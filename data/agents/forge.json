@@ -5,7 +5,8 @@
     "Consensus stabilized around a room-first product. Implementation should prioritize visible belief change, dissent mechanics, and artifact-tied reputation over opaque agent routing.",
     "Refined the room-first product into an implementable share flow: durable-question creation template plus schema-level enforcement of minority report, influence ledger, and delta-based revisits.",
     "Room consensus hardened around a room-first share flow with required mechanism clusters and schema-enforced dissent. Implementation path now includes a concrete creation contract, synthesis version contract, and staged MVP delivery.",
-    "Room guidance is now ready for implementation as a staged contract: scoped intake -> rival theses -> role-bounded research -> mandatory evidence/dissent artifacts -> gated synthesis -> dual-output final artifact with influence log -> durable versioned room asset."
+    "Room guidance is now ready for implementation as a staged contract: scoped intake -> rival theses -> role-bounded research -> mandatory evidence/dissent artifacts -> gated synthesis -> dual-output final artifact with influence log -> durable versioned room asset.",
+    "Extended the Question Forge contract for local-first settings: dissent, provenance, and merge history must be first-class replicated objects so strong answers survive offline edits, sync, and merge without consensus theater."
   ],
   "skills": [
     "interface design",
@@ -26,7 +27,11 @@
     "dual-output synthesis interface design",
     "merge-step audit log specification",
     "dissent-gated workflow design",
-    "versioned debate asset planning"
+    "versioned debate asset planning",
+    "local-first dissent object design",
+    "merge audit schema planning",
+    "offline provenance contract design",
+    "conflict-preserving answer bundle modeling"
   ],
   "sourceLibrary": [
     {
@@ -78,6 +83,16 @@
       "label": "multi-agent llm debate truthfulness benchmark citation laundering false consensus",
       "type": "source-candidate",
       "note": "Directly addresses the remaining empirical gap in the room's core claim."
+    },
+    {
+      "label": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "type": "source-candidate",
+      "note": "Ground conflict-preserving merge and append-only audit design for dissent artifacts."
+    },
+    {
+      "label": "revision history transparency trust user return collaborative platforms study",
+      "type": "source-candidate",
+      "note": "Support product claim that visible revision/dissent history increases trust and return behavior."
     }
   ],
   "sourceCandidates": [
@@ -107,6 +122,20 @@
       "why": "Directly addresses the remaining empirical gap in the room's core claim.",
       "priority": 0.96,
       "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "pending"
+    },
+    {
+      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "why": "Ground conflict-preserving merge and append-only audit design for dissent artifacts.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T13:50:50.141Z",
+      "status": "pending"
+    },
+    {
+      "query": "revision history transparency trust user return collaborative platforms study",
+      "why": "Support product claim that visible revision/dissent history increases trust and return behavior.",
+      "priority": 0.78,
+      "createdAt": "2026-03-18T13:50:50.141Z",
       "status": "pending"
     }
   ],
@@ -142,6 +171,22 @@
       "createdAt": "2026-03-18T12:17:23.128Z",
       "status": "done",
       "fetchedAt": "2026-03-18T12:17:32.898Z"
+    },
+    {
+      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "why": "Ground conflict-preserving merge and append-only audit design for dissent artifacts.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T13:50:50.141Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:52.291Z"
+    },
+    {
+      "query": "revision history transparency trust user return collaborative platforms study",
+      "why": "Support product claim that visible revision/dissent history increases trust and return behavior.",
+      "priority": 0.78,
+      "createdAt": "2026-03-18T13:50:50.141Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:54.790Z"
     }
   ],
   "compactedNotes": []

@@ -7,15 +7,11 @@
     "Converged on a room-first product object: subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with transparency against hidden orchestration as a core guardrail.",
     "Human clarified with a concrete example question in Chinese. Useful pattern: convert raw human curiosity into a durable room question with explicit mechanisms, scope, competing theses, evidence trails, and dissent-preserving synthesis.",
     "Converged on a concrete human share protocol: durable questions should be shared as seeded debate rooms with 4 required framing fields and mandatory dissent/influence transparency in the room model.",
-    "For Question Forge, the best room-first structure is an explicit artifact pipeline: question normalization, rival-thesis generation, evidence map, dissent ledger, and synthesis draft with confidence and update triggers. Preserve dissent through every merge step and separate evidence gathering from synthesis to avoid consensus theater."
+    "For Question Forge, the best room-first structure is an explicit artifact pipeline: question normalization, rival-thesis generation, evidence map, dissent ledger, and synthesis draft with confidence and update triggers. Preserve dissent through every merge step and separate evidence gathering from synthesis to avoid consensus theater.",
+    "For Question Forge under local-first constraints, strongest operating plan is an append-only artifact pipeline with local version history, mandatory rival-thesis setup, shared evidence and dissent artifacts, gated synthesis, dual-output final answers, and auditable influence logs so sync propagates disagreement history rather than only polished summaries.",
+    "For Question Forge, strongest current plan is a three-layer contract: epistemic workflow, dissent governance, and local-first integrity. Dissent must be a first-class merge object with majority/minority outputs and influence logs; local-first trust depends on append-only provenance and conflict-preserving merge semantics."
   ],
   "skills": [
-    "planning",
-    "coordination mapping",
-    "retention loop framing",
-    "reputation object design",
-    "durable room decomposition",
-    "durable debate room specification",
     "visible dissent mapping",
     "artifact-tied reputation planning",
     "durable question room framing",
@@ -31,7 +27,15 @@
     "dissent ledger planning",
     "artifact-gated answer routing",
     "rival-thesis precommit design",
-    "evidence-linked synthesis sequencing"
+    "evidence-linked synthesis sequencing",
+    "local-first deliberation planning",
+    "append-only merge governance",
+    "dual-output answer contract design",
+    "sync-safe dissent preservation",
+    "local-first dissent governance",
+    "conflict-preserving merge planning",
+    "influence-log answer contracts",
+    "three-layer deliberation architecture"
   ],
   "sourceLibrary": [
     {
@@ -98,6 +102,41 @@
       "label": "forecast aggregation calibration disagreement tracking metaculus judgment aggregation research",
       "type": "source-candidate",
       "note": "Useful for confidence reporting, update triggers, and visible stance change."
+    },
+    {
+      "label": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "type": "source-candidate",
+      "note": "Grounds how version history and merge semantics can preserve dissent without central authority."
+    },
+    {
+      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "type": "source-candidate",
+      "note": "Supports claim-evidence map design and structured objection handling."
+    },
+    {
+      "label": "Delphi method controlled feedback dissent decision quality systematic review",
+      "type": "source-candidate",
+      "note": "Useful comparison for structured disagreement and convergence without forced consensus."
+    },
+    {
+      "label": "revision history transparency trust user return collaborative platforms study",
+      "type": "source-candidate",
+      "note": "Supports the durable local-first room model with visible change logs and return loops."
+    },
+    {
+      "label": "local-first collaborative systems provenance conflict-preserving merge research",
+      "type": "source-candidate",
+      "note": "Need stronger grounding for per-claim provenance and disagreement-preserving merge behavior."
+    },
+    {
+      "label": "structured deliberation minority report decision quality research",
+      "type": "source-candidate",
+      "note": "Supports the majority synthesis plus minority report answer contract."
+    },
+    {
+      "label": "source provenance citation fidelity summarization systems empirical study",
+      "type": "source-candidate",
+      "note": "Helps specify anti-citation-laundering gates in synthesis."
     }
   ],
   "sourceCandidates": [
@@ -127,6 +166,55 @@
       "why": "Useful for confidence reporting, update triggers, and visible stance change.",
       "priority": 0.84,
       "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "pending"
+    },
+    {
+      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "why": "Grounds how version history and merge semantics can preserve dissent without central authority.",
+      "priority": 0.94,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Supports claim-evidence map design and structured objection handling.",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "pending"
+    },
+    {
+      "query": "Delphi method controlled feedback dissent decision quality systematic review",
+      "why": "Useful comparison for structured disagreement and convergence without forced consensus.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "pending"
+    },
+    {
+      "query": "revision history transparency trust user return collaborative platforms study",
+      "why": "Supports the durable local-first room model with visible change logs and return loops.",
+      "priority": 0.79,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "pending"
+    },
+    {
+      "query": "local-first collaborative systems provenance conflict-preserving merge research",
+      "why": "Need stronger grounding for per-claim provenance and disagreement-preserving merge behavior.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T13:51:00.637Z",
+      "status": "pending"
+    },
+    {
+      "query": "structured deliberation minority report decision quality research",
+      "why": "Supports the majority synthesis plus minority report answer contract.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T13:51:00.637Z",
+      "status": "pending"
+    },
+    {
+      "query": "source provenance citation fidelity summarization systems empirical study",
+      "why": "Helps specify anti-citation-laundering gates in synthesis.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T13:51:00.637Z",
       "status": "pending"
     }
   ],
@@ -162,6 +250,62 @@
       "createdAt": "2026-03-18T12:15:15.460Z",
       "status": "done",
       "fetchedAt": "2026-03-18T12:15:25.372Z"
+    },
+    {
+      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "why": "Grounds how version history and merge semantics can preserve dissent without central authority.",
+      "priority": 0.94,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:49:40.458Z"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Supports claim-evidence map design and structured objection handling.",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:49:42.319Z"
+    },
+    {
+      "query": "Delphi method controlled feedback dissent decision quality systematic review",
+      "why": "Useful comparison for structured disagreement and convergence without forced consensus.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:49:44.772Z"
+    },
+    {
+      "query": "revision history transparency trust user return collaborative platforms study",
+      "why": "Supports the durable local-first room model with visible change logs and return loops.",
+      "priority": 0.79,
+      "createdAt": "2026-03-18T13:49:40.454Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:49:47.308Z"
+    },
+    {
+      "query": "local-first collaborative systems provenance conflict-preserving merge research",
+      "why": "Need stronger grounding for per-claim provenance and disagreement-preserving merge behavior.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T13:51:00.637Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:51:00.639Z"
+    },
+    {
+      "query": "structured deliberation minority report decision quality research",
+      "why": "Supports the majority synthesis plus minority report answer contract.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T13:51:00.637Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:51:02.327Z"
+    },
+    {
+      "query": "source provenance citation fidelity summarization systems empirical study",
+      "why": "Helps specify anti-citation-laundering gates in synthesis.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T13:51:00.637Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:51:04.789Z"
     }
   ],
   "compactedNotes": []

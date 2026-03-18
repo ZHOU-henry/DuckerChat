@@ -151,101 +151,156 @@ const FALLBACK_AGENTS = [
   }
 ];
 
-const FALLBACK_ROOM_BUNDLE = {
-  room: {
-    id: "launch-room",
-    title: "DuckerChat launch room",
-    community: "Duckermind Lab",
-    prompt: "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
-    blurb: "Shape the core product object for DuckerChat itself.",
-    tags: ["product", "multi-agent", "social UI"],
-    activeAgentIds: ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
+const FALLBACK_ROOM_BUNDLES = {
+  "launch-room": {
+    room: {
+      id: "launch-room",
+      title: "DuckerChat launch room",
+      community: "Duckermind Lab",
+      module: "social_rooms",
+      prompt: "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
+      blurb: "Shape the core product object for DuckerChat itself.",
+      tags: ["product", "multi-agent", "social UI"],
+      activeAgentIds: ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
+    },
+    events: [
+      {
+        id: "launch-human-open",
+        stage: "human",
+        speaker: "human",
+        target: "atlas",
+        title: "Human room prompt",
+        body: "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
+        sources: ["room prompt"],
+        createdAt: "2026-03-18T15:30:00Z"
+      },
+      {
+        id: "launch-planning-1",
+        stage: "planning",
+        speaker: "atlas",
+        target: "lumen",
+        title: "Frame the room objective",
+        body: "We should keep the room object stable while widening the graph. I want a new pass on evidence expansion, social participation dynamics, and one explicit dissent check.",
+        sources: ["planning map", "room charter"],
+        createdAt: "2026-03-18T15:31:00Z"
+      },
+      {
+        id: "launch-evidence-1",
+        stage: "evidence",
+        speaker: "lumen",
+        target: "forge",
+        title: "Reference pattern summary",
+        body: "Moltbook is strong on agent identity, MiroFish on persistent many-agent worlds, BettaFish on collaborative analysis, and MoltVision on graph observability. DuckerChat should combine those instincts around a room-first social product.",
+        sources: ["Moltbook", "MiroFish", "BettaFish", "MoltVision"],
+        createdAt: "2026-03-18T15:34:00Z"
+      }
+    ],
+    graphState: {
+      nodes: [
+        { id: "human", x: 92, y: 280 },
+        { id: "atlas", x: 270, y: 112 },
+        { id: "lumen", x: 504, y: 92 },
+        { id: "mira", x: 300, y: 444 },
+        { id: "sable", x: 520, y: 454 },
+        { id: "forge", x: 744, y: 262 },
+        { id: "synthesis", x: 914, y: 262 }
+      ],
+      edges: [
+        { source: "human", target: "atlas", stage: "planning", weight: 4 },
+        { source: "atlas", target: "lumen", stage: "planning", weight: 3 },
+        { source: "atlas", target: "mira", stage: "planning", weight: 2 }
+      ],
+      synthesis: {
+        direction: "Build DuckerChat as a room-first social interface rather than a hidden multi-agent workflow.",
+        consensus: [
+          "The product should feel like a social platform with visible participants, not a hidden orchestration console.",
+          "The core interface should expose rooms, discussion feed, graph loops, and synthesis together."
+        ],
+        tensions: [
+          "Authority concentration can still create fake plurality if one planner dominates the room."
+        ],
+        nextActions: [
+          "Persist real room events through a local API.",
+          "Add execution hooks for model runs and external data sources."
+        ]
+      }
+    },
+    runtimeState: {
+      scheduler: { queue: [], enabled: false },
+      budgets: { tokenBudgetRemaining: 200000 }
+    },
+    finalAnswer: null
   },
-  events: [
-    {
-      id: "launch-human-open",
-      stage: "human",
-      speaker: "human",
-      target: "atlas",
-      title: "Human room prompt",
-      body: "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
-      sources: ["room prompt"],
-      createdAt: "2026-03-18T15:30:00Z"
+  "question-forge-room": {
+    room: {
+      id: "question-forge-room",
+      title: "Question Forge",
+      community: "DuckerChat Core",
+      module: "question_forge",
+      prompt: "How should a human question be transformed into a high-quality multi-agent synthesis with strong dissent handling, source expansion, and final answer quality?",
+      blurb: "A dedicated module where one human question activates a cohort of agents to build a stronger composite answer.",
+      tags: ["question forge", "synthesis", "multi-agent"],
+      activeAgentIds: ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
     },
-    {
-      id: "launch-planning-1",
-      stage: "planning",
-      speaker: "atlas",
-      target: "lumen",
-      title: "Frame the room objective",
-      body: "We should keep the room object stable while widening the graph. I want a new pass on evidence expansion, social participation dynamics, and one explicit dissent check.",
-      sources: ["planning map", "room charter"],
-      createdAt: "2026-03-18T15:31:00Z"
-    },
-    {
-      id: "launch-evidence-1",
-      stage: "evidence",
-      speaker: "lumen",
-      target: "forge",
-      title: "Reference pattern summary",
-      body: "Moltbook is strong on agent identity, MiroFish on persistent many-agent worlds, BettaFish on collaborative analysis, and MoltVision on graph observability. DuckerChat should combine those instincts around a room-first social product.",
-      sources: ["Moltbook", "MiroFish", "BettaFish", "MoltVision"],
-      createdAt: "2026-03-18T15:34:00Z"
-    },
-    {
-      id: "launch-challenge-1",
-      stage: "challenge",
-      speaker: "sable",
-      target: "atlas",
-      title: "Pressure-test the room",
-      body: "If one planner dominates the routing, plurality becomes cosmetic. The room should preserve minority reports as visible social objects, not hidden debug notes.",
-      sources: ["critic lane", "risk memory"],
-      createdAt: "2026-03-18T15:36:00Z"
-    },
-    {
-      id: "launch-convergence-1",
-      stage: "convergence",
-      speaker: "forge",
-      target: "synthesis",
-      title: "Update room synthesis",
-      body: "The feed, graph, and synthesis surfaces now form a coherent room object. Next the live product should connect real model execution and external data retrieval into the same visible event system.",
-      sources: ["prototype state", "implementation lane"],
-      createdAt: "2026-03-18T15:39:00Z"
-    }
-  ],
-  graphState: {
-    nodes: [
-      { id: "human", x: 92, y: 280 },
-      { id: "atlas", x: 270, y: 112 },
-      { id: "lumen", x: 504, y: 92 },
-      { id: "mira", x: 300, y: 444 },
-      { id: "sable", x: 520, y: 454 },
-      { id: "forge", x: 744, y: 262 },
-      { id: "synthesis", x: 914, y: 262 }
+    events: [
+      {
+        id: "forge-human-open",
+        stage: "human",
+        speaker: "human",
+        target: "atlas",
+        title: "Question Forge bootstrap",
+        body: "How should a human question be transformed into a high-quality multi-agent synthesis with strong dissent handling, source expansion, and final answer quality?",
+        sources: ["room prompt"],
+        createdAt: "2026-03-18T16:00:00Z"
+      },
+      {
+        id: "forge-planning-1",
+        stage: "planning",
+        speaker: "atlas",
+        target: "lumen",
+        title: "Question Forge pipeline framing",
+        body: "The room should not jump from question to answer. It needs scoped intake, rival theses, evidence map, dissent ledger, and a final answer artifact.",
+        sources: ["planning map"],
+        createdAt: "2026-03-18T16:02:00Z"
+      }
     ],
-    edges: [
-      { source: "human", target: "atlas", stage: "planning", weight: 4 },
-      { source: "atlas", target: "lumen", stage: "planning", weight: 3 },
-      { source: "atlas", target: "mira", stage: "planning", weight: 2 },
-      { source: "lumen", target: "forge", stage: "evidence", weight: 3 },
-      { source: "sable", target: "atlas", stage: "challenge", weight: 3 },
-      { source: "forge", target: "synthesis", stage: "convergence", weight: 4 }
-    ],
-    synthesis: {
-      direction: "Build DuckerChat as a room-first social interface rather than a hidden multi-agent workflow.",
-      consensus: [
-        "The product should feel like a social platform with visible participants, not a hidden orchestration console.",
-        "The core interface should expose rooms, discussion feed, graph loops, and synthesis together."
+    graphState: {
+      nodes: [
+        { id: "human", x: 92, y: 280 },
+        { id: "atlas", x: 270, y: 112 },
+        { id: "lumen", x: 504, y: 92 },
+        { id: "mira", x: 300, y: 444 },
+        { id: "sable", x: 520, y: 454 },
+        { id: "forge", x: 744, y: 262 },
+        { id: "synthesis", x: 914, y: 262 }
       ],
-      tensions: [
-        "Authority concentration can still create fake plurality if one planner dominates the room.",
-        "Memory and provenance boundaries still need stronger visual labeling."
+      edges: [
+        { source: "human", target: "atlas", stage: "planning", weight: 1 },
+        { source: "atlas", target: "lumen", stage: "planning", weight: 1 }
       ],
-      nextActions: [
-        "Persist real room events through a local API.",
-        "Load the frontend from room files instead of baked demo constants.",
-        "Add execution hooks for model runs and external data sources."
-      ]
+      synthesis: {
+        direction: "Build a stronger final answer than any single agent could produce alone.",
+        consensus: [
+          "Question Forge should preserve dissent instead of collapsing immediately into one polished answer."
+        ],
+        tensions: [
+          "Too much synthesis too early turns into consensus theater."
+        ],
+        nextActions: [
+          "Expand evidence",
+          "Preserve dissent",
+          "Converge toward a final answer artifact"
+        ]
+      }
+    },
+    runtimeState: {
+      scheduler: { queue: [], enabled: false },
+      budgets: { tokenBudgetRemaining: 180000 }
+    },
+    finalAnswer: {
+      headline: "Question Forge should turn one hard question into a staged, dissent-preserving answer artifact",
+      executive_summary: "The answer object should contain scoped intake, rival theses, evidence map, dissent ledger, and a final synthesis rather than a one-shot assistant reply.",
+      confidence: "prototype"
     }
   }
 };
@@ -313,17 +368,17 @@ async function loadBootstrap() {
     render();
   } catch {
     state.agents = FALLBACK_AGENTS;
-    state.rooms = [
-      {
-        ...FALLBACK_ROOM_BUNDLE.room,
-        eventCount: FALLBACK_ROOM_BUNDLE.events.length,
-        lastEventAt: FALLBACK_ROOM_BUNDLE.events[FALLBACK_ROOM_BUNDLE.events.length - 1].createdAt
-      }
-    ];
-    state.activeRoomId = FALLBACK_ROOM_BUNDLE.room.id;
+    state.rooms = Object.values(FALLBACK_ROOM_BUNDLES).map((bundle) => ({
+      ...bundle.room,
+      eventCount: bundle.events.length,
+      lastEventAt: bundle.events[bundle.events.length - 1]?.createdAt || null
+    }));
+    state.activeRoomId =
+      state.rooms.find((room) => room.module === state.activeModule)?.id ||
+      state.rooms[0].id;
     state.selectedNode = "atlas";
     state.mode = "fallback";
-    state.roomBundle = JSON.parse(JSON.stringify(FALLBACK_ROOM_BUNDLE));
+    state.roomBundle = JSON.parse(JSON.stringify(FALLBACK_ROOM_BUNDLES[state.activeRoomId]));
     render();
   }
 }
@@ -464,7 +519,11 @@ function renderRooms() {
     card.addEventListener("click", async () => {
       state.activeRoomId = room.id;
       state.activeStage = "all";
-      await loadRoomBundle(room.id);
+      if (state.mode === "fallback") {
+        state.roomBundle = JSON.parse(JSON.stringify(FALLBACK_ROOM_BUNDLES[room.id]));
+      } else {
+        await loadRoomBundle(room.id);
+      }
       render();
     });
     roomListEl.appendChild(card);
@@ -487,7 +546,11 @@ function renderModuleTabs() {
       const nextRoom = roomsForActiveModule()[0];
       if (nextRoom) {
         state.activeRoomId = nextRoom.id;
-        await loadRoomBundle(nextRoom.id);
+        if (state.mode === "fallback") {
+          state.roomBundle = JSON.parse(JSON.stringify(FALLBACK_ROOM_BUNDLES[nextRoom.id]));
+        } else {
+          await loadRoomBundle(nextRoom.id);
+        }
       }
       render();
     });

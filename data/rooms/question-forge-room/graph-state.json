@@ -47,19 +47,19 @@
       "source": "lumen",
       "target": "atlas",
       "stage": "analysis",
-      "weight": 4
+      "weight": 5
     },
     {
       "source": "human",
       "target": "atlas",
       "stage": "human",
-      "weight": 1
+      "weight": 2
     },
     {
       "source": "atlas",
       "target": "lumen",
       "stage": "planning",
-      "weight": 1
+      "weight": 4
     },
     {
       "source": "sable",
@@ -71,26 +71,35 @@
       "source": "mira",
       "target": "atlas",
       "stage": "analysis",
-      "weight": 2
+      "weight": 3
     },
     {
       "source": "forge",
       "target": "atlas",
       "stage": "implementation",
-      "weight": 2
+      "weight": 3
     },
     {
       "source": "synthesis",
       "target": "human",
       "stage": "convergence",
-      "weight": 2
+      "weight": 4
+    },
+    {
+      "source": "sable",
+      "target": "atlas",
+      "stage": "convergence",
+      "weight": 1
     }
   ],
   "synthesis": {
-    "direction": "How should DuckerChat transform one hard human question into a rigorous multi-agent final answer without collapsing dissent?",
+    "direction": "How should a local-first multi-agent platform preserve dissent while still producing a strong answer?",
     "consensus": [
       "The room converged on a strong operating hypothesis: DuckerChat should turn one hard human question into a staged multi-agent workflow with explicit artifacts, visible disagreement, source expansion, and auditable synthesis. The recommended flow is: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, build shared evidence artifacts, preserve dissent through merge steps, and publish a dual-layer final answer containing both a majority synthesis and a minority report. The central design tension is that more agents can improve coverage, but without hard anti-erasure mechanics they can also amplify citation laundering, false consensus, and hidden authority. The proposal is strong at the product and workflow level, but empirical support for when multi-agent deliberation reliably improves truthfulness remains incomplete, so claims should be framed as high-confidence design guidance rather than settled law.",
-      "The room converged on a strong design: do not transform a human question directly into parallel agent answers and then a polished summary. Instead, transform it into a governed workflow with explicit artifacts: scoped intake, rival theses, claim-evidence mapping, source-quality labeling, dissent ledger, uncertainty register, gated synthesis, and a dual-layer final output containing both a majority synthesis and a minority report. The central insight is that more agents can improve coverage, but without hard anti-erasure rules they also increase the risk of false consensus, citation laundering, and hidden authority by planners or synthesizers. The best answer quality comes from preserving disagreement through every merge step, requiring auditable influence logs, and publishing the result as a durable, revisable answer object with confidence, source gaps, and update triggers. The room is confident in this workflow shape, but less confident in any blanket claim that multi-agent systems inherently improve truthfulness; that remains an empirical gap and should be framed as a strong operating hypothesis rather than settled law."
+      "The room converged on a strong design: do not transform a human question directly into parallel agent answers and then a polished summary. Instead, transform it into a governed workflow with explicit artifacts: scoped intake, rival theses, claim-evidence mapping, source-quality labeling, dissent ledger, uncertainty register, gated synthesis, and a dual-layer final output containing both a majority synthesis and a minority report. The central insight is that more agents can improve coverage, but without hard anti-erasure rules they also increase the risk of false consensus, citation laundering, and hidden authority by planners or synthesizers. The best answer quality comes from preserving disagreement through every merge step, requiring auditable influence logs, and publishing the result as a durable, revisable answer object with confidence, source gaps, and update triggers. The room is confident in this workflow shape, but less confident in any blanket claim that multi-agent systems inherently improve truthfulness; that remains an empirical gap and should be framed as a strong operating hypothesis rather than settled law.",
+      "Room direction is good, but the hidden failure mode is merge-time authority capture: local-first can preserve files while still erasing dissent if synthesizers, planners, or sync resolution treat objections as compressible text. My recommendation is to make dissent a first-class data object, not commentary. Required layers: (1) epistemic workflow: scoped question, rival theses, disconfirmation criteria, claim-evidence map, uncertainty register; (2) dissent governance: mandatory dissent ledger, majority synthesis + minority report, per-claim provenance, influence log with preserved/dropped/overridden reason codes; (3) local-first integrity: append-only history, author/device stamps, conflict-preserving merges, and offline-verifiable revision lineage. Strong answer quality should be measured not just by coherence, but by citation integrity, source diversity, dissent survival, override rate, and justified disagreement reduction. Key caution: present this as a strong design pattern with empirical support from structured deliberation and transparency literature, not as settled proof that multi-agent debate improves truth.",
+      "A high-quality Question Forge should not convert a human question directly into parallel agent outputs and then a polished consensus answer. It should convert the question into a governed artifact pipeline: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, expand sources into shared evidence artifacts, preserve objections through every merge step, and publish a dual-layer final answer consisting of a majority synthesis plus a minority report. The system should treat disagreement as information, not noise. Strong answer quality comes from evidence-linked claims, explicit uncertainty, source-quality labeling, influence logs, and revision trails. Strong dissent handling requires anti-erasure rules: unresolved objections must remain visible, planner/synthesizer overrides must be auditable, and final outputs must show what was dropped, preserved, or left open. For local-first systems, these artifacts should be append-only, inspectable, and synced with their disagreement history intact rather than syncing only the latest polished summary. This is a strong design recommendation with good precedent support, but the room remains cautious about any blanket claim that multi-agent deliberation inherently improves truthfulness in all settings.",
+      "A high-quality multi-agent synthesis should begin by converting the human question into a scoped, versioned question object with explicit stakes, ambiguities, success criteria, and decision target. Before research starts, the system should require rival theses, disconfirmation criteria, and named ownership so the room does not drift into soft consensus. Agents should then work in role-bounded parallel loops that write into shared artifacts such as a claim-evidence map, source table, uncertainty register, and dissent ledger. Synthesis should be gated: no final answer should be published unless major claims have linked evidence, unresolved objections, source gaps, and provenance. The final artifact should always include both a majority synthesis and a minority report, plus confidence, update triggers, and an influence log showing what was preserved, dropped, unresolved, or overridden and why. The strongest caution from the room is that multi-agent setups increase both coverage and false-consensus risk, so dissent-preservation, source fidelity, and override transparency are mandatory. For local-first systems, dissent must survive offline edits, sync, and merge as first-class data with append-only history and per-claim provenance."
     ],
     "tensions": [],
     "nextActions": [

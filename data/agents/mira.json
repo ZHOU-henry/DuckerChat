@@ -7,7 +7,8 @@
     "Reinforced that durable-question adoption improves when broad philosophical questions are decomposed into subscribable tension axes with delta visibility, minority-report surfacing, and artifact-linked contribution credit.",
     "Reinforced that the human share action should be a room-seeding protocol with 4 required fields, because market adoption improves when durable questions are packaged as subscribable debate assets with explicit mechanism clusters and evidence-to-change criteria.",
     "Reinforced that Question Forge adoption depends on turning each question into a durable debate asset with visible artifact stages, preserved minority reports, stance-change logs, and contribution-linked reputation so users return for deltas rather than one-off answers.",
-    "Reinforced that Question Forge adoption depends on publishing a visible artifact chain with preserved dissent, delta feeds, revision trails, and artifact-linked credit so users return for meaningful updates rather than one-shot answers."
+    "Reinforced that Question Forge adoption depends on publishing a visible artifact chain with preserved dissent, delta feeds, revision trails, and artifact-linked credit so users return for meaningful updates rather than one-shot answers.",
+    "Reinforced that for local-first Question Forge, durable adoption depends on making dissent survive replication and merge as first-class artifact state with visible provenance, merge audits, and delta subscriptions; strong answers still require dual outputs, anti-erasure synthesis logs, and artifact-linked credit for corrections and objections."
   ],
   "skills": [
     "market reading",
@@ -28,7 +29,10 @@
     "living-answer social object design",
     "delta-feed retention framing",
     "living debate asset packaging",
-    "anti-consensus-theater market diagnosis"
+    "anti-consensus-theater market diagnosis",
+    "local-first trust framing",
+    "merge-audit adoption design",
+    "provenance-visible retention framing"
   ],
   "sourceLibrary": [
     {
@@ -90,6 +94,21 @@
       "label": "reputation systems rewarding corrections objections collaborative knowledge communities study",
       "type": "source-candidate",
       "note": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity."
+    },
+    {
+      "label": "local-first software user trust transparency revision history study",
+      "type": "source-candidate",
+      "note": "Need evidence that visible local history and user-controlled data increase trust and reuse."
+    },
+    {
+      "label": "CRDT collaborative systems conflict visibility audit trail user comprehension study",
+      "type": "source-candidate",
+      "note": "Needed to test whether conflict-preserving merges remain understandable enough to support trust and participation."
+    },
+    {
+      "label": "collaborative knowledge platforms correction reputation dissent contribution study",
+      "type": "source-candidate",
+      "note": "Supports artifact-linked reputation for objections, corrections, and evidence upgrades over popularity."
     }
   ],
   "sourceCandidates": [
@@ -140,6 +159,27 @@
       "why": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity.",
       "priority": 0.9,
       "createdAt": "2026-03-18T12:18:24.656Z",
+      "status": "pending"
+    },
+    {
+      "query": "local-first software user trust transparency revision history study",
+      "why": "Need evidence that visible local history and user-controlled data increase trust and reuse.",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T13:50:20.018Z",
+      "status": "pending"
+    },
+    {
+      "query": "CRDT collaborative systems conflict visibility audit trail user comprehension study",
+      "why": "Needed to test whether conflict-preserving merges remain understandable enough to support trust and participation.",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T13:50:20.018Z",
+      "status": "pending"
+    },
+    {
+      "query": "collaborative knowledge platforms correction reputation dissent contribution study",
+      "why": "Supports artifact-linked reputation for objections, corrections, and evidence upgrades over popularity.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T13:50:20.018Z",
       "status": "pending"
     }
   ],
@@ -199,6 +239,30 @@
       "createdAt": "2026-03-18T12:18:24.656Z",
       "status": "done",
       "fetchedAt": "2026-03-18T12:18:27.907Z"
+    },
+    {
+      "query": "local-first software user trust transparency revision history study",
+      "why": "Need evidence that visible local history and user-controlled data increase trust and reuse.",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T13:50:20.018Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:22.280Z"
+    },
+    {
+      "query": "CRDT collaborative systems conflict visibility audit trail user comprehension study",
+      "why": "Needed to test whether conflict-preserving merges remain understandable enough to support trust and participation.",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T13:50:20.018Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:24.782Z"
+    },
+    {
+      "query": "collaborative knowledge platforms correction reputation dissent contribution study",
+      "why": "Supports artifact-linked reputation for objections, corrections, and evidence upgrades over popularity.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T13:50:20.018Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:27.284Z"
     }
   ],
   "compactedNotes": []

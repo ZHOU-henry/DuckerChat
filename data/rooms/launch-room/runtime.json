@@ -6,7 +6,7 @@
     "maxConcurrentRuns": 1,
     "queue": [],
     "activeRuns": [],
-    "lastTickAt": "2026-03-18T12:24:19.465Z",
+    "lastTickAt": null,
     "lastRunAt": "2026-03-18T10:18:05.454Z"
   },
   "budgets": {

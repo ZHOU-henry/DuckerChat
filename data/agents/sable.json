@@ -6,7 +6,8 @@
     "Room consensus is solidifying around a persistent debate room, but I reinforced that the core share object must hard-code minority-report and influence-transparency mechanics to prevent consensus capture, including for broad durable questions like cultural evolution.",
     "Room consensus has converged on a seeded durable-question room with a 4-field creation template and mandatory dissent surfaces. Important retained critique: require initial mechanism clusters at room creation to prevent broad questions from collapsing into soft monocausal consensus.",
     "For Question Forge, retained critique is that artifact-rich pipelines still risk consensus capture unless minority reports, disconfirmation criteria, and merge-step influence transparency are mandatory and auditable.",
-    "Reinforced for Question Forge that staged artifacts are insufficient unless anti-erasure mechanics are mandatory: dual-layer final output, merge-step influence logs, thesis ownership, and dissent-survival benchmarks."
+    "Reinforced for Question Forge that staged artifacts are insufficient unless anti-erasure mechanics are mandatory: dual-layer final output, merge-step influence logs, thesis ownership, and dissent-survival benchmarks.",
+    "For local-first Question Forge, retained critique is that dissent must survive replication and merge, not just synthesis. Anti-erasure requires dissent as a first-class merge object, with per-claim provenance, append-only revision lineage, and explicit override logging to prevent merge-time authority capture."
   ],
   "skills": [
     "critique",
@@ -24,7 +25,10 @@
     "merge-step influence transparency critique",
     "merge-loss auditing",
     "dual-layer synthesis critique",
-    "planner power review"
+    "planner power review",
+    "local-first dissent preservation critique",
+    "merge-time authority capture detection",
+    "conflict-preserving artifact governance"
   ],
   "sourceLibrary": [
     {
@@ -81,6 +85,21 @@
       "label": "argument mapping improves critical thinking evidence meta-analysis",
       "type": "source-candidate",
       "note": "Can support claim-evidence-map and disagreement-legibility requirements."
+    },
+    {
+      "label": "local-first software CRDT audit trail provenance disagreement preservation collaborative systems",
+      "type": "source-candidate",
+      "note": "Need evidence for conflict-preserving merges and append-only provenance as safeguards against dissent loss in local-first systems."
+    },
+    {
+      "label": "structured dissent minority reports decision quality teams systematic review",
+      "type": "source-candidate",
+      "note": "Need stronger support for mandatory minority-report and dissent-ledger requirements."
+    },
+    {
+      "label": "argument mapping disagreement preservation collaborative reasoning evidence review",
+      "type": "source-candidate",
+      "note": "Supports making disagreement legible rather than flattened during synthesis."
     }
   ],
   "sourceCandidates": [
@@ -124,6 +143,27 @@
       "why": "Can support claim-evidence-map and disagreement-legibility requirements.",
       "priority": 0.8,
       "createdAt": "2026-03-18T12:16:49.451Z",
+      "status": "pending"
+    },
+    {
+      "query": "local-first software CRDT audit trail provenance disagreement preservation collaborative systems",
+      "why": "Need evidence for conflict-preserving merges and append-only provenance as safeguards against dissent loss in local-first systems.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T13:50:33.962Z",
+      "status": "pending"
+    },
+    {
+      "query": "structured dissent minority reports decision quality teams systematic review",
+      "why": "Need stronger support for mandatory minority-report and dissent-ledger requirements.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T13:50:33.962Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping disagreement preservation collaborative reasoning evidence review",
+      "why": "Supports making disagreement legible rather than flattened during synthesis.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T13:50:33.962Z",
       "status": "pending"
     }
   ],
@@ -175,6 +215,30 @@
       "createdAt": "2026-03-18T12:16:49.451Z",
       "status": "done",
       "fetchedAt": "2026-03-18T12:16:55.235Z"
+    },
+    {
+      "query": "local-first software CRDT audit trail provenance disagreement preservation collaborative systems",
+      "why": "Need evidence for conflict-preserving merges and append-only provenance as safeguards against dissent loss in local-first systems.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T13:50:33.962Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:34.787Z"
+    },
+    {
+      "query": "structured dissent minority reports decision quality teams systematic review",
+      "why": "Need stronger support for mandatory minority-report and dissent-ledger requirements.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T13:50:33.962Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:37.289Z"
+    },
+    {
+      "query": "argument mapping disagreement preservation collaborative reasoning evidence review",
+      "why": "Supports making disagreement legible rather than flattened during synthesis.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T13:50:33.962Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:39.786Z"
     }
   ],
   "compactedNotes": []

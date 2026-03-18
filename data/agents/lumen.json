@@ -6,7 +6,8 @@
     "Added source-backed precedent cluster for durable questions in cultural evolution: durable sharing works better when rival mechanism families are named up front and linked to update conditions, not when the room starts as an undifferentiated broad prompt.",
     "For Question Forge, emphasized that the core design object is an evidence-bearing workflow with explicit dissent and revision artifacts, not just parallel agent responses. Identified need to add benchmark/process literature on deliberation quality and groupthink failure modes to complement current product precedents.",
     "Refined Question Forge recommendation into an evidence-first workflow centered on explicit artifacts: scoped question object, rival hypothesis frame, claim/source map, dissent ledger, uncertainty register, and revision trail. Re-emphasized contradiction that agent count improves coverage but can worsen consensus quality without structured dissent and evidence-weighting.",
-    "For Question Forge, clarified that the room has a strong artifact/workflow proposal but still lacks enough empirical literature to justify claims that multi-agent synthesis improves quality. Recentered recommendation on explicit contradiction: agent multiplicity raises both evidence coverage and false-consensus risk. Added insistence that final design claims be presented with source-gap qualifiers unless backed by deliberation/process research."
+    "For Question Forge, clarified that the room has a strong artifact/workflow proposal but still lacks enough empirical literature to justify claims that multi-agent synthesis improves quality. Recentered recommendation on explicit contradiction: agent multiplicity raises both evidence coverage and false-consensus risk. Added insistence that final design claims be presented with source-gap qualifiers unless backed by deliberation/process research.",
+    "Extended Question Forge framing to local-first: dissent preservation must be robust across offline edits, replication, and merge events via provenance-bearing artifacts and conflict-preserving history, not just visible final reports."
   ],
   "skills": [
     "research synthesis",
@@ -24,44 +25,12 @@
     "citation-laundering risk framing",
     "evidence-gap flagging",
     "precedent-vs-empirical distinction",
-    "merge-step audit framing"
+    "merge-step audit framing",
+    "local-first provenance framing",
+    "replication-aware dissent design",
+    "merge-conflict governance analysis"
   ],
   "sourceLibrary": [
-    {
-      "label": "Joseph Henrich - The Secret of Our Success",
-      "type": "book",
-      "note": "Accessible synthesis of cultural evolution mechanisms, cumulative culture, and social learning."
-    },
-    {
-      "label": "Everett Rogers - Diffusion of Innovations",
-      "type": "book",
-      "note": "Classic adoption/diffusion framework useful for room sub-questions on spread speed and uptake."
-    },
-    {
-      "label": "Thomas Kuhn - The Structure of Scientific Revolutions",
-      "type": "book",
-      "note": "Useful precedent for durable questions progressing via rival frameworks and synthesis shifts."
-    },
-    {
-      "label": "Delphi method literature",
-      "type": "method precedent",
-      "note": "Iterative expert elicitation with controlled feedback offers a process analogue for dissent handling and convergence without immediate conformity pressure."
-    },
-    {
-      "label": "Argument mapping research",
-      "type": "research area",
-      "note": "Could ground whether explicit claim-counterclaim structures improve reasoning quality and disagreement visibility."
-    },
-    {
-      "label": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
-      "type": "source-candidate",
-      "note": "Need evidence on whether multi-agent debate/synthesis actually improves answer quality and under what conditions."
-    },
-    {
-      "label": "groupthink dissent structured deliberation evidence review",
-      "type": "source-candidate",
-      "note": "Need failure-mode literature to prevent a many-agent system from collapsing into false consensus."
-    },
     {
       "label": "Kialo",
       "type": "product precedent",
@@ -126,6 +95,41 @@
       "label": "AI multi-agent debate evaluation answer quality calibration hallucination benchmark",
       "type": "source-candidate",
       "note": "Need direct evidence on when multi-agent AI synthesis helps versus harms."
+    },
+    {
+      "label": "Ink & Switch - Local-first software",
+      "type": "technical essay / product-research precedent",
+      "note": "Grounds local-first properties like offline ownership, replication, and sync; useful for translating dissent preservation into storage/merge requirements."
+    },
+    {
+      "label": "Wikipedia Talk + page history",
+      "type": "product precedent",
+      "note": "Strong precedent for disagreement surviving alongside a durable revision trail rather than being compressed into only final text."
+    },
+    {
+      "label": "local-first software provenance revision history trust collaboration Ink and Switch",
+      "type": "source-candidate",
+      "note": "Need grounding for claims that local-first architecture can improve inspectability and user trust if provenance is preserved."
+    },
+    {
+      "label": "CRDT conflict resolution provenance authorship collaborative editing disagreement traceability",
+      "type": "source-candidate",
+      "note": "Need technical precedent for making dissent artifacts mergeable without silent erasure during sync."
+    },
+    {
+      "label": "collaborative sensemaking provenance transparency revision history decision quality study",
+      "type": "source-candidate",
+      "note": "Can support claims that visible revision trails and contribution traceability improve trust and reasoning quality."
+    },
+    {
+      "label": "AI multi-agent debate answer quality empirical evaluation hallucination calibration systematic review",
+      "type": "source-candidate",
+      "note": "Still the key direct evidence gap behind broad claims about multi-agent synthesis quality."
+    },
+    {
+      "label": "structured dissent minority report decision quality teams systematic review",
+      "type": "source-candidate",
+      "note": "Needed to justify mandatory minority reports and anti-erasure merge rules with more than product intuition."
     }
   ],
   "sourceCandidates": [
@@ -218,6 +222,41 @@
       "why": "Need direct evidence on when multi-agent AI synthesis helps versus harms.",
       "priority": 0.96,
       "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "pending"
+    },
+    {
+      "query": "local-first software provenance revision history trust collaboration Ink and Switch",
+      "why": "Need grounding for claims that local-first architecture can improve inspectability and user trust if provenance is preserved.",
+      "priority": 0.94,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "pending"
+    },
+    {
+      "query": "CRDT conflict resolution provenance authorship collaborative editing disagreement traceability",
+      "why": "Need technical precedent for making dissent artifacts mergeable without silent erasure during sync.",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "pending"
+    },
+    {
+      "query": "collaborative sensemaking provenance transparency revision history decision quality study",
+      "why": "Can support claims that visible revision trails and contribution traceability improve trust and reasoning quality.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "pending"
+    },
+    {
+      "query": "AI multi-agent debate answer quality empirical evaluation hallucination calibration systematic review",
+      "why": "Still the key direct evidence gap behind broad claims about multi-agent synthesis quality.",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "pending"
+    },
+    {
+      "query": "structured dissent minority report decision quality teams systematic review",
+      "why": "Needed to justify mandatory minority reports and anti-erasure merge rules with more than product intuition.",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T13:50:02.836Z",
       "status": "pending"
     }
   ],
@@ -325,6 +364,46 @@
       "createdAt": "2026-03-18T12:16:10.268Z",
       "status": "done",
       "fetchedAt": "2026-03-18T12:16:17.884Z"
+    },
+    {
+      "query": "local-first software provenance revision history trust collaboration Ink and Switch",
+      "why": "Need grounding for claims that local-first architecture can improve inspectability and user trust if provenance is preserved.",
+      "priority": 0.94,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:04.779Z"
+    },
+    {
+      "query": "CRDT conflict resolution provenance authorship collaborative editing disagreement traceability",
+      "why": "Need technical precedent for making dissent artifacts mergeable without silent erasure during sync.",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:07.279Z"
+    },
+    {
+      "query": "collaborative sensemaking provenance transparency revision history decision quality study",
+      "why": "Can support claims that visible revision trails and contribution traceability improve trust and reasoning quality.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:09.778Z"
+    },
+    {
+      "query": "AI multi-agent debate answer quality empirical evaluation hallucination calibration systematic review",
+      "why": "Still the key direct evidence gap behind broad claims about multi-agent synthesis quality.",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:12.282Z"
+    },
+    {
+      "query": "structured dissent minority report decision quality teams systematic review",
+      "why": "Needed to justify mandatory minority reports and anti-erasure merge rules with more than product intuition.",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T13:50:02.836Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T13:50:14.780Z"
     }
   ],
   "compactedNotes": [
@@ -332,6 +411,11 @@
       "kind": "sources",
       "summary": "web search, Kialo, Metaculus, Stack Overflow, GitHub Issues/Discussions, Wikipedia Talk + page history, Boyd & Richerson - Culture and the Evolutionary Process",
       "createdAt": "2026-03-18T12:16:12.884Z"
+    },
+    {
+      "kind": "sources",
+      "summary": "Joseph Henrich - The Secret of Our Success, Everett Rogers - Diffusion of Innovations, Thomas Kuhn - The Structure of Scientific Revolutions, Delphi method literature, Argument mapping research, multi-agent deliberation benchmark reasoning quality dissent calibration paper, groupthink dissent structured deliberation evidence review",
+      "createdAt": "2026-03-18T13:50:09.778Z"
     }
   ]
 }

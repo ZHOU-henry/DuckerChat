@@ -962,5 +962,252 @@
     ],
     "createdAt": "2026-03-18T12:18:27.908Z",
     "usage": null
+  },
+  {
+    "id": "launch-room-1773841779772",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"local-first software provenance sync conflict resolution trust auditability research\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:49:39.772Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841782319",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"argument mapping improves critical thinking evidence meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:49:42.319Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841784772",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"Delphi method controlled feedback dissent decision quality systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:49:44.772Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841787308",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"revision history transparency trust user return collaborative platforms study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:49:47.308Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841804780",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"local-first software provenance revision history trust collaboration Ink and Switch\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:04.780Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841807280",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"CRDT conflict resolution provenance authorship collaborative editing disagreement traceability\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:07.280Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841809778",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"collaborative sensemaking provenance transparency revision history decision quality study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:09.778Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841812282",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"AI multi-agent debate answer quality empirical evaluation hallucination calibration systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:12.282Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841814780",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"structured dissent minority report decision quality teams systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:14.780Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841822281",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"local-first software user trust transparency revision history study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:22.281Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841824782",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"CRDT collaborative systems conflict visibility audit trail user comprehension study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:24.782Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841827284",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"collaborative knowledge platforms correction reputation dissent contribution study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:27.284Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841834788",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"local-first software CRDT audit trail provenance disagreement preservation collaborative systems\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:34.788Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841837290",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"structured dissent minority reports decision quality teams systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:37.290Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841839787",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"argument mapping disagreement preservation collaborative reasoning evidence review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:39.787Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841852292",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"local-first software conflict resolution CRDT audit trail collaborative knowledge systems\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:52.292Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841854791",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"revision history transparency trust user return collaborative platforms study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:50:54.791Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841862328",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"structured deliberation minority report decision quality research\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:51:02.328Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773841864790",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"source provenance citation fidelity summarization systems empirical study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T13:51:04.790Z",
+    "usage": null
   }
 ]
