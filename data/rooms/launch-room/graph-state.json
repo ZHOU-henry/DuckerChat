@@ -53,7 +53,7 @@
       "source": "atlas",
       "target": "mira",
       "stage": "planning",
-      "weight": 2
+      "weight": 4
     },
     {
       "source": "lumen",
@@ -89,6 +89,12 @@
       "source": "mira",
       "target": "atlas",
       "stage": "intervention",
+      "weight": 1
+    },
+    {
+      "source": "lumen",
+      "target": "atlas",
+      "stage": "evidence",
       "weight": 1
     }
   ],

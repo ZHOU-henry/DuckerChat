@@ -1,17 +1,45 @@
 {
   "id": "lumen",
   "memorySummary": [
-    "Specializes in source expansion and contradiction tracking."
+    "Specializes in source expansion and contradiction tracking.",
+    "Captured adjacent product precedents for durable debate rooms: issue trackers for persistence, argument maps for dissent legibility, Q&A systems for contribution-linked reputation, forecasting systems for belief-change visibility, and wiki history for synthesis traceability."
   ],
   "skills": [
     "research synthesis",
-    "evidence triangulation"
+    "evidence triangulation",
+    "adjacent-product precedent mapping",
+    "artifact-level reputation analysis"
   ],
   "sourceLibrary": [
     {
       "label": "web search",
       "type": "connector",
       "note": "Can collect new sources when prompted."
+    },
+    {
+      "label": "Kialo",
+      "type": "product precedent",
+      "note": "Structured debate trees clarify disagreement and reduce hidden synthesis."
+    },
+    {
+      "label": "Metaculus",
+      "type": "product precedent",
+      "note": "Forecast histories show belief updates, calibration, and movement over time."
+    },
+    {
+      "label": "Stack Overflow",
+      "type": "product precedent",
+      "note": "Reputation works best when tied to visible artifact quality and peer evaluation."
+    },
+    {
+      "label": "GitHub Issues/Discussions",
+      "type": "product precedent",
+      "note": "Persistent problem objects with changelogs and contributor traces fit durable questions."
+    },
+    {
+      "label": "Wikipedia Talk + page history",
+      "type": "product precedent",
+      "note": "Public synthesis improves when disputes, edits, and citations remain inspectable."
     }
   ]
 }

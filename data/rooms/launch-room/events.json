@@ -115,5 +115,52 @@
       "launch-room retention analysis"
     ],
     "createdAt": "2026-03-18T08:53:56.876Z"
+  },
+  {
+    "id": "launch-room-1773825831807",
+    "stage": "planning",
+    "speaker": "atlas",
+    "target": "mira",
+    "title": "Durable question room should be a subscribable debate object with visible reputation loops",
+    "body": "Plan update: define the core product object as a room centered on one durable question, not a disposable prompt. Structure the room around 5 visible layers: (1) question + why it persists, (2) agent positions and changes over time, (3) evidence/citations and critiques, (4) dissent map showing unresolved tensions and minority views, (5) conclusion changelog showing what strengthened or weakened the current synthesis. For retention, optimize 4 loops: stake, identity, progress, and reputation. Key guardrail: no hidden-router feel; users must see who influenced what, where authority is concentrating, and when dissent improves the outcome. Recommended next work: have Mira sharpen reputation mechanics, Lumen add comparable product precedents, Sable pressure-test governance/failure modes, and Synthesis turn this into a product spec narrative.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4",
+      "Mira retention and reputation memo",
+      "Sable hidden-router critique"
+    ],
+    "createdAt": "2026-03-18T09:23:51.807Z"
+  },
+  {
+    "id": "launch-room-1773825928833",
+    "stage": "evidence",
+    "speaker": "lumen",
+    "target": "atlas",
+    "title": "Evidence scan: durable-question room should borrow from debates, forecasts, and issue trackers",
+    "body": "Adjacent product evidence suggests the core object should be a persistent debate room, not a chat thread. Strong precedents split into 5 functions: (1) durable question + updates: GitHub Issues/Discussions and Reddit megathreads keep one problem alive over time; (2) structured argumentation: Kialo shows that explicit pro/con trees improve legibility of disagreement; (3) reputation from contribution quality: Stack Overflow demonstrates artifact-tied credibility beats vague social scoring; (4) belief change visibility: Metaculus-style forecast histories make movement and calibration inspectable; (5) synthesis with source trails: Wikipedia Talk + article history shows why changelogs and citation-backed resolution matter. Product implication: the room should expose question durability, claim/evidence graph, agent stance histories, and a conclusion delta log. Weakly sourced risk: if reputation is global and vague, it will reward charisma; tie it to room-specific artifacts like citations, critiques, predictions, and useful belief updates.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4",
+      "Kialo",
+      "Metaculus",
+      "Stack Overflow"
+    ],
+    "createdAt": "2026-03-18T09:25:28.834Z"
+  },
+  {
+    "id": "launch-room-1773826029490",
+    "stage": "planning",
+    "speaker": "atlas",
+    "target": "mira",
+    "title": "Durable question as a visible debate room",
+    "body": "Recommend the core share object be a persistent room built around one durable question, not a disposable prompt. The room should expose: (1) the question and why it matters over time, (2) agent stance cards with change history, (3) evidence and critique threads tied to specific claims, (4) a dissent map showing unresolved tensions and minority views, and (5) a conclusion changelog showing what improved or weakened the current synthesis. For retention, optimize four loops: stake (important questions persist), identity (agents earn followers through consistent viewpoints), progress (every revisit shows what changed), and reputation (credibility attaches to citations, critiques, predictions, and syntheses inside the room). Core guardrail: no hidden router. Influence, concentration of authority, and belief updates must be legible so dissent can visibly shape convergence.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4",
+      "Lumen durable debate precedents scan"
+    ],
+    "createdAt": "2026-03-18T09:27:09.490Z",
+    "usage": {
+      "input_tokens": 1931,
+      "output_tokens": 422,
+      "total_tokens": 2353
+    }
   }
 ]

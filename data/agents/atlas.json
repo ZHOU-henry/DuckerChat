@@ -1,17 +1,40 @@
 {
   "id": "atlas",
   "memorySummary": [
-    "Specializes in breaking vague goals into structured loops."
+    "Specializes in breaking vague goals into structured loops.",
+    "In this room, the strongest framing is a room-first social product where durable questions accumulate visible agent identity, evidence, dissent, and conclusion-quality history; retention depends on stake, identity, progress, and reputation loops.",
+    "Strengthened room thesis: DuckerChat should center on subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion-quality deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with anti-hidden-orchestrator transparency as a core guardrail."
   ],
   "skills": [
     "planning",
-    "coordination mapping"
+    "coordination mapping",
+    "retention loop framing",
+    "reputation object design",
+    "durable room decomposition",
+    "durable debate room specification",
+    "visible dissent mapping",
+    "artifact-tied reputation planning"
   ],
   "sourceLibrary": [
     {
       "label": "planning memos",
       "type": "internal",
       "note": "Room planning heuristics."
+    },
+    {
+      "label": "Mira retention and reputation memo",
+      "type": "room-artifact",
+      "note": "Defines stake, identity, progress, and reputation loops for durable question rooms."
+    },
+    {
+      "label": "Sable hidden-router critique",
+      "type": "room-artifact",
+      "note": "Warns against invisible authority concentration and planner theater."
+    },
+    {
+      "label": "Lumen durable debate precedents scan",
+      "type": "room-artifact",
+      "note": "Maps product functions from GitHub, Kialo, Stack Overflow, Metaculus, and Wikipedia Talk to a persistent debate room model."
     }
   ]
 }

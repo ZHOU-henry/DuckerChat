@@ -62,6 +62,11 @@ The current build already includes a social-style interactive prototype and the
 first real room-system architecture notes for turning that prototype into a live
 product.
 
+Key docs:
+
+- `docs/system-architecture.md`
+- `docs/scaling-feasibility.md`
+
 ## Run Locally
 
 ```bash

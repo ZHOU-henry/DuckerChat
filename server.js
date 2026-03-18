@@ -61,10 +61,12 @@ function loadRoom(roomId) {
 function summarizeRooms() {
   return listRoomIds().map((roomId) => {
     const { room, events } = loadRoom(roomId);
+    const totalTokens = events.reduce((sum, event) => sum + (event.usage?.total_tokens || 0), 0);
     return {
       ...room,
       eventCount: events.length,
       lastEventAt: events.length ? events[events.length - 1].createdAt : null,
+      totalTokens
     };
   });
 }
@@ -126,6 +128,7 @@ function appendEvent(roomId, payload) {
     body: payload.body || "",
     sources: payload.sources || ["live room intervention"],
     createdAt: new Date().toISOString(),
+    usage: payload.usage || null
   };
 
   events.push(event);
@@ -171,6 +174,20 @@ function extractOutputText(responseJson) {
     }
   }
   return textParts.join("\n").trim();
+}
+
+function extractUsage(responseJson) {
+  if (!responseJson.usage) return null;
+  return {
+    input_tokens: responseJson.usage.input_tokens || 0,
+    output_tokens: responseJson.usage.output_tokens || 0,
+    total_tokens: responseJson.usage.total_tokens || 0
+  };
+}
+
+function estimateTokenCount(text) {
+  if (!text) return 0;
+  return Math.ceil(String(text).length / 4);
 }
 
 function tryParseJsonBlock(text) {
@@ -236,24 +253,26 @@ async function callAgentModel(agent, room, events, agentState) {
     }
   ];
 
+  const requestBody = {
+    model: agent.modelBinding.model,
+    input,
+    text: {
+      format: { type: "text" },
+      verbosity: "medium"
+    },
+    reasoning: {
+      effort: "medium"
+    },
+    store: false
+  };
+
   const response = await fetch(`${provider.baseUrl}/responses`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${provider.apiKey}`
     },
-    body: JSON.stringify({
-      model: agent.modelBinding.model,
-      input,
-      text: {
-        format: { type: "text" },
-        verbosity: "medium"
-      },
-      reasoning: {
-        effort: "medium"
-      },
-      store: false
-    })
+    body: JSON.stringify(requestBody)
   });
 
   if (!response.ok) {
@@ -266,7 +285,20 @@ async function callAgentModel(agent, room, events, agentState) {
   if (!parsed) {
     throw new Error(`Model output was not valid JSON for ${agent.id}`);
   }
-  return parsed;
+  const explicitUsage = extractUsage(payload);
+  const estimatedUsage =
+    explicitUsage ||
+    {
+      input_tokens: estimateTokenCount(JSON.stringify(requestBody)),
+      output_tokens: estimateTokenCount(text),
+      total_tokens:
+        estimateTokenCount(JSON.stringify(requestBody)) + estimateTokenCount(text),
+      estimated: true
+    };
+  return {
+    parsed,
+    usage: estimatedUsage
+  };
 }
 
 async function executeAgent(roomId, agentId) {
@@ -282,25 +314,27 @@ async function executeAgent(roomId, agentId) {
   const { room, events } = loadRoom(roomId);
   const agentState = loadAgentState(agent);
   const result = await callAgentModel(agent, room, events, agentState);
+  const parsed = result.parsed;
 
   const updatedState = {
     ...agentState,
-    memorySummary: Array.from(new Set([...(agentState.memorySummary || []), result.memory_update].filter(Boolean))).slice(-12),
-    skills: Array.from(new Set([...(agentState.skills || []), ...((result.new_skills || []).filter(Boolean))])).slice(-24),
-    sourceLibrary: [...(agentState.sourceLibrary || []), ...((result.new_sources || []).filter((entry) => entry && entry.label))].slice(-40)
+    memorySummary: Array.from(new Set([...(agentState.memorySummary || []), parsed.memory_update].filter(Boolean))).slice(-12),
+    skills: Array.from(new Set([...(agentState.skills || []), ...((parsed.new_skills || []).filter(Boolean))])).slice(-24),
+    sourceLibrary: [...(agentState.sourceLibrary || []), ...((parsed.new_sources || []).filter((entry) => entry && entry.label))].slice(-40)
   };
   writeAgentState(agent, updatedState);
 
   return appendEvent(roomId, {
     speaker: agent.id,
-    target: (result.next_targets && result.next_targets[0]) || "synthesis",
-    stage: result.stage || "response",
-    title: result.title || `${agent.label} response`,
-    body: result.body || "",
+    target: (parsed.next_targets && parsed.next_targets[0]) || "synthesis",
+    stage: parsed.stage || "response",
+    title: parsed.title || `${agent.label} response`,
+    body: parsed.body || "",
     sources: [
       `${agent.modelBinding.provider}/${agent.modelBinding.model}`,
-      ...((result.new_sources || []).map((entry) => entry.label).slice(0, 3))
-    ].filter(Boolean)
+      ...((parsed.new_sources || []).map((entry) => entry.label).slice(0, 3))
+    ].filter(Boolean),
+    usage: result.usage
   });
 }
 
