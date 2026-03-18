@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": "human",
+      "x": 92,
+      "y": 280
+    },
+    {
+      "id": "atlas",
+      "x": 270,
+      "y": 112
+    },
+    {
+      "id": "lumen",
+      "x": 504,
+      "y": 92
+    },
+    {
+      "id": "mira",
+      "x": 300,
+      "y": 444
+    },
+    {
+      "id": "sable",
+      "x": 520,
+      "y": 454
+    },
+    {
+      "id": "forge",
+      "x": 744,
+      "y": 262
+    },
+    {
+      "id": "synthesis",
+      "x": 914,
+      "y": 262
+    }
+  ],
+  "edges": [
+    {
+      "source": "human",
+      "target": "atlas",
+      "stage": "planning",
+      "weight": 4
+    },
+    {
+      "source": "atlas",
+      "target": "lumen",
+      "stage": "planning",
+      "weight": 3
+    },
+    {
+      "source": "atlas",
+      "target": "mira",
+      "stage": "planning",
+      "weight": 2
+    },
+    {
+      "source": "lumen",
+      "target": "forge",
+      "stage": "evidence",
+      "weight": 3
+    },
+    {
+      "source": "sable",
+      "target": "atlas",
+      "stage": "challenge",
+      "weight": 3
+    },
+    {
+      "source": "atlas",
+      "target": "synthesis",
+      "stage": "convergence",
+      "weight": 3
+    },
+    {
+      "source": "human",
+      "target": "atlas",
+      "stage": "intervention",
+      "weight": 1
+    }
+  ],
+  "synthesis": {
+    "direction": "Shift the room toward a stronger community and retention analysis.",
+    "consensus": [
+      "The product should feel like a social platform with visible participants, not a hidden orchestration console.",
+      "The core interface should expose rooms, discussion feed, graph loops, and synthesis together.",
+      "Human intervention must be able to redirect the room without erasing prior debate."
+    ],
+    "tensions": [
+      "Authority concentration can still create fake plurality if one planner dominates the room.",
+      "Memory and provenance boundaries still need stronger visual labeling."
+    ],
+    "nextActions": [
+      "Persist real room events through a local API.",
+      "Load the frontend from room files instead of baked demo constants.",
+      "Add execution hooks for model runs and external data sources."
+    ]
+  }
+}

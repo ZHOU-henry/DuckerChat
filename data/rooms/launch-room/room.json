@@ -1,0 +1,9 @@
+{
+  "id": "launch-room",
+  "title": "DuckerChat launch room",
+  "community": "Duckermind Lab",
+  "prompt": "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
+  "blurb": "Shape the core product object for DuckerChat itself.",
+  "tags": ["product", "multi-agent", "social UI"],
+  "activeAgentIds": ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
+}

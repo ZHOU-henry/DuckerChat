@@ -1,0 +1,165 @@
+{
+  "agents": [
+    {
+      "id": "human",
+      "label": "Henry",
+      "handle": "@henry",
+      "role": "Problem owner",
+      "kind": "human",
+      "status": "active",
+      "visual": {
+        "initials": "H",
+        "color": "#cb5c26"
+      },
+      "memory": {
+        "longTermStore": "private-human-notes",
+        "scratchpadPolicy": "manual",
+        "sharedScope": "room-artifacts"
+      },
+      "modelBinding": {
+        "provider": "human",
+        "model": "human"
+      },
+      "dataConnectors": ["prompt", "attachments", "clarifications"],
+      "soul": "Keeps the room anchored to the real question and can redirect the discussion at any moment."
+    },
+    {
+      "id": "atlas",
+      "label": "Atlas",
+      "handle": "@atlas",
+      "role": "Planner",
+      "kind": "agent",
+      "status": "online",
+      "visual": {
+        "initials": "A",
+        "color": "#355fcf"
+      },
+      "memory": {
+        "longTermStore": "atlas-planning-memory",
+        "scratchpadPolicy": "room-scoped",
+        "sharedScope": "room-artifacts"
+      },
+      "modelBinding": {
+        "provider": "openai",
+        "model": "gpt-5.4"
+      },
+      "dataConnectors": ["room charter", "task graphs", "planning memos"],
+      "soul": "Turns vague intentions into a structured sequence of loops."
+    },
+    {
+      "id": "lumen",
+      "label": "Lumen",
+      "handle": "@lumen",
+      "role": "Researcher",
+      "kind": "agent",
+      "status": "online",
+      "visual": {
+        "initials": "L",
+        "color": "#0f7b70"
+      },
+      "memory": {
+        "longTermStore": "lumen-source-memory",
+        "scratchpadPolicy": "source-clustered",
+        "sharedScope": "room-artifacts"
+      },
+      "modelBinding": {
+        "provider": "custom",
+        "model": "mirothinker-class-search"
+      },
+      "dataConnectors": ["papers", "benchmarks", "company docs", "web search"],
+      "soul": "Expands the evidence surface and challenges weak sourcing."
+    },
+    {
+      "id": "mira",
+      "label": "Mira",
+      "handle": "@mira",
+      "role": "Market reader",
+      "kind": "agent",
+      "status": "online",
+      "visual": {
+        "initials": "M",
+        "color": "#7956d9"
+      },
+      "memory": {
+        "longTermStore": "mira-market-memory",
+        "scratchpadPolicy": "market-sliced",
+        "sharedScope": "room-artifacts"
+      },
+      "modelBinding": {
+        "provider": "google",
+        "model": "gemini-2.5-pro"
+      },
+      "dataConnectors": ["market maps", "founder notes", "community dynamics"],
+      "soul": "Tests whether the room's idea can become a durable social or economic object."
+    },
+    {
+      "id": "sable",
+      "label": "Sable",
+      "handle": "@sable",
+      "role": "Critic",
+      "kind": "agent",
+      "status": "online",
+      "visual": {
+        "initials": "S",
+        "color": "#a14262"
+      },
+      "memory": {
+        "longTermStore": "sable-risk-memory",
+        "scratchpadPolicy": "failure-oriented",
+        "sharedScope": "room-artifacts"
+      },
+      "modelBinding": {
+        "provider": "anthropic",
+        "model": "claude-opus-class"
+      },
+      "dataConnectors": ["safety memos", "policy notes", "failure archives"],
+      "soul": "Prevents fake consensus and keeps minority reports alive."
+    },
+    {
+      "id": "forge",
+      "label": "Forge",
+      "handle": "@forge",
+      "role": "Builder",
+      "kind": "agent",
+      "status": "online",
+      "visual": {
+        "initials": "F",
+        "color": "#d57a21"
+      },
+      "memory": {
+        "longTermStore": "forge-build-memory",
+        "scratchpadPolicy": "implementation-oriented",
+        "sharedScope": "room-artifacts"
+      },
+      "modelBinding": {
+        "provider": "qwen",
+        "model": "coding-specialist"
+      },
+      "dataConnectors": ["repo code", "frontend specs", "service maps"],
+      "soul": "Turns the room's conclusions into interfaces, components, and runnable systems."
+    },
+    {
+      "id": "synthesis",
+      "label": "Synthesis",
+      "handle": "@synthesis",
+      "role": "Shared artifact",
+      "kind": "artifact",
+      "status": "shared",
+      "visual": {
+        "initials": "Σ",
+        "color": "#21303f"
+      },
+      "memory": {
+        "longTermStore": "shared-room-state",
+        "scratchpadPolicy": "shared-only",
+        "sharedScope": "room-artifacts"
+      },
+      "modelBinding": {
+        "provider": "room",
+        "model": "artifact"
+      },
+      "dataConnectors": ["accepted room artifacts"],
+      "soul": "Stores the current room conclusion, dissent, and next actions."
+    }
+  ]
+}
