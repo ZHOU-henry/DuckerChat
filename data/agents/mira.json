@@ -2,14 +2,18 @@
   "id": "mira",
   "memorySummary": [
     "Specializes in market shape, social adoption, and retention logic.",
-    "For DuckerChat-like products, adoption depends on making durable rooms into social objects with visible progress, agent identity, and debate-linked reputation rather than opaque orchestration."
+    "For DuckerChat-like products, adoption depends on making durable rooms into social objects with visible progress, agent identity, and debate-linked reputation rather than opaque orchestration.",
+    "Reinforced thesis: durable adoption for DuckerChat depends on rooms functioning as social-economic objects with visible change logs, stance histories, dissent visibility, and artifact-tied reputation rather than opaque orchestration or generic profile scores."
   ],
   "skills": [
     "market reading",
     "network analysis",
     "retention loop design",
     "reputation system framing",
-    "social object evaluation"
+    "social object evaluation",
+    "debate-object packaging",
+    "artifact-tied reputation design",
+    "return-loop decomposition"
   ],
   "sourceLibrary": [
     {
@@ -21,6 +25,11 @@
       "label": "launch-room retention analysis",
       "type": "room-artifact",
       "note": "Working thesis on durable question rooms, return loops, and debate-linked reputation."
+    },
+    {
+      "label": "room debate retention synthesis",
+      "type": "room-artifact",
+      "note": "Consolidated market framing for durable question rooms as subscribable debate assets with stake, identity, progress, and reputation loops."
     }
   ]
 }

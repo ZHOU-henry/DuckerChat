@@ -10,6 +10,8 @@ const DATA_ROOT = path.join(ROOT, "data", "rooms");
 const CONFIG_ROOT = path.join(ROOT, "config");
 const PROTOTYPE_ROOT = path.join(ROOT, "prototype");
 const OPENCLAW_CONFIG_PATH = path.join(process.env.HOME || "/home/henry", ".openclaw", "openclaw.json");
+const ROOM_TICKERS = new Map();
+const STALE_RUN_MS = 60_000;
 
 const MIME_TYPES = {
   ".css": "text/css; charset=utf-8",
@@ -55,20 +57,51 @@ function loadRoom(roomId) {
     room: readJson(path.join(roomDir, "room.json")),
     events: readJson(path.join(roomDir, "events.json")),
     graphState: readJson(path.join(roomDir, "graph-state.json")),
+    runtimeState: readJson(path.join(roomDir, "runtime.json")),
   };
 }
 
 function summarizeRooms() {
   return listRoomIds().map((roomId) => {
-    const { room, events } = loadRoom(roomId);
+    const { room, events, runtimeState } = loadRoom(roomId);
     const totalTokens = events.reduce((sum, event) => sum + (event.usage?.total_tokens || 0), 0);
     return {
       ...room,
       eventCount: events.length,
       lastEventAt: events.length ? events[events.length - 1].createdAt : null,
-      totalTokens
+      totalTokens,
+      queueDepth: runtimeState.scheduler.queue.length,
+      schedulerEnabled: runtimeState.scheduler.enabled
     };
   });
+}
+
+function runtimeStatePath(roomId) {
+  return path.join(DATA_ROOT, roomId, "runtime.json");
+}
+
+function archivedEventsPath(roomId) {
+  return path.join(DATA_ROOT, roomId, "archived-events.json");
+}
+
+function writeRuntimeState(roomId, value) {
+  writeJson(runtimeStatePath(roomId), value);
+}
+
+function loadRuntimeState(roomId) {
+  return readJson(runtimeStatePath(roomId));
+}
+
+function reconcileRuntimeState(roomId) {
+  const runtimeState = loadRuntimeState(roomId);
+  const now = Date.now();
+  runtimeState.scheduler.activeRuns = (runtimeState.scheduler.activeRuns || []).filter((entry) => {
+    const started = Date.parse(entry.startedAt || "");
+    if (!Number.isFinite(started)) return false;
+    return now - started < STALE_RUN_MS;
+  });
+  writeRuntimeState(roomId, runtimeState);
+  return runtimeState;
 }
 
 function sendJson(res, statusCode, payload) {
@@ -116,8 +149,10 @@ function appendEvent(roomId, payload) {
   const roomDir = path.join(DATA_ROOT, roomId);
   const eventsPath = path.join(roomDir, "events.json");
   const graphPath = path.join(roomDir, "graph-state.json");
+  const runtimePath = runtimeStatePath(roomId);
   const events = readJson(eventsPath);
   const graphState = readJson(graphPath);
+  const runtimeState = readJson(runtimePath);
 
   const event = {
     id: payload.id || `${roomId}-${Date.now()}`,
@@ -153,9 +188,80 @@ function appendEvent(roomId, payload) {
     graphState.synthesis.direction = event.body;
   }
 
+  if (event.usage?.total_tokens) {
+    runtimeState.metrics.totalAgentRuns += event.speaker === "human" ? 0 : 1;
+    runtimeState.metrics.totalTokens += event.usage.total_tokens;
+    runtimeState.budgets.tokenBudgetRemaining = Math.max(
+      0,
+      runtimeState.budgets.tokenBudgetRemaining - event.usage.total_tokens
+    );
+  }
+
   writeJson(eventsPath, events);
   writeJson(graphPath, graphState);
+  writeJson(runtimePath, runtimeState);
   return event;
+}
+
+function enqueueAgent(roomId, agentId, reason) {
+  const runtimeState = loadRuntimeState(roomId);
+  const queue = runtimeState.scheduler.queue || [];
+  if (
+    queue.some((entry) => entry.agentId === agentId) ||
+    (runtimeState.scheduler.activeRuns || []).some((entry) => entry.agentId === agentId)
+  ) {
+    return;
+  }
+  if (queue.length >= runtimeState.budgets.maxQueuedAgents) {
+    return;
+  }
+  queue.push({
+    agentId,
+    reason,
+    enqueuedAt: new Date().toISOString()
+  });
+  runtimeState.scheduler.queue = queue;
+  writeRuntimeState(roomId, runtimeState);
+}
+
+function queueSuggestedTargets(roomId, targets, reason) {
+  for (const target of targets || []) {
+    if (!target || target === "synthesis") continue;
+    enqueueAgent(roomId, target, reason);
+  }
+}
+
+function compactRoomIfNeeded(roomId) {
+  const { events, runtimeState } = loadRoom(roomId);
+  const { compactBatchSize, keepRecentEvents, summaryNotes } = runtimeState.compaction;
+  if (events.length <= keepRecentEvents + compactBatchSize) {
+    return;
+  }
+
+  const archivePath = archivedEventsPath(roomId);
+  const archived = readJson(archivePath);
+  const compacted = events.slice(0, compactBatchSize);
+  const retained = events.slice(compactBatchSize);
+
+  const uniqueSpeakers = Array.from(new Set(compacted.map((event) => event.speaker)));
+  summaryNotes.push({
+    id: `${roomId}-summary-${Date.now()}`,
+    fromEventId: compacted[0].id,
+    toEventId: compacted[compacted.length - 1].id,
+    eventCount: compacted.length,
+    speakers: uniqueSpeakers,
+    summary:
+      compacted
+        .map((event) => `${event.speaker}: ${event.title}`)
+        .join(" | ")
+        .slice(0, 600),
+    createdAt: new Date().toISOString()
+  });
+
+  runtimeState.compaction.summaryNotes = summaryNotes.slice(-30);
+  writeJson(path.join(DATA_ROOT, roomId, "events.json"), retained);
+  writeJson(archivePath, archived.concat(compacted));
+  writeRuntimeState(roomId, runtimeState);
 }
 
 function getOpenClawProvider() {
@@ -311,8 +417,11 @@ async function executeAgent(roomId, agentId) {
     throw new Error(`Agent ${agentId} is not executable`);
   }
 
-  const { room, events } = loadRoom(roomId);
+  const { room, events, runtimeState } = loadRoom(roomId);
   const agentState = loadAgentState(agent);
+  if (runtimeState.budgets.tokenBudgetRemaining <= 0) {
+    throw new Error(`Room ${roomId} has exhausted its token budget`);
+  }
   const result = await callAgentModel(agent, room, events, agentState);
   const parsed = result.parsed;
 
@@ -324,7 +433,7 @@ async function executeAgent(roomId, agentId) {
   };
   writeAgentState(agent, updatedState);
 
-  return appendEvent(roomId, {
+  const event = appendEvent(roomId, {
     speaker: agent.id,
     target: (parsed.next_targets && parsed.next_targets[0]) || "synthesis",
     stage: parsed.stage || "response",
@@ -336,6 +445,68 @@ async function executeAgent(roomId, agentId) {
     ].filter(Boolean),
     usage: result.usage
   });
+  queueSuggestedTargets(roomId, parsed.next_targets, `suggested-by-${agent.id}`);
+  compactRoomIfNeeded(roomId);
+  return event;
+}
+
+async function processSchedulerTick(roomId) {
+  const runtimeState = reconcileRuntimeState(roomId);
+  runtimeState.scheduler.lastTickAt = new Date().toISOString();
+
+  if (!runtimeState.scheduler.enabled) {
+    writeRuntimeState(roomId, runtimeState);
+    return;
+  }
+
+  if (runtimeState.scheduler.activeRuns.length >= runtimeState.scheduler.maxConcurrentRuns) {
+    writeRuntimeState(roomId, runtimeState);
+    return;
+  }
+
+  const next = runtimeState.scheduler.queue.shift();
+  if (!next) {
+    writeRuntimeState(roomId, runtimeState);
+    return;
+  }
+
+  runtimeState.scheduler.activeRuns.push({
+    agentId: next.agentId,
+    startedAt: new Date().toISOString(),
+    reason: next.reason
+  });
+  writeRuntimeState(roomId, runtimeState);
+
+  try {
+    await executeAgent(roomId, next.agentId);
+  } catch (error) {
+    appendEvent(roomId, {
+      speaker: "synthesis",
+      target: null,
+      stage: "system",
+      title: "Scheduler execution warning",
+      body: `${next.agentId} did not complete: ${error.message}`,
+      sources: ["scheduler"]
+    });
+  } finally {
+    const refreshed = loadRuntimeState(roomId);
+    refreshed.scheduler.activeRuns = refreshed.scheduler.activeRuns.filter(
+      (entry) => entry.agentId !== next.agentId
+    );
+    refreshed.scheduler.lastRunAt = new Date().toISOString();
+    writeRuntimeState(roomId, refreshed);
+  }
+}
+
+function ensureRoomTicker(roomId) {
+  if (ROOM_TICKERS.has(roomId)) return;
+  const runtimeState = reconcileRuntimeState(roomId);
+  const ticker = setInterval(() => {
+    processSchedulerTick(roomId).catch((error) => {
+      console.error(`scheduler tick failed for ${roomId}`, error);
+    });
+  }, runtimeState.scheduler.intervalMs || 2500);
+  ROOM_TICKERS.set(roomId, ticker);
 }
 
 const server = http.createServer(async (req, res) => {
@@ -383,7 +554,7 @@ const server = http.createServer(async (req, res) => {
       } else if (suffix === "graph") {
         sendJson(res, 200, graphState);
       } else if (suffix === "room" || !suffix) {
-        sendJson(res, 200, { room, events, graphState });
+        sendJson(res, 200, { room, events, graphState, runtimeState: loadRuntimeState(roomId) });
       } else {
         notFound(res);
       }
@@ -394,6 +565,10 @@ const server = http.createServer(async (req, res) => {
       try {
         const body = await collectBody(req);
         const event = appendEvent(roomId, body);
+        if (body.speaker === "human" && body.target) {
+          enqueueAgent(roomId, body.target, "human-target");
+          enqueueAgent(roomId, "sable", "critic-followup");
+        }
         sendJson(res, 201, { event });
       } catch (error) {
         sendJson(res, 400, { error: error.message });
@@ -413,6 +588,31 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  const schedulerMatch = pathname.match(/^\/api\/rooms\/([^/]+)\/scheduler\/(status|nudge|toggle)$/);
+  if (schedulerMatch) {
+    const roomId = schedulerMatch[1];
+    const action = schedulerMatch[2];
+    if (req.method === "GET" && action === "status") {
+      sendJson(res, 200, loadRuntimeState(roomId));
+      return;
+    }
+    if (req.method === "POST" && action === "toggle") {
+      const runtimeState = loadRuntimeState(roomId);
+      runtimeState.scheduler.enabled = !runtimeState.scheduler.enabled;
+      writeRuntimeState(roomId, runtimeState);
+      sendJson(res, 200, runtimeState);
+      return;
+    }
+    if (req.method === "POST" && action === "nudge") {
+      const body = await collectBody(req);
+      const { room } = loadRoom(roomId);
+      const activeTargets = body.agentIds && body.agentIds.length ? body.agentIds : room.activeAgentIds.filter((id) => !["human", "synthesis"].includes(id));
+      activeTargets.slice(0, 3).forEach((agentId) => enqueueAgent(roomId, agentId, "manual-nudge"));
+      sendJson(res, 200, loadRuntimeState(roomId));
+      return;
+    }
+  }
+
   const filePath =
     pathname === "/" ? path.join(PROTOTYPE_ROOT, "index.html") : path.join(PROTOTYPE_ROOT, pathname.slice(1));
   if (filePath.startsWith(PROTOTYPE_ROOT) && fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
@@ -424,5 +624,8 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, HOST, () => {
+  for (const roomId of listRoomIds()) {
+    ensureRoomTicker(roomId);
+  }
   console.log(`DuckerChat running at http://${HOST}:${PORT}`);
 });

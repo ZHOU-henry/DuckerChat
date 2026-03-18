@@ -96,6 +96,12 @@
       "target": "atlas",
       "stage": "evidence",
       "weight": 1
+    },
+    {
+      "source": "mira",
+      "target": "sable",
+      "stage": "convergence",
+      "weight": 1
     }
   ],
   "synthesis": {

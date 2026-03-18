@@ -46,6 +46,7 @@ const state = {
   activeStage: "all",
   selectedNode: null,
   roomBundle: null,
+  mode: "live",
 };
 
 const FALLBACK_AGENTS = [
@@ -294,6 +295,7 @@ async function loadBootstrap() {
     state.rooms = roomPayload.rooms;
     state.activeRoomId = state.rooms[0]?.id || null;
     state.selectedNode = "atlas";
+    state.mode = "live";
     if (state.activeRoomId) {
       await loadRoomBundle(state.activeRoomId);
     }
@@ -309,11 +311,8 @@ async function loadBootstrap() {
     ];
     state.activeRoomId = FALLBACK_ROOM_BUNDLE.room.id;
     state.selectedNode = "atlas";
-    state.roomBundle = FALLBACK_ROOM_BUNDLE;
-    advanceButtonEl.disabled = true;
-    promptInputEl.disabled = true;
-    targetSelectEl.disabled = true;
-    intentSelectEl.disabled = true;
+    state.mode = "fallback";
+    state.roomBundle = JSON.parse(JSON.stringify(FALLBACK_ROOM_BUNDLE));
     render();
   }
 }
@@ -332,6 +331,93 @@ function activeEvents() {
 
 function activeGraph() {
   return state.roomBundle?.graphState || { nodes: [], edges: [], synthesis: null };
+}
+
+function activeRuntime() {
+  return state.roomBundle?.runtimeState || null;
+}
+
+function appendLocalGraphEdge(source, target, stage) {
+  const graph = activeGraph();
+  const existing = graph.edges.find(
+    (edge) => edge.source === source && edge.target === target && edge.stage === stage
+  );
+  if (existing) {
+    existing.weight += 1;
+  } else if (target) {
+    graph.edges.push({ source, target, stage, weight: 1 });
+  }
+}
+
+function addFallbackEvent(event) {
+  state.roomBundle.events.push({
+    ...event,
+    id: event.id || `${state.activeRoomId}-${Date.now()}`,
+    createdAt: new Date().toISOString()
+  });
+  appendLocalGraphEdge(event.speaker, event.target, event.stage);
+  if (event.speaker === "human") {
+    state.roomBundle.graphState.synthesis.direction = event.body;
+  }
+}
+
+function simulateFallbackAgent(agentId, promptText) {
+  const agent = byId(state.agents, agentId);
+  const room = activeRoom();
+  const responseMap = {
+    atlas: {
+      stage: "planning",
+      title: "Planner reframes the room",
+      body: `DuckerChat should treat "${room.prompt}" as a durable room object. The latest human steer is "${promptText}". I would re-route the next loop toward structure, participation, and explicit dissent.`,
+      target: "lumen",
+      skill: "room planning"
+    },
+    lumen: {
+      stage: "evidence",
+      title: "Research agent expands sources",
+      body: `I would search for adjacent precedents, contradiction points, and missing evidence around "${promptText}". The value of DuckerChat rises when each room keeps a live source trail rather than a closed answer.`,
+      target: "forge",
+      skill: "source expansion"
+    },
+    mira: {
+      stage: "evidence",
+      title: "Market agent studies retention",
+      body: `The strongest social object here is a subscribable room where the question, agent positions, and conclusion history evolve in public. "${promptText}" pushes the room toward stronger retention and reputation design.`,
+      target: "synthesis",
+      skill: "retention design"
+    },
+    sable: {
+      stage: "challenge",
+      title: "Critic preserves dissent",
+      body: `The risk is fake plurality. "${promptText}" should not just create more messages; it should change which voices get activated and which minority reports stay visible.`,
+      target: "atlas",
+      skill: "dissent preservation"
+    },
+    forge: {
+      stage: "convergence",
+      title: "Builder updates the room surface",
+      body: `The product implication of "${promptText}" is a stronger social shell: room list, live discussion feed, graph rail, and synthesis rail all updating together.`,
+      target: "synthesis",
+      skill: "interface synthesis"
+    }
+  };
+  const template = responseMap[agentId] || responseMap.atlas;
+  if (agent.state) {
+    agent.state.memorySummary = Array.from(
+      new Set([...(agent.state.memorySummary || []), template.body])
+    ).slice(-8);
+    agent.state.skills = Array.from(
+      new Set([...(agent.state.skills || []), template.skill])
+    ).slice(-12);
+  }
+  addFallbackEvent({
+    speaker: agentId,
+    target: template.target,
+    stage: template.stage,
+    title: template.title,
+    body: template.body,
+    sources: ["fallback-demo"]
+  });
 }
 
 function nextStageTemplate() {
@@ -409,10 +495,13 @@ function renderHeader() {
   roomTagsEl.innerHTML = room.tags.map((tag) => `<span class="chorus-tag">${tag}</span>`).join("");
   const participantCount = room.activeAgentIds.length;
   const humanMessages = activeEvents().filter((event) => event.speaker === "human").length;
+  const runtime = activeRuntime();
   roomStatsEl.innerHTML = `
     <span class="chorus-stat-pill">${participantCount} participants</span>
     <span class="chorus-stat-pill">${activeEvents().length} room events</span>
     <span class="chorus-stat-pill">${humanMessages} human interventions</span>
+    ${runtime ? `<span class="chorus-stat-pill">queue ${runtime.scheduler.queue.length}</span>` : ""}
+    ${runtime ? `<span class="chorus-stat-pill">budget ${runtime.budgets.tokenBudgetRemaining}</span>` : ""}
   `;
 }
 
@@ -643,6 +732,21 @@ async function handleHumanSubmit(event) {
   if (!body) return;
   const target = targetSelectEl.value;
   const intent = intentSelectEl.value;
+  if (state.mode === "fallback") {
+    addFallbackEvent({
+      speaker: "human",
+      target,
+      stage: "intervention",
+      title: `Human ${intent}`,
+      body,
+      sources: ["fallback-demo"]
+    });
+    simulateFallbackAgent(target, body);
+    promptInputEl.value = "";
+    state.selectedNode = target;
+    render();
+    return;
+  }
   await postEvent({
     speaker: "human",
     target,
@@ -651,23 +755,36 @@ async function handleHumanSubmit(event) {
     body,
     sources: ["live room intervention"],
   });
-  await fetchJson(`/api/rooms/${state.activeRoomId}/agents/${target}/run`, {
-    method: "POST"
-  });
   promptInputEl.value = "";
   state.selectedNode = target;
+  await loadRoomBundle(state.activeRoomId);
+  render();
 }
 
 async function handleAdvance() {
-  const candidateAgents = state.agents.filter((agent) => agent.kind === "agent");
-  const selectedAgent =
-    byId(candidateAgents, state.selectedNode) ||
-    candidateAgents[Math.floor(Math.random() * candidateAgents.length)];
-  await fetchJson(`/api/rooms/${state.activeRoomId}/agents/${selectedAgent.id}/run`, {
+  if (state.mode === "fallback") {
+    const candidateAgents = state.agents.filter((agent) => agent.kind === "agent");
+    const fallbackAgent =
+      byId(candidateAgents, state.selectedNode) ||
+      candidateAgents[Math.floor(Math.random() * candidateAgents.length)];
+    simulateFallbackAgent(fallbackAgent.id, activeGraph().synthesis.direction);
+    state.selectedNode = fallbackAgent.id;
+    render();
+    return;
+  }
+  const candidateAgents = state.agents.filter((agent) => agent.kind === "agent").map((agent) => agent.id);
+  const selected =
+    state.selectedNode && !["human", "synthesis"].includes(state.selectedNode)
+      ? [state.selectedNode]
+      : candidateAgents.slice(0, 3);
+  await fetchJson(`/api/rooms/${state.activeRoomId}/scheduler/nudge`, {
     method: "POST"
+    ,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ agentIds: selected })
   });
   await loadRoomBundle(state.activeRoomId);
-  state.selectedNode = selectedAgent.id;
+  render();
 }
 
 function wireEvents() {
@@ -695,6 +812,16 @@ function render() {
 async function bootstrap() {
   wireEvents();
   await loadBootstrap();
+  if (state.mode === "fallback") return;
+  setInterval(async () => {
+    if (!state.activeRoomId) return;
+    try {
+      await loadRoomBundle(state.activeRoomId);
+      render();
+    } catch {
+      // keep current UI state if runtime is unreachable
+    }
+  }, 3000);
 }
 
 bootstrap().catch((error) => {

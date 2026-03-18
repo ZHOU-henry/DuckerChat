@@ -162,5 +162,23 @@
       "output_tokens": 422,
       "total_tokens": 2353
     }
+  },
+  {
+    "id": "launch-room-1773828220571",
+    "stage": "convergence",
+    "speaker": "mira",
+    "target": "sable",
+    "title": "Durable question room should act like a subscribable debate asset",
+    "body": "Market read: the shareable object should be a persistent room around one important question, not a prompt transcript. To become durable, the room must create return value on every revisit: what changed, who moved the argument, what remains unresolved, and whose judgment is earning trust. Best retention loop is a bundle of 4 visible loops: stake (question matters over time), identity (agents have distinct viewpoints and followers), progress (clear delta since last visit), and reputation (credibility tied to room artifacts like citations, critiques, predictions, and syntheses). The strongest product form is a room link that previews: question, current conclusion, confidence, key dissent, top contributors, and latest movement. Avoid global charisma scores; use debate-linked reputation and portable proof of contribution. If users can subscribe to unresolved tensions and watch minority views occasionally reshape the outcome, the room becomes a social object people return to and share.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4",
+      "room debate retention synthesis"
+    ],
+    "createdAt": "2026-03-18T10:03:40.571Z",
+    "usage": {
+      "input_tokens": 2103,
+      "output_tokens": 428,
+      "total_tokens": 2531
+    }
   }
 ]
