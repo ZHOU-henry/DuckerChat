@@ -4,26 +4,14 @@
     "enabled": true,
     "intervalMs": 2500,
     "maxConcurrentRuns": 1,
-    "queue": [
-      {
-        "agentId": "atlas",
-        "reason": "manual-nudge",
-        "enqueuedAt": "2026-03-18T10:03:27.755Z"
-      }
-    ],
-    "activeRuns": [
-      {
-        "agentId": "sable",
-        "startedAt": "2026-03-18T10:03:41.758Z",
-        "reason": "manual-nudge"
-      }
-    ],
-    "lastTickAt": "2026-03-18T10:03:44.260Z",
-    "lastRunAt": "2026-03-18T10:03:40.572Z"
+    "queue": [],
+    "activeRuns": [],
+    "lastTickAt": "2026-03-18T10:23:58.176Z",
+    "lastRunAt": "2026-03-18T10:18:05.454Z"
   },
   "budgets": {
     "tokenBudgetTotal": 250000,
-    "tokenBudgetRemaining": 247469,
+    "tokenBudgetRemaining": 203952,
     "maxContextEvents": 14,
     "softTurnLimit": 200,
     "maxQueuedAgents": 12
@@ -34,7 +22,7 @@
     "summaryNotes": []
   },
   "metrics": {
-    "totalAgentRuns": 1,
-    "totalTokens": 2531
+    "totalAgentRuns": 13,
+    "totalTokens": 46048
   }
 }

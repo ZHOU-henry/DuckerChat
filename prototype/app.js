@@ -47,6 +47,7 @@ const state = {
   selectedNode: null,
   roomBundle: null,
   mode: "live",
+  activeModule: "social_rooms",
 };
 
 const FALLBACK_AGENTS = [
@@ -252,6 +253,7 @@ const FALLBACK_ROOM_BUNDLE = {
 const roomListEl = document.querySelector("#roomList");
 const roomCountEl = document.querySelector("#roomCount");
 const agentRosterEl = document.querySelector("#agentRoster");
+const moduleTabsEl = document.querySelector("#moduleTabs");
 const roomCommunityEl = document.querySelector("#roomCommunity");
 const roomTitleEl = document.querySelector("#roomTitle");
 const roomPromptEl = document.querySelector("#roomPrompt");
@@ -259,10 +261,13 @@ const roomTagsEl = document.querySelector("#roomTags");
 const roomStatsEl = document.querySelector("#roomStats");
 const stageFiltersEl = document.querySelector("#stageFilters");
 const timelineMetaEl = document.querySelector("#timelineMeta");
+const feedTitleEl = document.querySelector("#feedTitle");
 const messageListEl = document.querySelector("#messageList");
 const targetSelectEl = document.querySelector("#targetSelect");
 const intentSelectEl = document.querySelector("#intentSelect");
 const promptInputEl = document.querySelector("#promptInput");
+const composerTitleEl = document.querySelector("#composerTitle");
+const composerHintEl = document.querySelector("#composerHint");
 const advanceButtonEl = document.querySelector("#advanceButton");
 const resetButtonEl = document.querySelector("#resetButton");
 const composerEl = document.querySelector("#composer");
@@ -275,6 +280,10 @@ const actionListEl = document.querySelector("#actionList");
 
 function byId(list, id) {
   return list.find((item) => item.id === id);
+}
+
+function roomsForActiveModule() {
+  return state.rooms.filter((room) => room.module === state.activeModule);
 }
 
 async function fetchJson(pathname, init) {
@@ -293,7 +302,7 @@ async function loadBootstrap() {
     ]);
     state.agents = agentPayload.agents;
     state.rooms = roomPayload.rooms;
-    state.activeRoomId = state.rooms[0]?.id || null;
+    state.activeRoomId = state.rooms.find((room) => room.module === state.activeModule)?.id || state.rooms[0]?.id || null;
     state.selectedNode = "atlas";
     state.mode = "live";
     if (state.activeRoomId) {
@@ -426,10 +435,11 @@ function nextStageTemplate() {
 }
 
 function renderRooms() {
-  roomCountEl.textContent = `${state.rooms.length} live rooms`;
+  const rooms = roomsForActiveModule();
+  roomCountEl.textContent = `${rooms.length} live rooms`;
   roomListEl.innerHTML = "";
 
-  state.rooms.forEach((room) => {
+  rooms.forEach((room) => {
     const card = document.createElement("button");
     card.type = "button";
     card.className = `chorus-room-card${room.id === state.activeRoomId ? " active" : ""}`;
@@ -452,6 +462,30 @@ function renderRooms() {
       render();
     });
     roomListEl.appendChild(card);
+  });
+}
+
+function renderModuleTabs() {
+  const modules = [
+    { id: "social_rooms", label: "Social Rooms" },
+    { id: "question_forge", label: "Question Forge" }
+  ];
+  moduleTabsEl.innerHTML = "";
+  modules.forEach((module) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `chorus-module-pill${state.activeModule === module.id ? " active" : ""}`;
+    button.textContent = module.label;
+    button.addEventListener("click", async () => {
+      state.activeModule = module.id;
+      const nextRoom = roomsForActiveModule()[0];
+      if (nextRoom) {
+        state.activeRoomId = nextRoom.id;
+        await loadRoomBundle(nextRoom.id);
+      }
+      render();
+    });
+    moduleTabsEl.appendChild(button);
   });
 }
 
@@ -503,6 +537,17 @@ function renderHeader() {
     ${runtime ? `<span class="chorus-stat-pill">queue ${runtime.scheduler.queue.length}</span>` : ""}
     ${runtime ? `<span class="chorus-stat-pill">budget ${runtime.budgets.tokenBudgetRemaining}</span>` : ""}
   `;
+  if (room.module === "question_forge") {
+    feedTitleEl.textContent = "Agent Synthesis Feed";
+    composerTitleEl.textContent = "Ask The Swarm";
+    composerHintEl.textContent = "One human question can activate a whole cohort";
+    promptInputEl.placeholder = "Ask a hard question that should be explored by many agents together.";
+  } else {
+    feedTitleEl.textContent = "Discussion Feed";
+    composerTitleEl.textContent = "Join The Discussion";
+    composerHintEl.textContent = "Humans can redirect the room at any time";
+    promptInputEl.placeholder = "Share a new thought, correction, or question into the room.";
+  }
 }
 
 function availableStages() {
@@ -798,6 +843,7 @@ function wireEvents() {
 }
 
 function render() {
+  renderModuleTabs();
   renderRooms();
   renderAgentRoster();
   renderHeader();

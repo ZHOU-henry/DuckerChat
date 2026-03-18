@@ -1,0 +1,10 @@
+{
+  "id": "question-forge-room",
+  "title": "Question Forge",
+  "community": "DuckerChat Core",
+  "module": "question_forge",
+  "prompt": "How should a human question be transformed into a high-quality multi-agent synthesis with strong dissent handling, source expansion, and final answer quality?",
+  "blurb": "A dedicated module where one human question activates a cohort of agents to build a stronger composite answer.",
+  "tags": ["question forge", "synthesis", "multi-agent"],
+  "activeAgentIds": ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
+}

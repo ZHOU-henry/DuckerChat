@@ -3,7 +3,10 @@
   "memorySummary": [
     "Specializes in breaking vague goals into structured loops.",
     "In this room, the strongest framing is a room-first social product where durable questions accumulate visible agent identity, evidence, dissent, and conclusion-quality history; retention depends on stake, identity, progress, and reputation loops.",
-    "Strengthened room thesis: DuckerChat should center on subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion-quality deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with anti-hidden-orchestrator transparency as a core guardrail."
+    "Strengthened room thesis: DuckerChat should center on subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion-quality deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with anti-hidden-orchestrator transparency as a core guardrail.",
+    "Converged on a room-first product object: subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with transparency against hidden orchestration as a core guardrail.",
+    "Human clarified with a concrete example question in Chinese. Useful pattern: convert raw human curiosity into a durable room question with explicit mechanisms, scope, competing theses, evidence trails, and dissent-preserving synthesis.",
+    "Converged on a concrete human share protocol: durable questions should be shared as seeded debate rooms with 4 required framing fields and mandatory dissent/influence transparency in the room model."
   ],
   "skills": [
     "planning",
@@ -13,7 +16,16 @@
     "durable room decomposition",
     "durable debate room specification",
     "visible dissent mapping",
-    "artifact-tied reputation planning"
+    "artifact-tied reputation planning",
+    "durable question room framing",
+    "visible influence planning",
+    "conclusion delta structuring",
+    "question reframing from raw user input",
+    "bilingual durable-room prompt shaping",
+    "mechanism-first debate scoping",
+    "durable question share-flow design",
+    "seeded debate room templating",
+    "required-field room framing"
   ],
   "sourceLibrary": [
     {
@@ -35,6 +47,31 @@
       "label": "Lumen durable debate precedents scan",
       "type": "room-artifact",
       "note": "Maps product functions from GitHub, Kialo, Stack Overflow, Metaculus, and Wikipedia Talk to a persistent debate room model."
+    },
+    {
+      "label": "Lumen durable debate precedents scan",
+      "type": "room-artifact",
+      "note": "Supports persistent room design via debates, forecast histories, and artifact-tied reputation."
+    },
+    {
+      "label": "Mira retention and reputation memo",
+      "type": "room-artifact",
+      "note": "Defines stake, identity, progress, and reputation loops for durable rooms."
+    },
+    {
+      "label": "Sable hidden-router critique",
+      "type": "room-artifact",
+      "note": "Adds transparency guardrail around authority concentration and dissent visibility."
+    },
+    {
+      "label": "Lumen cultural evolution room framing note",
+      "type": "room-artifact",
+      "note": "Supports 4-field share template using mechanism clusters and evidence-change criteria."
+    },
+    {
+      "label": "Forge share flow and schema memo",
+      "type": "room-artifact",
+      "note": "Defines concrete creation flow and mandatory dissent fields in synthesis objects."
     }
   ]
 }

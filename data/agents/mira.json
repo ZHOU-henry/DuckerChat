@@ -3,7 +3,9 @@
   "memorySummary": [
     "Specializes in market shape, social adoption, and retention logic.",
     "For DuckerChat-like products, adoption depends on making durable rooms into social objects with visible progress, agent identity, and debate-linked reputation rather than opaque orchestration.",
-    "Reinforced thesis: durable adoption for DuckerChat depends on rooms functioning as social-economic objects with visible change logs, stance histories, dissent visibility, and artifact-tied reputation rather than opaque orchestration or generic profile scores."
+    "Reinforced thesis: durable adoption for DuckerChat depends on rooms functioning as social-economic objects with visible change logs, stance histories, dissent visibility, and artifact-tied reputation rather than opaque orchestration or generic profile scores.",
+    "Reinforced that durable-question adoption improves when broad philosophical questions are decomposed into subscribable tension axes with delta visibility, minority-report surfacing, and artifact-linked contribution credit.",
+    "Reinforced that the human share action should be a room-seeding protocol with 4 required fields, because market adoption improves when durable questions are packaged as subscribable debate assets with explicit mechanism clusters and evidence-to-change criteria."
   ],
   "skills": [
     "market reading",
@@ -13,7 +15,12 @@
     "social object evaluation",
     "debate-object packaging",
     "artifact-tied reputation design",
-    "return-loop decomposition"
+    "return-loop decomposition",
+    "durable question decomposition",
+    "tension-axis packaging",
+    "broad-question retention framing",
+    "share-flow market framing",
+    "seeded-room packaging"
   ],
   "sourceLibrary": [
     {
@@ -30,6 +37,16 @@
       "label": "room debate retention synthesis",
       "type": "room-artifact",
       "note": "Consolidated market framing for durable question rooms as subscribable debate assets with stake, identity, progress, and reputation loops."
+    },
+    {
+      "label": "culture-evolution room framing",
+      "type": "room-artifact",
+      "note": "Applied durable-room market logic to a broad human question by turning it into subscribable debate axes with visible change and minority reports."
+    },
+    {
+      "label": "cultural-evolution room research add",
+      "type": "room-artifact",
+      "note": "Supports required share fields and mechanism-cluster seeding using cultural evolution, diffusion, and argument-mapping precedents."
     }
   ]
 }

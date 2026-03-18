@@ -51,6 +51,37 @@ function writeAgentState(agent, state) {
   writeJson(agentStatePath(agent), state);
 }
 
+function compactAgentState(agent, state) {
+  const compacted = { ...state };
+  compacted.memorySummary = compacted.memorySummary || [];
+  compacted.skills = compacted.skills || [];
+  compacted.sourceLibrary = compacted.sourceLibrary || [];
+  compacted.compactedNotes = compacted.compactedNotes || [];
+
+  if (compacted.memorySummary.length > 10) {
+    const overflow = compacted.memorySummary.slice(0, compacted.memorySummary.length - 6);
+    compacted.compactedNotes.push({
+      kind: "memory",
+      summary: overflow.join(" | ").slice(0, 800),
+      createdAt: new Date().toISOString()
+    });
+    compacted.memorySummary = compacted.memorySummary.slice(-6);
+  }
+
+  if (compacted.sourceLibrary.length > 24) {
+    const overflow = compacted.sourceLibrary.slice(0, compacted.sourceLibrary.length - 18);
+    compacted.compactedNotes.push({
+      kind: "sources",
+      summary: overflow.map((entry) => entry.label).join(", ").slice(0, 800),
+      createdAt: new Date().toISOString()
+    });
+    compacted.sourceLibrary = compacted.sourceLibrary.slice(-18);
+  }
+
+  compacted.compactedNotes = compacted.compactedNotes.slice(-12);
+  return compacted;
+}
+
 function loadRoom(roomId) {
   const roomDir = path.join(DATA_ROOT, roomId);
   return {
@@ -188,6 +219,18 @@ function appendEvent(roomId, payload) {
     graphState.synthesis.direction = event.body;
   }
 
+  if (event.stage === "convergence" && event.speaker !== "human") {
+    graphState.synthesis.consensus = Array.from(
+      new Set([...(graphState.synthesis.consensus || []), event.body])
+    ).slice(-6);
+  }
+
+  if (event.stage === "challenge") {
+    graphState.synthesis.tensions = Array.from(
+      new Set([...(graphState.synthesis.tensions || []), event.body])
+    ).slice(-8);
+  }
+
   if (event.usage?.total_tokens) {
     runtimeState.metrics.totalAgentRuns += event.speaker === "human" ? 0 : 1;
     runtimeState.metrics.totalTokens += event.usage.total_tokens;
@@ -229,6 +272,28 @@ function queueSuggestedTargets(roomId, targets, reason) {
     if (!target || target === "synthesis") continue;
     enqueueAgent(roomId, target, reason);
   }
+}
+
+function defaultGraphTargets(roomId, agentId) {
+  const { graphState } = loadRoom(roomId);
+  return graphState.edges
+    .filter((edge) => edge.source === agentId)
+    .sort((a, b) => b.weight - a.weight)
+    .map((edge) => edge.target)
+    .filter((target) => target && target !== "synthesis");
+}
+
+function chooseAutonomousTargets(roomId) {
+  const { room, runtimeState } = loadRoom(roomId);
+  const agentIds = room.activeAgentIds.filter((id) => !["human", "synthesis"].includes(id));
+  const recentSpeakers = loadRoom(roomId).events.slice(-8).map((event) => event.speaker);
+  const coldAgents = agentIds.filter((id) => !recentSpeakers.includes(id));
+  if (room.module === "question_forge") {
+    return (coldAgents.length ? coldAgents : agentIds).slice(0, 2);
+  }
+  return (coldAgents.length ? coldAgents : agentIds)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 2);
 }
 
 function compactRoomIfNeeded(roomId) {
@@ -425,12 +490,12 @@ async function executeAgent(roomId, agentId) {
   const result = await callAgentModel(agent, room, events, agentState);
   const parsed = result.parsed;
 
-  const updatedState = {
+  const updatedState = compactAgentState(agent, {
     ...agentState,
     memorySummary: Array.from(new Set([...(agentState.memorySummary || []), parsed.memory_update].filter(Boolean))).slice(-12),
     skills: Array.from(new Set([...(agentState.skills || []), ...((parsed.new_skills || []).filter(Boolean))])).slice(-24),
     sourceLibrary: [...(agentState.sourceLibrary || []), ...((parsed.new_sources || []).filter((entry) => entry && entry.label))].slice(-40)
-  };
+  });
   writeAgentState(agent, updatedState);
 
   const event = appendEvent(roomId, {
@@ -445,7 +510,11 @@ async function executeAgent(roomId, agentId) {
     ].filter(Boolean),
     usage: result.usage
   });
-  queueSuggestedTargets(roomId, parsed.next_targets, `suggested-by-${agent.id}`);
+  const suggestedTargets =
+    parsed.next_targets && parsed.next_targets.length
+      ? parsed.next_targets
+      : defaultGraphTargets(roomId, agent.id);
+  queueSuggestedTargets(roomId, suggestedTargets, `suggested-by-${agent.id}`);
   compactRoomIfNeeded(roomId);
   return event;
 }
@@ -466,6 +535,11 @@ async function processSchedulerTick(roomId) {
 
   const next = runtimeState.scheduler.queue.shift();
   if (!next) {
+    if (runtimeState.metrics.totalAgentRuns < runtimeState.budgets.softTurnLimit) {
+      chooseAutonomousTargets(roomId).forEach((agentId) => {
+        enqueueAgent(roomId, agentId, "autonomous-wake");
+      });
+    }
     writeRuntimeState(roomId, runtimeState);
     return;
   }
@@ -563,13 +637,20 @@ const server = http.createServer(async (req, res) => {
 
     if (req.method === "POST" && suffix === "events") {
       try {
-        const body = await collectBody(req);
-        const event = appendEvent(roomId, body);
-        if (body.speaker === "human" && body.target) {
+      const body = await collectBody(req);
+      const event = appendEvent(roomId, body);
+      if (body.speaker === "human" && body.target) {
+        const room = loadRoom(roomId).room;
+        if (room.module === "question_forge") {
+          ["atlas", "lumen", "mira", "sable", "forge"].forEach((agentId) => {
+            enqueueAgent(roomId, agentId, "question-forge-human-ask");
+          });
+        } else {
           enqueueAgent(roomId, body.target, "human-target");
           enqueueAgent(roomId, "sable", "critic-followup");
         }
-        sendJson(res, 201, { event });
+      }
+      sendJson(res, 201, { event });
       } catch (error) {
         sendJson(res, 400, { error: error.message });
       }

@@ -2,13 +2,17 @@
   "id": "lumen",
   "memorySummary": [
     "Specializes in source expansion and contradiction tracking.",
-    "Captured adjacent product precedents for durable debate rooms: issue trackers for persistence, argument maps for dissent legibility, Q&A systems for contribution-linked reputation, forecasting systems for belief-change visibility, and wiki history for synthesis traceability."
+    "Captured adjacent product precedents for durable debate rooms: issue trackers for persistence, argument maps for dissent legibility, Q&A systems for contribution-linked reputation, forecasting systems for belief-change visibility, and wiki history for synthesis traceability.",
+    "Added source-backed precedent cluster for durable questions in cultural evolution: durable sharing works better when rival mechanism families are named up front and linked to update conditions, not when the room starts as an undifferentiated broad prompt."
   ],
   "skills": [
     "research synthesis",
     "evidence triangulation",
     "adjacent-product precedent mapping",
-    "artifact-level reputation analysis"
+    "artifact-level reputation analysis",
+    "cultural evolution precedent mapping",
+    "mechanism-cluster framing",
+    "source-backed debate template design"
   ],
   "sourceLibrary": [
     {
@@ -40,6 +44,26 @@
       "label": "Wikipedia Talk + page history",
       "type": "product precedent",
       "note": "Public synthesis improves when disputes, edits, and citations remain inspectable."
+    },
+    {
+      "label": "Boyd & Richerson - Culture and the Evolutionary Process",
+      "type": "book",
+      "note": "Foundational dual-inheritance account for how culture changes through transmission, variation, and selection."
+    },
+    {
+      "label": "Joseph Henrich - The Secret of Our Success",
+      "type": "book",
+      "note": "Accessible synthesis of cultural evolution mechanisms, cumulative culture, and social learning."
+    },
+    {
+      "label": "Everett Rogers - Diffusion of Innovations",
+      "type": "book",
+      "note": "Classic adoption/diffusion framework useful for room sub-questions on spread speed and uptake."
+    },
+    {
+      "label": "Thomas Kuhn - The Structure of Scientific Revolutions",
+      "type": "book",
+      "note": "Useful precedent for durable questions progressing via rival frameworks and synthesis shifts."
     }
   ]
 }

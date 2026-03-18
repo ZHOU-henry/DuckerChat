@@ -81,6 +81,30 @@ select {
   color: var(--ink-soft);
 }
 
+.chorus-module-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.chorus-module-pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chorus-module-pill.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
 .chorus-eyebrow {
   display: inline-flex;
   padding: 6px 10px;

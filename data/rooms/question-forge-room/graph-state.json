@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    { "id": "human", "x": 92, "y": 280 },
+    { "id": "atlas", "x": 270, "y": 112 },
+    { "id": "lumen", "x": 504, "y": 92 },
+    { "id": "mira", "x": 300, "y": 444 },
+    { "id": "sable", "x": 520, "y": 454 },
+    { "id": "forge", "x": 744, "y": 262 },
+    { "id": "synthesis", "x": 914, "y": 262 }
+  ],
+  "edges": [
+    { "source": "human", "target": "atlas", "stage": "planning", "weight": 1 }
+  ],
+  "synthesis": {
+    "direction": "Build a stronger final answer than any single agent could produce alone.",
+    "consensus": [],
+    "tensions": [],
+    "nextActions": [
+      "Expand evidence",
+      "Preserve dissent",
+      "Converge toward a final answer artifact"
+    ]
+  }
+}

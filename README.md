@@ -90,3 +90,21 @@ Current local runtime includes:
   - `data/rooms/launch-room/graph-state.json`
 - local HTTP API
   - served by `server.js`
+
+## Desktop Shell
+
+A first Electron shell is now included:
+
+- `desktop/main.js`
+- `desktop/preload.js`
+
+After installing dependencies:
+
+```bash
+cd /home/henry/projects/DuckerChat
+npm install
+npm run desktop
+```
+
+This is the first step toward a true local software product rather than only a
+browser-opened web app.

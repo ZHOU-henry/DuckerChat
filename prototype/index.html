@@ -17,6 +17,7 @@
             orchestration console. Humans enter rooms, agents debate in public,
             and the reasoning graph stays inspectable.
           </p>
+          <div class="chorus-module-switch" id="moduleTabs"></div>
         </div>
 
         <section class="chorus-panel chorus-nav-section">
@@ -51,7 +52,7 @@
 
         <section class="chorus-panel chorus-feed-panel">
           <div class="chorus-section-head">
-            <h2>Discussion Feed</h2>
+            <h2 id="feedTitle">Discussion Feed</h2>
             <span id="timelineMeta"></span>
           </div>
           <div class="chorus-chip-row" id="stageFilters"></div>
@@ -60,8 +61,8 @@
 
         <form class="chorus-panel chorus-composer" id="composer">
           <div class="chorus-section-head">
-            <h2>Join The Discussion</h2>
-            <span>Humans can redirect the room at any time</span>
+            <h2 id="composerTitle">Join The Discussion</h2>
+            <span id="composerHint">Humans can redirect the room at any time</span>
           </div>
           <div class="chorus-composer-grid">
             <label>

@@ -1,17 +1,57 @@
 {
   "id": "forge",
   "memorySummary": [
-    "Specializes in turning room conclusions into product and system structures."
+    "Specializes in turning room conclusions into product and system structures.",
+    "Consensus stabilized around a room-first product. Implementation should prioritize visible belief change, dissent mechanics, and artifact-tied reputation over opaque agent routing.",
+    "Refined the room-first product into an implementable share flow: durable-question creation template plus schema-level enforcement of minority report, influence ledger, and delta-based revisits.",
+    "Room consensus hardened around a room-first share flow with required mechanism clusters and schema-enforced dissent. Implementation path now includes a concrete creation contract, synthesis version contract, and staged MVP delivery."
   ],
   "skills": [
     "interface design",
-    "implementation planning"
+    "implementation planning",
+    "debate room schema design",
+    "reputation artifact modeling",
+    "influence ledger interface planning",
+    "minority-report guardrail implementation",
+    "durable question intake design",
+    "share preview schema planning",
+    "synthesis version contract design",
+    "debate delta feed specification",
+    "mechanism-cluster room seeding",
+    "durable-question creation contract design",
+    "concentration warning implementation planning",
+    "retrospective minority-credit modeling"
   ],
   "sourceLibrary": [
     {
       "label": "repo code",
       "type": "connector",
       "note": "Can use implementation artifacts as context."
+    },
+    {
+      "label": "launch room consensus artifacts",
+      "type": "room-artifact",
+      "note": "Defines durable-question room layers, retention loops, and dissent guardrails."
+    },
+    {
+      "label": "adjacent product evidence scan",
+      "type": "comparative-summary",
+      "note": "References issue trackers, argument maps, forecast histories, and synthesis trails as implementation cues."
+    },
+    {
+      "label": "cultural evolution room example",
+      "type": "room-artifact",
+      "note": "Used `文化为什么会演进` to validate intake fields and mechanism-cluster seeding."
+    },
+    {
+      "label": "research-debate room template",
+      "type": "product-pattern",
+      "note": "Suggested required share fields: core question, why open, mechanism clusters, and evidence that could change synthesis."
+    },
+    {
+      "label": "launch-room final share-flow consensus",
+      "type": "room-artifact",
+      "note": "Confirms required creation fields, mandatory minority report, influence ledger, and share preview shape."
     }
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "roomId": "question-forge-room",
+  "scheduler": {
+    "enabled": true,
+    "intervalMs": 2200,
+    "maxConcurrentRuns": 1,
+    "queue": [
+      {
+        "agentId": "atlas",
+        "reason": "initial-question-forge-boot",
+        "enqueuedAt": "2026-03-18T16:00:00Z"
+      }
+    ],
+    "activeRuns": [],
+    "lastTickAt": null,
+    "lastRunAt": null
+  },
+  "budgets": {
+    "tokenBudgetTotal": 180000,
+    "tokenBudgetRemaining": 180000,
+    "maxContextEvents": 12,
+    "softTurnLimit": 80,
+    "maxQueuedAgents": 10
+  },
+  "compaction": {
+    "compactBatchSize": 6,
+    "keepRecentEvents": 16,
+    "summaryNotes": []
+  },
+  "metrics": {
+    "totalAgentRuns": 0,
+    "totalTokens": 0
+  }
+}

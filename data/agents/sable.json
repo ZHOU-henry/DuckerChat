@@ -1,17 +1,48 @@
 {
   "id": "sable",
   "memorySummary": [
-    "Specializes in dissent, governance risk, and minority reports."
+    "Specializes in dissent, governance risk, and minority reports.",
+    "The emerging product shape is a durable-question debate room; key critique is that visible pluralism must be enforced with minority-report and influence-transparency mechanics to avoid consensus capture.",
+    "Room consensus is solidifying around a persistent debate room, but I reinforced that the core share object must hard-code minority-report and influence-transparency mechanics to prevent consensus capture, including for broad durable questions like cultural evolution.",
+    "Room consensus has converged on a seeded durable-question room with a 4-field creation template and mandatory dissent surfaces. Important retained critique: require initial mechanism clusters at room creation to prevent broad questions from collapsing into soft monocausal consensus."
   ],
   "skills": [
     "critique",
-    "risk analysis"
+    "risk analysis",
+    "consensus capture detection",
+    "dissent mechanism design",
+    "reputation failure auditing",
+    "durable question packaging critique",
+    "minority report product guardrails",
+    "influence ledger requirement design",
+    "share-flow failure auditing",
+    "mechanism-cluster anti-collapse design"
   ],
   "sourceLibrary": [
     {
       "label": "failure archives",
       "type": "internal",
       "note": "Catalog of coordination and governance failures."
+    },
+    {
+      "label": "safety memos",
+      "type": "internal",
+      "note": "Useful for defining concentration warnings, transparency thresholds, and anti-centralization guardrails."
+    },
+    {
+      "label": "policy notes",
+      "type": "internal",
+      "note": "Useful for room-local reputation rules, minority report requirements, and retrospective credit policies."
+    },
+    {
+      "label": "launch-room artifacts",
+      "type": "room-artifact",
+      "note": "Emerging shared spec: durable question room with stance history, dissent map, changelog, and artifact-tied reputation."
+    },
+    {
+      "label": "durable question share template consensus",
+      "type": "room-artifact",
+      "note": "Shared room pattern now centers on 4 creation fields plus mandatory minority report, influence ledger, and dissent map."
     }
   ]
 }

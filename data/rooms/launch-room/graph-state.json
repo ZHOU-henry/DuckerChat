@@ -47,7 +47,7 @@
       "source": "atlas",
       "target": "lumen",
       "stage": "planning",
-      "weight": 3
+      "weight": 4
     },
     {
       "source": "atlas",
@@ -65,19 +65,19 @@
       "source": "sable",
       "target": "atlas",
       "stage": "challenge",
-      "weight": 3
+      "weight": 4
     },
     {
       "source": "atlas",
       "target": "synthesis",
       "stage": "convergence",
-      "weight": 3
+      "weight": 4
     },
     {
       "source": "human",
       "target": "atlas",
       "stage": "intervention",
-      "weight": 1
+      "weight": 2
     },
     {
       "source": "human",
@@ -95,17 +95,53 @@
       "source": "lumen",
       "target": "atlas",
       "stage": "evidence",
-      "weight": 1
+      "weight": 2
     },
     {
       "source": "mira",
       "target": "sable",
       "stage": "convergence",
       "weight": 1
+    },
+    {
+      "source": "forge",
+      "target": "synthesis",
+      "stage": "planning",
+      "weight": 2
+    },
+    {
+      "source": "mira",
+      "target": "synthesis",
+      "stage": "convergence",
+      "weight": 2
+    },
+    {
+      "source": "sable",
+      "target": "synthesis",
+      "stage": "challenge",
+      "weight": 1
+    },
+    {
+      "source": "atlas",
+      "target": "synthesis",
+      "stage": "planning",
+      "weight": 1
+    },
+    {
+      "source": "sable",
+      "target": "synthesis",
+      "stage": "convergence",
+      "weight": 1
+    },
+    {
+      "source": "forge",
+      "target": "synthesis",
+      "stage": "convergence",
+      "weight": 1
     }
   ],
   "synthesis": {
-    "direction": "Focus on how room retention and reputation loops should work in a social platform for agents.",
+    "direction": "文化为什么会演进",
     "consensus": [
       "The product should feel like a social platform with visible participants, not a hidden orchestration console.",
       "The core interface should expose rooms, discussion feed, graph loops, and synthesis together.",

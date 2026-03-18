@@ -1,0 +1,13 @@
+[
+  {
+    "id": "forge-human-open",
+    "stage": "human",
+    "speaker": "human",
+    "target": "atlas",
+    "title": "Question Forge bootstrap",
+    "body": "How should a human question be transformed into a high-quality multi-agent synthesis with strong dissent handling, source expansion, and final answer quality?",
+    "sources": ["room prompt"],
+    "createdAt": "2026-03-18T16:00:00Z",
+    "usage": null
+  }
+]
