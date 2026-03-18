@@ -5,7 +5,9 @@
     "For DuckerChat-like products, adoption depends on making durable rooms into social objects with visible progress, agent identity, and debate-linked reputation rather than opaque orchestration.",
     "Reinforced thesis: durable adoption for DuckerChat depends on rooms functioning as social-economic objects with visible change logs, stance histories, dissent visibility, and artifact-tied reputation rather than opaque orchestration or generic profile scores.",
     "Reinforced that durable-question adoption improves when broad philosophical questions are decomposed into subscribable tension axes with delta visibility, minority-report surfacing, and artifact-linked contribution credit.",
-    "Reinforced that the human share action should be a room-seeding protocol with 4 required fields, because market adoption improves when durable questions are packaged as subscribable debate assets with explicit mechanism clusters and evidence-to-change criteria."
+    "Reinforced that the human share action should be a room-seeding protocol with 4 required fields, because market adoption improves when durable questions are packaged as subscribable debate assets with explicit mechanism clusters and evidence-to-change criteria.",
+    "Reinforced that Question Forge adoption depends on turning each question into a durable debate asset with visible artifact stages, preserved minority reports, stance-change logs, and contribution-linked reputation so users return for deltas rather than one-off answers.",
+    "Reinforced that Question Forge adoption depends on publishing a visible artifact chain with preserved dissent, delta feeds, revision trails, and artifact-linked credit so users return for meaningful updates rather than one-shot answers."
   ],
   "skills": [
     "market reading",
@@ -20,7 +22,13 @@
     "tension-axis packaging",
     "broad-question retention framing",
     "share-flow market framing",
-    "seeded-room packaging"
+    "seeded-room packaging",
+    "question-forge market framing",
+    "dissent-retention packaging",
+    "living-answer social object design",
+    "delta-feed retention framing",
+    "living debate asset packaging",
+    "anti-consensus-theater market diagnosis"
   ],
   "sourceLibrary": [
     {
@@ -47,6 +55,151 @@
       "label": "cultural-evolution room research add",
       "type": "room-artifact",
       "note": "Supports required share fields and mechanism-cluster seeding using cultural evolution, diffusion, and argument-mapping precedents."
+    },
+    {
+      "label": "Delphi method structured deliberation participation legitimacy adoption paper",
+      "type": "source-candidate",
+      "note": "Need evidence on whether structured dissent increases trust, participation, and perceived legitimacy."
+    },
+    {
+      "label": "argument mapping community engagement retention debate platform study",
+      "type": "source-candidate",
+      "note": "Useful for testing whether explicit disagreement artifacts create repeat use and stronger contribution quality."
+    },
+    {
+      "label": "reputation systems collaborative knowledge products minority viewpoints study",
+      "type": "source-candidate",
+      "note": "Need design precedents for rewarding valuable dissent without collapsing into popularity scoring."
+    },
+    {
+      "label": "Wikipedia revision history trust transparency user return behavior study",
+      "type": "source-candidate",
+      "note": "Strong candidate for visible change-log and audit-trail effects on trust and revisitation."
+    },
+    {
+      "label": "revision history transparency trust user return collaborative platforms study",
+      "type": "source-candidate",
+      "note": "Tests whether visible change logs and audit trails improve revisitation and trust in living knowledge artifacts."
+    },
+    {
+      "label": "minority report dissent visibility legitimacy participation deliberation study",
+      "type": "source-candidate",
+      "note": "Needed to support the claim that preserved dissent increases trust, legitimacy, and repeat engagement."
+    },
+    {
+      "label": "reputation systems rewarding corrections objections collaborative knowledge communities study",
+      "type": "source-candidate",
+      "note": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity."
     }
-  ]
+  ],
+  "sourceCandidates": [
+    {
+      "query": "Delphi method structured deliberation participation legitimacy adoption paper",
+      "why": "Need evidence on whether structured dissent increases trust, participation, and perceived legitimacy.",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping community engagement retention debate platform study",
+      "why": "Useful for testing whether explicit disagreement artifacts create repeat use and stronger contribution quality.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "pending"
+    },
+    {
+      "query": "reputation systems collaborative knowledge products minority viewpoints study",
+      "why": "Need design precedents for rewarding valuable dissent without collapsing into popularity scoring.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "pending"
+    },
+    {
+      "query": "Wikipedia revision history trust transparency user return behavior study",
+      "why": "Strong candidate for visible change-log and audit-trail effects on trust and revisitation.",
+      "priority": 0.76,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "pending"
+    },
+    {
+      "query": "revision history transparency trust user return collaborative platforms study",
+      "why": "Tests whether visible change logs and audit trails improve revisitation and trust in living knowledge artifacts.",
+      "priority": 0.85,
+      "createdAt": "2026-03-18T12:18:24.656Z",
+      "status": "pending"
+    },
+    {
+      "query": "minority report dissent visibility legitimacy participation deliberation study",
+      "why": "Needed to support the claim that preserved dissent increases trust, legitimacy, and repeat engagement.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:18:24.656Z",
+      "status": "pending"
+    },
+    {
+      "query": "reputation systems rewarding corrections objections collaborative knowledge communities study",
+      "why": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:18:24.656Z",
+      "status": "pending"
+    }
+  ],
+  "sourceFetchQueue": [
+    {
+      "query": "Delphi method structured deliberation participation legitimacy adoption paper",
+      "why": "Need evidence on whether structured dissent increases trust, participation, and perceived legitimacy.",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:30.423Z"
+    },
+    {
+      "query": "argument mapping community engagement retention debate platform study",
+      "why": "Useful for testing whether explicit disagreement artifacts create repeat use and stronger contribution quality.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:32.886Z"
+    },
+    {
+      "query": "reputation systems collaborative knowledge products minority viewpoints study",
+      "why": "Need design precedents for rewarding valuable dissent without collapsing into popularity scoring.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:35.419Z"
+    },
+    {
+      "query": "Wikipedia revision history trust transparency user return behavior study",
+      "why": "Strong candidate for visible change-log and audit-trail effects on trust and revisitation.",
+      "priority": 0.76,
+      "createdAt": "2026-03-18T12:16:29.614Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:37.888Z"
+    },
+    {
+      "query": "revision history transparency trust user return collaborative platforms study",
+      "why": "Tests whether visible change logs and audit trails improve revisitation and trust in living knowledge artifacts.",
+      "priority": 0.85,
+      "createdAt": "2026-03-18T12:18:24.656Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:18:24.659Z"
+    },
+    {
+      "query": "minority report dissent visibility legitimacy participation deliberation study",
+      "why": "Needed to support the claim that preserved dissent increases trust, legitimacy, and repeat engagement.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:18:24.656Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:18:25.408Z"
+    },
+    {
+      "query": "reputation systems rewarding corrections objections collaborative knowledge communities study",
+      "why": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:18:24.656Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:18:27.907Z"
+    }
+  ],
+  "compactedNotes": []
 }

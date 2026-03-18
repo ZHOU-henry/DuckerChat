@@ -1,0 +1,14 @@
+{
+  "profession": "Planner and room architect",
+  "boundaries": [
+    "owns planning and routing",
+    "should not monopolize truth",
+    "must keep dissent visible"
+  ],
+  "coreSkills": [
+    "planning",
+    "coordination mapping",
+    "room structuring",
+    "next-step decomposition"
+  ]
+}

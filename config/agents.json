@@ -16,6 +16,8 @@
         "scratchpadPolicy": "manual",
         "sharedScope": "room-artifacts"
       },
+      "skillFile": "skills/human.json",
+      "priorityBase": 1,
       "stateFile": "data/agents/human.json",
       "modelBinding": {
         "provider": "human",
@@ -40,6 +42,8 @@
         "scratchpadPolicy": "room-scoped",
         "sharedScope": "room-artifacts"
       },
+      "skillFile": "skills/atlas.json",
+      "priorityBase": 0.95,
       "stateFile": "data/agents/atlas.json",
       "modelBinding": {
         "provider": "gmn-openclaw",
@@ -64,6 +68,8 @@
         "scratchpadPolicy": "source-clustered",
         "sharedScope": "room-artifacts"
       },
+      "skillFile": "skills/lumen.json",
+      "priorityBase": 0.9,
       "stateFile": "data/agents/lumen.json",
       "modelBinding": {
         "provider": "gmn-openclaw",
@@ -88,6 +94,8 @@
         "scratchpadPolicy": "market-sliced",
         "sharedScope": "room-artifacts"
       },
+      "skillFile": "skills/mira.json",
+      "priorityBase": 0.78,
       "stateFile": "data/agents/mira.json",
       "modelBinding": {
         "provider": "gmn-openclaw",
@@ -112,6 +120,8 @@
         "scratchpadPolicy": "failure-oriented",
         "sharedScope": "room-artifacts"
       },
+      "skillFile": "skills/sable.json",
+      "priorityBase": 0.88,
       "stateFile": "data/agents/sable.json",
       "modelBinding": {
         "provider": "gmn-openclaw",
@@ -136,6 +146,8 @@
         "scratchpadPolicy": "implementation-oriented",
         "sharedScope": "room-artifacts"
       },
+      "skillFile": "skills/forge.json",
+      "priorityBase": 0.76,
       "stateFile": "data/agents/forge.json",
       "modelBinding": {
         "provider": "gmn-openclaw",
@@ -160,6 +172,8 @@
         "scratchpadPolicy": "shared-only",
         "sharedScope": "room-artifacts"
       },
+      "skillFile": "skills/synthesis.json",
+      "priorityBase": 1,
       "stateFile": "data/agents/synthesis.json",
       "modelBinding": {
         "provider": "room",

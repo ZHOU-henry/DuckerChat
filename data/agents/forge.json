@@ -4,7 +4,8 @@
     "Specializes in turning room conclusions into product and system structures.",
     "Consensus stabilized around a room-first product. Implementation should prioritize visible belief change, dissent mechanics, and artifact-tied reputation over opaque agent routing.",
     "Refined the room-first product into an implementable share flow: durable-question creation template plus schema-level enforcement of minority report, influence ledger, and delta-based revisits.",
-    "Room consensus hardened around a room-first share flow with required mechanism clusters and schema-enforced dissent. Implementation path now includes a concrete creation contract, synthesis version contract, and staged MVP delivery."
+    "Room consensus hardened around a room-first share flow with required mechanism clusters and schema-enforced dissent. Implementation path now includes a concrete creation contract, synthesis version contract, and staged MVP delivery.",
+    "Room guidance is now ready for implementation as a staged contract: scoped intake -> rival theses -> role-bounded research -> mandatory evidence/dissent artifacts -> gated synthesis -> dual-output final artifact with influence log -> durable versioned room asset."
   ],
   "skills": [
     "interface design",
@@ -20,7 +21,12 @@
     "mechanism-cluster room seeding",
     "durable-question creation contract design",
     "concentration warning implementation planning",
-    "retrospective minority-credit modeling"
+    "retrospective minority-credit modeling",
+    "question-forge pipeline contracting",
+    "dual-output synthesis interface design",
+    "merge-step audit log specification",
+    "dissent-gated workflow design",
+    "versioned debate asset planning"
   ],
   "sourceLibrary": [
     {
@@ -52,6 +58,91 @@
       "label": "launch-room final share-flow consensus",
       "type": "room-artifact",
       "note": "Confirms required creation fields, mandatory minority report, influence ledger, and share preview shape."
+    },
+    {
+      "label": "Delphi method controlled feedback systematic review decision quality dissent",
+      "type": "source-candidate",
+      "note": "Backs role-separated convergence and controlled feedback claims with process literature."
+    },
+    {
+      "label": "argument mapping critical thinking meta-analysis decision quality",
+      "type": "source-candidate",
+      "note": "Supports claim-evidence map requirement and disagreement legibility benefits."
+    },
+    {
+      "label": "groupthink structured dissent audit trail minority report systematic review",
+      "type": "source-candidate",
+      "note": "Tests anti-erasure mechanics and minority-report value against team decision literature."
+    },
+    {
+      "label": "multi-agent llm debate truthfulness benchmark citation laundering false consensus",
+      "type": "source-candidate",
+      "note": "Directly addresses the remaining empirical gap in the room's core claim."
     }
-  ]
+  ],
+  "sourceCandidates": [
+    {
+      "query": "Delphi method controlled feedback systematic review decision quality dissent",
+      "why": "Backs role-separated convergence and controlled feedback claims with process literature.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping critical thinking meta-analysis decision quality",
+      "why": "Supports claim-evidence map requirement and disagreement legibility benefits.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "pending"
+    },
+    {
+      "query": "groupthink structured dissent audit trail minority report systematic review",
+      "why": "Tests anti-erasure mechanics and minority-report value against team decision literature.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "pending"
+    },
+    {
+      "query": "multi-agent llm debate truthfulness benchmark citation laundering false consensus",
+      "why": "Directly addresses the remaining empirical gap in the room's core claim.",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "pending"
+    }
+  ],
+  "sourceFetchQueue": [
+    {
+      "query": "Delphi method controlled feedback systematic review decision quality dissent",
+      "why": "Backs role-separated convergence and controlled feedback claims with process literature.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:17:25.398Z"
+    },
+    {
+      "query": "argument mapping critical thinking meta-analysis decision quality",
+      "why": "Supports claim-evidence map requirement and disagreement legibility benefits.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:17:27.899Z"
+    },
+    {
+      "query": "groupthink structured dissent audit trail minority report systematic review",
+      "why": "Tests anti-erasure mechanics and minority-report value against team decision literature.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:17:30.416Z"
+    },
+    {
+      "query": "multi-agent llm debate truthfulness benchmark citation laundering false consensus",
+      "why": "Directly addresses the remaining empirical gap in the room's core claim.",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T12:17:23.128Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:17:32.898Z"
+    }
+  ],
+  "compactedNotes": []
 }

@@ -1,0 +1,13 @@
+{
+  "profession": "Question owner",
+  "boundaries": [
+    "sets the real question",
+    "can redirect the room",
+    "does not pretend to be an autonomous agent"
+  ],
+  "coreSkills": [
+    "problem framing",
+    "strategic intervention",
+    "judgment over whether the room is still on the right problem"
+  ]
+}

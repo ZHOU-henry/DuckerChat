@@ -416,5 +416,551 @@
       "output_tokens": 461,
       "total_tokens": 4019
     }
+  },
+  {
+    "id": "launch-room-1773835944904",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"groupthink dissent structured deliberation evidence review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:12:24.904Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836100407",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"argument mapping improves critical thinking evidence meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:00.407Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836102870",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"Delphi method controlled feedback consensus dissent quality review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:02.870Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836105370",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"forecasting aggregation superforecasting belief update interface evidence\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:05.370Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836117873",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"multi-agent deliberation benchmark reasoning quality dissent calibration paper\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:17.873Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836120373",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"groupthink dissent preservation structured debate decision quality research\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:20.374Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836122874",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"citation laundering summarization systems source fidelity research\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:22.874Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836125372",
+    "stage": "source_ingestion",
+    "speaker": "atlas",
+    "target": null,
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"forecast aggregation calibration disagreement tracking metaculus judgment aggregation research\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:25.372Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836130377",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"Delphi method controlled feedback consensus dissent quality review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:30.377Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836132876",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"forecasting aggregation superforecasting belief update interface evidence\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:32.876Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836135375",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"argument mapping improves critical thinking evidence meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:35.375Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836137877",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"Delphi method controlled feedback consensus dissent quality review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:37.877Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836140378",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"forecasting aggregation superforecasting belief update interface evidence\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:40.378Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836152881",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"citation laundering multi-agent summarization evidence quality propagation study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:52.881Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836155422",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"argument mapping disagreement preservation structured deliberation meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:55.422Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836157885",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"LLM multi-agent debate benchmark truthfulness calibration systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:57.885Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836160407",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"groupthink minority dissent decision quality review anonymous critique\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:00.407Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836162882",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"argument mapping critical thinking meta-analysis claim counterclaim structure\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:02.882Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836165445",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"Delphi method dissent preservation controlled feedback evidence review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:05.445Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836167885",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"superforecasting aggregation disagreement visibility interface evidence\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:07.885Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836170439",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"argument mapping meta-analysis reasoning quality critical thinking higher education\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:10.439Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836172884",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"Delphi method review controlled feedback disagreement preservation consensus accuracy\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:12.884Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836175423",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"forecast aggregation calibration belief updating interface superforecasting evidence review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:15.423Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836177884",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"AI multi-agent debate evaluation answer quality calibration hallucination benchmark\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:17.884Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836190424",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"Delphi method structured deliberation participation legitimacy adoption paper\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:30.424Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836192887",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"argument mapping community engagement retention debate platform study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:32.887Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836195420",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"reputation systems collaborative knowledge products minority viewpoints study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:35.420Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836197889",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"Wikipedia revision history trust transparency user return behavior study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:37.889Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836200433",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"argument mapping disagreement preservation decision quality meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:40.433Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836202891",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"groupthink minority dissent audit trail decision making review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:42.891Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836210393",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"systematic review groupthink structured dissent decision quality teams\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:50.393Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836212891",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"Delphi method controlled feedback dissent decision quality review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:52.891Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836215392",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"Delphi method controlled feedback dissent decision quality systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:55.392Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836217894",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"systematic review groupthink structured dissent decision quality teams\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:57.894Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836220393",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"argument mapping critical thinking meta-analysis decision quality\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:17:00.393Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836222896",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"multi-agent LLM debate truthfulness benchmark synthesis disagreement audit\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:17:02.896Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836245399",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"Delphi method controlled feedback systematic review decision quality dissent\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:17:25.399Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836247899",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"argument mapping critical thinking meta-analysis decision quality\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:17:27.899Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836250417",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"groupthink structured dissent audit trail minority report systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:17:30.417Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836252898",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge added a private source candidate",
+    "body": "Forge added \"multi-agent llm debate truthfulness benchmark citation laundering false consensus\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:17:32.898Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836305408",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"minority report dissent visibility legitimacy participation deliberation study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:18:25.408Z",
+    "usage": null
+  },
+  {
+    "id": "launch-room-1773836307908",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"reputation systems rewarding corrections objections collaborative knowledge communities study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:18:27.908Z",
+    "usage": null
   }
 ]

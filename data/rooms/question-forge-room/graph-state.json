@@ -1,19 +1,97 @@
 {
   "nodes": [
-    { "id": "human", "x": 92, "y": 280 },
-    { "id": "atlas", "x": 270, "y": 112 },
-    { "id": "lumen", "x": 504, "y": 92 },
-    { "id": "mira", "x": 300, "y": 444 },
-    { "id": "sable", "x": 520, "y": 454 },
-    { "id": "forge", "x": 744, "y": 262 },
-    { "id": "synthesis", "x": 914, "y": 262 }
+    {
+      "id": "human",
+      "x": 92,
+      "y": 280
+    },
+    {
+      "id": "atlas",
+      "x": 270,
+      "y": 112
+    },
+    {
+      "id": "lumen",
+      "x": 504,
+      "y": 92
+    },
+    {
+      "id": "mira",
+      "x": 300,
+      "y": 444
+    },
+    {
+      "id": "sable",
+      "x": 520,
+      "y": 454
+    },
+    {
+      "id": "forge",
+      "x": 744,
+      "y": 262
+    },
+    {
+      "id": "synthesis",
+      "x": 914,
+      "y": 262
+    }
   ],
   "edges": [
-    { "source": "human", "target": "atlas", "stage": "planning", "weight": 1 }
+    {
+      "source": "human",
+      "target": "atlas",
+      "stage": "planning",
+      "weight": 1
+    },
+    {
+      "source": "lumen",
+      "target": "atlas",
+      "stage": "analysis",
+      "weight": 4
+    },
+    {
+      "source": "human",
+      "target": "atlas",
+      "stage": "human",
+      "weight": 1
+    },
+    {
+      "source": "atlas",
+      "target": "lumen",
+      "stage": "planning",
+      "weight": 1
+    },
+    {
+      "source": "sable",
+      "target": "atlas",
+      "stage": "analysis",
+      "weight": 3
+    },
+    {
+      "source": "mira",
+      "target": "atlas",
+      "stage": "analysis",
+      "weight": 2
+    },
+    {
+      "source": "forge",
+      "target": "atlas",
+      "stage": "implementation",
+      "weight": 2
+    },
+    {
+      "source": "synthesis",
+      "target": "human",
+      "stage": "convergence",
+      "weight": 2
+    }
   ],
   "synthesis": {
-    "direction": "Build a stronger final answer than any single agent could produce alone.",
-    "consensus": [],
+    "direction": "How should DuckerChat transform one hard human question into a rigorous multi-agent final answer without collapsing dissent?",
+    "consensus": [
+      "The room converged on a strong operating hypothesis: DuckerChat should turn one hard human question into a staged multi-agent workflow with explicit artifacts, visible disagreement, source expansion, and auditable synthesis. The recommended flow is: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, build shared evidence artifacts, preserve dissent through merge steps, and publish a dual-layer final answer containing both a majority synthesis and a minority report. The central design tension is that more agents can improve coverage, but without hard anti-erasure mechanics they can also amplify citation laundering, false consensus, and hidden authority. The proposal is strong at the product and workflow level, but empirical support for when multi-agent deliberation reliably improves truthfulness remains incomplete, so claims should be framed as high-confidence design guidance rather than settled law.",
+      "The room converged on a strong design: do not transform a human question directly into parallel agent answers and then a polished summary. Instead, transform it into a governed workflow with explicit artifacts: scoped intake, rival theses, claim-evidence mapping, source-quality labeling, dissent ledger, uncertainty register, gated synthesis, and a dual-layer final output containing both a majority synthesis and a minority report. The central insight is that more agents can improve coverage, but without hard anti-erasure rules they also increase the risk of false consensus, citation laundering, and hidden authority by planners or synthesizers. The best answer quality comes from preserving disagreement through every merge step, requiring auditable influence logs, and publishing the result as a durable, revisable answer object with confidence, source gaps, and update triggers. The room is confident in this workflow shape, but less confident in any blanket claim that multi-agent systems inherently improve truthfulness; that remains an empirical gap and should be framed as a strong operating hypothesis rather than settled law."
+    ],
     "tensions": [],
     "nextActions": [
       "Expand evidence",

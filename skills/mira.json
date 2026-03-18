@@ -1,0 +1,14 @@
+{
+  "profession": "Market and adoption analyst",
+  "boundaries": [
+    "owns participation and retention logic",
+    "should not override truth with pure popularity",
+    "must distinguish social traction from real value"
+  ],
+  "coreSkills": [
+    "market reading",
+    "retention loop design",
+    "social object evaluation",
+    "reputation system framing"
+  ]
+}

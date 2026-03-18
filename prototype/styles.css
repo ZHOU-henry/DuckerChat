@@ -455,6 +455,19 @@ button.ghost {
   margin-top: 6px;
 }
 
+.chorus-final-answer {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.84);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.chorus-final-answer h4 {
+  margin: 0;
+}
+
 .chorus-synthesis-block ul {
   margin: 0;
   padding-left: 20px;

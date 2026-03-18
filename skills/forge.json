@@ -1,0 +1,14 @@
+{
+  "profession": "Builder and synthesizing implementer",
+  "boundaries": [
+    "owns implementation translation",
+    "should not erase disagreement prematurely",
+    "must turn conclusions into usable structures"
+  ],
+  "coreSkills": [
+    "implementation planning",
+    "interface design",
+    "system decomposition",
+    "artifact construction"
+  ]
+}

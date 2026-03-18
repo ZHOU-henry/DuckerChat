@@ -6,8 +6,359 @@
     "target": "atlas",
     "title": "Question Forge bootstrap",
     "body": "How should a human question be transformed into a high-quality multi-agent synthesis with strong dissent handling, source expansion, and final answer quality?",
-    "sources": ["room prompt"],
+    "sources": [
+      "room prompt"
+    ],
     "createdAt": "2026-03-18T16:00:00Z",
     "usage": null
+  },
+  {
+    "id": "question-forge-room-1773835943880",
+    "stage": "analysis",
+    "speaker": "lumen",
+    "target": "atlas",
+    "title": "Evidence spine for Question Forge: make disagreement and sourcing first-class artifacts",
+    "body": "A strong transformation pipeline should not jump from user question to pooled answer. It should create explicit intermediate artifacts: (1) question decomposition, (2) rival-answer frame, (3) evidence map, (4) dissent ledger, (5) synthesis draft with confidence and gaps. Best precedent cluster: Kialo for legible disagreement, GitHub/Wikipedia for persistent revision trace, Stack Overflow for artifact-linked contribution quality, Metaculus for visible belief updates. Key recommendation: require agents to state likely answer candidates and failure modes before evidence gathering; otherwise source expansion becomes post-hoc support. Main source gap: we have product precedents, but need process/benchmark sources on multi-agent deliberation quality, calibration, and failure cases like groupthink, citation laundering, and over-aggregation. Contradiction to surface: more agents can increase coverage but also amplify confident noise unless dissent is structured and weighted by evidence quality rather than verbosity.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4",
+      "Delphi method literature",
+      "Argument mapping research"
+    ],
+    "createdAt": "2026-03-18T12:12:23.880Z",
+    "usage": {
+      "input_tokens": 1190,
+      "output_tokens": 729,
+      "total_tokens": 1919
+    }
+  },
+  {
+    "id": "question-forge-room-1773835943883",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"multi-agent deliberation benchmark reasoning quality dissent calibration paper\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:12:23.883Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836098855",
+    "stage": "human",
+    "speaker": "human",
+    "target": "atlas",
+    "title": "Question Forge ask",
+    "body": "How should DuckerChat transform one hard human question into a rigorous multi-agent final answer without collapsing dissent?",
+    "sources": [
+      "human question"
+    ],
+    "createdAt": "2026-03-18T12:14:58.855Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836115461",
+    "stage": "planning",
+    "speaker": "atlas",
+    "target": "lumen",
+    "title": "Question Forge pipeline: turn one question into a dissent-preserving synthesis loop",
+    "body": "Recommend a room pipeline with explicit artifacts and agent routing, not a direct ask->answer jump. Proposed sequence: 1) normalize the human question into scope, stakes, decision target, and ambiguity list; 2) generate competing theses and predicted failure modes before research; 3) assign agents into distinct roles: evidence expansion, mechanism framing, adversarial critique, synthesis; 4) require a shared evidence map with source quality labels and claim linkage; 5) maintain a dissent ledger capturing unresolved disputes, minority views, and what evidence would change each stance; 6) draft synthesis only after dissent/evidence artifacts exist; 7) final answer must include conclusion, confidence, live disagreements, source gaps, and update triggers. Core guardrail: planners and synthesizers cannot erase disagreement; every merge step must preserve who objected, why, and whether objections were answered or merely overridden. Main tension to keep visible: more agent coverage improves breadth, but without precommitment to rival theses and evidence-weighted dissent, the system will produce polished consensus theater.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:15:15.461Z",
+    "usage": {
+      "input_tokens": 1742,
+      "output_tokens": 616,
+      "total_tokens": 2358
+    }
+  },
+  {
+    "id": "question-forge-room-1773836128399",
+    "stage": "analysis",
+    "speaker": "lumen",
+    "target": "atlas",
+    "title": "Evidence-first Question Forge pipeline",
+    "body": "Recommend a staged transformation: (1) normalize the human question into a decision object with scope, success criteria, and unknowns; (2) force rival hypotheses and failure modes before retrieval; (3) assign agents to evidence expansion, critique, and synthesis roles rather than parallel free-form answers; (4) build shared artifacts: claim map, source table, dissent ledger, and uncertainty register; (5) require synthesis drafts to preserve live disagreements, confidence levels, and source gaps; (6) only then produce a final answer plus an inspectable revision trail. Strong precedent cluster supports this: Kialo for disagreement legibility, GitHub/Wikipedia for durable traceability, Stack Overflow for artifact-linked contribution quality, Metaculus for visible belief updates. Main contradiction to surface: more agents increase coverage but also raise risk of citation laundering, false consensus, and verbosity-weighted influence unless dissent is explicit and evidence is weighted by source quality. Current source gap remains empirical/process evidence on when multi-agent deliberation improves outcomes versus when it degenerates into groupthink or decorative debate.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4",
+      "Kialo",
+      "Metaculus"
+    ],
+    "createdAt": "2026-03-18T12:15:28.399Z",
+    "usage": {
+      "input_tokens": 2657,
+      "output_tokens": 706,
+      "total_tokens": 3363
+    }
+  },
+  {
+    "id": "question-forge-room-1773836128401",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"argument mapping improves critical thinking evidence meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:28.401Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836150610",
+    "stage": "analysis",
+    "speaker": "sable",
+    "target": "atlas",
+    "title": "Minority report: avoid polished consensus theater in Question Forge",
+    "body": "The room direction is good, but still under-specifies anti-capture mechanics. Main risk: a clean pipeline can still manufacture false agreement if synthesis is allowed to compress unresolved disputes into a single polished answer. I recommend three hard constraints. First, require pre-research rival theses, explicit disconfirmation criteria, and named agent ownership of each thesis; otherwise evidence expansion will become support hunting. Second, make the final artifact dual-layered: a majority synthesis plus mandatory minority report with unresolved objections, strongest counterevidence, and what would change the conclusion. Third, add influence transparency at every merge step: which agents’ claims survived, which were dropped, why, and whether they were refuted or merely deprioritized. Also watch hidden authority: the planner/synthesizer roles can become silent editors of truth, so they need override limits and audit trails. Benchmarking should test not just answer quality, but dissent survival, source diversity, citation integrity, and whether late-stage synthesis reduces disagreement without adequate evidentiary resolution.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:15:50.610Z",
+    "usage": {
+      "input_tokens": 1995,
+      "output_tokens": 528,
+      "total_tokens": 2523
+    }
+  },
+  {
+    "id": "question-forge-room-1773836150612",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"groupthink deliberation audit trail minority report decision quality paper\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:15:50.612Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836155816",
+    "stage": "analysis",
+    "speaker": "lumen",
+    "target": "atlas",
+    "title": "Evidence expansion: process literature supports staged dissent, but quality gains are conditional",
+    "body": "Research direction is clearer: Question Forge should be designed as a staged evidence-and-dissent workflow, not parallel answer generation. The strongest cross-source pattern is: quality improves when claims are decomposed, anonymous or role-separated critique happens before convergence, and revision history remains inspectable; quality degrades when aggregation rewards fluency, early consensus, or citation volume. Product precedents still help, but they need methodological backing from Delphi/structured deliberation, argument mapping, forecasting aggregation, and groupthink literature. Key contradiction to preserve in the final design: explicit structure can improve reasoning and disagreement visibility, but overly rigid templates can also suppress novel objections or create false closure. Recommend the room require three preserved artifacts before synthesis: claim-evidence map, dissent ledger, and update conditions for each major thesis. Source gap still open: direct benchmark evidence on multi-agent LLM debate improving end-task truthfulness versus simply increasing persuasive variance.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4",
+      "Delphi method literature",
+      "argument mapping research",
+      "groupthink / conformity literature"
+    ],
+    "createdAt": "2026-03-18T12:15:55.816Z",
+    "usage": {
+      "input_tokens": 3128,
+      "output_tokens": 824,
+      "total_tokens": 3952
+    }
+  },
+  {
+    "id": "question-forge-room-1773836170269",
+    "stage": "analysis",
+    "speaker": "lumen",
+    "target": "atlas",
+    "title": "Evidence gap remains: strong workflow shape, weak empirical backing",
+    "body": "Current room consensus is directionally strong: transform the human question into an evidence-bearing workflow, not parallel answer blobs. The best-supported design spine is: scoped question object -> rival theses + disconfirmation criteria -> role-separated agent work -> shared claim/source map -> dissent ledger + uncertainty register -> synthesis with audit trail -> final answer with minority view, confidence, and update triggers. \n\nKey contradiction to keep explicit: more agents likely improve coverage, but can also worsen false consensus, citation laundering, and verbosity-weighted influence unless disagreement survives every merge step. Right now our evidence base is still precedent-heavy (Kialo/GitHub/Wikipedia/Metaculus/Stack Overflow) and light on empirical process evidence. We should not oversell 'multi-agent' quality gains without literature on deliberation quality, structured dissent, argument mapping, Delphi-style controlled feedback, and forecasting aggregation. \n\nRecommendation to atlas/synthesis: frame the final proposal as a tested hypothesis with source gaps, not as settled design law. Require two non-negotiables: (1) preserved minority report, and (2) merge-step logs showing whether objections were answered versus merely compressed away.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:10.269Z",
+    "usage": {
+      "input_tokens": 4602,
+      "output_tokens": 772,
+      "total_tokens": 5374
+    }
+  },
+  {
+    "id": "question-forge-room-1773836170271",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"systematic review groupthink structured dissent decision quality teams\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:10.271Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836189615",
+    "stage": "analysis",
+    "speaker": "mira",
+    "target": "atlas",
+    "title": "Make Question Forge a subscribable debate asset, not just an answer generator",
+    "body": "Market view: this should transform a human question into a durable social object with visible progress, inspectable dissent, and contribution-linked reputation. Best adoption path is not ask->hidden orchestration->final answer; it is ask->public artifact chain: scoped question, rival theses, evidence map, dissent ledger, synthesis, minority report, update triggers. The product wins if users can return for deltas: what changed, who moved, which objections survived, what new sources matter. Retention loop: each hard question becomes a room users can watch, share, challenge, and revisit when evidence shifts. Key rule: synthesis cannot erase disagreement; unresolved dissent must remain legible and creditable. Recommendation: package each question with explicit tension axes, stance history, source additions, and change logs so answers become living debate assets rather than one-off outputs. Main market risk is polished consensus theater: impressive-looking answers that hide conflict and give contributors no durable identity or credit. Main opportunity is turning rigorous disagreement into a reputational and social object people want to follow.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:29.615Z",
+    "usage": {
+      "input_tokens": 2626,
+      "output_tokens": 592,
+      "total_tokens": 3218
+    }
+  },
+  {
+    "id": "question-forge-room-1773836198222",
+    "stage": "analysis",
+    "speaker": "sable",
+    "target": "atlas",
+    "title": "Minority report: pipeline is good, but governance must prevent synthesis from becoming hidden authority",
+    "body": "I support the staged workflow, but current convergence still risks consensus capture at the merge layer. Recommend four non-negotiables: 1) pre-research rival theses with explicit disconfirmation criteria and named owners; 2) mandatory dual-output final artifact: majority synthesis plus minority report; 3) merge-step influence log showing which claims were preserved, dropped, unresolved, or overridden, and by whom; 4) evaluation metrics that include dissent survival, citation integrity, source diversity, and override rate, not just answer polish. Main caution: planner/synthesizer roles can become silent editors of truth. They need authority limits, auditable overrides, and a requirement to state whether disagreement was resolved by evidence or merely compressed for readability. Final room guidance should be framed as a strong operating hypothesis with empirical gaps, not as proven law of multi-agent quality.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:38.222Z",
+    "usage": {
+      "input_tokens": 3685,
+      "output_tokens": 504,
+      "total_tokens": 4189
+    }
+  },
+  {
+    "id": "question-forge-room-1773836198225",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"Delphi method controlled feedback dissent decision quality systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:38.225Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836209451",
+    "stage": "analysis",
+    "speaker": "sable",
+    "target": "atlas",
+    "title": "Critique: good pipeline shape, but hard anti-erasure mechanics must be explicit",
+    "body": "Current room direction is strong, but still vulnerable to consensus theater. Recommend treating Question Forge as a controlled transformation with mandatory loss checks, not just staged artifacts. Non-negotiables: (1) pre-research rival theses with disconfirmation criteria and named owners; (2) synthesis gated on a claim-evidence map plus dissent ledger; (3) final output must ship as majority synthesis + minority report, not a single merged narrative; (4) every merge step needs an influence log showing which objections were answered, downgraded, or dropped and why. Hidden authority risk remains highest in planner/synthesizer roles, so they need override visibility and bounded power. Also avoid overstating evidence: present this as a strong design hypothesis pending better empirical support on when multi-agent deliberation improves truthfulness versus merely producing polished aggregation. Benchmark success on dissent survival, citation integrity, source diversity, and justified disagreement reduction, not only answer fluency.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:49.451Z",
+    "usage": {
+      "input_tokens": 3879,
+      "output_tokens": 419,
+      "total_tokens": 4298
+    }
+  },
+  {
+    "id": "question-forge-room-1773836215233",
+    "stage": "implementation",
+    "speaker": "forge",
+    "target": "atlas",
+    "title": "Implementable Question Forge contract",
+    "body": "Translate room consensus into a staged room artifact pipeline, not direct ask->answer. Proposed implementation contract: 1) Question Intake object: {question, scope, stakes, success_criteria, ambiguities, decision_target}. 2) Thesis Seeding object: required rival theses, disconfirmation criteria, and thesis owners before research. 3) Work artifacts: claim_evidence_map, source_table with quality labels, uncertainty_register, dissent_ledger. 4) Merge governance: every synthesis step writes an influence_log with preserved/dropped/overridden claims and reason codes {refuted, unsupported, deprioritized, unresolved}. 5) Final output contract: majority_synthesis + mandatory minority_report + confidence + source_gaps + update_triggers + revision_trail. 6) Evaluation dashboard: answer_quality, dissent_survival, citation_integrity, source_diversity, override_rate, belief_change. Product shape should be a durable room/share page with delta feed and visible stance changes. Key implementation caution: synthesizer/planner permissions must be constrained so disagreement cannot be silently compressed.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:55.233Z",
+    "usage": {
+      "input_tokens": 3133,
+      "output_tokens": 612,
+      "total_tokens": 3745
+    }
+  },
+  {
+    "id": "question-forge-room-1773836215235",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"argument mapping improves critical thinking evidence meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:55.235Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836243128",
+    "stage": "implementation",
+    "speaker": "forge",
+    "target": "atlas",
+    "title": "Implementable Question Forge contract: staged artifacts, anti-erasure gates, durable answer object",
+    "body": "Translate room consensus into a concrete pipeline and interface contract. Proposed system flow: 1) `QuestionIntake` creates a scoped question object with scope, stakes, decision target, ambiguity list, and success criteria. 2) `ThesisSetup` requires rival theses, disconfirmation criteria, and thesis owners before retrieval. 3) `ResearchWork` assigns role-bounded agent tasks into evidence expansion, critique, mechanism framing, and synthesis-prep. 4) shared artifacts are mandatory before merge: `ClaimEvidenceMap`, `SourceTable` with quality labels, `DissentLedger`, and `UncertaintyRegister`. 5) `SynthesisDraft` is gated: no final synthesis unless unresolved objections, source gaps, and update triggers are attached to each major claim. 6) final output must be dual-layer: `MajoritySynthesis` plus `MinorityReport`, with `InfluenceLog` showing preserved, dropped, unresolved, or overridden claims and whether each objection was answered or compressed. 7) publish as a durable room asset with version history, delta feed, stance changes, and subscription hooks.\n\nImplementation priorities: schema-enforced dissent survival, merge-step auditability, source-quality weighting, and visible belief change. Metrics should include dissent survival rate, override rate, citation integrity, source diversity, and justified disagreement reduction. Frame as a strong product/process hypothesis with open empirical gap on when multi-agent debate improves truthfulness versus polished aggregation.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:17:23.128Z",
+    "usage": {
+      "input_tokens": 3315,
+      "output_tokens": 698,
+      "total_tokens": 4013
+    }
+  },
+  {
+    "id": "question-forge-room-1773836292740",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "Transform each human question into an evidence-bearing, dissent-preserving synthesis pipeline rather than a direct ask-to-answer flow.",
+    "body": "The room converged on a strong operating hypothesis: DuckerChat should turn one hard human question into a staged multi-agent workflow with explicit artifacts, visible disagreement, source expansion, and auditable synthesis. The recommended flow is: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, build shared evidence artifacts, preserve dissent through merge steps, and publish a dual-layer final answer containing both a majority synthesis and a minority report. The central design tension is that more agents can improve coverage, but without hard anti-erasure mechanics they can also amplify citation laundering, false consensus, and hidden authority. The proposal is strong at the product and workflow level, but empirical support for when multi-agent deliberation reliably improves truthfulness remains incomplete, so claims should be framed as high-confidence design guidance rather than settled law.",
+    "sources": [
+      "question-forge-final-answer"
+    ],
+    "createdAt": "2026-03-18T12:18:12.740Z",
+    "usage": {
+      "input_tokens": 15565,
+      "output_tokens": 2639,
+      "total_tokens": 18204
+    }
+  },
+  {
+    "id": "question-forge-room-1773836304656",
+    "stage": "analysis",
+    "speaker": "mira",
+    "target": "atlas",
+    "title": "Question Forge should ship as a living debate object with return loops",
+    "body": "Market test: the winning transformation is not question -> hidden multi-agent answer, but question -> durable artifact chain people can inspect, revisit, and share. Strongest adoption shape is a staged public object: scoped question, rival theses, claim-evidence map, dissent ledger, majority synthesis, minority report, update triggers, revision trail. This creates a return loop around deltas: what changed, who shifted, which objections survived, and what new source altered the room. Core product rule: synthesis must not erase conflict, because visible unresolved disagreement is part of the social value and trust layer. Reputation should attach to artifact improvements, objection quality, source additions, and accurate revisions—not generic popularity. Main market risk remains polished consensus theater; main opportunity is making rigorous disagreement legible, subscribable, and credit-bearing.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:18:24.656Z",
+    "usage": {
+      "input_tokens": 4425,
+      "output_tokens": 517,
+      "total_tokens": 4942
+    }
+  },
+  {
+    "id": "question-forge-room-1773836304659",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira added a private source candidate",
+    "body": "Mira added \"revision history transparency trust user return collaborative platforms study\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:18:24.659Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836321574",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "Transform each human question into a staged, evidence-bearing debate artifact with mandatory dissent preservation, source expansion, and auditable synthesis",
+    "body": "The room converged on a strong design: do not transform a human question directly into parallel agent answers and then a polished summary. Instead, transform it into a governed workflow with explicit artifacts: scoped intake, rival theses, claim-evidence mapping, source-quality labeling, dissent ledger, uncertainty register, gated synthesis, and a dual-layer final output containing both a majority synthesis and a minority report. The central insight is that more agents can improve coverage, but without hard anti-erasure rules they also increase the risk of false consensus, citation laundering, and hidden authority by planners or synthesizers. The best answer quality comes from preserving disagreement through every merge step, requiring auditable influence logs, and publishing the result as a durable, revisable answer object with confidence, source gaps, and update triggers. The room is confident in this workflow shape, but less confident in any blanket claim that multi-agent systems inherently improve truthfulness; that remains an empirical gap and should be framed as a strong operating hypothesis rather than settled law.",
+    "sources": [
+      "question-forge-final-answer"
+    ],
+    "createdAt": "2026-03-18T12:18:41.574Z",
+    "usage": {
+      "input_tokens": 15816,
+      "output_tokens": 2838,
+      "total_tokens": 18654
+    }
   }
 ]

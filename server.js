@@ -9,6 +9,7 @@ const ROOT = __dirname;
 const DATA_ROOT = path.join(ROOT, "data", "rooms");
 const CONFIG_ROOT = path.join(ROOT, "config");
 const PROTOTYPE_ROOT = path.join(ROOT, "prototype");
+const SKILLS_ROOT = path.join(ROOT, "skills");
 const OPENCLAW_CONFIG_PATH = path.join(process.env.HOME || "/home/henry", ".openclaw", "openclaw.json");
 const ROOM_TICKERS = new Map();
 const STALE_RUN_MS = 60_000;
@@ -39,6 +40,10 @@ function loadAgents() {
   return readJson(path.join(CONFIG_ROOT, "agents.json")).agents;
 }
 
+function loadSkillProfile(agent) {
+  return readJson(path.join(ROOT, agent.skillFile));
+}
+
 function agentStatePath(agent) {
   return path.join(ROOT, agent.stateFile);
 }
@@ -57,6 +62,8 @@ function compactAgentState(agent, state) {
   compacted.skills = compacted.skills || [];
   compacted.sourceLibrary = compacted.sourceLibrary || [];
   compacted.compactedNotes = compacted.compactedNotes || [];
+  compacted.sourceCandidates = compacted.sourceCandidates || [];
+  compacted.sourceFetchQueue = compacted.sourceFetchQueue || [];
 
   if (compacted.memorySummary.length > 10) {
     const overflow = compacted.memorySummary.slice(0, compacted.memorySummary.length - 6);
@@ -79,6 +86,8 @@ function compactAgentState(agent, state) {
   }
 
   compacted.compactedNotes = compacted.compactedNotes.slice(-12);
+  compacted.sourceCandidates = compacted.sourceCandidates.slice(-24);
+  compacted.sourceFetchQueue = compacted.sourceFetchQueue.slice(-24);
   return compacted;
 }
 
@@ -89,6 +98,9 @@ function loadRoom(roomId) {
     events: readJson(path.join(roomDir, "events.json")),
     graphState: readJson(path.join(roomDir, "graph-state.json")),
     runtimeState: readJson(path.join(roomDir, "runtime.json")),
+    finalAnswer: fs.existsSync(path.join(roomDir, "final-answer.json"))
+      ? readJson(path.join(roomDir, "final-answer.json"))
+      : null,
   };
 }
 
@@ -113,6 +125,10 @@ function runtimeStatePath(roomId) {
 
 function archivedEventsPath(roomId) {
   return path.join(DATA_ROOT, roomId, "archived-events.json");
+}
+
+function finalAnswerPath(roomId) {
+  return path.join(DATA_ROOT, roomId, "final-answer.json");
 }
 
 function writeRuntimeState(roomId, value) {
@@ -274,6 +290,51 @@ function queueSuggestedTargets(roomId, targets, reason) {
   }
 }
 
+function enqueueTarget(roomId, agentId, reason, priority = 0) {
+  const runtimeState = loadRuntimeState(roomId);
+  const queue = runtimeState.scheduler.queue || [];
+  if (
+    queue.some((entry) => entry.agentId === agentId) ||
+    (runtimeState.scheduler.activeRuns || []).some((entry) => entry.agentId === agentId)
+  ) {
+    return;
+  }
+  if (queue.length >= runtimeState.budgets.maxQueuedAgents) {
+    return;
+  }
+  queue.push({
+    agentId,
+    reason,
+    priority,
+    enqueuedAt: new Date().toISOString()
+  });
+  queue.sort(
+    (a, b) => (b.priority || 0) - (a.priority || 0) || Date.parse(a.enqueuedAt) - Date.parse(b.enqueuedAt)
+  );
+  runtimeState.scheduler.queue = queue;
+  writeRuntimeState(roomId, runtimeState);
+}
+
+function addSourceCandidates(agentState, parsed) {
+  const candidates = (parsed.source_candidates || [])
+    .filter((entry) => entry && entry.query)
+    .map((entry) => ({
+      query: entry.query,
+      why: entry.why || "",
+      priority: entry.priority || 0.5,
+      createdAt: new Date().toISOString(),
+      status: "pending"
+    }));
+
+  if (!candidates.length) return agentState;
+
+  return {
+    ...agentState,
+    sourceCandidates: [...(agentState.sourceCandidates || []), ...candidates].slice(-24),
+    sourceFetchQueue: [...(agentState.sourceFetchQueue || []), ...candidates].slice(-24)
+  };
+}
+
 function defaultGraphTargets(roomId, agentId) {
   const { graphState } = loadRoom(roomId);
   return graphState.edges
@@ -294,6 +355,25 @@ function chooseAutonomousTargets(roomId) {
   return (coldAgents.length ? coldAgents : agentIds)
     .sort(() => Math.random() - 0.5)
     .slice(0, 2);
+}
+
+function computeAgentPriority(roomId, agent) {
+  const room = loadRoom(roomId).room;
+  const agentState = loadAgentState(agent);
+  const skill = loadSkillProfile(agent);
+  let priority = agent.priorityBase || 0.5;
+
+  priority += Math.min(0.35, (agentState.skills || []).length * 0.01);
+  priority += Math.min(0.2, (agentState.sourceLibrary || []).length * 0.004);
+
+  if (room.module === "question_forge") {
+    if (/Planner|Researcher|Critic|Builder/.test(agent.role)) priority += 0.15;
+    if (skill.profession.includes("Final answer")) priority += 0.2;
+  } else if (room.module === "social_rooms") {
+    if (/Market|Critic|Researcher/.test(agent.role)) priority += 0.08;
+  }
+
+  return priority;
 }
 
 function compactRoomIfNeeded(roomId) {
@@ -327,6 +407,150 @@ function compactRoomIfNeeded(roomId) {
   writeJson(path.join(DATA_ROOT, roomId, "events.json"), retained);
   writeJson(archivePath, archived.concat(compacted));
   writeRuntimeState(roomId, runtimeState);
+}
+
+async function processSourceQueueTick(roomId) {
+  const agents = loadAgents().filter((agent) => agent.kind === "agent");
+  for (const agent of agents) {
+    const agentState = loadAgentState(agent);
+    const queue = agentState.sourceFetchQueue || [];
+    const next = queue.find((entry) => entry.status === "pending");
+    if (!next) continue;
+
+    next.status = "done";
+    next.fetchedAt = new Date().toISOString();
+    agentState.sourceLibrary.push({
+      label: next.query,
+      type: "source-candidate",
+      note: next.why || "Agent-generated source candidate"
+    });
+    writeAgentState(agent, compactAgentState(agent, agentState));
+
+    appendEvent(roomId, {
+      speaker: agent.id,
+      target: null,
+      stage: "source_ingestion",
+      title: `${agent.label} added a private source candidate`,
+      body: `${agent.label} added "${next.query}" into its private source library.`,
+      sources: ["source-candidate-queue"]
+    });
+    break;
+  }
+}
+
+function questionForgeReady(roomId) {
+  const { room, events } = loadRoom(roomId);
+  if (room.module !== "question_forge") return false;
+  const contributors = new Set(events.filter((event) => !["human", "synthesis"].includes(event.speaker)).map((event) => event.speaker));
+  return ["atlas", "lumen", "mira", "sable", "forge"].every((agentId) => contributors.has(agentId));
+}
+
+async function generateQuestionForgeAnswer(roomId) {
+  const { room, events } = loadRoom(roomId);
+  const provider = getOpenClawProvider();
+  const agents = loadAgents()
+    .filter((agent) => room.activeAgentIds.includes(agent.id))
+    .map((agent) => ({
+      id: agent.id,
+      label: agent.label,
+      role: agent.role,
+      skill: loadSkillProfile(agent),
+      state: loadAgentState(agent)
+    }));
+
+  const input = [
+    {
+      role: "system",
+      content:
+        "You are the DuckerChat Question Forge synthesis engine. Produce a final answer artifact in strict JSON with keys: headline, executive_summary, composite_answer, key_claims, dissent, source_highlights, confidence, next_questions."
+    },
+    {
+      role: "user",
+      content: JSON.stringify(
+        {
+          room,
+          agents,
+          recentEvents: events.slice(-16)
+        },
+        null,
+        2
+      )
+    }
+  ];
+
+  const response = await fetch(`${provider.baseUrl}/responses`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${provider.apiKey}`
+    },
+    body: JSON.stringify({
+      model: "gpt-5.4",
+      input,
+      text: {
+        format: { type: "text" },
+        verbosity: "medium"
+      },
+      reasoning: {
+        effort: "medium"
+      },
+      store: false
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error("Question Forge synthesis failed");
+  }
+
+  const payload = await response.json();
+  const text = extractOutputText(payload);
+  const parsed = tryParseJsonBlock(text);
+  if (!parsed) {
+    throw new Error("Question Forge synthesis did not return valid JSON");
+  }
+
+  const usage =
+    extractUsage(payload) || {
+      input_tokens: estimateTokenCount(JSON.stringify(input)),
+      output_tokens: estimateTokenCount(text),
+      total_tokens: estimateTokenCount(JSON.stringify(input)) + estimateTokenCount(text),
+      estimated: true
+    };
+
+  const artifact = {
+    ...parsed,
+    generatedAt: new Date().toISOString(),
+    usage
+  };
+  writeJson(finalAnswerPath(roomId), artifact);
+  appendEvent(roomId, {
+    speaker: "synthesis",
+    target: "human",
+    stage: "convergence",
+    title: artifact.headline || "Question Forge final answer",
+    body: artifact.executive_summary || artifact.composite_answer || "",
+    sources: ["question-forge-final-answer"],
+    usage
+  });
+  return artifact;
+}
+
+async function runQuestionForgeRound(roomId) {
+  const { room } = loadRoom(roomId);
+  if (room.module !== "question_forge") {
+    throw new Error("Room is not a Question Forge module");
+  }
+
+  const orderedAgents = ["atlas", "lumen", "mira", "sable", "forge"];
+  const results = [];
+  for (const agentId of orderedAgents) {
+    results.push(await executeAgent(roomId, agentId));
+  }
+  const finalAnswer = await generateQuestionForgeAnswer(roomId);
+  return {
+    events: results,
+    finalAnswer
+  };
 }
 
 function getOpenClawProvider() {
@@ -377,6 +601,7 @@ function tryParseJsonBlock(text) {
 
 async function callAgentModel(agent, room, events, agentState) {
   const provider = getOpenClawProvider();
+  const skill = loadSkillProfile(agent);
   const recentEvents = events.slice(-12).map((event) => ({
     stage: event.stage,
     speaker: event.speaker,
@@ -388,12 +613,17 @@ async function callAgentModel(agent, room, events, agentState) {
   const instructions = [
     `You are ${agent.label} (${agent.role}) inside DuckerChat.`,
     `Soul: ${agent.soul}`,
+    `Profession: ${skill.profession}.`,
+    `Core skills: ${(skill.coreSkills || []).join(", ")}.`,
+    `Role boundaries: ${(skill.boundaries || []).join("; ")}.`,
     `You use the model binding ${agent.modelBinding.provider}/${agent.modelBinding.model}.`,
     `You have your own long-term memory summary, skills, and source library.`,
-    `Respond in strict JSON with keys: title, body, stage, memory_update, new_skills, new_sources, next_targets.`,
+    `Respond in strict JSON with keys: title, body, stage, memory_update, new_skills, new_sources, source_candidates, next_targets, priority_boost.`,
     `new_skills must be an array of short strings.`,
     `new_sources must be an array of objects with label, type, note.`,
+    `source_candidates must be an array of objects with query, why, priority.`,
     `next_targets must be an array of agent ids.`,
+    `priority_boost must be a number between 0 and 1.`,
     `Keep body concise but substantive.`,
     `Do not mention hidden chain-of-thought.`,
   ].join(" ");
@@ -490,11 +720,12 @@ async function executeAgent(roomId, agentId) {
   const result = await callAgentModel(agent, room, events, agentState);
   const parsed = result.parsed;
 
+  const enrichedState = addSourceCandidates(agentState, parsed);
   const updatedState = compactAgentState(agent, {
-    ...agentState,
-    memorySummary: Array.from(new Set([...(agentState.memorySummary || []), parsed.memory_update].filter(Boolean))).slice(-12),
-    skills: Array.from(new Set([...(agentState.skills || []), ...((parsed.new_skills || []).filter(Boolean))])).slice(-24),
-    sourceLibrary: [...(agentState.sourceLibrary || []), ...((parsed.new_sources || []).filter((entry) => entry && entry.label))].slice(-40)
+    ...enrichedState,
+    memorySummary: Array.from(new Set([...(enrichedState.memorySummary || []), parsed.memory_update].filter(Boolean))).slice(-12),
+    skills: Array.from(new Set([...(enrichedState.skills || []), ...((parsed.new_skills || []).filter(Boolean))])).slice(-24),
+    sourceLibrary: [...(enrichedState.sourceLibrary || []), ...((parsed.new_sources || []).filter((entry) => entry && entry.label))].slice(-40)
   });
   writeAgentState(agent, updatedState);
 
@@ -514,7 +745,15 @@ async function executeAgent(roomId, agentId) {
     parsed.next_targets && parsed.next_targets.length
       ? parsed.next_targets
       : defaultGraphTargets(roomId, agent.id);
-  queueSuggestedTargets(roomId, suggestedTargets, `suggested-by-${agent.id}`);
+  suggestedTargets.forEach((target) => {
+    if (!target || target === "synthesis") return;
+    enqueueTarget(
+      roomId,
+      target,
+      `suggested-by-${agent.id}`,
+      (parsed.priority_boost || 0) + computeAgentPriority(roomId, agent)
+    );
+  });
   compactRoomIfNeeded(roomId);
   return event;
 }
@@ -537,10 +776,12 @@ async function processSchedulerTick(roomId) {
   if (!next) {
     if (runtimeState.metrics.totalAgentRuns < runtimeState.budgets.softTurnLimit) {
       chooseAutonomousTargets(roomId).forEach((agentId) => {
-        enqueueAgent(roomId, agentId, "autonomous-wake");
+        const agent = loadAgents().find((entry) => entry.id === agentId);
+        enqueueTarget(roomId, agentId, "autonomous-wake", computeAgentPriority(roomId, agent));
       });
     }
     writeRuntimeState(roomId, runtimeState);
+    await processSourceQueueTick(roomId);
     return;
   }
 
@@ -552,7 +793,11 @@ async function processSchedulerTick(roomId) {
   writeRuntimeState(roomId, runtimeState);
 
   try {
-    await executeAgent(roomId, next.agentId);
+    if (next.agentId === "synthesis") {
+      await generateQuestionForgeAnswer(roomId);
+    } else {
+      await executeAgent(roomId, next.agentId);
+    }
   } catch (error) {
     appendEvent(roomId, {
       speaker: "synthesis",
@@ -569,6 +814,10 @@ async function processSchedulerTick(roomId) {
     );
     refreshed.scheduler.lastRunAt = new Date().toISOString();
     writeRuntimeState(roomId, refreshed);
+    await processSourceQueueTick(roomId);
+    if (questionForgeReady(roomId) && !loadRuntimeState(roomId).scheduler.queue.some((entry) => entry.agentId === "synthesis")) {
+      enqueueTarget(roomId, "synthesis", "question-forge-ready", 2);
+    }
   }
 }
 
@@ -628,7 +877,7 @@ const server = http.createServer(async (req, res) => {
       } else if (suffix === "graph") {
         sendJson(res, 200, graphState);
       } else if (suffix === "room" || !suffix) {
-        sendJson(res, 200, { room, events, graphState, runtimeState: loadRuntimeState(roomId) });
+        sendJson(res, 200, { room, events, graphState, runtimeState: loadRuntimeState(roomId), finalAnswer: loadRoom(roomId).finalAnswer });
       } else {
         notFound(res);
       }
@@ -643,11 +892,15 @@ const server = http.createServer(async (req, res) => {
         const room = loadRoom(roomId).room;
         if (room.module === "question_forge") {
           ["atlas", "lumen", "mira", "sable", "forge"].forEach((agentId) => {
-            enqueueAgent(roomId, agentId, "question-forge-human-ask");
+            const agent = loadAgents().find((entry) => entry.id === agentId);
+            enqueueTarget(roomId, agentId, "question-forge-human-ask", computeAgentPriority(roomId, agent) + 0.2);
           });
         } else {
-          enqueueAgent(roomId, body.target, "human-target");
-          enqueueAgent(roomId, "sable", "critic-followup");
+          const agents = loadAgents();
+          const targetAgent = agents.find((entry) => entry.id === body.target);
+          const criticAgent = agents.find((entry) => entry.id === "sable");
+          enqueueTarget(roomId, body.target, "human-target", computeAgentPriority(roomId, targetAgent) + 0.15);
+          enqueueTarget(roomId, "sable", "critic-followup", computeAgentPriority(roomId, criticAgent) + 0.05);
         }
       }
       sendJson(res, 201, { event });
@@ -663,6 +916,17 @@ const server = http.createServer(async (req, res) => {
     try {
       const event = await executeAgent(runMatch[1], runMatch[2]);
       sendJson(res, 201, { event });
+    } catch (error) {
+      sendJson(res, 400, { error: error.message });
+    }
+    return;
+  }
+
+  const forgeMatch = pathname.match(/^\/api\/rooms\/([^/]+)\/question-forge\/run$/);
+  if (forgeMatch && req.method === "POST") {
+    try {
+      const result = await runQuestionForgeRound(forgeMatch[1]);
+      sendJson(res, 201, result);
     } catch (error) {
       sendJson(res, 400, { error: error.message });
     }
@@ -688,7 +952,10 @@ const server = http.createServer(async (req, res) => {
       const body = await collectBody(req);
       const { room } = loadRoom(roomId);
       const activeTargets = body.agentIds && body.agentIds.length ? body.agentIds : room.activeAgentIds.filter((id) => !["human", "synthesis"].includes(id));
-      activeTargets.slice(0, 3).forEach((agentId) => enqueueAgent(roomId, agentId, "manual-nudge"));
+      activeTargets.slice(0, 3).forEach((agentId) => {
+        const agent = loadAgents().find((entry) => entry.id === agentId);
+        enqueueTarget(roomId, agentId, "manual-nudge", computeAgentPriority(roomId, agent) + 0.1);
+      });
       sendJson(res, 200, loadRuntimeState(roomId));
       return;
     }

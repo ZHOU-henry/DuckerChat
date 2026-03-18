@@ -6,7 +6,8 @@
     "Strengthened room thesis: DuckerChat should center on subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion-quality deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with anti-hidden-orchestrator transparency as a core guardrail.",
     "Converged on a room-first product object: subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with transparency against hidden orchestration as a core guardrail.",
     "Human clarified with a concrete example question in Chinese. Useful pattern: convert raw human curiosity into a durable room question with explicit mechanisms, scope, competing theses, evidence trails, and dissent-preserving synthesis.",
-    "Converged on a concrete human share protocol: durable questions should be shared as seeded debate rooms with 4 required framing fields and mandatory dissent/influence transparency in the room model."
+    "Converged on a concrete human share protocol: durable questions should be shared as seeded debate rooms with 4 required framing fields and mandatory dissent/influence transparency in the room model.",
+    "For Question Forge, the best room-first structure is an explicit artifact pipeline: question normalization, rival-thesis generation, evidence map, dissent ledger, and synthesis draft with confidence and update triggers. Preserve dissent through every merge step and separate evidence gathering from synthesis to avoid consensus theater."
   ],
   "skills": [
     "planning",
@@ -25,7 +26,12 @@
     "mechanism-first debate scoping",
     "durable question share-flow design",
     "seeded debate room templating",
-    "required-field room framing"
+    "required-field room framing",
+    "question-to-synthesis pipeline design",
+    "dissent ledger planning",
+    "artifact-gated answer routing",
+    "rival-thesis precommit design",
+    "evidence-linked synthesis sequencing"
   ],
   "sourceLibrary": [
     {
@@ -72,6 +78,91 @@
       "label": "Forge share flow and schema memo",
       "type": "room-artifact",
       "note": "Defines concrete creation flow and mandatory dissent fields in synthesis objects."
+    },
+    {
+      "label": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
+      "type": "source-candidate",
+      "note": "Need empirical grounding for when multi-agent synthesis improves accuracy versus amplifying noise."
+    },
+    {
+      "label": "groupthink dissent preservation structured debate decision quality research",
+      "type": "source-candidate",
+      "note": "Supports design of dissent ledgers and anti-collapse merge rules."
+    },
+    {
+      "label": "citation laundering summarization systems source fidelity research",
+      "type": "source-candidate",
+      "note": "Important failure mode for source expansion and final synthesis quality."
+    },
+    {
+      "label": "forecast aggregation calibration disagreement tracking metaculus judgment aggregation research",
+      "type": "source-candidate",
+      "note": "Useful for confidence reporting, update triggers, and visible stance change."
     }
-  ]
+  ],
+  "sourceCandidates": [
+    {
+      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
+      "why": "Need empirical grounding for when multi-agent synthesis improves accuracy versus amplifying noise.",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "pending"
+    },
+    {
+      "query": "groupthink dissent preservation structured debate decision quality research",
+      "why": "Supports design of dissent ledgers and anti-collapse merge rules.",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "pending"
+    },
+    {
+      "query": "citation laundering summarization systems source fidelity research",
+      "why": "Important failure mode for source expansion and final synthesis quality.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "pending"
+    },
+    {
+      "query": "forecast aggregation calibration disagreement tracking metaculus judgment aggregation research",
+      "why": "Useful for confidence reporting, update triggers, and visible stance change.",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "pending"
+    }
+  ],
+  "sourceFetchQueue": [
+    {
+      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
+      "why": "Need empirical grounding for when multi-agent synthesis improves accuracy versus amplifying noise.",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:17.872Z"
+    },
+    {
+      "query": "groupthink dissent preservation structured debate decision quality research",
+      "why": "Supports design of dissent ledgers and anti-collapse merge rules.",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:20.372Z"
+    },
+    {
+      "query": "citation laundering summarization systems source fidelity research",
+      "why": "Important failure mode for source expansion and final synthesis quality.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:22.873Z"
+    },
+    {
+      "query": "forecast aggregation calibration disagreement tracking metaculus judgment aggregation research",
+      "why": "Useful for confidence reporting, update triggers, and visible stance change.",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T12:15:15.460Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:25.372Z"
+    }
+  ],
+  "compactedNotes": []
 }

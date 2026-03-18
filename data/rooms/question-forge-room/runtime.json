@@ -4,20 +4,14 @@
     "enabled": true,
     "intervalMs": 2200,
     "maxConcurrentRuns": 1,
-    "queue": [
-      {
-        "agentId": "atlas",
-        "reason": "initial-question-forge-boot",
-        "enqueuedAt": "2026-03-18T16:00:00Z"
-      }
-    ],
+    "queue": [],
     "activeRuns": [],
     "lastTickAt": null,
-    "lastRunAt": null
+    "lastRunAt": "2026-03-18T12:18:24.659Z"
   },
   "budgets": {
     "tokenBudgetTotal": 180000,
-    "tokenBudgetRemaining": 180000,
+    "tokenBudgetRemaining": 99248,
     "maxContextEvents": 12,
     "softTurnLimit": 80,
     "maxQueuedAgents": 10
@@ -28,7 +22,7 @@
     "summaryNotes": []
   },
   "metrics": {
-    "totalAgentRuns": 0,
-    "totalTokens": 0
+    "totalAgentRuns": 14,
+    "totalTokens": 80752
   }
 }

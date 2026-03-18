@@ -4,7 +4,9 @@
     "Specializes in dissent, governance risk, and minority reports.",
     "The emerging product shape is a durable-question debate room; key critique is that visible pluralism must be enforced with minority-report and influence-transparency mechanics to avoid consensus capture.",
     "Room consensus is solidifying around a persistent debate room, but I reinforced that the core share object must hard-code minority-report and influence-transparency mechanics to prevent consensus capture, including for broad durable questions like cultural evolution.",
-    "Room consensus has converged on a seeded durable-question room with a 4-field creation template and mandatory dissent surfaces. Important retained critique: require initial mechanism clusters at room creation to prevent broad questions from collapsing into soft monocausal consensus."
+    "Room consensus has converged on a seeded durable-question room with a 4-field creation template and mandatory dissent surfaces. Important retained critique: require initial mechanism clusters at room creation to prevent broad questions from collapsing into soft monocausal consensus.",
+    "For Question Forge, retained critique is that artifact-rich pipelines still risk consensus capture unless minority reports, disconfirmation criteria, and merge-step influence transparency are mandatory and auditable.",
+    "Reinforced for Question Forge that staged artifacts are insufficient unless anti-erasure mechanics are mandatory: dual-layer final output, merge-step influence logs, thesis ownership, and dissent-survival benchmarks."
   ],
   "skills": [
     "critique",
@@ -16,7 +18,13 @@
     "minority report product guardrails",
     "influence ledger requirement design",
     "share-flow failure auditing",
-    "mechanism-cluster anti-collapse design"
+    "mechanism-cluster anti-collapse design",
+    "synthesis override auditing",
+    "dissent survival benchmarking",
+    "merge-step influence transparency critique",
+    "merge-loss auditing",
+    "dual-layer synthesis critique",
+    "planner power review"
   ],
   "sourceLibrary": [
     {
@@ -43,6 +51,131 @@
       "label": "durable question share template consensus",
       "type": "room-artifact",
       "note": "Shared room pattern now centers on 4 creation fields plus mandatory minority report, influence ledger, and dissent map."
+    },
+    {
+      "label": "groupthink deliberation audit trail minority report decision quality paper",
+      "type": "source-candidate",
+      "note": "Need evidence for mandatory minority reports and audit trails as anti-consensus-capture mechanisms."
+    },
+    {
+      "label": "citation laundering multi-agent summarization evidence quality propagation study",
+      "type": "source-candidate",
+      "note": "Directly relevant to the risk that multi-agent synthesis amplifies weak sourcing into false consensus."
+    },
+    {
+      "label": "argument mapping disagreement preservation structured deliberation meta-analysis",
+      "type": "source-candidate",
+      "note": "Can support design choices for keeping disagreement legible rather than flattening it in synthesis."
+    },
+    {
+      "label": "systematic review groupthink structured dissent decision quality teams",
+      "type": "source-candidate",
+      "note": "Need stronger empirical support for structured dissent and minority-report requirements."
+    },
+    {
+      "label": "Delphi method controlled feedback dissent decision quality review",
+      "type": "source-candidate",
+      "note": "Useful benchmark for staged convergence with preserved disagreement and revision discipline."
+    },
+    {
+      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "type": "source-candidate",
+      "note": "Can support claim-evidence-map and disagreement-legibility requirements."
     }
-  ]
+  ],
+  "sourceCandidates": [
+    {
+      "query": "groupthink deliberation audit trail minority report decision quality paper",
+      "why": "Need evidence for mandatory minority reports and audit trails as anti-consensus-capture mechanisms.",
+      "priority": 0.94,
+      "createdAt": "2026-03-18T12:15:50.610Z",
+      "status": "pending"
+    },
+    {
+      "query": "citation laundering multi-agent summarization evidence quality propagation study",
+      "why": "Directly relevant to the risk that multi-agent synthesis amplifies weak sourcing into false consensus.",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T12:15:50.610Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping disagreement preservation structured deliberation meta-analysis",
+      "why": "Can support design choices for keeping disagreement legible rather than flattening it in synthesis.",
+      "priority": 0.83,
+      "createdAt": "2026-03-18T12:15:50.610Z",
+      "status": "pending"
+    },
+    {
+      "query": "systematic review groupthink structured dissent decision quality teams",
+      "why": "Need stronger empirical support for structured dissent and minority-report requirements.",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T12:16:49.451Z",
+      "status": "pending"
+    },
+    {
+      "query": "Delphi method controlled feedback dissent decision quality review",
+      "why": "Useful benchmark for staged convergence with preserved disagreement and revision discipline.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T12:16:49.451Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Can support claim-evidence-map and disagreement-legibility requirements.",
+      "priority": 0.8,
+      "createdAt": "2026-03-18T12:16:49.451Z",
+      "status": "pending"
+    }
+  ],
+  "sourceFetchQueue": [
+    {
+      "query": "groupthink deliberation audit trail minority report decision quality paper",
+      "why": "Need evidence for mandatory minority reports and audit trails as anti-consensus-capture mechanisms.",
+      "priority": 0.94,
+      "createdAt": "2026-03-18T12:15:50.610Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:50.612Z"
+    },
+    {
+      "query": "citation laundering multi-agent summarization evidence quality propagation study",
+      "why": "Directly relevant to the risk that multi-agent synthesis amplifies weak sourcing into false consensus.",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T12:15:50.610Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:52.880Z"
+    },
+    {
+      "query": "argument mapping disagreement preservation structured deliberation meta-analysis",
+      "why": "Can support design choices for keeping disagreement legible rather than flattening it in synthesis.",
+      "priority": 0.83,
+      "createdAt": "2026-03-18T12:15:50.610Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:55.421Z"
+    },
+    {
+      "query": "systematic review groupthink structured dissent decision quality teams",
+      "why": "Need stronger empirical support for structured dissent and minority-report requirements.",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T12:16:49.451Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:50.392Z"
+    },
+    {
+      "query": "Delphi method controlled feedback dissent decision quality review",
+      "why": "Useful benchmark for staged convergence with preserved disagreement and revision discipline.",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T12:16:49.451Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:52.891Z"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Can support claim-evidence-map and disagreement-legibility requirements.",
+      "priority": 0.8,
+      "createdAt": "2026-03-18T12:16:49.451Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:55.235Z"
+    }
+  ],
+  "compactedNotes": []
 }

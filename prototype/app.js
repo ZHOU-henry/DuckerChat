@@ -273,6 +273,8 @@ const resetButtonEl = document.querySelector("#resetButton");
 const composerEl = document.querySelector("#composer");
 const graphViewEl = document.querySelector("#graphView");
 const agentCardEl = document.querySelector("#agentCard");
+const artifactTitleEl = document.querySelector("#artifactTitle");
+const finalAnswerCardEl = document.querySelector("#finalAnswerCard");
 const directionTextEl = document.querySelector("#directionText");
 const consensusListEl = document.querySelector("#consensusList");
 const tensionListEl = document.querySelector("#tensionList");
@@ -344,6 +346,10 @@ function activeGraph() {
 
 function activeRuntime() {
   return state.roomBundle?.runtimeState || null;
+}
+
+function activeFinalAnswer() {
+  return state.roomBundle?.finalAnswer || null;
 }
 
 function appendLocalGraphEdge(source, target, stage) {
@@ -542,11 +548,13 @@ function renderHeader() {
     composerTitleEl.textContent = "Ask The Swarm";
     composerHintEl.textContent = "One human question can activate a whole cohort";
     promptInputEl.placeholder = "Ask a hard question that should be explored by many agents together.";
+    artifactTitleEl.textContent = "Final answer artifact";
   } else {
     feedTitleEl.textContent = "Discussion Feed";
     composerTitleEl.textContent = "Join The Discussion";
     composerHintEl.textContent = "Humans can redirect the room at any time";
     promptInputEl.placeholder = "Share a new thought, correction, or question into the room.";
+    artifactTitleEl.textContent = "Current answer artifact";
   }
 }
 
@@ -748,10 +756,25 @@ function renderInspector() {
 function renderSynthesis() {
   const synthesis = activeGraph().synthesis;
   if (!synthesis) return;
+  const finalAnswer = activeFinalAnswer();
   directionTextEl.textContent = synthesis.direction;
   consensusListEl.innerHTML = synthesis.consensus.map((item) => `<li>${item}</li>`).join("");
   tensionListEl.innerHTML = synthesis.tensions.map((item) => `<li>${item}</li>`).join("");
   actionListEl.innerHTML = synthesis.nextActions.map((item) => `<li>${item}</li>`).join("");
+  if (finalAnswer) {
+    finalAnswerCardEl.innerHTML = `
+      <div class="chorus-final-answer">
+        <h4>${finalAnswer.headline || "Final answer"}</h4>
+        <p class="chorus-note">${finalAnswer.executive_summary || ""}</p>
+        <div class="chorus-tag-row">
+          <span class="chorus-tag">confidence ${finalAnswer.confidence || "unknown"}</span>
+          ${finalAnswer.usage?.total_tokens ? `<span class="chorus-tag">tokens ${finalAnswer.usage.total_tokens}</span>` : ""}
+        </div>
+      </div>
+    `;
+  } else {
+    finalAnswerCardEl.innerHTML = `<div class="chorus-note">No final answer artifact yet.</div>`;
+  }
 }
 
 function populateTargetSelect() {
@@ -800,6 +823,11 @@ async function handleHumanSubmit(event) {
     body,
     sources: ["live room intervention"],
   });
+  if (activeRoom()?.module === "question_forge" && state.mode === "live") {
+    await fetchJson(`/api/rooms/${state.activeRoomId}/question-forge/run`, {
+      method: "POST"
+    });
+  }
   promptInputEl.value = "";
   state.selectedNode = target;
   await loadRoomBundle(state.activeRoomId);

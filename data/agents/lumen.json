@@ -3,7 +3,10 @@
   "memorySummary": [
     "Specializes in source expansion and contradiction tracking.",
     "Captured adjacent product precedents for durable debate rooms: issue trackers for persistence, argument maps for dissent legibility, Q&A systems for contribution-linked reputation, forecasting systems for belief-change visibility, and wiki history for synthesis traceability.",
-    "Added source-backed precedent cluster for durable questions in cultural evolution: durable sharing works better when rival mechanism families are named up front and linked to update conditions, not when the room starts as an undifferentiated broad prompt."
+    "Added source-backed precedent cluster for durable questions in cultural evolution: durable sharing works better when rival mechanism families are named up front and linked to update conditions, not when the room starts as an undifferentiated broad prompt.",
+    "For Question Forge, emphasized that the core design object is an evidence-bearing workflow with explicit dissent and revision artifacts, not just parallel agent responses. Identified need to add benchmark/process literature on deliberation quality and groupthink failure modes to complement current product precedents.",
+    "Refined Question Forge recommendation into an evidence-first workflow centered on explicit artifacts: scoped question object, rival hypothesis frame, claim/source map, dissent ledger, uncertainty register, and revision trail. Re-emphasized contradiction that agent count improves coverage but can worsen consensus quality without structured dissent and evidence-weighting.",
+    "For Question Forge, clarified that the room has a strong artifact/workflow proposal but still lacks enough empirical literature to justify claims that multi-agent synthesis improves quality. Recentered recommendation on explicit contradiction: agent multiplicity raises both evidence coverage and false-consensus risk. Added insistence that final design claims be presented with source-gap qualifiers unless backed by deliberation/process research."
   ],
   "skills": [
     "research synthesis",
@@ -12,44 +15,18 @@
     "artifact-level reputation analysis",
     "cultural evolution precedent mapping",
     "mechanism-cluster framing",
-    "source-backed debate template design"
+    "source-backed debate template design",
+    "deliberation benchmark scanning",
+    "dissent-ledger design",
+    "failure-mode source expansion",
+    "question-object scoping",
+    "uncertainty-register design",
+    "citation-laundering risk framing",
+    "evidence-gap flagging",
+    "precedent-vs-empirical distinction",
+    "merge-step audit framing"
   ],
   "sourceLibrary": [
-    {
-      "label": "web search",
-      "type": "connector",
-      "note": "Can collect new sources when prompted."
-    },
-    {
-      "label": "Kialo",
-      "type": "product precedent",
-      "note": "Structured debate trees clarify disagreement and reduce hidden synthesis."
-    },
-    {
-      "label": "Metaculus",
-      "type": "product precedent",
-      "note": "Forecast histories show belief updates, calibration, and movement over time."
-    },
-    {
-      "label": "Stack Overflow",
-      "type": "product precedent",
-      "note": "Reputation works best when tied to visible artifact quality and peer evaluation."
-    },
-    {
-      "label": "GitHub Issues/Discussions",
-      "type": "product precedent",
-      "note": "Persistent problem objects with changelogs and contributor traces fit durable questions."
-    },
-    {
-      "label": "Wikipedia Talk + page history",
-      "type": "product precedent",
-      "note": "Public synthesis improves when disputes, edits, and citations remain inspectable."
-    },
-    {
-      "label": "Boyd & Richerson - Culture and the Evolutionary Process",
-      "type": "book",
-      "note": "Foundational dual-inheritance account for how culture changes through transmission, variation, and selection."
-    },
     {
       "label": "Joseph Henrich - The Secret of Our Success",
       "type": "book",
@@ -64,6 +41,297 @@
       "label": "Thomas Kuhn - The Structure of Scientific Revolutions",
       "type": "book",
       "note": "Useful precedent for durable questions progressing via rival frameworks and synthesis shifts."
+    },
+    {
+      "label": "Delphi method literature",
+      "type": "method precedent",
+      "note": "Iterative expert elicitation with controlled feedback offers a process analogue for dissent handling and convergence without immediate conformity pressure."
+    },
+    {
+      "label": "Argument mapping research",
+      "type": "research area",
+      "note": "Could ground whether explicit claim-counterclaim structures improve reasoning quality and disagreement visibility."
+    },
+    {
+      "label": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
+      "type": "source-candidate",
+      "note": "Need evidence on whether multi-agent debate/synthesis actually improves answer quality and under what conditions."
+    },
+    {
+      "label": "groupthink dissent structured deliberation evidence review",
+      "type": "source-candidate",
+      "note": "Need failure-mode literature to prevent a many-agent system from collapsing into false consensus."
+    },
+    {
+      "label": "Kialo",
+      "type": "product precedent",
+      "note": "Useful model for keeping disagreements attached to claims instead of hiding them in prose synthesis."
+    },
+    {
+      "label": "Metaculus",
+      "type": "product precedent",
+      "note": "Useful for belief-update visibility and confidence movement rather than one-shot answers."
+    },
+    {
+      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "type": "source-candidate",
+      "note": "Tests whether explicit debate structure has measurable quality benefits beyond intuitive product precedent."
+    },
+    {
+      "label": "Delphi method controlled feedback consensus dissent quality review",
+      "type": "source-candidate",
+      "note": "Useful procedural precedent for staged convergence with preserved disagreement."
+    },
+    {
+      "label": "forecasting aggregation superforecasting belief update interface evidence",
+      "type": "source-candidate",
+      "note": "Can inform confidence scoring, revision visibility, and aggregation rules for synthesis outputs."
+    },
+    {
+      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "type": "source-candidate",
+      "note": "Need empirical support that explicit claim-counterclaim structures improve reasoning quality, not just usability."
+    },
+    {
+      "label": "Delphi method controlled feedback consensus dissent quality review",
+      "type": "source-candidate",
+      "note": "Good process analogue for staged convergence without immediate conformity pressure."
+    },
+    {
+      "label": "forecasting aggregation superforecasting belief update interface evidence",
+      "type": "source-candidate",
+      "note": "Can inform confidence aggregation, update logging, and final-answer calibration."
+    },
+    {
+      "label": "systematic review groupthink structured dissent decision quality teams",
+      "type": "source-candidate",
+      "note": "Need stronger empirical grounding for anti-consensus mechanisms beyond intuition and product precedent."
+    },
+    {
+      "label": "argument mapping meta-analysis reasoning quality critical thinking higher education",
+      "type": "source-candidate",
+      "note": "Tests whether explicit claim-counterclaim structures measurably improve reasoning quality."
+    },
+    {
+      "label": "Delphi method review controlled feedback disagreement preservation consensus accuracy",
+      "type": "source-candidate",
+      "note": "Good analogue for staged convergence without immediate conformity pressure."
+    },
+    {
+      "label": "forecast aggregation calibration belief updating interface superforecasting evidence review",
+      "type": "source-candidate",
+      "note": "Can inform confidence handling, revision logs, and update-trigger design for final answers."
+    },
+    {
+      "label": "AI multi-agent debate evaluation answer quality calibration hallucination benchmark",
+      "type": "source-candidate",
+      "note": "Need direct evidence on when multi-agent AI synthesis helps versus harms."
+    }
+  ],
+  "sourceCandidates": [
+    {
+      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
+      "why": "Need evidence on whether multi-agent debate/synthesis actually improves answer quality and under what conditions.",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "pending"
+    },
+    {
+      "query": "groupthink dissent structured deliberation evidence review",
+      "why": "Need failure-mode literature to prevent a many-agent system from collapsing into false consensus.",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Tests whether explicit debate structure has measurable quality benefits beyond intuitive product precedent.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "pending"
+    },
+    {
+      "query": "Delphi method controlled feedback consensus dissent quality review",
+      "why": "Useful procedural precedent for staged convergence with preserved disagreement.",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "pending"
+    },
+    {
+      "query": "forecasting aggregation superforecasting belief update interface evidence",
+      "why": "Can inform confidence scoring, revision visibility, and aggregation rules for synthesis outputs.",
+      "priority": 0.78,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Need empirical support that explicit claim-counterclaim structures improve reasoning quality, not just usability.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:15:28.398Z",
+      "status": "pending"
+    },
+    {
+      "query": "Delphi method controlled feedback consensus dissent quality review",
+      "why": "Good process analogue for staged convergence without immediate conformity pressure.",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T12:15:28.398Z",
+      "status": "pending"
+    },
+    {
+      "query": "forecasting aggregation superforecasting belief update interface evidence",
+      "why": "Can inform confidence aggregation, update logging, and final-answer calibration.",
+      "priority": 0.79,
+      "createdAt": "2026-03-18T12:15:28.398Z",
+      "status": "pending"
+    },
+    {
+      "query": "systematic review groupthink structured dissent decision quality teams",
+      "why": "Need stronger empirical grounding for anti-consensus mechanisms beyond intuition and product precedent.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "pending"
+    },
+    {
+      "query": "argument mapping meta-analysis reasoning quality critical thinking higher education",
+      "why": "Tests whether explicit claim-counterclaim structures measurably improve reasoning quality.",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "pending"
+    },
+    {
+      "query": "Delphi method review controlled feedback disagreement preservation consensus accuracy",
+      "why": "Good analogue for staged convergence without immediate conformity pressure.",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "pending"
+    },
+    {
+      "query": "forecast aggregation calibration belief updating interface superforecasting evidence review",
+      "why": "Can inform confidence handling, revision logs, and update-trigger design for final answers.",
+      "priority": 0.8,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "pending"
+    },
+    {
+      "query": "AI multi-agent debate evaluation answer quality calibration hallucination benchmark",
+      "why": "Need direct evidence on when multi-agent AI synthesis helps versus harms.",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "pending"
+    }
+  ],
+  "sourceFetchQueue": [
+    {
+      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
+      "why": "Need evidence on whether multi-agent debate/synthesis actually improves answer quality and under what conditions.",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:12:23.882Z"
+    },
+    {
+      "query": "groupthink dissent structured deliberation evidence review",
+      "why": "Need failure-mode literature to prevent a many-agent system from collapsing into false consensus.",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:12:24.904Z"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Tests whether explicit debate structure has measurable quality benefits beyond intuitive product precedent.",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:28.401Z"
+    },
+    {
+      "query": "Delphi method controlled feedback consensus dissent quality review",
+      "why": "Useful procedural precedent for staged convergence with preserved disagreement.",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:30.376Z"
+    },
+    {
+      "query": "forecasting aggregation superforecasting belief update interface evidence",
+      "why": "Can inform confidence scoring, revision visibility, and aggregation rules for synthesis outputs.",
+      "priority": 0.78,
+      "createdAt": "2026-03-18T12:12:23.879Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:32.875Z"
+    },
+    {
+      "query": "argument mapping improves critical thinking evidence meta-analysis",
+      "why": "Need empirical support that explicit claim-counterclaim structures improve reasoning quality, not just usability.",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T12:15:28.398Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:35.375Z"
+    },
+    {
+      "query": "Delphi method controlled feedback consensus dissent quality review",
+      "why": "Good process analogue for staged convergence without immediate conformity pressure.",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T12:15:28.398Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:37.877Z"
+    },
+    {
+      "query": "forecasting aggregation superforecasting belief update interface evidence",
+      "why": "Can inform confidence aggregation, update logging, and final-answer calibration.",
+      "priority": 0.79,
+      "createdAt": "2026-03-18T12:15:28.398Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:15:40.377Z"
+    },
+    {
+      "query": "systematic review groupthink structured dissent decision quality teams",
+      "why": "Need stronger empirical grounding for anti-consensus mechanisms beyond intuition and product precedent.",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:10.271Z"
+    },
+    {
+      "query": "argument mapping meta-analysis reasoning quality critical thinking higher education",
+      "why": "Tests whether explicit claim-counterclaim structures measurably improve reasoning quality.",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:10.439Z"
+    },
+    {
+      "query": "Delphi method review controlled feedback disagreement preservation consensus accuracy",
+      "why": "Good analogue for staged convergence without immediate conformity pressure.",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:12.884Z"
+    },
+    {
+      "query": "forecast aggregation calibration belief updating interface superforecasting evidence review",
+      "why": "Can inform confidence handling, revision logs, and update-trigger design for final answers.",
+      "priority": 0.8,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:15.423Z"
+    },
+    {
+      "query": "AI multi-agent debate evaluation answer quality calibration hallucination benchmark",
+      "why": "Need direct evidence on when multi-agent AI synthesis helps versus harms.",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T12:16:10.268Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T12:16:17.884Z"
+    }
+  ],
+  "compactedNotes": [
+    {
+      "kind": "sources",
+      "summary": "web search, Kialo, Metaculus, Stack Overflow, GitHub Issues/Discussions, Wikipedia Talk + page history, Boyd & Richerson - Culture and the Evolutionary Process",
+      "createdAt": "2026-03-18T12:16:12.884Z"
     }
   ]
 }
