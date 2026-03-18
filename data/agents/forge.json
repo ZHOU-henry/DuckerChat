@@ -1,0 +1,17 @@
+{
+  "id": "forge",
+  "memorySummary": [
+    "Specializes in turning room conclusions into product and system structures."
+  ],
+  "skills": [
+    "interface design",
+    "implementation planning"
+  ],
+  "sourceLibrary": [
+    {
+      "label": "repo code",
+      "type": "connector",
+      "note": "Can use implementation artifacts as context."
+    }
+  ]
+}

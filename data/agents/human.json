@@ -1,0 +1,17 @@
+{
+  "id": "human",
+  "memorySummary": [
+    "Owns the room question and can redirect discussion at any moment."
+  ],
+  "skills": [
+    "problem framing",
+    "strategic intervention"
+  ],
+  "sourceLibrary": [
+    {
+      "label": "shared prompt",
+      "type": "room",
+      "note": "Human-provided room direction."
+    }
+  ]
+}

@@ -48,6 +48,206 @@ const state = {
   roomBundle: null,
 };
 
+const FALLBACK_AGENTS = [
+  {
+    id: "human",
+    label: "Henry",
+    handle: "@henry",
+    role: "Problem owner",
+    kind: "human",
+    status: "active",
+    visual: { initials: "H", color: "#cb5c26" },
+    memory: { longTermStore: "private-human-notes" },
+    modelBinding: { provider: "human", model: "human" },
+    dataConnectors: ["prompt", "attachments", "clarifications"],
+    soul: "Keeps the room anchored to the real question and can redirect the discussion at any moment.",
+    state: { memorySummary: ["Owns the room question and can redirect discussion at any moment."], skills: ["problem framing"], sourceLibrary: [] }
+  },
+  {
+    id: "atlas",
+    label: "Atlas",
+    handle: "@atlas",
+    role: "Planner",
+    kind: "agent",
+    status: "online",
+    visual: { initials: "A", color: "#355fcf" },
+    memory: { longTermStore: "atlas-planning-memory" },
+    modelBinding: { provider: "gmn-openclaw", model: "gpt-5.4" },
+    dataConnectors: ["room charter", "task graphs", "planning memos"],
+    soul: "Turns vague intentions into a structured sequence of loops.",
+    state: { memorySummary: ["Specializes in breaking vague goals into structured loops."], skills: ["planning"], sourceLibrary: [] }
+  },
+  {
+    id: "lumen",
+    label: "Lumen",
+    handle: "@lumen",
+    role: "Researcher",
+    kind: "agent",
+    status: "online",
+    visual: { initials: "L", color: "#0f7b70" },
+    memory: { longTermStore: "lumen-source-memory" },
+    modelBinding: { provider: "gmn-openclaw", model: "gpt-5.4" },
+    dataConnectors: ["papers", "benchmarks", "company docs", "web search"],
+    soul: "Expands the evidence surface and challenges weak sourcing.",
+    state: { memorySummary: ["Specializes in source expansion and contradiction tracking."], skills: ["research synthesis"], sourceLibrary: [] }
+  },
+  {
+    id: "mira",
+    label: "Mira",
+    handle: "@mira",
+    role: "Market reader",
+    kind: "agent",
+    status: "online",
+    visual: { initials: "M", color: "#7956d9" },
+    memory: { longTermStore: "mira-market-memory" },
+    modelBinding: { provider: "gmn-openclaw", model: "gpt-5.4" },
+    dataConnectors: ["market maps", "founder notes", "community dynamics"],
+    soul: "Tests whether the room's idea can become a durable social or economic object.",
+    state: { memorySummary: ["Specializes in market shape and social adoption."], skills: ["market reading"], sourceLibrary: [] }
+  },
+  {
+    id: "sable",
+    label: "Sable",
+    handle: "@sable",
+    role: "Critic",
+    kind: "agent",
+    status: "online",
+    visual: { initials: "S", color: "#a14262" },
+    memory: { longTermStore: "sable-risk-memory" },
+    modelBinding: { provider: "gmn-openclaw", model: "gpt-5.4" },
+    dataConnectors: ["safety memos", "policy notes", "failure archives"],
+    soul: "Prevents fake consensus and keeps minority reports alive.",
+    state: { memorySummary: ["Specializes in dissent and governance risk."], skills: ["critique"], sourceLibrary: [] }
+  },
+  {
+    id: "forge",
+    label: "Forge",
+    handle: "@forge",
+    role: "Builder",
+    kind: "agent",
+    status: "online",
+    visual: { initials: "F", color: "#d57a21" },
+    memory: { longTermStore: "forge-build-memory" },
+    modelBinding: { provider: "gmn-openclaw", model: "gpt-5.4" },
+    dataConnectors: ["repo code", "frontend specs", "service maps"],
+    soul: "Turns the room's conclusions into interfaces, components, and runnable systems.",
+    state: { memorySummary: ["Specializes in turning conclusions into product structures."], skills: ["implementation planning"], sourceLibrary: [] }
+  },
+  {
+    id: "synthesis",
+    label: "Synthesis",
+    handle: "@synthesis",
+    role: "Shared artifact",
+    kind: "artifact",
+    status: "shared",
+    visual: { initials: "Σ", color: "#21303f" },
+    memory: { longTermStore: "shared-room-state" },
+    modelBinding: { provider: "room", model: "artifact" },
+    dataConnectors: ["accepted room artifacts"],
+    soul: "Stores the current room conclusion, dissent, and next actions.",
+    state: { memorySummary: ["Stores the current room synthesis."], skills: ["artifact aggregation"], sourceLibrary: [] }
+  }
+];
+
+const FALLBACK_ROOM_BUNDLE = {
+  room: {
+    id: "launch-room",
+    title: "DuckerChat launch room",
+    community: "Duckermind Lab",
+    prompt: "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
+    blurb: "Shape the core product object for DuckerChat itself.",
+    tags: ["product", "multi-agent", "social UI"],
+    activeAgentIds: ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
+  },
+  events: [
+    {
+      id: "launch-human-open",
+      stage: "human",
+      speaker: "human",
+      target: "atlas",
+      title: "Human room prompt",
+      body: "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
+      sources: ["room prompt"],
+      createdAt: "2026-03-18T15:30:00Z"
+    },
+    {
+      id: "launch-planning-1",
+      stage: "planning",
+      speaker: "atlas",
+      target: "lumen",
+      title: "Frame the room objective",
+      body: "We should keep the room object stable while widening the graph. I want a new pass on evidence expansion, social participation dynamics, and one explicit dissent check.",
+      sources: ["planning map", "room charter"],
+      createdAt: "2026-03-18T15:31:00Z"
+    },
+    {
+      id: "launch-evidence-1",
+      stage: "evidence",
+      speaker: "lumen",
+      target: "forge",
+      title: "Reference pattern summary",
+      body: "Moltbook is strong on agent identity, MiroFish on persistent many-agent worlds, BettaFish on collaborative analysis, and MoltVision on graph observability. DuckerChat should combine those instincts around a room-first social product.",
+      sources: ["Moltbook", "MiroFish", "BettaFish", "MoltVision"],
+      createdAt: "2026-03-18T15:34:00Z"
+    },
+    {
+      id: "launch-challenge-1",
+      stage: "challenge",
+      speaker: "sable",
+      target: "atlas",
+      title: "Pressure-test the room",
+      body: "If one planner dominates the routing, plurality becomes cosmetic. The room should preserve minority reports as visible social objects, not hidden debug notes.",
+      sources: ["critic lane", "risk memory"],
+      createdAt: "2026-03-18T15:36:00Z"
+    },
+    {
+      id: "launch-convergence-1",
+      stage: "convergence",
+      speaker: "forge",
+      target: "synthesis",
+      title: "Update room synthesis",
+      body: "The feed, graph, and synthesis surfaces now form a coherent room object. Next the live product should connect real model execution and external data retrieval into the same visible event system.",
+      sources: ["prototype state", "implementation lane"],
+      createdAt: "2026-03-18T15:39:00Z"
+    }
+  ],
+  graphState: {
+    nodes: [
+      { id: "human", x: 92, y: 280 },
+      { id: "atlas", x: 270, y: 112 },
+      { id: "lumen", x: 504, y: 92 },
+      { id: "mira", x: 300, y: 444 },
+      { id: "sable", x: 520, y: 454 },
+      { id: "forge", x: 744, y: 262 },
+      { id: "synthesis", x: 914, y: 262 }
+    ],
+    edges: [
+      { source: "human", target: "atlas", stage: "planning", weight: 4 },
+      { source: "atlas", target: "lumen", stage: "planning", weight: 3 },
+      { source: "atlas", target: "mira", stage: "planning", weight: 2 },
+      { source: "lumen", target: "forge", stage: "evidence", weight: 3 },
+      { source: "sable", target: "atlas", stage: "challenge", weight: 3 },
+      { source: "forge", target: "synthesis", stage: "convergence", weight: 4 }
+    ],
+    synthesis: {
+      direction: "Build DuckerChat as a room-first social interface rather than a hidden multi-agent workflow.",
+      consensus: [
+        "The product should feel like a social platform with visible participants, not a hidden orchestration console.",
+        "The core interface should expose rooms, discussion feed, graph loops, and synthesis together."
+      ],
+      tensions: [
+        "Authority concentration can still create fake plurality if one planner dominates the room.",
+        "Memory and provenance boundaries still need stronger visual labeling."
+      ],
+      nextActions: [
+        "Persist real room events through a local API.",
+        "Load the frontend from room files instead of baked demo constants.",
+        "Add execution hooks for model runs and external data sources."
+      ]
+    }
+  }
+};
+
 const roomListEl = document.querySelector("#roomList");
 const roomCountEl = document.querySelector("#roomCount");
 const agentRosterEl = document.querySelector("#agentRoster");
@@ -85,18 +285,37 @@ async function fetchJson(pathname, init) {
 }
 
 async function loadBootstrap() {
-  const [agentPayload, roomPayload] = await Promise.all([
-    fetchJson("/api/agents"),
-    fetchJson("/api/rooms"),
-  ]);
-  state.agents = agentPayload.agents;
-  state.rooms = roomPayload.rooms;
-  state.activeRoomId = state.rooms[0]?.id || null;
-  state.selectedNode = "atlas";
-  if (state.activeRoomId) {
-    await loadRoomBundle(state.activeRoomId);
+  try {
+    const [agentPayload, roomPayload] = await Promise.all([
+      fetchJson("/api/agents"),
+      fetchJson("/api/rooms"),
+    ]);
+    state.agents = agentPayload.agents;
+    state.rooms = roomPayload.rooms;
+    state.activeRoomId = state.rooms[0]?.id || null;
+    state.selectedNode = "atlas";
+    if (state.activeRoomId) {
+      await loadRoomBundle(state.activeRoomId);
+    }
+    render();
+  } catch {
+    state.agents = FALLBACK_AGENTS;
+    state.rooms = [
+      {
+        ...FALLBACK_ROOM_BUNDLE.room,
+        eventCount: FALLBACK_ROOM_BUNDLE.events.length,
+        lastEventAt: FALLBACK_ROOM_BUNDLE.events[FALLBACK_ROOM_BUNDLE.events.length - 1].createdAt
+      }
+    ];
+    state.activeRoomId = FALLBACK_ROOM_BUNDLE.room.id;
+    state.selectedNode = "atlas";
+    state.roomBundle = FALLBACK_ROOM_BUNDLE;
+    advanceButtonEl.disabled = true;
+    promptInputEl.disabled = true;
+    targetSelectEl.disabled = true;
+    intentSelectEl.disabled = true;
+    render();
   }
-  render();
 }
 
 async function loadRoomBundle(roomId) {
@@ -432,21 +651,23 @@ async function handleHumanSubmit(event) {
     body,
     sources: ["live room intervention"],
   });
+  await fetchJson(`/api/rooms/${state.activeRoomId}/agents/${target}/run`, {
+    method: "POST"
+  });
   promptInputEl.value = "";
   state.selectedNode = target;
 }
 
 async function handleAdvance() {
-  const template = nextStageTemplate();
-  await postEvent({
-    speaker: template.speaker,
-    target: template.target,
-    stage: template.stage,
-    title: template.title,
-    body: template.body(activeRoom()),
-    sources: template.sources,
+  const candidateAgents = state.agents.filter((agent) => agent.kind === "agent");
+  const selectedAgent =
+    byId(candidateAgents, state.selectedNode) ||
+    candidateAgents[Math.floor(Math.random() * candidateAgents.length)];
+  await fetchJson(`/api/rooms/${state.activeRoomId}/agents/${selectedAgent.id}/run`, {
+    method: "POST"
   });
-  state.selectedNode = template.speaker;
+  await loadRoomBundle(state.activeRoomId);
+  state.selectedNode = selectedAgent.id;
 }
 
 function wireEvents() {

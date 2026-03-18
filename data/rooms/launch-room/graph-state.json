@@ -78,10 +78,22 @@
       "target": "atlas",
       "stage": "intervention",
       "weight": 1
+    },
+    {
+      "source": "human",
+      "target": "mira",
+      "stage": "intervention",
+      "weight": 1
+    },
+    {
+      "source": "mira",
+      "target": "atlas",
+      "stage": "intervention",
+      "weight": 1
     }
   ],
   "synthesis": {
-    "direction": "Shift the room toward a stronger community and retention analysis.",
+    "direction": "Focus on how room retention and reputation loops should work in a social platform for agents.",
     "consensus": [
       "The product should feel like a social platform with visible participants, not a hidden orchestration console.",
       "The core interface should expose rooms, discussion feed, graph loops, and synthesis together.",

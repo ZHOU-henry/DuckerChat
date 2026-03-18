@@ -9,6 +9,7 @@ const ROOT = __dirname;
 const DATA_ROOT = path.join(ROOT, "data", "rooms");
 const CONFIG_ROOT = path.join(ROOT, "config");
 const PROTOTYPE_ROOT = path.join(ROOT, "prototype");
+const OPENCLAW_CONFIG_PATH = path.join(process.env.HOME || "/home/henry", ".openclaw", "openclaw.json");
 
 const MIME_TYPES = {
   ".css": "text/css; charset=utf-8",
@@ -30,6 +31,22 @@ function listRoomIds() {
     .readdirSync(DATA_ROOT, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name);
+}
+
+function loadAgents() {
+  return readJson(path.join(CONFIG_ROOT, "agents.json")).agents;
+}
+
+function agentStatePath(agent) {
+  return path.join(ROOT, agent.stateFile);
+}
+
+function loadAgentState(agent) {
+  return readJson(agentStatePath(agent));
+}
+
+function writeAgentState(agent, state) {
+  writeJson(agentStatePath(agent), state);
 }
 
 function loadRoom(roomId) {
@@ -138,6 +155,155 @@ function appendEvent(roomId, payload) {
   return event;
 }
 
+function getOpenClawProvider() {
+  const config = readJson(OPENCLAW_CONFIG_PATH);
+  return config.models.providers.gmn;
+}
+
+function extractOutputText(responseJson) {
+  const textParts = [];
+  for (const item of responseJson.output || []) {
+    if (item.type !== "message") continue;
+    for (const content of item.content || []) {
+      if (content.type === "output_text" && content.text) {
+        textParts.push(content.text);
+      }
+    }
+  }
+  return textParts.join("\n").trim();
+}
+
+function tryParseJsonBlock(text) {
+  try {
+    return JSON.parse(text);
+  } catch {
+    const match = text.match(/\{[\s\S]*\}$/);
+    if (!match) return null;
+    try {
+      return JSON.parse(match[0]);
+    } catch {
+      return null;
+    }
+  }
+}
+
+async function callAgentModel(agent, room, events, agentState) {
+  const provider = getOpenClawProvider();
+  const recentEvents = events.slice(-12).map((event) => ({
+    stage: event.stage,
+    speaker: event.speaker,
+    target: event.target,
+    title: event.title,
+    body: event.body
+  }));
+
+  const instructions = [
+    `You are ${agent.label} (${agent.role}) inside DuckerChat.`,
+    `Soul: ${agent.soul}`,
+    `You use the model binding ${agent.modelBinding.provider}/${agent.modelBinding.model}.`,
+    `You have your own long-term memory summary, skills, and source library.`,
+    `Respond in strict JSON with keys: title, body, stage, memory_update, new_skills, new_sources, next_targets.`,
+    `new_skills must be an array of short strings.`,
+    `new_sources must be an array of objects with label, type, note.`,
+    `next_targets must be an array of agent ids.`,
+    `Keep body concise but substantive.`,
+    `Do not mention hidden chain-of-thought.`,
+  ].join(" ");
+
+  const input = [
+    {
+      role: "system",
+      content: instructions
+    },
+    {
+      role: "user",
+      content: JSON.stringify(
+        {
+          room,
+          agentProfile: {
+            id: agent.id,
+            label: agent.label,
+            role: agent.role,
+            memory: agent.memory,
+            dataConnectors: agent.dataConnectors
+          },
+          agentState,
+          recentEvents
+        },
+        null,
+        2
+      )
+    }
+  ];
+
+  const response = await fetch(`${provider.baseUrl}/responses`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${provider.apiKey}`
+    },
+    body: JSON.stringify({
+      model: agent.modelBinding.model,
+      input,
+      text: {
+        format: { type: "text" },
+        verbosity: "medium"
+      },
+      reasoning: {
+        effort: "medium"
+      },
+      store: false
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error(`Model request failed for ${agent.id}`);
+  }
+
+  const payload = await response.json();
+  const text = extractOutputText(payload);
+  const parsed = tryParseJsonBlock(text);
+  if (!parsed) {
+    throw new Error(`Model output was not valid JSON for ${agent.id}`);
+  }
+  return parsed;
+}
+
+async function executeAgent(roomId, agentId) {
+  const agents = loadAgents();
+  const agent = agents.find((entry) => entry.id === agentId);
+  if (!agent) {
+    throw new Error(`Unknown agent ${agentId}`);
+  }
+  if (agent.kind !== "agent") {
+    throw new Error(`Agent ${agentId} is not executable`);
+  }
+
+  const { room, events } = loadRoom(roomId);
+  const agentState = loadAgentState(agent);
+  const result = await callAgentModel(agent, room, events, agentState);
+
+  const updatedState = {
+    ...agentState,
+    memorySummary: Array.from(new Set([...(agentState.memorySummary || []), result.memory_update].filter(Boolean))).slice(-12),
+    skills: Array.from(new Set([...(agentState.skills || []), ...((result.new_skills || []).filter(Boolean))])).slice(-24),
+    sourceLibrary: [...(agentState.sourceLibrary || []), ...((result.new_sources || []).filter((entry) => entry && entry.label))].slice(-40)
+  };
+  writeAgentState(agent, updatedState);
+
+  return appendEvent(roomId, {
+    speaker: agent.id,
+    target: (result.next_targets && result.next_targets[0]) || "synthesis",
+    stage: result.stage || "response",
+    title: result.title || `${agent.label} response`,
+    body: result.body || "",
+    sources: [
+      `${agent.modelBinding.provider}/${agent.modelBinding.model}`,
+      ...((result.new_sources || []).map((entry) => entry.label).slice(0, 3))
+    ].filter(Boolean)
+  });
+}
+
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const pathname = url.pathname;
@@ -153,7 +319,11 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (pathname === "/api/agents" && req.method === "GET") {
-    sendJson(res, 200, readJson(path.join(CONFIG_ROOT, "agents.json")));
+    const agents = loadAgents().map((agent) => ({
+      ...agent,
+      state: loadAgentState(agent)
+    }));
+    sendJson(res, 200, { agents });
     return;
   }
 
@@ -196,6 +366,17 @@ const server = http.createServer(async (req, res) => {
       }
       return;
     }
+  }
+
+  const runMatch = pathname.match(/^\/api\/rooms\/([^/]+)\/agents\/([^/]+)\/run$/);
+  if (runMatch && req.method === "POST") {
+    try {
+      const event = await executeAgent(runMatch[1], runMatch[2]);
+      sendJson(res, 201, { event });
+    } catch (error) {
+      sendJson(res, 400, { error: error.message });
+    }
+    return;
   }
 
   const filePath =

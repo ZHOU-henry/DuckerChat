@@ -16,6 +16,7 @@
         "scratchpadPolicy": "manual",
         "sharedScope": "room-artifacts"
       },
+      "stateFile": "data/agents/human.json",
       "modelBinding": {
         "provider": "human",
         "model": "human"
@@ -39,8 +40,9 @@
         "scratchpadPolicy": "room-scoped",
         "sharedScope": "room-artifacts"
       },
+      "stateFile": "data/agents/atlas.json",
       "modelBinding": {
-        "provider": "openai",
+        "provider": "gmn-openclaw",
         "model": "gpt-5.4"
       },
       "dataConnectors": ["room charter", "task graphs", "planning memos"],
@@ -62,9 +64,10 @@
         "scratchpadPolicy": "source-clustered",
         "sharedScope": "room-artifacts"
       },
+      "stateFile": "data/agents/lumen.json",
       "modelBinding": {
-        "provider": "custom",
-        "model": "mirothinker-class-search"
+        "provider": "gmn-openclaw",
+        "model": "gpt-5.4"
       },
       "dataConnectors": ["papers", "benchmarks", "company docs", "web search"],
       "soul": "Expands the evidence surface and challenges weak sourcing."
@@ -85,9 +88,10 @@
         "scratchpadPolicy": "market-sliced",
         "sharedScope": "room-artifacts"
       },
+      "stateFile": "data/agents/mira.json",
       "modelBinding": {
-        "provider": "google",
-        "model": "gemini-2.5-pro"
+        "provider": "gmn-openclaw",
+        "model": "gpt-5.4"
       },
       "dataConnectors": ["market maps", "founder notes", "community dynamics"],
       "soul": "Tests whether the room's idea can become a durable social or economic object."
@@ -108,9 +112,10 @@
         "scratchpadPolicy": "failure-oriented",
         "sharedScope": "room-artifacts"
       },
+      "stateFile": "data/agents/sable.json",
       "modelBinding": {
-        "provider": "anthropic",
-        "model": "claude-opus-class"
+        "provider": "gmn-openclaw",
+        "model": "gpt-5.4"
       },
       "dataConnectors": ["safety memos", "policy notes", "failure archives"],
       "soul": "Prevents fake consensus and keeps minority reports alive."
@@ -131,9 +136,10 @@
         "scratchpadPolicy": "implementation-oriented",
         "sharedScope": "room-artifacts"
       },
+      "stateFile": "data/agents/forge.json",
       "modelBinding": {
-        "provider": "qwen",
-        "model": "coding-specialist"
+        "provider": "gmn-openclaw",
+        "model": "gpt-5.4"
       },
       "dataConnectors": ["repo code", "frontend specs", "service maps"],
       "soul": "Turns the room's conclusions into interfaces, components, and runnable systems."
@@ -154,6 +160,7 @@
         "scratchpadPolicy": "shared-only",
         "sharedScope": "room-artifacts"
       },
+      "stateFile": "data/agents/synthesis.json",
       "modelBinding": {
         "provider": "room",
         "model": "artifact"

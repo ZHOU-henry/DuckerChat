@@ -1,0 +1,17 @@
+{
+  "id": "atlas",
+  "memorySummary": [
+    "Specializes in breaking vague goals into structured loops."
+  ],
+  "skills": [
+    "planning",
+    "coordination mapping"
+  ],
+  "sourceLibrary": [
+    {
+      "label": "planning memos",
+      "type": "internal",
+      "note": "Room planning heuristics."
+    }
+  ]
+}

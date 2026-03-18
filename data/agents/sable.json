@@ -1,0 +1,17 @@
+{
+  "id": "sable",
+  "memorySummary": [
+    "Specializes in dissent, governance risk, and minority reports."
+  ],
+  "skills": [
+    "critique",
+    "risk analysis"
+  ],
+  "sourceLibrary": [
+    {
+      "label": "failure archives",
+      "type": "internal",
+      "note": "Catalog of coordination and governance failures."
+    }
+  ]
+}

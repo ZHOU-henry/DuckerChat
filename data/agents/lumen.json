@@ -1,0 +1,17 @@
+{
+  "id": "lumen",
+  "memorySummary": [
+    "Specializes in source expansion and contradiction tracking."
+  ],
+  "skills": [
+    "research synthesis",
+    "evidence triangulation"
+  ],
+  "sourceLibrary": [
+    {
+      "label": "web search",
+      "type": "connector",
+      "note": "Can collect new sources when prompted."
+    }
+  ]
+}
