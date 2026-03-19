@@ -824,8 +824,9 @@ async function fetchJson(pathname, init) {
 
 async function refreshLiveState() {
   const activeRoomId = state.activeRoomId;
+  const isPrediction = state.activeModule === "ultimate_prediction";
   const agentPath = activeRoomId
-    ? `/api/agents?minimal=1&roomId=${encodeURIComponent(activeRoomId)}`
+    ? `/api/agents?minimal=1&roomId=${encodeURIComponent(activeRoomId)}${isPrediction ? "&spotlight=1" : ""}`
     : "/api/agents?minimal=1";
   const [agentPayload, roomPayload] = await Promise.all([
     fetchJson(agentPath),
@@ -2348,15 +2349,24 @@ async function bootstrap() {
   wireEvents();
   await loadBootstrap();
   if (state.mode === "live") {
-    state.refreshTimer = setInterval(async () => {
+    const tick = async () => {
       if (!state.activeRoomId) return;
       try {
         await refreshLiveState();
         render();
       } catch {
         // keep last good state
+      } finally {
+        const runtime = currentRuntime();
+        const activePrediction = isPredictionRoom();
+        const busy = (runtime?.scheduler?.activeRuns || []).length || (runtime?.scheduler?.queue || []).length;
+        const delay = activePrediction
+          ? (busy ? 4000 : 9000)
+          : 3000;
+        state.refreshTimer = setTimeout(tick, delay);
       }
-    }, 3000);
+    };
+    state.refreshTimer = setTimeout(tick, 3000);
   }
 }
 

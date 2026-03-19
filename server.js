@@ -3889,8 +3889,19 @@ const server = http.createServer(async (req, res) => {
   if (pathname === "/api/agents" && req.method === "GET") {
     const roomId = url.searchParams.get("roomId");
     const minimal = url.searchParams.get("minimal") === "1";
+    const spotlightOnly = url.searchParams.get("spotlight") === "1";
     const room = roomId && fs.existsSync(roomPath(roomId)) ? resolveRoomDefinition(readJson(roomPath(roomId))) : null;
-    const selectedAgentIds = room ? new Set(room.activeAgentIds || []) : null;
+    let selectedAgentIds = room ? new Set(room.activeAgentIds || []) : null;
+    if (room && spotlightOnly && room.module === "ultimate_prediction") {
+      const predictionState = loadPredictionState(room.id, room);
+      selectedAgentIds = new Set([
+        "human",
+        "synthesis",
+        ...(predictionState.participantAgentIds || []),
+        ...(predictionState.frontlineAgentIds || []),
+        ...(predictionState.arbitratorIds || [])
+      ]);
+    }
     const agents = loadAgents()
       .filter((agent) => !selectedAgentIds || selectedAgentIds.has(agent.id))
       .map((agent) => {
