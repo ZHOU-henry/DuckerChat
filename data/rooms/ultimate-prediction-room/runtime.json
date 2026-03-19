@@ -1,0 +1,43 @@
+{
+  "roomId": "ultimate-prediction-room",
+  "scheduler": {
+    "enabled": false,
+    "intervalMs": 2500,
+    "maxConcurrentRuns": 20,
+    "queue": [],
+    "activeRuns": [],
+    "lastTickAt": "2026-03-19T15:11:19.053Z",
+    "lastRunAt": null,
+    "queueDecay": 0.94,
+    "priorityFloor": 0.12,
+    "clusterWakeCount": 5,
+    "maxAutoAgentsPerTick": 5
+  },
+  "budgets": {
+    "tokenBudgetTotal": 180000,
+    "tokenBudgetRemaining": 92805,
+    "maxContextEvents": 16,
+    "softTurnLimit": 36,
+    "maxQueuedAgents": 16
+  },
+  "compaction": {
+    "compactBatchSize": 6,
+    "keepRecentEvents": 18,
+    "summaryNotes": []
+  },
+  "metrics": {
+    "totalAgentRuns": 8,
+    "totalTokens": 87195
+  },
+  "announcements": {
+    "onceKeys": [],
+    "lastGlobalNotice": null
+  },
+  "prediction": {
+    "scoutCount": 100,
+    "draftAgentLimit": 20,
+    "frontlineCount": 20,
+    "coalitionTarget": 6,
+    "arbitrationCount": 5
+  }
+}

@@ -2,12 +2,15 @@ const { app, BrowserWindow } = require("electron");
 const http = require("http");
 const net = require("net");
 const path = require("path");
+const fs = require("fs");
 const { spawn } = require("child_process");
 
-const APP_PORT = process.env.DUCKERCHAT_PORT || "4318";
+const DEFAULT_PORT = Number(process.env.DUCKERCHAT_PORT || "4318");
 const APP_HOST = "127.0.0.1";
+const NO_SANDBOX = process.env.DUCKERCHAT_ELECTRON_NO_SANDBOX === "1";
 let mainWindow = null;
 let serverProcess = null;
+let activePort = DEFAULT_PORT;
 
 function isPortOpen(port, host = APP_HOST) {
   return new Promise((resolve) => {
@@ -21,6 +24,46 @@ function isPortOpen(port, host = APP_HOST) {
   });
 }
 
+function findOpenPort(startPort = DEFAULT_PORT, host = APP_HOST, searchSpan = 20) {
+  return new Promise(async (resolve) => {
+    for (let port = Number(startPort); port < Number(startPort) + searchSpan; port += 1) {
+      const inUse = await isPortOpen(port, host);
+      if (!inUse) {
+        resolve(port);
+        return;
+      }
+    }
+    resolve(Number(startPort) + searchSpan);
+  });
+}
+
+function ensurePredictionPopulation() {
+  const root = path.join(__dirname, "..");
+  const configPath = path.join(root, "config", "agents.json");
+  const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+  const swarmCount = (config.agents || []).filter((agent) => agent.id.startsWith("swarm-")).length;
+  if (swarmCount >= 1000) {
+    return Promise.resolve();
+  }
+
+  return new Promise((resolve, reject) => {
+    const seedProcess = spawn(
+      process.execPath,
+      [path.join(root, "scripts", "seed-agent-swarm.js"), "1000", "swarm-room"],
+      {
+        cwd: root,
+        env: process.env,
+        stdio: "inherit"
+      }
+    );
+
+    seedProcess.on("exit", (code) => {
+      if (code === 0) resolve();
+      else reject(new Error(`Failed to seed prediction population, exit=${code}`));
+    });
+  });
+}
+
 function waitForServer(port, host = APP_HOST, timeoutMs = 15000) {
   const startedAt = Date.now();
   return new Promise((resolve, reject) => {
@@ -29,8 +72,8 @@ function waitForServer(port, host = APP_HOST, timeoutMs = 15000) {
         {
           host,
           port: Number(port),
-          path: "/api/rooms",
-          timeout: 1500
+          path: "/api/health",
+          timeout: 4000
         },
         (res) => {
           res.resume();
@@ -58,7 +101,7 @@ function startServer() {
     cwd: path.join(__dirname, ".."),
     env: {
       ...process.env,
-      DUCKERCHAT_PORT: APP_PORT
+      DUCKERCHAT_PORT: String(activePort)
     },
     stdio: "inherit"
   });
@@ -72,33 +115,40 @@ function startServer() {
 
 function createWindow() {
   mainWindow = new BrowserWindow({
+    title: "DuckerChat",
     width: 1520,
     height: 980,
     minWidth: 1180,
     minHeight: 760,
     backgroundColor: "#f3efe8",
+    autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
-      nodeIntegration: false
+      nodeIntegration: false,
+      sandbox: !NO_SANDBOX
     }
   });
 
-  mainWindow.loadURL(`http://${APP_HOST}:${APP_PORT}/`);
+  mainWindow.loadURL(`http://${APP_HOST}:${activePort}/`);
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
+}
+
+if (process.platform === "linux" && NO_SANDBOX) {
+  app.commandLine.appendSwitch("no-sandbox");
+  app.commandLine.appendSwitch("disable-setuid-sandbox");
 }
 
 app.commandLine.appendSwitch("disable-gpu");
 app.commandLine.appendSwitch("disable-software-rasterizer");
 
 app.whenReady().then(async () => {
-  const portAlreadyOpen = await isPortOpen(APP_PORT);
-  if (!portAlreadyOpen) {
-    await startServer();
-  }
-  await waitForServer(APP_PORT);
+  await ensurePredictionPopulation();
+  activePort = await findOpenPort(DEFAULT_PORT);
+  await startServer();
+  await waitForServer(activePort);
   createWindow();
 
   app.on("activate", () => {

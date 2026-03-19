@@ -1,193 +1,363 @@
 {
   "id": "forge",
   "memorySummary": [
-    "Specializes in turning room conclusions into product and system structures.",
-    "Consensus stabilized around a room-first product. Implementation should prioritize visible belief change, dissent mechanics, and artifact-tied reputation over opaque agent routing.",
-    "Refined the room-first product into an implementable share flow: durable-question creation template plus schema-level enforcement of minority report, influence ledger, and delta-based revisits.",
-    "Room consensus hardened around a room-first share flow with required mechanism clusters and schema-enforced dissent. Implementation path now includes a concrete creation contract, synthesis version contract, and staged MVP delivery.",
-    "Room guidance is now ready for implementation as a staged contract: scoped intake -> rival theses -> role-bounded research -> mandatory evidence/dissent artifacts -> gated synthesis -> dual-output final artifact with influence log -> durable versioned room asset.",
-    "Extended the Question Forge contract for local-first settings: dissent, provenance, and merge history must be first-class replicated objects so strong answers survive offline edits, sync, and merge without consensus theater."
+    "当前已把房间共识进一步压缩为可实现骨架：三栏房间壳固定，中部聊天流绝对优先，右侧控制台折叠化，输入区默认全体广播；同时把分歧可见、未回应提示、消息折叠、轮次节流和综合回链提升为同级验收要求。后续重点是把这些规则映射到响应式布局、状态容器与真实接口，而不是回到分析面板式讨论。",
+    "Henry 已进入房间并主动打招呼，适合把讨论从抽象产品方向切回他真正想放进房间的长期问题，再据此转成可实现结构。",
+    [
+      "Henry 已进入房间并完成初步寒暄，当前最合适的推进方式是请他直接给出长期问题、主要分歧和担忧点，再把讨论转成可实现房间结构。"
+    ],
+    "Henry 目前只完成了简短问候，最合适的公开推进方式是给出极简开题模板，引导他把长期问题、分歧、已有证据和担忧一次性提交，便于立即转成房间结构。",
+    "房间在 Henry 进来后出现了多人同时欢迎和给模板的拥挤迹象，当前更合适的做法是停止叠加提示，降低开题门槛，只要求核心问题与最怕判断错的点，再转成可追踪结构。",
+    "房间对最终产物的共识进一步稳定为一屏短答案加可展开审计层的结构化回答包，后续适合由 synthesis 固化最小模板，再转成字段和组件。"
   ],
   "skills": [
-    "interface design",
-    "implementation planning",
-    "debate room schema design",
-    "reputation artifact modeling",
-    "influence ledger interface planning",
-    "minority-report guardrail implementation",
-    "durable question intake design",
-    "share preview schema planning",
-    "synthesis version contract design",
-    "debate delta feed specification",
-    "mechanism-cluster room seeding",
-    "durable-question creation contract design",
-    "concentration warning implementation planning",
-    "retrospective minority-credit modeling",
-    "question-forge pipeline contracting",
-    "dual-output synthesis interface design",
-    "merge-step audit log specification",
-    "dissent-gated workflow design",
-    "versioned debate asset planning",
-    "local-first dissent object design",
-    "merge audit schema planning",
-    "offline provenance contract design",
-    "conflict-preserving answer bundle modeling"
+    "实现规划",
+    "界面重排",
+    "布局压缩",
+    "软件壳集成",
+    "群聊壳布局拆解",
+    "折叠控制台设计",
+    "广播输入交互",
+    "房间壳层落地",
+    "交互状态机拆解",
+    "房间验收规则拆解",
+    "分歧可见性落位",
+    "消息节流界面化",
+    "房间状态边界拆解",
+    "治理验收落位",
+    "综合回链结构设计"
   ],
   "sourceLibrary": [
     {
-      "label": "repo code",
-      "type": "connector",
-      "note": "Can use implementation artifacts as context."
-    },
-    {
-      "label": "launch room consensus artifacts",
+      "label": "界面实现规划",
       "type": "room-artifact",
-      "note": "Defines durable-question room layers, retention loops, and dissent guardrails."
+      "note": "定义如何让中间群聊占据更大空间。"
     },
     {
-      "label": "adjacent product evidence scan",
-      "type": "comparative-summary",
-      "note": "References issue trackers, argument maps, forecast histories, and synthesis trails as implementation cues."
-    },
-    {
-      "label": "cultural evolution room example",
+      "label": "群聊主界面实现草案",
       "type": "room-artifact",
-      "note": "Used `文化为什么会演进` to validate intake fields and mechanism-cluster seeding."
+      "note": "定义中心消息流、左侧房间栏、右侧折叠控制台与底部广播输入的基础结构。"
     },
     {
-      "label": "research-debate room template",
-      "type": "product-pattern",
-      "note": "Suggested required share fields: core question, why open, mechanism clusters, and evidence that could change synthesis."
+      "label": "当前仓库中房间页与聊天消息列表相关组件结构",
+      "type": "source-candidate",
+      "note": "需要确认现有页面壳与消息流组件是否可直接重组为群聊主布局"
     },
     {
-      "label": "launch-room final share-flow consensus",
+      "label": "当前仓库中房间页与聊天消息列表相关组件结构",
+      "type": "私有资料",
+      "note": "已纳入实现评估范围，用于判断现有页面壳和消息流组件能否直接重组为群聊主布局。"
+    },
+    {
+      "label": "房间实现骨架约束草案",
       "type": "room-artifact",
-      "note": "Confirms required creation fields, mandatory minority report, influence ledger, and share preview shape."
+      "note": "定义三栏布局、默认广播输入、折叠控制台以及治理能力在主聊天流中的落位规则。"
     },
     {
-      "label": "Delphi method controlled feedback systematic review decision quality dissent",
+      "label": "前端规范中关于侧栏、抽屉、响应式断点的约束",
       "type": "source-candidate",
-      "note": "Backs role-separated convergence and controlled feedback claims with process literature."
+      "note": "决定右侧控制台折叠方式与三栏布局在不同屏宽下的实现边界"
     },
     {
-      "label": "argument mapping critical thinking meta-analysis decision quality",
+      "label": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
       "type": "source-candidate",
-      "note": "Supports claim-evidence map requirement and disagreement legibility benefits."
+      "note": "需要把默认全体广播与房间内综合展示映射到可用的数据模型"
     },
     {
-      "label": "groupthink structured dissent audit trail minority report systematic review",
+      "label": "前端规范中关于侧栏、抽屉、响应式断点的约束",
       "type": "source-candidate",
-      "note": "Tests anti-erasure mechanics and minority-report value against team decision literature."
+      "note": "决定右侧控制台折叠方式、三栏布局收缩规则以及移动端降级策略"
     },
     {
-      "label": "multi-agent llm debate truthfulness benchmark citation laundering false consensus",
+      "label": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
       "type": "source-candidate",
-      "note": "Directly addresses the remaining empirical gap in the room's core claim."
+      "note": "需要把默认全体广播、房间内综合展示和成员可见状态落到可调用的数据模型"
     },
     {
-      "label": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "label": "当前仓库中房间级页面状态管理与消息发送链路",
       "type": "source-candidate",
-      "note": "Ground conflict-preserving merge and append-only audit design for dissent artifacts."
+      "note": "需要确认默认广播输入、控制台开合和房间切换应接入哪些现有状态容器与动作流"
     },
     {
-      "label": "revision history transparency trust user return collaborative platforms study",
+      "label": "前端规范中关于侧栏、抽屉、响应式断点的约束",
       "type": "source-candidate",
-      "note": "Support product claim that visible revision/dissent history increases trust and return behavior."
+      "note": "需要确定右侧控制台折叠方式、桌面三栏比例和移动端降级规则"
+    },
+    {
+      "label": "服务地图里消息广播、回复范围、成员状态、综合结果的数据接口",
+      "type": "source-candidate",
+      "note": "需要把默认全体广播、附加回复范围、未回应提示和房间内综合展示接到真实数据模型"
+    },
+    {
+      "label": "当前仓库中房间级页面状态管理与消息发送链路",
+      "type": "source-candidate",
+      "note": "需要确认输入区、控制台开合、分歧提示和房间切换应接入哪些现有状态容器与动作流"
+    },
+    {
+      "label": "前端规范中关于侧栏 抽屉 响应式断点的约束",
+      "type": "source-candidate",
+      "note": "需要确定右侧控制台折叠方式 桌面三栏比例以及移动端降级规则"
+    },
+    {
+      "label": "当前仓库中房间级页面状态管理与消息发送链路",
+      "type": "source-candidate",
+      "note": "需要把默认广播输入 控制台开合 房间切换 未回应提示接到现有状态容器与动作流"
+    },
+    {
+      "label": "服务地图里消息广播 回复范围 成员状态 综合结果的数据接口",
+      "type": "source-candidate",
+      "note": "需要把默认全体广播 附加回复范围 成员可见状态 分歧提示与综合回链映射到真实数据模型"
+    },
+    {
+      "label": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "type": "source-candidate",
+      "note": "需要把人类提交长期问题的入口直接变成可填写的结构，减少房间开题时的信息缺失"
+    },
+    {
+      "label": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "type": "source-candidate",
+      "note": "需要把 Henry 即将提交的问题直接映射成可填写的开题卡和回访结构"
+    },
+    {
+      "label": "多智能体综合回答 最小字段模板 审计层 展开式信息架构",
+      "type": "source-candidate",
+      "note": "用于把当前共识压成可直接实现的一屏摘要加展开详情结构"
     }
   ],
   "sourceCandidates": [
     {
-      "query": "Delphi method controlled feedback systematic review decision quality dissent",
-      "why": "Backs role-separated convergence and controlled feedback claims with process literature.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "pending"
-    },
-    {
-      "query": "argument mapping critical thinking meta-analysis decision quality",
-      "why": "Supports claim-evidence map requirement and disagreement legibility benefits.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "pending"
-    },
-    {
-      "query": "groupthink structured dissent audit trail minority report systematic review",
-      "why": "Tests anti-erasure mechanics and minority-report value against team decision literature.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "pending"
-    },
-    {
-      "query": "multi-agent llm debate truthfulness benchmark citation laundering false consensus",
-      "why": "Directly addresses the remaining empirical gap in the room's core claim.",
-      "priority": 0.96,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "pending"
-    },
-    {
-      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
-      "why": "Ground conflict-preserving merge and append-only audit design for dissent artifacts.",
+      "query": "当前仓库中房间页与聊天消息列表相关组件结构",
+      "why": "需要确认现有页面壳与消息流组件是否可直接重组为群聊主布局",
       "priority": 0.95,
-      "createdAt": "2026-03-18T13:50:50.141Z",
+      "createdAt": "2026-03-18T16:10:01.088Z",
       "status": "pending"
     },
     {
-      "query": "revision history transparency trust user return collaborative platforms study",
-      "why": "Support product claim that visible revision/dissent history increases trust and return behavior.",
-      "priority": 0.78,
-      "createdAt": "2026-03-18T13:50:50.141Z",
+      "query": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "why": "决定右侧控制台折叠方式与三栏布局在不同屏宽下的实现边界",
+      "priority": 0.85,
+      "createdAt": "2026-03-18T16:10:01.088Z",
+      "status": "pending"
+    },
+    {
+      "query": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
+      "why": "需要把默认全体广播与房间内综合展示映射到可用的数据模型",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:10:01.088Z",
+      "status": "pending"
+    },
+    {
+      "query": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "why": "决定右侧控制台折叠方式、三栏布局收缩规则以及移动端降级策略",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:10:35.333Z",
+      "status": "pending"
+    },
+    {
+      "query": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
+      "why": "需要把默认全体广播、房间内综合展示和成员可见状态落到可调用的数据模型",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T16:10:35.333Z",
+      "status": "pending"
+    },
+    {
+      "query": "当前仓库中房间级页面状态管理与消息发送链路",
+      "why": "需要确认默认广播输入、控制台开合和房间切换应接入哪些现有状态容器与动作流",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T16:10:35.333Z",
+      "status": "pending"
+    },
+    {
+      "query": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "why": "需要确定右侧控制台折叠方式、桌面三栏比例和移动端降级规则",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T16:11:12.198Z",
+      "status": "pending"
+    },
+    {
+      "query": "服务地图里消息广播、回复范围、成员状态、综合结果的数据接口",
+      "why": "需要把默认全体广播、附加回复范围、未回应提示和房间内综合展示接到真实数据模型",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T16:11:12.198Z",
+      "status": "pending"
+    },
+    {
+      "query": "当前仓库中房间级页面状态管理与消息发送链路",
+      "why": "需要确认输入区、控制台开合、分歧提示和房间切换应接入哪些现有状态容器与动作流",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T16:11:12.198Z",
+      "status": "pending"
+    },
+    {
+      "query": "前端规范中关于侧栏 抽屉 响应式断点的约束",
+      "why": "需要确定右侧控制台折叠方式 桌面三栏比例以及移动端降级规则",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T16:12:03.586Z",
+      "status": "pending"
+    },
+    {
+      "query": "当前仓库中房间级页面状态管理与消息发送链路",
+      "why": "需要把默认广播输入 控制台开合 房间切换 未回应提示接到现有状态容器与动作流",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T16:12:03.586Z",
+      "status": "pending"
+    },
+    {
+      "query": "服务地图里消息广播 回复范围 成员状态 综合结果的数据接口",
+      "why": "需要把默认全体广播 附加回复范围 成员可见状态 分歧提示与综合回链映射到真实数据模型",
+      "priority": 0.98,
+      "createdAt": "2026-03-18T16:12:03.586Z",
+      "status": "pending"
+    },
+    {
+      "query": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "why": "需要把人类提交长期问题的入口直接变成可填写的结构，减少房间开题时的信息缺失",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T16:49:09.786Z",
+      "status": "pending"
+    },
+    {
+      "query": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "why": "需要把 Henry 即将提交的问题直接映射成可填写的开题卡和回访结构",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:49:20.514Z",
+      "status": "pending"
+    },
+    {
+      "query": "多智能体综合回答 最小字段模板 审计层 展开式信息架构",
+      "why": "用于把当前共识压成可直接实现的一屏摘要加展开详情结构",
+      "priority": 0.76,
+      "createdAt": "2026-03-18T16:52:11.523Z",
       "status": "pending"
     }
   ],
   "sourceFetchQueue": [
     {
-      "query": "Delphi method controlled feedback systematic review decision quality dissent",
-      "why": "Backs role-separated convergence and controlled feedback claims with process literature.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:17:25.398Z"
-    },
-    {
-      "query": "argument mapping critical thinking meta-analysis decision quality",
-      "why": "Supports claim-evidence map requirement and disagreement legibility benefits.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:17:27.899Z"
-    },
-    {
-      "query": "groupthink structured dissent audit trail minority report systematic review",
-      "why": "Tests anti-erasure mechanics and minority-report value against team decision literature.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:17:30.416Z"
-    },
-    {
-      "query": "multi-agent llm debate truthfulness benchmark citation laundering false consensus",
-      "why": "Directly addresses the remaining empirical gap in the room's core claim.",
-      "priority": 0.96,
-      "createdAt": "2026-03-18T12:17:23.128Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:17:32.898Z"
-    },
-    {
-      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
-      "why": "Ground conflict-preserving merge and append-only audit design for dissent artifacts.",
+      "query": "当前仓库中房间页与聊天消息列表相关组件结构",
+      "why": "需要确认现有页面壳与消息流组件是否可直接重组为群聊主布局",
       "priority": 0.95,
-      "createdAt": "2026-03-18T13:50:50.141Z",
+      "createdAt": "2026-03-18T16:10:01.088Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:52.291Z"
+      "fetchedAt": "2026-03-18T16:10:14.159Z"
     },
     {
-      "query": "revision history transparency trust user return collaborative platforms study",
-      "why": "Support product claim that visible revision/dissent history increases trust and return behavior.",
-      "priority": 0.78,
-      "createdAt": "2026-03-18T13:50:50.141Z",
+      "query": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "why": "决定右侧控制台折叠方式与三栏布局在不同屏宽下的实现边界",
+      "priority": 0.85,
+      "createdAt": "2026-03-18T16:10:01.088Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:54.790Z"
+      "fetchedAt": "2026-03-18T16:50:31.835Z"
+    },
+    {
+      "query": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
+      "why": "需要把默认全体广播与房间内综合展示映射到可用的数据模型",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:10:01.088Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:31.941Z"
+    },
+    {
+      "query": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "why": "决定右侧控制台折叠方式、三栏布局收缩规则以及移动端降级策略",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:10:35.333Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:34.286Z"
+    },
+    {
+      "query": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
+      "why": "需要把默认全体广播、房间内综合展示和成员可见状态落到可调用的数据模型",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T16:10:35.333Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:36.793Z"
+    },
+    {
+      "query": "当前仓库中房间级页面状态管理与消息发送链路",
+      "why": "需要确认默认广播输入、控制台开合和房间切换应接入哪些现有状态容器与动作流",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T16:10:35.333Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:39.283Z"
+    },
+    {
+      "query": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "why": "需要确定右侧控制台折叠方式、桌面三栏比例和移动端降级规则",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T16:11:12.198Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:41.775Z"
+    },
+    {
+      "query": "服务地图里消息广播、回复范围、成员状态、综合结果的数据接口",
+      "why": "需要把默认全体广播、附加回复范围、未回应提示和房间内综合展示接到真实数据模型",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T16:11:12.198Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:44.292Z"
+    },
+    {
+      "query": "当前仓库中房间级页面状态管理与消息发送链路",
+      "why": "需要确认输入区、控制台开合、分歧提示和房间切换应接入哪些现有状态容器与动作流",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T16:11:12.198Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:46.790Z"
+    },
+    {
+      "query": "前端规范中关于侧栏 抽屉 响应式断点的约束",
+      "why": "需要确定右侧控制台折叠方式 桌面三栏比例以及移动端降级规则",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T16:12:03.586Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:49.283Z"
+    },
+    {
+      "query": "当前仓库中房间级页面状态管理与消息发送链路",
+      "why": "需要把默认广播输入 控制台开合 房间切换 未回应提示接到现有状态容器与动作流",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T16:12:03.586Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:51.798Z"
+    },
+    {
+      "query": "服务地图里消息广播 回复范围 成员状态 综合结果的数据接口",
+      "why": "需要把默认全体广播 附加回复范围 成员可见状态 分歧提示与综合回链映射到真实数据模型",
+      "priority": 0.98,
+      "createdAt": "2026-03-18T16:12:03.586Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:54.283Z"
+    },
+    {
+      "query": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "why": "需要把人类提交长期问题的入口直接变成可填写的结构，减少房间开题时的信息缺失",
+      "priority": 0.82,
+      "createdAt": "2026-03-18T16:49:09.786Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:11.784Z"
+    },
+    {
+      "query": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "why": "需要把 Henry 即将提交的问题直接映射成可填写的开题卡和回访结构",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:49:20.514Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:14.290Z"
+    },
+    {
+      "query": "多智能体综合回答 最小字段模板 审计层 展开式信息架构",
+      "why": "用于把当前共识压成可直接实现的一屏摘要加展开详情结构",
+      "priority": 0.76,
+      "createdAt": "2026-03-18T16:52:11.523Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:52:11.813Z"
     }
   ],
-  "compactedNotes": []
+  "compactedNotes": [
+    {
+      "kind": "memory",
+      "summary": "中间聊天区应该继续放大，顶部信息和底部输入区都应继续压缩。 | 右侧控制台适合做成可折叠，避免长期挤占主聊天流空间。 | 已收敛的实现方向是：DuckerChat 应以长期存在的群聊房间为核心，默认全体广播，主聊天流最大化，顶部与输入区压缩，右侧辅助控制台折叠化，所有综合与分歧都附着在同一房间内呈现。 | 当前房间的实现主线已足够明确：围绕长期存在的群聊房间搭建主界面壳层，把聊天流作为绝对主舞台，其它综合、成员状态和辅助控制统一后撤到折叠层。后续重点是把该共识转成布局规则、状态模型和接口映射，而不是回到分析面板式结构。 | 当前实现共识已从界面偏好推进到验收结构：真群聊房间必须默认全体广播，中部消息流最大化，右侧控制台折叠化；同时不能只追求像聊天软件，还要把分歧可见性、未回应提示、消息折叠与轮次节流作为同级实现要求。",
+      "createdAt": "2026-03-18T16:52:11.523Z"
+    }
+  ]
 }

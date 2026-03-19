@@ -1,54 +1,60 @@
 {
   "roomId": "question-forge-room",
   "scheduler": {
-    "enabled": true,
+    "enabled": false,
     "intervalMs": 2200,
-    "maxConcurrentRuns": 1,
+    "maxConcurrentRuns": 2,
     "queue": [],
     "activeRuns": [],
-    "lastTickAt": null,
-    "lastRunAt": "2026-03-18T13:51:08.870Z"
+    "lastTickAt": "2026-03-19T15:11:19.020Z",
+    "lastRunAt": "2026-03-18T17:49:34.348Z",
+    "queueDecay": 0.94,
+    "priorityFloor": 0.12,
+    "clusterWakeCount": 2,
+    "maxAutoAgentsPerTick": 2
   },
   "budgets": {
     "tokenBudgetTotal": 180000,
-    "tokenBudgetRemaining": 13735,
+    "tokenBudgetRemaining": 180000,
     "maxContextEvents": 12,
     "softTurnLimit": 80,
-    "maxQueuedAgents": 10
+    "maxQueuedAgents": 12
   },
   "compaction": {
     "compactBatchSize": 6,
     "keepRecentEvents": 16,
     "summaryNotes": [
       {
-        "id": "question-forge-room-summary-1773841779539",
-        "fromEventId": "forge-human-open",
-        "toEventId": "question-forge-room-1773836128399",
+        "id": "question-forge-room-summary-1773852731531",
+        "fromEventId": "forge-cn-1",
+        "toEventId": "forge-cn-6",
         "eventCount": 6,
         "speakers": [
           "human",
+          "atlas",
           "lumen",
-          "atlas"
+          "sable",
+          "forge",
+          "synthesis"
         ],
-        "summary": "human: Question Forge bootstrap | lumen: Evidence spine for Question Forge: make disagreement and sourcing first-class artifacts | lumen: Lumen added a private source candidate | human: Question Forge ask | atlas: Question Forge pipeline: turn one question into a dissent-preserving synthesis loop | lumen: Evidence-first Question Forge pipeline",
-        "createdAt": "2026-03-18T13:49:39.539Z"
-      },
-      {
-        "id": "question-forge-room-summary-1773841820021",
-        "fromEventId": "question-forge-room-1773836128401",
-        "toEventId": "question-forge-room-1773836170271",
-        "eventCount": 6,
-        "speakers": [
-          "lumen",
-          "sable"
-        ],
-        "summary": "lumen: Lumen added a private source candidate | sable: Minority report: avoid polished consensus theater in Question Forge | sable: Sable added a private source candidate | lumen: Evidence expansion: process literature supports staged dissent, but quality gains are conditional | lumen: Evidence gap remains: strong workflow shape, weak empirical backing | lumen: Lumen added a private source candidate",
-        "createdAt": "2026-03-18T13:50:20.021Z"
+        "summary": "human: Henry 向全房间发言 | atlas: 回答产物框架 | lumen: 证据要求 | sable: 少数派必须保留 | forge: 产物结构落地 | synthesis: 问题锻炉当前回答",
+        "createdAt": "2026-03-18T16:52:11.531Z"
       }
     ]
   },
   "metrics": {
-    "totalAgentRuns": 23,
-    "totalTokens": 166265
+    "totalAgentRuns": 63,
+    "totalTokens": 1778509
+  },
+  "announcements": {
+    "onceKeys": [],
+    "lastGlobalNotice": null
+  },
+  "prediction": {
+    "scoutCount": 100,
+    "draftAgentLimit": 8,
+    "frontlineCount": 12,
+    "coalitionTarget": 4,
+    "arbitrationCount": 3
   }
 }

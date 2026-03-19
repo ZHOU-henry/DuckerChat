@@ -40,72 +40,94 @@
     {
       "source": "human",
       "target": "atlas",
-      "stage": "planning",
+      "stage": "human",
       "weight": 1
     },
     {
-      "source": "lumen",
-      "target": "atlas",
-      "stage": "analysis",
-      "weight": 5
+      "source": "human",
+      "target": "lumen",
+      "stage": "human",
+      "weight": 1
     },
     {
       "source": "human",
-      "target": "atlas",
+      "target": "sable",
       "stage": "human",
-      "weight": 2
+      "weight": 1
     },
     {
       "source": "atlas",
       "target": "lumen",
       "stage": "planning",
-      "weight": 4
+      "weight": 2
+    },
+    {
+      "source": "lumen",
+      "target": "sable",
+      "stage": "evidence",
+      "weight": 1
     },
     {
       "source": "sable",
-      "target": "atlas",
-      "stage": "analysis",
-      "weight": 3
-    },
-    {
-      "source": "mira",
-      "target": "atlas",
-      "stage": "analysis",
-      "weight": 3
+      "target": "synthesis",
+      "stage": "challenge",
+      "weight": 2
     },
     {
       "source": "forge",
-      "target": "atlas",
+      "target": "synthesis",
       "stage": "implementation",
-      "weight": 3
+      "weight": 5
     },
     {
       "source": "synthesis",
       "target": "human",
       "stage": "convergence",
-      "weight": 4
+      "weight": 54
     },
     {
-      "source": "sable",
-      "target": "atlas",
+      "source": "atlas",
+      "target": "synthesis",
+      "stage": "planning",
+      "weight": 2
+    },
+    {
+      "source": "lumen",
+      "target": "synthesis",
+      "stage": "evidence",
+      "weight": 3
+    },
+    {
+      "source": "lumen",
+      "target": "synthesis",
       "stage": "convergence",
+      "weight": 1
+    },
+    {
+      "source": "synthesis",
+      "target": "human",
+      "stage": "system",
       "weight": 1
     }
   ],
   "synthesis": {
-    "direction": "How should a local-first multi-agent platform preserve dissent while still producing a strong answer?",
+    "direction": "一个长期复杂问题怎样被稳定地锻造成高质量答案？",
     "consensus": [
-      "The room converged on a strong operating hypothesis: DuckerChat should turn one hard human question into a staged multi-agent workflow with explicit artifacts, visible disagreement, source expansion, and auditable synthesis. The recommended flow is: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, build shared evidence artifacts, preserve dissent through merge steps, and publish a dual-layer final answer containing both a majority synthesis and a minority report. The central design tension is that more agents can improve coverage, but without hard anti-erasure mechanics they can also amplify citation laundering, false consensus, and hidden authority. The proposal is strong at the product and workflow level, but empirical support for when multi-agent deliberation reliably improves truthfulness remains incomplete, so claims should be framed as high-confidence design guidance rather than settled law.",
-      "The room converged on a strong design: do not transform a human question directly into parallel agent answers and then a polished summary. Instead, transform it into a governed workflow with explicit artifacts: scoped intake, rival theses, claim-evidence mapping, source-quality labeling, dissent ledger, uncertainty register, gated synthesis, and a dual-layer final output containing both a majority synthesis and a minority report. The central insight is that more agents can improve coverage, but without hard anti-erasure rules they also increase the risk of false consensus, citation laundering, and hidden authority by planners or synthesizers. The best answer quality comes from preserving disagreement through every merge step, requiring auditable influence logs, and publishing the result as a durable, revisable answer object with confidence, source gaps, and update triggers. The room is confident in this workflow shape, but less confident in any blanket claim that multi-agent systems inherently improve truthfulness; that remains an empirical gap and should be framed as a strong operating hypothesis rather than settled law.",
-      "Room direction is good, but the hidden failure mode is merge-time authority capture: local-first can preserve files while still erasing dissent if synthesizers, planners, or sync resolution treat objections as compressible text. My recommendation is to make dissent a first-class data object, not commentary. Required layers: (1) epistemic workflow: scoped question, rival theses, disconfirmation criteria, claim-evidence map, uncertainty register; (2) dissent governance: mandatory dissent ledger, majority synthesis + minority report, per-claim provenance, influence log with preserved/dropped/overridden reason codes; (3) local-first integrity: append-only history, author/device stamps, conflict-preserving merges, and offline-verifiable revision lineage. Strong answer quality should be measured not just by coherence, but by citation integrity, source diversity, dissent survival, override rate, and justified disagreement reduction. Key caution: present this as a strong design pattern with empirical support from structured deliberation and transparency literature, not as settled proof that multi-agent debate improves truth.",
-      "A high-quality Question Forge should not convert a human question directly into parallel agent outputs and then a polished consensus answer. It should convert the question into a governed artifact pipeline: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, expand sources into shared evidence artifacts, preserve objections through every merge step, and publish a dual-layer final answer consisting of a majority synthesis plus a minority report. The system should treat disagreement as information, not noise. Strong answer quality comes from evidence-linked claims, explicit uncertainty, source-quality labeling, influence logs, and revision trails. Strong dissent handling requires anti-erasure rules: unresolved objections must remain visible, planner/synthesizer overrides must be auditable, and final outputs must show what was dropped, preserved, or left open. For local-first systems, these artifacts should be append-only, inspectable, and synced with their disagreement history intact rather than syncing only the latest polished summary. This is a strong design recommendation with good precedent support, but the room remains cautious about any blanket claim that multi-agent deliberation inherently improves truthfulness in all settings.",
-      "A high-quality multi-agent synthesis should begin by converting the human question into a scoped, versioned question object with explicit stakes, ambiguities, success criteria, and decision target. Before research starts, the system should require rival theses, disconfirmation criteria, and named ownership so the room does not drift into soft consensus. Agents should then work in role-bounded parallel loops that write into shared artifacts such as a claim-evidence map, source table, uncertainty register, and dissent ledger. Synthesis should be gated: no final answer should be published unless major claims have linked evidence, unresolved objections, source gaps, and provenance. The final artifact should always include both a majority synthesis and a minority report, plus confidence, update triggers, and an influence log showing what was preserved, dropped, unresolved, or overridden and why. The strongest caution from the room is that multi-agent setups increase both coverage and false-consensus risk, so dissent-preservation, source fidelity, and override transparency are mandatory. For local-first systems, dissent must survive offline edits, sync, and merge as first-class data with append-only history and per-claim provenance."
+      "高质量做法不是把一个人类问题直接压成单段统一结论，而是把它送入一条可追踪的综合流程：先澄清问题，再拆解任务，随后让不同角色并行处理策略、证据、风险、治理、留存与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性、可追问性与可审计性的结构化回答包。这个回答包应同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、未知项、未采纳路线、更新触发条件、资料扩展入口与少数派报告。为了保证最终回答质量，系统还必须配套治理机制，包括节流、轮次控制、分歧回链、未回应提示、摘要折叠和少数意见保留位，避免信息过载、欢迎噪音和多数压制。",
+      "较强共识是，不应把一个人类问题直接压成单段统一结论，而应送入一条可追踪的综合流程：先澄清问题，再拆解任务，再让不同角色并行处理策略、证据、风险、治理、留存与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性、可追问性与可审计性的结构化回答包。该产物既要有一屏短答案，也要有可展开审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。为了保证最终回答质量，系统还必须配套治理机制，包括节流、轮次控制、摘要折叠、分歧回链、未回应提示和少数意见保留位，避免信息过载、欢迎噪音与多数压制。",
+      "当前较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。这个回答包需要同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。与此同时，回答质量不只取决于综合模板，还取决于房间治理机制是否抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项和少数派报告持续可见。",
+      "当前较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。该回答包应同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。与此同时，最终回答质量不只取决于综合模板，还取决于房间治理机制是否能抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项和少数派报告持续可见。",
+      "当前较强共识是：一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。该回答包应同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。与此同时，最终回答质量不只取决于综合模板，还取决于房间治理机制是否能抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项和少数派报告持续可见。",
+      "较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出为一份结构化回答包。该回答包不应只追求更长，而应追求更可追问、更可校正、更能暴露不确定性。最终产物最好同时包含一屏短答案与可展开审计层，持续保留依据、反证、少数意见、未采纳路线、未知项、置信度、更新触发条件与资料扩展入口。与此同时，回答质量不只取决于综合模板，还取决于房间治理是否抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项与少数派报告持续可见。"
     ],
-    "tensions": [],
+    "tensions": [
+      "如果过早综合，问题锻炉会失去真正的辩论价值。",
+      "我同意现在这个“可审计综合回答包”的方向，但还缺一条防作假的硬线：不仅要展示结论依据，也要展示哪些重要分歧、资料缺口和被排除路线曾经存在。否则综合层很容易把真正的争议清洗成“看起来很稳”的答案。建议 synthesis 的正式模板再加一个槽位：未采纳观点与排除理由。"
+    ],
     "nextActions": [
-      "Expand evidence",
-      "Preserve dissent",
-      "Converge toward a final answer artifact"
+      "继续增强最终回答产物结构。",
+      "继续把证据和分歧显式挂到回答上。",
+      "让最终回答的更新历史可见。"
     ]
   }
 }

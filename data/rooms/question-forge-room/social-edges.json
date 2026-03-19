@@ -1,0 +1,546 @@
+{
+  "roomId": "question-forge-room",
+  "updatedAt": null,
+  "edges": [
+    {
+      "source": "atlas",
+      "target": "lumen",
+      "prior": {
+        "trust": 0.58,
+        "complementarity": 0.6,
+        "rivalry": 0.18,
+        "influence": 0.38,
+        "coordination": 0.48000000000000004
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "atlas",
+      "target": "mira",
+      "prior": {
+        "trust": 0.5,
+        "complementarity": 0.54,
+        "rivalry": 0.18,
+        "influence": 0.36,
+        "coordination": 0.44000000000000006
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "atlas",
+      "target": "sable",
+      "prior": {
+        "trust": 0.44,
+        "complementarity": 0.52,
+        "rivalry": 0.3,
+        "influence": 0.38,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "atlas",
+      "target": "forge",
+      "prior": {
+        "trust": 0.5,
+        "complementarity": 0.58,
+        "rivalry": 0.18,
+        "influence": 0.4,
+        "coordination": 0.5
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "lumen",
+      "target": "atlas",
+      "prior": {
+        "trust": 0.54,
+        "complementarity": 0.58,
+        "rivalry": 0.18,
+        "influence": 0.4,
+        "coordination": 0.44000000000000006
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "lumen",
+      "target": "mira",
+      "prior": {
+        "trust": 0.42,
+        "complementarity": 0.36,
+        "rivalry": 0.18,
+        "influence": 0.3,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "lumen",
+      "target": "sable",
+      "prior": {
+        "trust": 0.5,
+        "complementarity": 0.54,
+        "rivalry": 0.26,
+        "influence": 0.36,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "lumen",
+      "target": "forge",
+      "prior": {
+        "trust": 0.5,
+        "complementarity": 0.56,
+        "rivalry": 0.18,
+        "influence": 0.33999999999999997,
+        "coordination": 0.44000000000000006
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "mira",
+      "target": "atlas",
+      "prior": {
+        "trust": 0.48,
+        "complementarity": 0.54,
+        "rivalry": 0.18,
+        "influence": 0.38,
+        "coordination": 0.42000000000000004
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "mira",
+      "target": "lumen",
+      "prior": {
+        "trust": 0.42,
+        "complementarity": 0.36,
+        "rivalry": 0.18,
+        "influence": 0.3,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "mira",
+      "target": "sable",
+      "prior": {
+        "trust": 0.44,
+        "complementarity": 0.5,
+        "rivalry": 0.28,
+        "influence": 0.3,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "mira",
+      "target": "forge",
+      "prior": {
+        "trust": 0.45999999999999996,
+        "complementarity": 0.52,
+        "rivalry": 0.18,
+        "influence": 0.33999999999999997,
+        "coordination": 0.44000000000000006
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "sable",
+      "target": "atlas",
+      "prior": {
+        "trust": 0.39999999999999997,
+        "complementarity": 0.5,
+        "rivalry": 0.36,
+        "influence": 0.4,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "sable",
+      "target": "lumen",
+      "prior": {
+        "trust": 0.45999999999999996,
+        "complementarity": 0.52,
+        "rivalry": 0.3,
+        "influence": 0.33999999999999997,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "sable",
+      "target": "mira",
+      "prior": {
+        "trust": 0.39999999999999997,
+        "complementarity": 0.48,
+        "rivalry": 0.3,
+        "influence": 0.3,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "sable",
+      "target": "forge",
+      "prior": {
+        "trust": 0.42,
+        "complementarity": 0.36,
+        "rivalry": 0.18,
+        "influence": 0.3,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "forge",
+      "target": "atlas",
+      "prior": {
+        "trust": 0.48,
+        "complementarity": 0.56,
+        "rivalry": 0.18,
+        "influence": 0.38,
+        "coordination": 0.52
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "forge",
+      "target": "lumen",
+      "prior": {
+        "trust": 0.48,
+        "complementarity": 0.54,
+        "rivalry": 0.18,
+        "influence": 0.32,
+        "coordination": 0.44000000000000006
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "forge",
+      "target": "mira",
+      "prior": {
+        "trust": 0.44,
+        "complementarity": 0.5,
+        "rivalry": 0.18,
+        "influence": 0.32,
+        "coordination": 0.42000000000000004
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    },
+    {
+      "source": "forge",
+      "target": "sable",
+      "prior": {
+        "trust": 0.42,
+        "complementarity": 0.36,
+        "rivalry": 0.18,
+        "influence": 0.3,
+        "coordination": 0.34
+      },
+      "learnedDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "localDelta": {
+        "trust": 0,
+        "complementarity": 0,
+        "rivalry": 0,
+        "influence": 0,
+        "coordination": 0
+      },
+      "history": [],
+      "updatedAt": null
+    }
+  ]
+}

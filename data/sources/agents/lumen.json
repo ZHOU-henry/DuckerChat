@@ -1,0 +1,191 @@
+{
+  "agentId": "lumen",
+  "updatedAt": "2026-03-19T15:06:34.668Z",
+  "catalogRefs": [
+    "frontier-ai",
+    "science-health",
+    "global-public-data"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A-",
+    "diversityTarget": 4,
+    "freshness": "mixed"
+  },
+  "entries": [
+    {
+      "label": "Slack Discord 社区 回访 留存 长期频道 协作 研究",
+      "type": "source-candidate",
+      "note": "验证长期房间是否真的带来重复回访与持续推进，而非仅凭产品直觉判断。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "共享可见性 分歧暴露 群体推理 协作 决策 研究",
+      "type": "source-candidate",
+      "note": "补强“公开讨论与显性分歧有助于形成更强结论”的研究基础，同时检查反例。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "多智能体 聊天界面 可用性 认知负担 信息过载 研究",
+      "type": "source-candidate",
+      "note": "确认公开多智能体发言在什么条件下会退化成噪音墙，以及常见缓解机制。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "线程式讨论 与 主聊天流 决策质量 协作效率 研究",
+      "type": "source-candidate",
+      "note": "判断长期问题是否应以主消息流为主，还是必须依赖线程分支来控制复杂度。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "ChatDev AutoGen 多智能体 产品 界面 评价 可用性 反馈",
+      "type": "source-candidate",
+      "note": "寻找现有多智能体产品中控制前置、编排前置导致群聊直觉受损的反例。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "Slack Discord 社区 回访 留存 问题解决 协作成效 研究",
+      "type": "source-candidate",
+      "note": "把单纯活跃度与真正的问题推进分开，避免将高回访误判为更强结论。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "共享可见性 分歧暴露 协作 决策质量 边界条件 研究",
+      "type": "source-candidate",
+      "note": "验证公开分歧何时提升结论质量，何时反而造成协调成本和从众压力。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "多智能体 聊天界面 认知负担 信息过载 节流 摘要 轮次 研究",
+      "type": "source-candidate",
+      "note": "寻找公开多智能体从有益到失控的阈值与常见缓解机制。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "线程式讨论 与 主聊天流 协作效率 决策质量 复杂任务 研究",
+      "type": "source-candidate",
+      "note": "判断什么时候主流足够，什么时候必须分线程，否则主流会失真或过载。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "少数意见保留 异议可见性 反从众 协作系统 研究",
+      "type": "source-candidate",
+      "note": "补强 Sable 提出的治理风险，确认少数派保留位是否应成为硬验收项。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "argumentation systems claim evidence counterevidence uncertainty explanation research",
+      "type": "source-candidate",
+      "note": "补强“强回答应同时呈现主张、依据、反证与不确定性”的研究基础，避免只停留在模板直觉。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "epistemic transparency decision support interface confidence uncertainty communication research",
+      "type": "source-candidate",
+      "note": "验证界面中显式呈现置信度、未知项和更新条件是否真的提升判断质量与可追问性。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "turn taking moderation online deliberation overload conversation research",
+      "type": "source-candidate",
+      "note": "补强“多人同时热情回应会抬高进入门槛和阅读负担”的研究依据，看看轮次控制是否应成为房间默认机制。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "argumentation interface rejected alternatives rationale decision support research",
+      "type": "source-candidate",
+      "note": "补强“未采纳观点与排除理由”是否应成为最终回答固定槽位，避免这条只停留在设计直觉。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "decision provenance interface rejected alternatives cognitive load transparency research",
+      "type": "source-candidate",
+      "note": "补强“展示未采纳观点与排除理由”在提升可审计性和增加阅读负担之间的边界条件。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "process transparency deliberation interface public reasoning overload trust calibration research",
+      "type": "source-candidate",
+      "note": "验证协作推理过程公开到什么程度更有利于信任校准，而不是引发信息过载。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "online community revisit behavior knowledge retention conversation archives research",
+      "type": "source-candidate",
+      "note": "验证用户是否会因可回访的讨论沉淀而持续回来，这直接关系到长期价值是否成立。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "visible disagreement trust fatigue deliberation interface research",
+      "type": "source-candidate",
+      "note": "判断公开展示分歧究竟更能校准信任，还是会提高认知负担与疲劳。"
+    }
+  ]
+}

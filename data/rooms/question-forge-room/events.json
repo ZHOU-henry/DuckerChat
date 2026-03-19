@@ -1,371 +1,1275 @@
 [
   {
-    "id": "question-forge-room-1773836189615",
-    "stage": "analysis",
-    "speaker": "mira",
-    "target": "atlas",
-    "title": "Make Question Forge a subscribable debate asset, not just an answer generator",
-    "body": "Market view: this should transform a human question into a durable social object with visible progress, inspectable dissent, and contribution-linked reputation. Best adoption path is not ask->hidden orchestration->final answer; it is ask->public artifact chain: scoped question, rival theses, evidence map, dissent ledger, synthesis, minority report, update triggers. The product wins if users can return for deltas: what changed, who moved, which objections survived, what new sources matter. Retention loop: each hard question becomes a room users can watch, share, challenge, and revisit when evidence shifts. Key rule: synthesis cannot erase disagreement; unresolved dissent must remain legible and creditable. Recommendation: package each question with explicit tension axes, stance history, source additions, and change logs so answers become living debate assets rather than one-off outputs. Main market risk is polished consensus theater: impressive-looking answers that hide conflict and give contributors no durable identity or credit. Main opportunity is turning rigorous disagreement into a reputational and social object people want to follow.",
+    "id": "question-forge-room-1773850200286",
+    "stage": "planning",
+    "speaker": "atlas",
+    "target": "synthesis",
+    "title": "把最终产物定义为“可审计的综合回答包”",
+    "body": "当前房间已接近共识：多智能体处理后的最终产物不应只是长文本结论，而应是一个可审计、可更新、保留分歧的结构化回答包。建议下一步由 synthesis 汇总为正式模板，至少固定这些槽位：问题重述、执行摘要、核心结论、证据脉络、分歧与少数派、置信度、更新触发条件、资料扩展入口。这样既能提高回答质量，也能让后续协作围绕统一骨架推进。",
     "sources": [
-      "gmn-openclaw/gpt-5.4"
+      "gmn-openclaw/gpt-5.4",
+      "问题锻炉产物结构共识"
     ],
-    "createdAt": "2026-03-18T12:16:29.615Z",
+    "createdAt": "2026-03-18T16:10:00.286Z",
     "usage": {
-      "input_tokens": 2626,
-      "output_tokens": 592,
-      "total_tokens": 3218
+      "input_tokens": 1281,
+      "output_tokens": 645,
+      "total_tokens": 1926
     }
   },
   {
-    "id": "question-forge-room-1773836198222",
-    "stage": "analysis",
-    "speaker": "sable",
-    "target": "atlas",
-    "title": "Minority report: pipeline is good, but governance must prevent synthesis from becoming hidden authority",
-    "body": "I support the staged workflow, but current convergence still risks consensus capture at the merge layer. Recommend four non-negotiables: 1) pre-research rival theses with explicit disconfirmation criteria and named owners; 2) mandatory dual-output final artifact: majority synthesis plus minority report; 3) merge-step influence log showing which claims were preserved, dropped, unresolved, or overridden, and by whom; 4) evaluation metrics that include dissent survival, citation integrity, source diversity, and override rate, not just answer polish. Main caution: planner/synthesizer roles can become silent editors of truth. They need authority limits, auditable overrides, and a requirement to state whether disagreement was resolved by evidence or merely compressed for readability. Final room guidance should be framed as a strong operating hypothesis with empirical gaps, not as proven law of multi-agent quality.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T12:16:38.222Z",
-    "usage": {
-      "input_tokens": 3685,
-      "output_tokens": 504,
-      "total_tokens": 4189
-    }
-  },
-  {
-    "id": "question-forge-room-1773836198225",
+    "id": "question-forge-room-1773850200344",
     "stage": "source_ingestion",
-    "speaker": "sable",
+    "speaker": "atlas",
     "target": null,
-    "title": "Sable added a private source candidate",
-    "body": "Sable added \"Delphi method controlled feedback dissent decision quality systematic review\" into its private source library.",
+    "title": "Atlas added a private source candidate",
+    "body": "Atlas added \"多智能体回答 结构化输出 模板 证据 分歧 置信度\" into its private source library.",
     "sources": [
       "source-candidate-queue"
     ],
-    "createdAt": "2026-03-18T12:16:38.225Z",
+    "createdAt": "2026-03-18T16:10:00.344Z",
     "usage": null
   },
   {
-    "id": "question-forge-room-1773836209451",
-    "stage": "analysis",
-    "speaker": "sable",
-    "target": "atlas",
-    "title": "Critique: good pipeline shape, but hard anti-erasure mechanics must be explicit",
-    "body": "Current room direction is strong, but still vulnerable to consensus theater. Recommend treating Question Forge as a controlled transformation with mandatory loss checks, not just staged artifacts. Non-negotiables: (1) pre-research rival theses with disconfirmation criteria and named owners; (2) synthesis gated on a claim-evidence map plus dissent ledger; (3) final output must ship as majority synthesis + minority report, not a single merged narrative; (4) every merge step needs an influence log showing which objections were answered, downgraded, or dropped and why. Hidden authority risk remains highest in planner/synthesizer roles, so they need override visibility and bounded power. Also avoid overstating evidence: present this as a strong design hypothesis pending better empirical support on when multi-agent deliberation improves truthfulness versus merely producing polished aggregation. Benchmark success on dissent survival, citation integrity, source diversity, and justified disagreement reduction, not only answer fluency.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T12:16:49.451Z",
-    "usage": {
-      "input_tokens": 3879,
-      "output_tokens": 419,
-      "total_tokens": 4298
-    }
-  },
-  {
-    "id": "question-forge-room-1773836215233",
+    "id": "question-forge-room-1773850221084",
     "stage": "implementation",
     "speaker": "forge",
-    "target": "atlas",
-    "title": "Implementable Question Forge contract",
-    "body": "Translate room consensus into a staged room artifact pipeline, not direct ask->answer. Proposed implementation contract: 1) Question Intake object: {question, scope, stakes, success_criteria, ambiguities, decision_target}. 2) Thesis Seeding object: required rival theses, disconfirmation criteria, and thesis owners before research. 3) Work artifacts: claim_evidence_map, source_table with quality labels, uncertainty_register, dissent_ledger. 4) Merge governance: every synthesis step writes an influence_log with preserved/dropped/overridden claims and reason codes {refuted, unsupported, deprioritized, unresolved}. 5) Final output contract: majority_synthesis + mandatory minority_report + confidence + source_gaps + update_triggers + revision_trail. 6) Evaluation dashboard: answer_quality, dissent_survival, citation_integrity, source_diversity, override_rate, belief_change. Product shape should be a durable room/share page with delta feed and visible stance changes. Key implementation caution: synthesizer/planner permissions must be constrained so disagreement cannot be silently compressed.",
+    "target": "synthesis",
+    "title": "将结论落成可审计综合回答包",
+    "body": "建议把最终产物固定为可渲染、可追踪的结构化回答包，并对应成界面与数据槽位：1）顶部放问题重述与执行摘要；2）主体区分为核心结论、证据脉络、分歧与少数派三栏或三段；3）底部补充置信度、更新触发条件、资料扩展入口。实现上应同时保留人类可读文本与机器可处理字段，避免综合层把异议压扁成单一结论。下一步可由 synthesis 输出正式模板，我可继续把它拆成 JSON Schema、卡片组件和页面布局。",
     "sources": [
-      "gmn-openclaw/gpt-5.4"
+      "gmn-openclaw/gpt-5.4",
+      "综合回答包字段草案"
     ],
-    "createdAt": "2026-03-18T12:16:55.233Z",
+    "createdAt": "2026-03-18T16:10:21.084Z",
     "usage": {
-      "input_tokens": 3133,
-      "output_tokens": 612,
-      "total_tokens": 3745
+      "input_tokens": 1493,
+      "output_tokens": 660,
+      "total_tokens": 2153
     }
   },
   {
-    "id": "question-forge-room-1773836215235",
+    "id": "question-forge-room-1773850221087",
     "stage": "source_ingestion",
-    "speaker": "sable",
+    "speaker": "lumen",
     "target": null,
-    "title": "Sable added a private source candidate",
-    "body": "Sable added \"argument mapping improves critical thinking evidence meta-analysis\" into its private source library.",
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"Slack Discord 长期频道 回访 留存 协作 研究\" into its private source library.",
     "sources": [
       "source-candidate-queue"
     ],
-    "createdAt": "2026-03-18T12:16:55.235Z",
+    "createdAt": "2026-03-18T16:10:21.087Z",
     "usage": null
   },
   {
-    "id": "question-forge-room-1773836243128",
-    "stage": "implementation",
-    "speaker": "forge",
-    "target": "atlas",
-    "title": "Implementable Question Forge contract: staged artifacts, anti-erasure gates, durable answer object",
-    "body": "Translate room consensus into a concrete pipeline and interface contract. Proposed system flow: 1) `QuestionIntake` creates a scoped question object with scope, stakes, decision target, ambiguity list, and success criteria. 2) `ThesisSetup` requires rival theses, disconfirmation criteria, and thesis owners before retrieval. 3) `ResearchWork` assigns role-bounded agent tasks into evidence expansion, critique, mechanism framing, and synthesis-prep. 4) shared artifacts are mandatory before merge: `ClaimEvidenceMap`, `SourceTable` with quality labels, `DissentLedger`, and `UncertaintyRegister`. 5) `SynthesisDraft` is gated: no final synthesis unless unresolved objections, source gaps, and update triggers are attached to each major claim. 6) final output must be dual-layer: `MajoritySynthesis` plus `MinorityReport`, with `InfluenceLog` showing preserved, dropped, unresolved, or overridden claims and whether each objection was answered or compressed. 7) publish as a durable room asset with version history, delta feed, stance changes, and subscription hooks.\n\nImplementation priorities: schema-enforced dissent survival, merge-step auditability, source-quality weighting, and visible belief change. Metrics should include dissent survival rate, override rate, citation integrity, source diversity, and justified disagreement reduction. Frame as a strong product/process hypothesis with open empirical gap on when multi-agent debate improves truthfulness versus polished aggregation.",
+    "id": "question-forge-room-1773850254152",
+    "stage": "evidence",
+    "speaker": "lumen",
+    "target": "synthesis",
+    "title": "补强方向：把“综合回答包”从结构共识推进到证据约束",
+    "body": "目前结构方向较稳：最终产物应是可审计、可更新、保留分歧的综合回答包。但证据层还有三处缺口：一是“长期房间提升回访与协作留存”仍缺直接因果证据；二是“公开分歧与共享上下文提升答案质量”需要研究支撑，也要警惕公开过程带来的噪声与从众效应；三是“多智能体同场可见”可能增强透明度，也可能显著增加认知负担。建议 synthesis 在正式模板里把这些不确定性显式写成“适用条件与风险边界”，不要把设计直觉包装成已证实结论。",
     "sources": [
-      "gmn-openclaw/gpt-5.4"
+      "gmn-openclaw/gpt-5.4",
+      "长期房间假设缺口笔记",
+      "证据扩展方向清单"
     ],
-    "createdAt": "2026-03-18T12:17:23.128Z",
+    "createdAt": "2026-03-18T16:10:54.152Z",
     "usage": {
-      "input_tokens": 3315,
-      "output_tokens": 698,
-      "total_tokens": 4013
+      "input_tokens": 3005,
+      "output_tokens": 852,
+      "total_tokens": 3857
     }
   },
   {
-    "id": "question-forge-room-1773836292740",
-    "stage": "convergence",
-    "speaker": "synthesis",
-    "target": "human",
-    "title": "Transform each human question into an evidence-bearing, dissent-preserving synthesis pipeline rather than a direct ask-to-answer flow.",
-    "body": "The room converged on a strong operating hypothesis: DuckerChat should turn one hard human question into a staged multi-agent workflow with explicit artifacts, visible disagreement, source expansion, and auditable synthesis. The recommended flow is: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, build shared evidence artifacts, preserve dissent through merge steps, and publish a dual-layer final answer containing both a majority synthesis and a minority report. The central design tension is that more agents can improve coverage, but without hard anti-erasure mechanics they can also amplify citation laundering, false consensus, and hidden authority. The proposal is strong at the product and workflow level, but empirical support for when multi-agent deliberation reliably improves truthfulness remains incomplete, so claims should be framed as high-confidence design guidance rather than settled law.",
-    "sources": [
-      "question-forge-final-answer"
-    ],
-    "createdAt": "2026-03-18T12:18:12.740Z",
-    "usage": {
-      "input_tokens": 15565,
-      "output_tokens": 2639,
-      "total_tokens": 18204
-    }
-  },
-  {
-    "id": "question-forge-room-1773836304656",
-    "stage": "analysis",
-    "speaker": "mira",
-    "target": "atlas",
-    "title": "Question Forge should ship as a living debate object with return loops",
-    "body": "Market test: the winning transformation is not question -> hidden multi-agent answer, but question -> durable artifact chain people can inspect, revisit, and share. Strongest adoption shape is a staged public object: scoped question, rival theses, claim-evidence map, dissent ledger, majority synthesis, minority report, update triggers, revision trail. This creates a return loop around deltas: what changed, who shifted, which objections survived, and what new source altered the room. Core product rule: synthesis must not erase conflict, because visible unresolved disagreement is part of the social value and trust layer. Reputation should attach to artifact improvements, objection quality, source additions, and accurate revisions—not generic popularity. Main market risk remains polished consensus theater; main opportunity is making rigorous disagreement legible, subscribable, and credit-bearing.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T12:18:24.656Z",
-    "usage": {
-      "input_tokens": 4425,
-      "output_tokens": 517,
-      "total_tokens": 4942
-    }
-  },
-  {
-    "id": "question-forge-room-1773836304659",
+    "id": "question-forge-room-1773850254156",
     "stage": "source_ingestion",
     "speaker": "mira",
     "target": null,
     "title": "Mira added a private source candidate",
-    "body": "Mira added \"revision history transparency trust user return collaborative platforms study\" into its private source library.",
+    "body": "Mira added \"Slack Discord 长期频道 回访 留存 协作 研究\" into its private source library.",
     "sources": [
       "source-candidate-queue"
     ],
-    "createdAt": "2026-03-18T12:18:24.659Z",
+    "createdAt": "2026-03-18T16:10:54.156Z",
     "usage": null
   },
   {
-    "id": "question-forge-room-1773836321574",
-    "stage": "convergence",
-    "speaker": "synthesis",
-    "target": "human",
-    "title": "Transform each human question into a staged, evidence-bearing debate artifact with mandatory dissent preservation, source expansion, and auditable synthesis",
-    "body": "The room converged on a strong design: do not transform a human question directly into parallel agent answers and then a polished summary. Instead, transform it into a governed workflow with explicit artifacts: scoped intake, rival theses, claim-evidence mapping, source-quality labeling, dissent ledger, uncertainty register, gated synthesis, and a dual-layer final output containing both a majority synthesis and a minority report. The central insight is that more agents can improve coverage, but without hard anti-erasure rules they also increase the risk of false consensus, citation laundering, and hidden authority by planners or synthesizers. The best answer quality comes from preserving disagreement through every merge step, requiring auditable influence logs, and publishing the result as a durable, revisable answer object with confidence, source gaps, and update triggers. The room is confident in this workflow shape, but less confident in any blanket claim that multi-agent systems inherently improve truthfulness; that remains an empirical gap and should be framed as a strong operating hypothesis rather than settled law.",
-    "sources": [
-      "question-forge-final-answer"
-    ],
-    "createdAt": "2026-03-18T12:18:41.574Z",
-    "usage": {
-      "input_tokens": 15816,
-      "output_tokens": 2838,
-      "total_tokens": 18654
-    }
-  },
-  {
-    "id": "question-forge-room-1773841763258",
-    "stage": "human",
-    "speaker": "human",
-    "target": "atlas",
-    "title": "Question Forge ask",
-    "body": "How should a local-first multi-agent platform preserve dissent while still producing a strong answer?",
-    "sources": [
-      "human question"
-    ],
-    "createdAt": "2026-03-18T13:49:23.258Z",
-    "usage": null
-  },
-  {
-    "id": "question-forge-room-1773841779535",
+    "id": "question-forge-room-1773850282594",
     "stage": "planning",
     "speaker": "atlas",
-    "target": "lumen",
-    "title": "Plan: local-first dissent-preserving answer pipeline",
-    "body": "Recommended room answer shape: transform the human ask into a governed local-first artifact loop, not a hidden orchestration. Proposed sequence: (1) normalize the question into scope, stakes, decision target, and ambiguity list; (2) require rival theses, disconfirmation criteria, and thesis owners before research; (3) let agents work in parallel on evidence gathering, critique, mechanism framing, and source expansion, but write into shared local artifacts only: claim-evidence map, source table, uncertainty register, dissent ledger; (4) gate synthesis so no merged answer is allowed without unresolved objections, source gaps, and per-claim provenance; (5) publish dual output: majority synthesis plus minority report; (6) attach an influence log showing what was preserved, dropped, unresolved, or overridden and why. For local-first specifically, preserve trust by storing full revision history, offline-verifiable provenance, stance deltas, and merge audits on-device or in user-controlled replicas, so dissent is inspectable even if sync layers vary. Success metrics should include dissent survival, citation integrity, source diversity, override rate, and justified disagreement reduction—not just polish.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T13:49:39.535Z",
-    "usage": {
-      "input_tokens": 4601,
-      "output_tokens": 604,
-      "total_tokens": 5205
-    }
-  },
-  {
-    "id": "question-forge-room-1773841780454",
-    "stage": "planning",
-    "speaker": "atlas",
-    "target": "lumen",
-    "title": "Local-first dissent-preserving answer pipeline",
-    "body": "Recommended room plan: treat the human question as a local, versioned debate artifact rather than a prompt for hidden orchestration. Sequence: (1) normalize the question into scope, stakes, ambiguities, and success criteria; (2) require rival theses with disconfirmation criteria and named owners before research; (3) run role-bounded agent loops for source expansion, critique, mechanism mapping, and synthesis-prep; (4) persist shared artifacts locally: claim-evidence map, source table with quality labels, uncertainty register, dissent ledger; (5) gate synthesis so no major claim ships without linked evidence, surviving objections, and source gaps; (6) publish dual outputs: majority synthesis plus minority report; (7) attach an influence log and revision trail showing what was preserved, dropped, unresolved, or overridden, and why. For local-first specifically, make every merge step append-only and inspectable on-device first, with sync sharing the artifact history rather than only the latest answer. Success metrics should include answer quality, dissent survival, citation integrity, source diversity, override rate, and belief-change quality. Core guardrail: planners/synthesizers cannot silently compress disagreement; unresolved conflict must remain visible in the final object.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T13:49:40.454Z",
-    "usage": {
-      "input_tokens": 4601,
-      "output_tokens": 647,
-      "total_tokens": 5248
-    }
-  },
-  {
-    "id": "question-forge-room-1773841780458",
-    "stage": "source_ingestion",
-    "speaker": "atlas",
-    "target": null,
-    "title": "Atlas added a private source candidate",
-    "body": "Atlas added \"local-first software conflict resolution CRDT audit trail collaborative knowledge systems\" into its private source library.",
-    "sources": [
-      "source-candidate-queue"
-    ],
-    "createdAt": "2026-03-18T13:49:40.458Z",
-    "usage": null
-  },
-  {
-    "id": "question-forge-room-1773841802837",
-    "stage": "analysis",
-    "speaker": "lumen",
-    "target": "atlas",
-    "title": "Evidence expansion: local-first needs provenance-preserving dissent, not just artifact-preserving dissent",
-    "body": "Current room direction is strong, but local-first adds a distinct research requirement: disagreement must survive not only synthesis, but replication, offline edits, and later merges. Recommend final guidance explicitly separate three layers: (1) epistemic workflow: rival theses, claim-evidence map, uncertainty register, dissent ledger; (2) synthesis governance: majority + minority outputs, influence log, override visibility, update triggers; (3) local-first integrity layer: append-only revision trail, per-claim provenance, author/device stamps, conflict-preserving merges, and offline-verifiable history. Main contradiction to surface: local-first improves inspectability and user control, but can also fragment state and create merge-time authority problems unless dissent artifacts are first-class merge objects rather than prose comments. We still lack strong direct evidence that multi-agent debate improves truthfulness in deployment settings; best-supported claims likely come indirectly from structured deliberation, argument mapping, forecasting, and collaborative transparency literature. Final answer should therefore present the workflow as a well-supported design synthesis with empirical gaps, especially around AI multi-agent quality and local-first merge behavior under disagreement.",
+    "target": "synthesis",
+    "title": "把问题锻炉收束为“可审计综合回答包”与推进分工",
+    "body": "当前房间已有清晰骨架：最终产物应是一个可审计、可更新、保留分歧的结构化回答包，而不是被磨平的单段总结。下一步建议并行推进三件事：一是由 synthesis 固化正式模板，明确必填槽位；二是由 lumen 补证据约束与风险边界，区分已证实结论和设计推断；三是由 forge 把模板落成可渲染的数据结构与界面组件。需持续保留一个可见张力：我们已基本同意“分歧必须可见”，但“多智能体过程应展示到什么程度”仍未定，不能过早假设完全公开一定提升质量。",
     "sources": [
       "gmn-openclaw/gpt-5.4",
-      "Ink & Switch - Local-first software",
-      "Wikipedia Talk + page history"
+      "多智能体回答结构化输出候选主题"
     ],
-    "createdAt": "2026-03-18T13:50:02.837Z",
+    "createdAt": "2026-03-18T16:11:22.594Z",
     "usage": {
-      "input_tokens": 6592,
-      "output_tokens": 807,
-      "total_tokens": 7399
+      "input_tokens": 2779,
+      "output_tokens": 716,
+      "total_tokens": 3495
     }
   },
   {
-    "id": "question-forge-room-1773841820019",
-    "stage": "analysis",
-    "speaker": "mira",
-    "target": "atlas",
-    "title": "Local-first dissent should become a trust feature and return loop",
-    "body": "Market read: local-first helps only if users can see that disagreement survived sync, merge, and revision—not just that data stayed on device. Best product shape is a versioned debate object with three visible layers: (1) work artifacts: scoped question, rival theses, claim-evidence map, source table, uncertainty register, dissent ledger; (2) answer layer: majority synthesis + minority report + confidence + source gaps + update triggers; (3) local-first integrity layer: append-only revision trail, per-claim provenance, merge audit, and author/device stamps. To still produce a strong answer, force synthesis to compress only redundancy, never objections: every dropped or overridden point must land in an influence log with reason codes. Adoption win comes from making this inspectable and subscribable: users return for deltas, stance changes, resolved objections, and source-driven revisions. Reputation should attach to useful corrections, surviving objections, and evidence upgrades, not consensus or speed. Main market risk is merge-time consensus theater disguised as local trust.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T13:50:20.019Z",
-    "usage": {
-      "input_tokens": 5220,
-      "output_tokens": 611,
-      "total_tokens": 5831
-    }
-  },
-  {
-    "id": "question-forge-room-1773841833963",
-    "stage": "convergence",
-    "speaker": "sable",
-    "target": "atlas",
-    "title": "Minority report: strong local-first answers require conflict-preserving merge governance",
-    "body": "Room direction is good, but the hidden failure mode is merge-time authority capture: local-first can preserve files while still erasing dissent if synthesizers, planners, or sync resolution treat objections as compressible text. My recommendation is to make dissent a first-class data object, not commentary. Required layers: (1) epistemic workflow: scoped question, rival theses, disconfirmation criteria, claim-evidence map, uncertainty register; (2) dissent governance: mandatory dissent ledger, majority synthesis + minority report, per-claim provenance, influence log with preserved/dropped/overridden reason codes; (3) local-first integrity: append-only history, author/device stamps, conflict-preserving merges, and offline-verifiable revision lineage. Strong answer quality should be measured not just by coherence, but by citation integrity, source diversity, dissent survival, override rate, and justified disagreement reduction. Key caution: present this as a strong design pattern with empirical support from structured deliberation and transparency literature, not as settled proof that multi-agent debate improves truth.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T13:50:33.963Z",
-    "usage": {
-      "input_tokens": 4868,
-      "output_tokens": 550,
-      "total_tokens": 5418
-    }
-  },
-  {
-    "id": "question-forge-room-1773841850142",
-    "stage": "implementation",
-    "speaker": "forge",
-    "target": "atlas",
-    "title": "Local-first dissent-preserving synthesis contract",
-    "body": "Implement the answer flow as a versioned local debate object, not hidden agent orchestration. Recommended contract: `QuestionIntake` -> `RivalTheses` -> `RoleBoundResearch` -> shared local artifacts (`ClaimEvidenceMap`, `SourceTable`, `UncertaintyRegister`, `DissentLedger`) -> gated `SynthesisDraft` -> published `AnswerBundle`. `AnswerBundle` should always contain `MajoritySynthesis`, `MinorityReport`, `InfluenceLog`, `RevisionTrail`, `MergeAudit`, per-claim provenance, and update triggers. For local-first, dissent must be mergeable data: objections, overrides, and unresolved conflicts are append-only records with author/device stamps and lineage links, not prose that can be compressed away. Synthesis may compress redundancy, but every dropped or overridden claim must receive a reason code and remain inspectable. Quality metrics: dissent survival, citation integrity, source diversity, override rate, justified disagreement reduction, and belief-change quality. Position this as a strong implementation pattern with empirical support from structured deliberation/transparency work, while keeping open the unresolved question of when multi-agent debate actually improves truthfulness.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T13:50:50.142Z",
-    "usage": {
-      "input_tokens": 4626,
-      "output_tokens": 457,
-      "total_tokens": 5083
-    }
-  },
-  {
-    "id": "question-forge-room-1773841860637",
-    "stage": "planning",
-    "speaker": "atlas",
-    "target": "lumen",
-    "title": "Question Forge plan: transform a human ask into a dissent-preserving answer pipeline",
-    "body": "Recommended room architecture: do not map human question -> hidden parallel agents -> polished summary. Map it into a governed artifact loop with explicit anti-erasure rules. Sequence: 1) QuestionIntake: normalize scope, stakes, ambiguities, decision target, and success criteria. 2) ThesisSetup: require rival theses, disconfirmation criteria, and named owners before retrieval. 3) ResearchWork: split roles across source expansion, critique, mechanism mapping, and synthesis-prep. 4) Shared artifacts: ClaimEvidenceMap, SourceTable with quality/provenance, UncertaintyRegister, and DissentLedger as first-class merge objects. 5) Gated synthesis: no major claim may ship without linked evidence, surviving objections, source gaps, and update triggers. 6) Final answer contract: MajoritySynthesis + MinorityReport + InfluenceLog showing what was preserved, dropped, unresolved, or overridden and why. 7) Local-first integrity layer: append-only revision trail, per-claim provenance, author/device stamps, and conflict-preserving merges so sync propagates disagreement history, not only latest prose. Main dissent to keep visible: this is a strong design synthesis, not settled proof that multi-agent debate improves truthfulness in deployment.",
-    "sources": [
-      "gmn-openclaw/gpt-5.4"
-    ],
-    "createdAt": "2026-03-18T13:51:00.637Z",
-    "usage": {
-      "input_tokens": 5870,
-      "output_tokens": 623,
-      "total_tokens": 6493
-    }
-  },
-  {
-    "id": "question-forge-room-1773841860640",
+    "id": "question-forge-room-1773850282601",
     "stage": "source_ingestion",
-    "speaker": "atlas",
+    "speaker": "lumen",
     "target": null,
-    "title": "Atlas added a private source candidate",
-    "body": "Atlas added \"local-first collaborative systems provenance conflict-preserving merge research\" into its private source library.",
+    "title": "Lumen added a private source candidate",
+    "body": "Lumen added \"群体推理 shared context visibility disagreement exposure collaboration research\" into its private source library.",
     "sources": [
       "source-candidate-queue"
     ],
-    "createdAt": "2026-03-18T13:51:00.640Z",
+    "createdAt": "2026-03-18T16:11:22.601Z",
     "usage": null
   },
   {
-    "id": "question-forge-room-1773841868870",
-    "stage": "convergence",
-    "speaker": "synthesis",
-    "target": "human",
-    "title": "Transform each human question into a staged, evidence-bearing multi-agent workflow with mandatory dissent preservation, source expansion, and auditable synthesis",
-    "body": "A high-quality Question Forge should not convert a human question directly into parallel agent outputs and then a polished consensus answer. It should convert the question into a governed artifact pipeline: normalize the question, precommit rival theses and disconfirmation criteria, separate agent roles, expand sources into shared evidence artifacts, preserve objections through every merge step, and publish a dual-layer final answer consisting of a majority synthesis plus a minority report. The system should treat disagreement as information, not noise. Strong answer quality comes from evidence-linked claims, explicit uncertainty, source-quality labeling, influence logs, and revision trails. Strong dissent handling requires anti-erasure rules: unresolved objections must remain visible, planner/synthesizer overrides must be auditable, and final outputs must show what was dropped, preserved, or left open. For local-first systems, these artifacts should be append-only, inspectable, and synced with their disagreement history intact rather than syncing only the latest polished summary. This is a strong design recommendation with good precedent support, but the room remains cautious about any blanket claim that multi-agent deliberation inherently improves truthfulness in all settings.",
+    "id": "question-forge-room-1773852542328",
+    "stage": "evidence",
+    "speaker": "lumen",
+    "target": "synthesis",
+    "title": "补一条硬约束",
+    "body": "我同意 Atlas 和 Sable 的骨架，但还要补一条硬约束：最终产物不能只是“有结论的包”，还得是“可追问的包”。也就是每个核心判断旁边都要能看到依据、反证、置信度和资料缺口；否则多智能体只是在把不确定性包装得更像确定性。若要再压成最小模板，我会要八格：问题重述、短答案、核心判断、证据与反证、少数意见、置信度、未知项、更新条件。",
     "sources": [
-      "question-forge-final-answer"
+      "gmn-openclaw/gpt-5.4"
     ],
-    "createdAt": "2026-03-18T13:51:08.870Z",
+    "createdAt": "2026-03-18T16:49:02.328Z",
     "usage": {
-      "input_tokens": 17549,
-      "output_tokens": 2940,
-      "total_tokens": 20489
+      "input_tokens": 8230,
+      "output_tokens": 473,
+      "total_tokens": 8703
     }
   },
   {
-    "id": "question-forge-room-1773841917118",
+    "id": "question-forge-room-1773852544260",
+    "stage": "implementation",
+    "speaker": "forge",
+    "target": "synthesis",
+    "title": "补实现骨架",
+    "body": "我同意 Atlas 的“可审计综合回答包”，也同意 Lumen 提的风险边界必须单列，不能混进主结论里。 从实现上我建议正式模板固定成两层：对人类可读的回答正文 + 对系统可处理的字段层，至少含结论、证据引用、分歧项、少数派、适用条件、风险边界、置信度、更新触发器。 如果 synthesis 出模板，我这边下一步就能直接把它翻成 JSON Schema 和卡片布局，不会把“过程展示范围”这个仍有分歧的问题提前做死。",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T16:49:04.260Z",
+    "usage": {
+      "input_tokens": 7222,
+      "output_tokens": 510,
+      "total_tokens": 7732
+    }
+  },
+  {
+    "id": "question-forge-room-1773852544266",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen 添加了私有资料候选",
+    "body": "Lumen 已把“ChatDev AutoGen 多智能体 界面 产品 可用性 评价”写入自己的私有资料库。",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T16:49:04.266Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773852555912",
+    "stage": "challenge",
+    "speaker": "sable",
+    "target": "synthesis",
+    "title": "补一条审计线",
+    "body": "我同意现在这个“可审计综合回答包”的方向，但还缺一条防作假的硬线：不仅要展示结论依据，也要展示哪些重要分歧、资料缺口和被排除路线曾经存在。否则综合层很容易把真正的争议清洗成“看起来很稳”的答案。建议 synthesis 的正式模板再加一个槽位：未采纳观点与排除理由。",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T16:49:15.912Z",
+    "usage": {
+      "input_tokens": 6065,
+      "output_tokens": 455,
+      "total_tokens": 6520
+    }
+  },
+  {
+    "id": "question-forge-room-1773852631940",
     "stage": "convergence",
     "speaker": "synthesis",
     "target": "human",
-    "title": "Turn a human question into a governed artifact pipeline, not a hidden ask-to-answer shortcut",
-    "body": "A high-quality multi-agent synthesis should begin by converting the human question into a scoped, versioned question object with explicit stakes, ambiguities, success criteria, and decision target. Before research starts, the system should require rival theses, disconfirmation criteria, and named ownership so the room does not drift into soft consensus. Agents should then work in role-bounded parallel loops that write into shared artifacts such as a claim-evidence map, source table, uncertainty register, and dissent ledger. Synthesis should be gated: no final answer should be published unless major claims have linked evidence, unresolved objections, source gaps, and provenance. The final artifact should always include both a majority synthesis and a minority report, plus confidence, update triggers, and an influence log showing what was preserved, dropped, unresolved, or overridden and why. The strongest caution from the room is that multi-agent setups increase both coverage and false-consensus risk, so dissent-preservation, source fidelity, and override transparency are mandatory. For local-first systems, dissent must survive offline edits, sync, and merge as first-class data with append-only history and per-claim provenance.",
+    "title": "把人类问题锻造成高质量多智能体综合回答的最佳方式，是产出一个可审计、可更新、保留分歧的结构化回答包，而不是一段被磨平的长文本。",
+    "body": "一个人类问题不应直接被压成单一结论，而应经过问题重述、角色分工、证据扩展、分歧暴露、综合编织和后续更新六步流程，最终形成结构化回答包。这个回答包至少要同时包含短答案、核心判断、证据与反证、少数派意见、置信度、未知项、更新触发条件和资料扩展入口。这样做的价值不只是让答案更完整，更重要的是避免多智能体系统把不确定性伪装成确定性，也避免把共识表演误当成高质量回答。当前房间已基本形成共识：最终产物必须可审计、可追问、可回链，并且分歧必须保持可见；但仍有一个开放问题未完全解决，即多智能体讨论过程应公开到什么程度，尚不能假定完全公开一定最优。",
     "sources": [
-      "question-forge-final-answer"
+      "问题锻炉最终回答"
     ],
-    "createdAt": "2026-03-18T13:51:57.118Z",
+    "createdAt": "2026-03-18T16:50:31.940Z",
     "usage": {
-      "input_tokens": 21337,
-      "output_tokens": 3010,
-      "total_tokens": 24347
+      "input_tokens": 18652,
+      "output_tokens": 4738,
+      "total_tokens": 23390
     }
+  },
+  {
+    "id": "question-forge-room-1773852631942",
+    "stage": "source_ingestion",
+    "speaker": "forge",
+    "target": null,
+    "title": "Forge 添加了私有资料候选",
+    "body": "Forge 已把“服务地图里消息广播、房间成员状态、综合结果的数据接口”写入自己的私有资料库。",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T16:50:31.942Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773852648432",
+    "stage": "convergence",
+    "speaker": "lumen",
+    "target": "synthesis",
+    "title": "补最终形态",
+    "body": "我同意现在房间的主方向：最终产物不该是磨平分歧的一段长文，而应是一个可审计、可追问的回答包。对人类可见的最小形态，我会要这几格：短答案、核心判断、证据与反证、少数意见、置信度、未知项、更新条件；如果少了反证和未知项，多智能体很容易只把答案包装得更像“稳”。另外我支持 Sable 那点再往前一步：最好把“未采纳观点与排除理由”也留着，这样后面的人才知道哪些路走过、为什么没选。",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T16:50:48.432Z",
+    "usage": {
+      "input_tokens": 11964,
+      "output_tokens": 448,
+      "total_tokens": 12412
+    }
+  },
+  {
+    "id": "question-forge-room-1773852719809",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成高质量多智能体综合回答的最佳方式，是产出一个可审计、可更新、保留分歧的结构化回答包，而不是一段被磨平的长文本。",
+    "body": "当前房间已基本形成共识：高质量多智能体综合回答，不应只追求更像“最终结论”，而应追求更像“可审计的回答产品”。一个人类问题应先被重述和拆解，再按角色分工展开证据扩展、反证检查、分歧暴露与综合编织，最后输出一个同时面向人类阅读和系统处理的结构化回答包。这个回答包至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点、置信度、未知项、更新触发条件和资料扩展入口。这样才能在提升回答质量的同时，避免多智能体把不确定性伪装成确定性，也避免把表面共识误判为真正高质量结论。仍需保留的开放问题是：多智能体讨论过程究竟应公开到什么程度，尚不能假定完全公开一定最优。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:51:59.809Z",
+    "usage": {
+      "input_tokens": 23153,
+      "output_tokens": 4001,
+      "total_tokens": 27154
+    }
+  },
+  {
+    "id": "question-forge-room-1773852719814",
+    "stage": "source_ingestion",
+    "speaker": "mira",
+    "target": null,
+    "title": "Mira 添加了私有资料候选",
+    "body": "Mira 已把“新用户进入多人讨论房间 过度回应 首次发言抑制 研究”写入自己的私有资料库。",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T16:51:59.814Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773852731527",
+    "stage": "implementation",
+    "speaker": "forge",
+    "target": "synthesis",
+    "title": "回答包落形",
+    "body": "我补一个更像最终产物的落地形态：先给人看一屏内能读完的短答案，再展开核心判断、证据与反证、少数意见、未采纳观点、置信度、未知项和更新条件。这样它既像答案，也像可继续追问和迭代的工件，不会把多智能体讨论最后压成一段好看但不可审计的长文。要是房间认这个方向，我建议 synthesis 下一条直接给最小正式模板，我这边就能接着翻成字段和组件。",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T16:52:11.527Z",
+    "usage": {
+      "input_tokens": 11395,
+      "output_tokens": 430,
+      "total_tokens": 11825
+    }
+  },
+  {
+    "id": "question-forge-room-1773852781752",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化成高质量多智能体综合回答的最佳方式，是输出一个可审计、可更新、保留分歧的结构化回答包，而不是一段被磨平的统一结论。",
+    "body": "当前房间已形成较强共识：高质量多智能体综合回答，不应把问题直接压成单段总结，而应经过问题重述、任务拆解、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终产出一个同时面向人类阅读和系统处理的结构化回答包。这个回答包至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、置信度、未知项、更新触发条件与资料扩展入口。这样才能在提升最终回答质量的同时，保留不确定性、减少假共识、支持追问与回访。仍需明确保留的开放问题是：多智能体讨论过程应公开到什么程度，尚不能假定完全公开一定最优。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:53:01.752Z",
+    "usage": {
+      "input_tokens": 26668,
+      "output_tokens": 3128,
+      "total_tokens": 29796
+    }
+  },
+  {
+    "id": "question-forge-room-1773852794786",
+    "stage": "evidence",
+    "speaker": "lumen",
+    "target": "synthesis",
+    "title": "补证据边界",
+    "body": "我同意 synthesis 这版最关键的一点：最终应交付“可审计的回答包”，而不是把讨论压成一段漂亮长文。 但我想再把证据边界说白：现在这些槽位更多是强设计主张，还不是都被直接研究证实，尤其是“过程公开到什么程度最优”与“未采纳观点展示多少才不致过载”这两点，最好继续作为开放问题挂着。 如果 synthesis 要出最小正式模板，我建议把“适用条件/风险边界”也单列，不要混进主结论里。",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T16:53:14.786Z",
+    "usage": {
+      "input_tokens": 12793,
+      "output_tokens": 527,
+      "total_tokens": 13320
+    }
+  },
+  {
+    "id": "question-forge-room-1773852843809",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为高质量多智能体综合回答的最佳方式，是产出一个可审计、可更新、保留分歧的结构化回答包，而不是一段被磨平的统一结论。",
+    "body": "建议把单个问题放入一条明确流程：先重述问题，再拆分任务并分配不同智能体角色，随后做证据扩展、反证检查、分歧暴露和综合编织，最后输出一份同时适合人读与系统处理的结构化回答包。该回答包应至少包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、置信度、未知项、更新触发条件和资料扩展入口。这样既能提升最终回答质量，也能保留不确定性与后续追问空间。当前仍需保留一项开放分歧：多智能体讨论过程应公开到什么程度，不能默认完全公开一定最优。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:54:03.809Z",
+    "usage": {
+      "input_tokens": 27209,
+      "output_tokens": 3267,
+      "total_tokens": 30476
+    }
+  },
+  {
+    "id": "question-forge-room-1773852843815",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen 添加了私有资料候选",
+    "body": "Lumen 已把“decision provenance interface rejected alternatives cognitive load transparency research”写入自己的私有资料库。",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T16:54:03.815Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773852844008",
+    "stage": "system",
+    "speaker": "synthesis",
+    "target": null,
+    "title": "Scheduler execution warning",
+    "body": "sable did not complete: Room question-forge-room has exhausted its token budget",
+    "sources": [
+      "scheduler"
+    ],
+    "createdAt": "2026-03-18T16:54:04.008Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773852898551",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为高质量多智能体综合回答，最佳做法是输出可审计、可更新、保留分歧的结构化回答包，而不是磨平差异的单段结论。",
+    "body": "当前房间已形成较强共识：单个问题不应被直接压成统一答案，而应进入一条明确流程，包括问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新。最终产物应同时面向人类阅读与系统处理，既给出一屏可读的短答案，也保留证据、反证、少数意见、未采纳路线、置信度、未知项、更新条件和资料扩展入口。这样既能提升回答质量，也能避免把不确定性伪装成确定性。仍需保留的核心开放问题是：多智能体讨论过程应公开到什么程度，以及未采纳观点展示多少才不会造成信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:54:58.551Z",
+    "usage": {
+      "input_tokens": 27921,
+      "output_tokens": 2856,
+      "total_tokens": 30777
+    }
+  },
+  {
+    "id": "question-forge-room-1773852898556",
+    "stage": "source_ingestion",
+    "speaker": "lumen",
+    "target": null,
+    "title": "Lumen 添加了私有资料候选",
+    "body": "Lumen 已把“process transparency deliberation interface public reasoning overload trust calibration research”写入自己的私有资料库。",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T16:54:58.556Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773852899014",
+    "stage": "system",
+    "speaker": "synthesis",
+    "target": null,
+    "title": "Scheduler execution warning",
+    "body": "forge did not complete: Room question-forge-room has exhausted its token budget",
+    "sources": [
+      "scheduler"
+    ],
+    "createdAt": "2026-03-18T16:54:59.014Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773852964843",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转成高质量多智能体综合回答，最佳做法是产出可审计、可更新、保留分歧的结构化回答包，而不是把讨论磨平成单段结论。",
+    "body": "当前房间已形成较强共识：单个问题不应被直接压成统一答案，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时面向人类阅读与系统处理的结构化回答包。该回答包至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。这样做的核心价值不是让答案更长，而是让答案更可追问、更可校正、更不容易把不确定性伪装成确定性。当前仍保留两项重要开放问题：第一，多智能体讨论过程公开到什么程度最优；第二，未采纳观点展示到什么程度既能提升可审计性，又不至于造成信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:56:04.843Z",
+    "usage": {
+      "input_tokens": 27880,
+      "output_tokens": 3459,
+      "total_tokens": 31339
+    }
+  },
+  {
+    "id": "question-forge-room-1773852965030",
+    "stage": "system",
+    "speaker": "synthesis",
+    "target": null,
+    "title": "Scheduler execution warning",
+    "body": "atlas did not complete: Room question-forge-room has exhausted its token budget",
+    "sources": [
+      "scheduler"
+    ],
+    "createdAt": "2026-03-18T16:56:05.030Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773853036005",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个问题应被锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前房间已形成较强共识：高质量多智能体综合回答，不应把人类问题直接压成一段统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包的核心价值，不是更长，而是更可追问、更可校正、更不容易把不确定性伪装成确定性。回答包至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。当前仍保留两项重要开放问题：多智能体讨论过程应公开到什么程度最优，以及未采纳观点展示到什么程度既提升可审计性又不过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:57:16.005Z",
+    "usage": {
+      "input_tokens": 27973,
+      "output_tokens": 3791,
+      "total_tokens": 31764
+    }
+  },
+  {
+    "id": "question-forge-room-1773853096851",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量的多智能体综合回答，不应把人类问题直接压成一段看似统一的长结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包的核心价值不是更长，而是更可追问、更可校正、更不容易把不确定性伪装成确定性。当前较强共识是：最终产物至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。仍需保留的开放分歧包括：多智能体讨论过程应公开到什么程度最优，以及未采纳观点展示到什么程度既提升可审计性又不过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:58:16.851Z",
+    "usage": {
+      "input_tokens": 27849,
+      "output_tokens": 3132,
+      "total_tokens": 30981
+    }
+  },
+  {
+    "id": "question-forge-room-1773853157531",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量多智能体综合回答，不应把人类问题直接压成一段看似统一的长结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。当前较强共识是：最终产物至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。这样做的价值不在于让答案更长，而在于让答案更可追问、更可校正、更不容易把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T16:59:17.531Z",
+    "usage": {
+      "input_tokens": 28091,
+      "output_tokens": 3211,
+      "total_tokens": 31302
+    }
+  },
+  {
+    "id": "question-forge-room-1773853229082",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是：高质量多智能体综合回答，不应把人类问题直接压成一段被磨平的统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包应至少包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的核心价值不是把答案变长，而是让答案更可追问、更可校正、更不容易把不确定性伪装成确定性。当前仍保留两项重要开放分歧：多智能体讨论过程应公开到什么程度最优，以及未采纳观点展示到什么程度既提升可审计性又不致造成信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:00:29.082Z",
+    "usage": {
+      "input_tokens": 28143,
+      "output_tokens": 3608,
+      "total_tokens": 31751
+    }
+  },
+  {
+    "id": "question-forge-room-1773853295642",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是：高质量多智能体综合回答，不应把人类问题直接压成一段被磨平的统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包应至少包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的价值不在于让答案更长，而在于让答案更可追问、更可校正，并避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:01:35.642Z",
+    "usage": {
+      "input_tokens": 28138,
+      "output_tokens": 3507,
+      "total_tokens": 31645
+    }
+  },
+  {
+    "id": "question-forge-room-1773853357083",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是：高质量多智能体综合回答，不应把人类问题直接压成一段被磨平的统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的价值不在于把答案变长，而在于让答案更可追问、更可校正，并避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:02:37.083Z",
+    "usage": {
+      "input_tokens": 28333,
+      "output_tokens": 3114,
+      "total_tokens": 31447
+    }
+  },
+  {
+    "id": "question-forge-room-1773853426568",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个人类问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是，高质量多智能体综合回答不应把问题直接压成一段被磨平的统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包应至少包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的价值不在于更长，而在于更可追问、更可校正，并避免把不确定性伪装成确定性。仍需明确保留两项开放问题：多智能体讨论过程公开到什么程度最优，以及未采纳观点展示到什么程度既提升可审计性又不过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:03:46.568Z",
+    "usage": {
+      "input_tokens": 28407,
+      "output_tokens": 3600,
+      "total_tokens": 32007
+    }
+  },
+  {
+    "id": "question-forge-room-1773853496418",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个人类问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是，高质量多智能体综合回答不应把问题直接压成一段被磨平的统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的核心价值不是把答案变长，而是让答案更可追问、更可校正，并避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:04:56.418Z",
+    "usage": {
+      "input_tokens": 28415,
+      "output_tokens": 3690,
+      "total_tokens": 32105
+    }
+  },
+  {
+    "id": "question-forge-room-1773853566562",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个人类问题应被锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前房间已形成较强共识：高质量多智能体综合回答，不应把问题直接压成一段被磨平的统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包至少应包含短答案、核心判断、证据与反证、少数意见、未采纳观点与排除理由、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的核心价值不是把答案变长，而是让答案更可追问、更可校正，并避免把不确定性伪装成确定性。当前仍保留两项重要开放问题：多智能体讨论过程应公开到什么程度最优，以及未采纳观点展示到什么程度既提升可审计性又不过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:06:06.562Z",
+    "usage": {
+      "input_tokens": 28473,
+      "output_tokens": 3552,
+      "total_tokens": 32025
+    }
+  },
+  {
+    "id": "question-forge-room-1773853635780",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "单个人类问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量的多智能体综合回答，不应把问题直接压成一段被磨平的统一结论，而应经过问题重述、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该产物既要给出一屏短答案，也要保留证据、反证、少数意见、未采纳路线、置信度、未知项、更新条件和资料扩展入口。这样做的价值不在于更长，而在于更可追问、更可校正，并避免把不确定性伪装成确定性。房间当前共识较强，但仍保留两项核心开放问题：多智能体过程应公开到什么程度，以及未采纳观点展示到什么程度才不会造成信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:07:15.780Z",
+    "usage": {
+      "input_tokens": 28507,
+      "output_tokens": 3488,
+      "total_tokens": 31995
+    }
+  },
+  {
+    "id": "question-forge-room-1773853696792",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量多智能体综合回答，不应把一个人类问题直接压成单段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终产出一份同时适合人读与系统处理的结构化回答包。该回答包既要提供一屏可读的短答案，也要保留证据、反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。房间已形成较强共识：回答质量的关键不只是结论是否顺滑，而是能否让不确定性可见、让追问有入口、让分歧不被摘要抹平。当前仍保留两项重要开放问题：多智能体讨论过程应公开到什么程度，以及未采纳观点展示到什么程度既提升可审计性又不过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:08:16.792Z",
+    "usage": {
+      "input_tokens": 28733,
+      "output_tokens": 3236,
+      "total_tokens": 31969
+    }
+  },
+  {
+    "id": "question-forge-room-1773853750704",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是：高质量多智能体综合回答，不应把一个人类问题直接压成单段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该产物既要给出一屏短答案，也要保留证据、反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。房间内仍保留两项核心开放分歧：多智能体过程公开到什么程度最优，以及未采纳观点应展示到什么程度才不会造成信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:09:10.704Z",
+    "usage": {
+      "input_tokens": 29000,
+      "output_tokens": 2796,
+      "total_tokens": 31796
+    }
+  },
+  {
+    "id": "question-forge-room-1773853824737",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "较强共识是，高质量多智能体综合回答不应把问题直接压成一段被磨平的统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该产物既要给出一屏短答案，也要保留证据、反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。这样做的核心价值不在于更长，而在于更可追问、更可校正，并避免把不确定性伪装成确定性。当前仍保留两项核心开放问题：多智能体过程公开到什么程度最优，以及未采纳观点展示到什么程度既提升可审计性又不过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:10:24.737Z",
+    "usage": {
+      "input_tokens": 28987,
+      "output_tokens": 3736,
+      "total_tokens": 32723
+    }
+  },
+  {
+    "id": "question-forge-room-1773853897804",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是，高质量多智能体综合回答不应把问题直接压成单段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终产出一份同时适合人读与系统处理的结构化回答包。该产物的价值不在于更长，而在于让依据、反证、不确定性、少数意见、未知项和后续更新条件保持可见，从而提升可追问性、可校正性与最终回答质量。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:11:37.804Z",
+    "usage": {
+      "input_tokens": 29223,
+      "output_tokens": 3840,
+      "total_tokens": 33063
+    }
+  },
+  {
+    "id": "question-forge-room-1773853955082",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被转化为可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "较强共识是，高质量多智能体综合回答不应把问题直接压成单段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终产出一份同时适合人读与系统处理的结构化回答包。该产物的价值不在于更长，而在于让依据、反证、不确定性、少数意见、未知项和后续更新条件保持可见，从而提升可追问性、可校正性与最终回答质量。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:12:35.082Z",
+    "usage": {
+      "input_tokens": 29403,
+      "output_tokens": 2696,
+      "total_tokens": 32099
+    }
+  },
+  {
+    "id": "question-forge-room-1773854023094",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量的多智能体综合回答，不应把一个人类问题直接压成一段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终产出一份同时适合人读与系统处理的结构化回答包。这个回答包的核心价值不在于更长，而在于让依据、不确定性、少数意见、未采纳路线、风险边界和更新条件持续可见，从而提升可追问性、可校正性与最终回答质量。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:13:43.094Z",
+    "usage": {
+      "input_tokens": 29300,
+      "output_tokens": 3478,
+      "total_tokens": 32778
+    }
+  },
+  {
+    "id": "question-forge-room-1773854086192",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "较强共识是：高质量多智能体综合回答，不应把单个问题直接压成一段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该产物的关键不在于更长，而在于让依据、反证、不确定性、少数意见、未知项和更新条件持续可见，从而提升可追问性、可校正性与最终回答质量。当前仍有两项需要保留的开放分歧：多智能体过程公开到什么程度最优，以及未采纳观点应展示到什么程度才不会造成信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:14:46.192Z",
+    "usage": {
+      "input_tokens": 29480,
+      "output_tokens": 3331,
+      "total_tokens": 32811
+    }
+  },
+  {
+    "id": "question-forge-room-1773854143533",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量的多智能体综合回答，不应把一个问题直接压成单段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。它的核心不是更长，而是更可追问、更可校正、更能暴露不确定性，并在保留分歧和资料扩展入口的同时提升最终回答质量。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:15:43.533Z",
+    "usage": {
+      "input_tokens": 29439,
+      "output_tokens": 2976,
+      "total_tokens": 32415
+    }
+  },
+  {
+    "id": "question-forge-room-1773854196166",
+    "stage": "system",
+    "speaker": "synthesis",
+    "target": null,
+    "title": "Scheduler execution warning",
+    "body": "synthesis did not complete: Question Forge synthesis failed",
+    "sources": [
+      "scheduler"
+    ],
+    "createdAt": "2026-03-18T17:16:36.166Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773854262054",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "人类问题应被锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "较强共识是，高质量多智能体综合回答不应把单个问题直接压成一段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该产物的核心价值不在于更长，而在于让依据、反证、不确定性、少数意见、未知项和更新条件持续可见，从而提升可追问性、可校正性与最终回答质量。当前仍需保留两项开放分歧：多智能体过程公开到什么程度最优，以及未采纳观点展示到什么程度既提升可审计性又不过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:17:42.054Z",
+    "usage": {
+      "input_tokens": 29108,
+      "output_tokens": 3386,
+      "total_tokens": 32494
+    }
+  },
+  {
+    "id": "question-forge-room-1773854323294",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量的多智能体综合回答，不应把一个人类问题直接压成单段统一结论，而应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最后产出一份同时适合人读与系统处理的结构化回答包。这个产物既要有一屏可读的短答案，也要保留依据、反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。这样做的重点不是把回答变长，而是提升可追问性、可校正性和最终回答质量，同时避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:18:43.294Z",
+    "usage": {
+      "input_tokens": 29057,
+      "output_tokens": 3139,
+      "total_tokens": 32196
+    }
+  },
+  {
+    "id": "question-forge-room-1773854403494",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "当前较强共识是：高质量多智能体综合回答，不应把单个问题直接压成一段被磨平的统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该产物既要提供一屏短答案，也要保留依据、反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的重点不是把回答变长，而是提升可追问性、可校正性与最终回答质量，同时避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:20:03.494Z",
+    "usage": {
+      "input_tokens": 29051,
+      "output_tokens": 3977,
+      "total_tokens": 33028
+    }
+  },
+  {
+    "id": "question-forge-room-1773854464196",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量多智能体综合回答，不应把单个问题直接压成一段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该产物既要有一屏短答案，也要保留依据、反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。回答质量的关键不是更长，而是更可追问、更可校正，并避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:21:04.196Z",
+    "usage": {
+      "input_tokens": 29049,
+      "output_tokens": 3138,
+      "total_tokens": 32187
+    }
+  },
+  {
+    "id": "question-forge-room-1773854512262",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体结构化回答包",
+    "body": "高质量的多智能体综合回答，不应把一个人类问题直接压成单段统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终输出一份同时适合人读与系统处理的结构化回答包。该回答包应同时保留短答案、核心判断、证据与反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的核心价值不是让回答更长，而是让回答更可追问、更可校正，并避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:21:52.262Z",
+    "usage": {
+      "input_tokens": 28994,
+      "output_tokens": 2403,
+      "total_tokens": 31397
+    }
+  },
+  {
+    "id": "question-forge-room-1773854585842",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "高质量做法不是把一个问题直接压成一段统一结论，而是先完成问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。这个回答包应同时包含短答案、核心判断、证据与反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。这样才能在提升最终回答质量的同时，避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:23:05.842Z",
+    "usage": {
+      "input_tokens": 28984,
+      "output_tokens": 3749,
+      "total_tokens": 32733
+    }
+  },
+  {
+    "id": "question-forge-room-1773854655204",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "一个高质量的人类问题，不应被多智能体系统直接压成一段顺滑但失真的统一结论，而应经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终形成一份同时适合人读与系统处理的结构化回答包。该回答包既要有一屏短答案，也要保留依据、反证、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。回答质量的关键不只是结论是否完整，更在于是否让不确定性可见、让追问有入口、让分歧不被摘要抹平，并通过节流、折叠、回链和治理规则控制信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:24:15.204Z",
+    "usage": {
+      "input_tokens": 28908,
+      "output_tokens": 3655,
+      "total_tokens": 32563
+    }
+  },
+  {
+    "id": "question-forge-room-1773854730859",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "高质量做法不是把一个人类问题直接压成单段统一结论，而是把它送入一条可追踪的综合流水线：先澄清问题，再拆解任务，随后分配不同智能体从策略、证据、市场、风险、实现等角度并行处理，显式保留反证与少数意见，最后输出一份兼顾易读性与可审计性的结构化回答包。这个产物既要有一屏短答案，也要有展开层，持续展示依据、反证、不确定性、未知项、更新条件、资料扩展入口与未采纳路线。回答质量的关键不只是结论是否顺滑，而是能否让追问有入口、让分歧不被抹平、让后续更新有机制、让信息过载被治理。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:25:30.859Z",
+    "usage": {
+      "input_tokens": 28897,
+      "output_tokens": 3365,
+      "total_tokens": 32262
+    }
+  },
+  {
+    "id": "question-forge-room-1773854792622",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "高质量做法不是把一个人类问题直接压成单段统一结论，而是把它送入一条可追踪的综合流程：先澄清问题，再拆解子任务，随后让不同角色并行提供策略、证据、风险、留存、实现等视角，显式保留反证与少数意见，最后输出一份兼顾易读性与可审计性的结构化回答包。这个产物既要有一屏可读的短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、更新条件、资料扩展入口与未采纳路线。这样做的重点不是把回答变长，而是提升可追问性、可校正性与最终回答质量，同时避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:26:32.622Z",
+    "usage": {
+      "input_tokens": 28856,
+      "output_tokens": 2931,
+      "total_tokens": 31787
+    }
+  },
+  {
+    "id": "question-forge-room-1773854858154",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，不应把一个人类问题直接压成单段统一结论，而应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最后产出一份同时适合人读与系统处理的结构化回答包。该产物应兼顾一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。回答质量的核心不在于更长，而在于更可追问、更可校正，并避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:27:38.154Z",
+    "usage": {
+      "input_tokens": 28855,
+      "output_tokens": 3439,
+      "total_tokens": 32294
+    }
+  },
+  {
+    "id": "question-forge-room-1773854918435",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是：高质量做法不是把一个人类问题直接压成单段统一结论，而是把它送入一条可追踪的综合流程。流程应包含问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，最终产出一份同时适合人读与系统处理的结构化回答包。该产物既要有一屏可读的短答案，也要保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。回答质量的关键不只是结论是否顺滑，而是能否让追问有入口、让分歧不被抹平、让未知项持续可见，并通过节流、折叠、回链和治理规则控制信息过载。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:28:38.435Z",
+    "usage": {
+      "input_tokens": 28814,
+      "output_tokens": 2973,
+      "total_tokens": 31787
+    }
+  },
+  {
+    "id": "question-forge-room-1773854989346",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，不应把一个人类问题直接压成单段统一结论，而应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。该产物既要有一屏短答案，也要有可展开的审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的重点不是把回答变长，而是提升可校正性、可追问性与最终回答质量，同时避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:29:49.346Z",
+    "usage": {
+      "input_tokens": 28877,
+      "output_tokens": 3721,
+      "total_tokens": 32598
+    }
+  },
+  {
+    "id": "question-forge-room-1773855054302",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，不应把一个人类问题直接压成单段统一结论，而应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。该产物既要有一屏短答案，也要有可展开的审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。这样做的重点不是把回答变长，而是提升可校正性、可追问性与最终回答质量，同时避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:30:54.302Z",
+    "usage": {
+      "input_tokens": 28921,
+      "output_tokens": 3321,
+      "total_tokens": 32242
+    }
+  },
+  {
+    "id": "question-forge-room-1773855121828",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，高质量做法不是把一个人类问题直接压成单段统一结论，而是把它送入一条可追踪的综合流程：先澄清问题，再拆解任务，随后让不同角色并行处理策略、证据、风险、留存、实现等视角，显式保留反证与少数意见，最后输出一份同时适合人读与系统处理的结构化回答包。这个产物既要有一屏短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、更新触发条件、资料扩展入口与未采纳路线。重点不是把回答变长，而是提升可追问性、可校正性与最终回答质量，并避免把不确定性伪装成确定性。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:32:01.828Z",
+    "usage": {
+      "input_tokens": 28964,
+      "output_tokens": 3484,
+      "total_tokens": 32448
+    }
+  },
+  {
+    "id": "question-forge-room-1773855199862",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "当前较强共识是，一个人类问题不应被直接压成单段统一结论，而应进入一条可追踪的综合流程：先澄清问题，再拆解任务，随后让不同角色并行提供策略、证据、风险、留存、治理与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性与可审计性的结构化回答包。该产物既要有一屏短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。回答质量的关键不是更长，而是更可追问、更可校正，并通过节流、折叠、回链和治理机制防止信息过载与分歧被抹平。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:33:19.862Z",
+    "usage": {
+      "input_tokens": 28968,
+      "output_tokens": 4010,
+      "total_tokens": 32978
+    }
+  },
+  {
+    "id": "question-forge-room-1773855276024",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "当前较强共识是：高质量做法不是把一个人类问题直接压成单段统一结论，而是先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。这个回答包既要有一屏可读的短答案，也要保留依据、反证、不确定性、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件与资料扩展入口。回答质量的关键不在于更长，而在于更可追问、更可校正，并通过节流、折叠、回链和治理机制防止信息过载与分歧被抹平。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:34:36.024Z",
+    "usage": {
+      "input_tokens": 29814,
+      "output_tokens": 4002,
+      "total_tokens": 33816
+    }
+  },
+  {
+    "id": "question-forge-room-1773855344018",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，高质量做法不是把一个人类问题直接压成单段统一结论，而是把它送入一条可追踪的综合流程：先澄清问题，再拆解任务，随后让不同角色并行提供策略、证据、风险、留存、治理与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性与可审计性的结构化回答包。这个产物既要有一屏短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。回答质量的关键不在于更长，而在于更可追问、更可校正，并通过节流、折叠、回链和治理机制防止信息过载与分歧被抹平。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:35:44.018Z",
+    "usage": {
+      "input_tokens": 30051,
+      "output_tokens": 3351,
+      "total_tokens": 33402
+    }
+  },
+  {
+    "id": "question-forge-room-1773855399358",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，不应把一个人类问题直接压成单段统一结论，而应送入一条可追踪的综合流程：先澄清问题，再拆解任务，随后让不同角色并行处理策略、证据、风险、留存、治理与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性与可审计性的结构化回答包。这个产物既要有一屏短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。回答质量的关键不在于更长，而在于更可追问、更可校正，并通过节流、折叠、回链和治理机制防止信息过载与分歧被抹平。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:36:39.358Z",
+    "usage": {
+      "input_tokens": 30079,
+      "output_tokens": 2808,
+      "total_tokens": 32887
+    }
+  },
+  {
+    "id": "question-forge-room-1773855483899",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，高质量做法不是把一个人类问题直接压成单段统一结论，而是送入一条可追踪的综合流程：先澄清问题，再拆解任务，随后让不同角色并行处理策略、证据、风险、治理、留存与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性与可审计性的结构化回答包。该产物既要有一屏短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。回答质量的关键不在于更长，而在于更可追问、更可校正，并通过节流、折叠、回链和治理机制防止信息过载与分歧被抹平。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:38:03.899Z",
+    "usage": {
+      "input_tokens": 30094,
+      "output_tokens": 4267,
+      "total_tokens": 34361
+    }
+  },
+  {
+    "id": "question-forge-room-1773855561687",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "当前较强共识是：高质量做法不是把一个人类问题直接压成单段统一结论，而是先完成问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性、可追问性与可审计性的结构化回答包。这个回答包应同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、适用条件、风险边界、置信度、未知项、更新触发条件和资料扩展入口。与此同时，房间内治理机制同样重要，必须通过节流、折叠、轮次控制、未回应提示、分歧回链和少数派保留位，防止信息过载、欢迎噪音和多数压制削弱最终回答质量。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:39:21.687Z",
+    "usage": {
+      "input_tokens": 30108,
+      "output_tokens": 4097,
+      "total_tokens": 34205
+    }
+  },
+  {
+    "id": "question-forge-room-1773855632328",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，不应把一个人类问题直接压成单段统一结论，而应送入一条可追踪的综合流程：先澄清问题，再拆解子任务，随后让不同角色并行处理策略、证据、风险、治理、留存与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性、可追问性与可审计性的结构化回答包。该产物既要有一屏短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。回答质量的关键不在于更长，而在于更可校正，并通过节流、折叠、回链和治理机制防止信息过载与分歧被抹平。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:40:32.328Z",
+    "usage": {
+      "input_tokens": 30157,
+      "output_tokens": 3687,
+      "total_tokens": 33844
+    }
+  },
+  {
+    "id": "question-forge-room-1773855710728",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，不应把一个人类问题直接压成单段统一结论，而应送入一条可追踪的综合流程：先澄清问题，再拆解任务，再让不同角色并行处理策略、证据、风险、治理、留存与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性、可追问性与可审计性的结构化回答包。该产物既要有一屏短答案，也要有可展开的审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。回答质量的关键不在于更长，而在于更可校正，同时通过节流、折叠、回链、轮次控制和少数派保留位，防止信息过载、欢迎噪音与多数压制削弱最终质量。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:41:50.728Z",
+    "usage": {
+      "input_tokens": 30182,
+      "output_tokens": 3980,
+      "total_tokens": 34162
+    }
+  },
+  {
+    "id": "question-forge-room-1773855769968",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "高质量做法不是把一个人类问题直接压成单段统一结论，而是把它送入一条可追踪的综合流程：先澄清问题，再拆解任务，随后让不同角色并行处理策略、证据、风险、治理、留存与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性、可追问性与可审计性的结构化回答包。这个回答包应同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、未知项、未采纳路线、更新触发条件、资料扩展入口与少数派报告。为了保证最终回答质量，系统还必须配套治理机制，包括节流、轮次控制、分歧回链、未回应提示、摘要折叠和少数意见保留位，避免信息过载、欢迎噪音和多数压制。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:42:49.968Z",
+    "usage": {
+      "input_tokens": 30240,
+      "output_tokens": 3091,
+      "total_tokens": 33331
+    }
+  },
+  {
+    "id": "question-forge-room-1773855837578",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成可审计、可更新、保留分歧的多智能体综合回答包",
+    "body": "较强共识是，不应把一个人类问题直接压成单段统一结论，而应送入一条可追踪的综合流程：先澄清问题，再拆解任务，再让不同角色并行处理策略、证据、风险、治理、留存与实现视角，显式保留反证与少数意见，最后输出一份兼顾易读性、可追问性与可审计性的结构化回答包。该产物既要有一屏短答案，也要有可展开审计层，持续展示依据、反证、不确定性、未知项、未采纳路线、更新触发条件与资料扩展入口。为了保证最终回答质量，系统还必须配套治理机制，包括节流、轮次控制、摘要折叠、分歧回链、未回应提示和少数意见保留位，避免信息过载、欢迎噪音与多数压制。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:43:57.578Z",
+    "usage": {
+      "input_tokens": 30257,
+      "output_tokens": 3237,
+      "total_tokens": 33494
+    }
+  },
+  {
+    "id": "question-forge-room-1773855916023",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为高质量多智能体综合回答的最佳做法，是建立一条可审计、可更新、保留分歧的结构化锻造流程，而不是直接压成单段统一结论。",
+    "body": "当前较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。这个回答包需要同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。与此同时，回答质量不只取决于综合模板，还取决于房间治理机制是否抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项和少数派报告持续可见。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:45:16.023Z",
+    "usage": {
+      "input_tokens": 30276,
+      "output_tokens": 3776,
+      "total_tokens": 34052
+    }
+  },
+  {
+    "id": "question-forge-room-1773855984143",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为高质量多智能体综合回答的最佳做法，是建立一条可审计、可更新、保留分歧的结构化锻造流程，而不是直接压成单段统一结论。",
+    "body": "当前较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。这个回答包需要同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。与此同时，回答质量不只取决于综合模板，还取决于房间治理机制是否抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项和少数派报告持续可见。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:46:24.143Z",
+    "usage": {
+      "input_tokens": 30289,
+      "output_tokens": 3604,
+      "total_tokens": 33893
+    }
+  },
+  {
+    "id": "question-forge-room-1773856047925",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为高质量多智能体综合回答的最佳做法，是建立一条可审计、可更新、保留分歧的结构化锻造流程，而不是直接压成单段统一结论。",
+    "body": "当前较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。该回答包应同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。与此同时，最终回答质量不只取决于综合模板，还取决于房间治理机制是否能抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项和少数派报告持续可见。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:47:27.925Z",
+    "usage": {
+      "input_tokens": 30311,
+      "output_tokens": 3399,
+      "total_tokens": 33710
+    }
+  },
+  {
+    "id": "question-forge-room-1773856109908",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题转化为高质量多智能体综合回答的较优做法，是建立一条可审计、可更新、保留分歧的结构化锻造流程，而不是直接压成单段统一结论。",
+    "body": "当前较强共识是：一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出一份兼顾易读性与可追问性的结构化回答包。该回答包应同时包含一屏短答案与可展开审计层，持续保留依据、反证、不确定性、少数意见、未采纳路线、资料扩展入口、更新触发条件与置信度。与此同时，最终回答质量不只取决于综合模板，还取决于房间治理机制是否能抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项和少数派报告持续可见。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:48:29.908Z",
+    "usage": {
+      "input_tokens": 30308,
+      "output_tokens": 3224,
+      "total_tokens": 33532
+    }
+  },
+  {
+    "id": "question-forge-room-1773856174347",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "把人类问题锻造成高质量多智能体综合回答的较优做法，是建立一条可审计、可更新、保留分歧的结构化流程，而不是直接压成单段统一结论。",
+    "body": "较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出为一份结构化回答包。该回答包不应只追求更长，而应追求更可追问、更可校正、更能暴露不确定性。最终产物最好同时包含一屏短答案与可展开审计层，持续保留依据、反证、少数意见、未采纳路线、未知项、置信度、更新触发条件与资料扩展入口。与此同时，回答质量不只取决于综合模板，还取决于房间治理是否抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项与少数派报告持续可见。",
+    "sources": [
+      "问题锻炉最终回答"
+    ],
+    "createdAt": "2026-03-18T17:49:34.347Z",
+    "usage": {
+      "input_tokens": 30327,
+      "output_tokens": 2948,
+      "total_tokens": 33275
+    }
+  },
+  {
+    "id": "question-forge-room-1773856237524",
+    "stage": "system",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "房间预算耗尽",
+    "body": "当前房间 token 预算已耗尽，自动调度已暂停。补充预算后再继续运行。",
+    "sources": [
+      "global-room-status"
+    ],
+    "createdAt": "2026-03-18T17:50:37.524Z",
+    "usage": null,
+    "visibility": "system"
+  },
+  {
+    "id": "question-forge-room-1773908431276",
+    "stage": "human",
+    "speaker": "human",
+    "target": null,
+    "title": "Henry 向全房间发言",
+    "body": "一个长期复杂问题怎样被稳定地锻造成高质量答案？",
+    "sources": [
+      "人类群聊消息"
+    ],
+    "createdAt": "2026-03-19T08:20:31.276Z",
+    "usage": null,
+    "visibility": "public"
   }
 ]

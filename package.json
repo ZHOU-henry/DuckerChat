@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "desktop": "electron .",
-    "desktop:dev": "electron ."
+    "desktop": "node desktop/run-electron.js",
+    "desktop:dev": "node desktop/run-electron.js",
+    "desktop:sandbox": "electron .",
+    "seed:swarm": "node scripts/seed-agent-swarm.js"
   },
   "devDependencies": {
     "electron": "^37.2.1"

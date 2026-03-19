@@ -66,6 +66,8 @@ Key docs:
 
 - `docs/system-architecture.md`
 - `docs/scaling-feasibility.md`
+- `docs/architecture-roadmap.md`
+- `docs/local-install.md`
 
 ## Run Locally
 
@@ -90,6 +92,21 @@ Current local runtime includes:
   - `data/rooms/launch-room/graph-state.json`
 - local HTTP API
   - served by `server.js`
+
+## Quickstart
+
+From a fresh clone:
+
+```bash
+git clone git@github.com:ZHOU-henry/Duckerchat.git
+cd Duckerchat
+npm install
+npm run desktop
+```
+
+See:
+
+- `docs/local-install.md`
 
 ## Desktop Shell
 

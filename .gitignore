@@ -6,3 +6,4 @@ dist/
 build/
 .runtime/
 *.log
+data/backups/

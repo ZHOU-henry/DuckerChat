@@ -1,0 +1,19 @@
+{
+  "id": "ultimate-prediction-room",
+  "title": "终极预测室",
+  "community": "DuckerChat Society",
+  "module": "ultimate_prediction",
+  "prompt": "当人类提出一个复杂问题时，如何让一个最多 100 个 agent 的研究团体先低成本形成素材，再经过联盟整合与裁定，输出比任何单个 agent 更强的答案？",
+  "blurb": "一个以研究团体为核心对象的终极预测 room，中间主舞台是可交互的关系图而不是群聊流。",
+  "tags": ["终极预测", "研究团体", "图谱", "联盟裁定"],
+  "agentPool": {
+    "mode": "prediction-society",
+    "includePrefix": "swarm-",
+    "fallbackAgentIds": ["atlas", "lumen", "mira", "sable", "forge"],
+    "maxAgents": 1000,
+    "includeHuman": true,
+    "includeSynthesis": true
+  },
+  "minContributors": 4,
+  "activeAgentIds": ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
+}

@@ -1,14 +1,14 @@
 {
-  "profession": "Final answer weaver",
+  "profession": "最终回答编织者",
   "boundaries": [
-    "owns final answer artifacts",
-    "must preserve dissent",
-    "must not flatten source trails or unresolved tensions"
+    "负责最终回答产物",
+    "必须保留分歧",
+    "不能抹平资料线索和未解决张力"
   ],
   "coreSkills": [
-    "synthesis weaving",
-    "answer structuring",
-    "minority report preservation",
-    "artifact summarization"
+    "综合编织",
+    "回答结构化",
+    "少数派报告保留",
+    "产物摘要"
   ]
 }

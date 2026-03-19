@@ -1,0 +1,66 @@
+{
+  "roomId": "question-forge-room",
+  "updatedAt": "2026-03-19T08:20:31.286Z",
+  "entries": [
+    {
+      "id": "question-forge-room-authority-seed-1",
+      "createdAt": "2026-03-19T13:54:00.000Z",
+      "actor": "synthesis",
+      "action": "forge-synthesis",
+      "scope": "question_forge",
+      "summary": "问题锻炉生成了当前结构化回答包，并将主结论、分歧和更新触发压成可审计对象。",
+      "affectedClaims": [
+        "claim-1",
+        "claim-2",
+        "dissent-1"
+      ],
+      "metadata": {
+        "confidence": "中高"
+      }
+    },
+    {
+      "id": "question-forge-room-authority-seed-2",
+      "createdAt": "2026-03-19T13:55:00.000Z",
+      "actor": "synthesis",
+      "action": "claim-merge",
+      "scope": "question_forge",
+      "summary": "将锻炉回答压成 12 个 claims，并显式保留 4 个 disputed claims。",
+      "affectedClaims": [
+        "claim-1",
+        "claim-2",
+        "claim-3",
+        "dissent-1",
+        "dissent-2"
+      ],
+      "metadata": {
+        "revisionCount": 1
+      }
+    },
+    {
+      "id": "question-forge-room-authority-1773908431286",
+      "createdAt": "2026-03-19T08:20:31.286Z",
+      "actor": "human",
+      "action": "room-reactivated",
+      "scope": "question_forge",
+      "summary": "用户新一轮提问后，系统恢复了预算或调度状态。",
+      "affectedClaims": [],
+      "metadata": {
+        "schedulerEnabled": false,
+        "tokenBudgetRemaining": 180000
+      }
+    },
+    {
+      "id": "question-forge-room-authority-1773908431286",
+      "createdAt": "2026-03-19T08:20:31.286Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "question_forge",
+      "summary": "一个长期复杂问题怎样被稳定地锻造成高质量答案？",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    }
+  ]
+}

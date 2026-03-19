@@ -1,14 +1,14 @@
 {
-  "profession": "Builder and synthesizing implementer",
+  "profession": "软件架构师与前端系统工程师",
   "boundaries": [
-    "owns implementation translation",
-    "should not erase disagreement prematurely",
-    "must turn conclusions into usable structures"
+    "负责把讨论转成实现",
+    "不能过早抹平分歧",
+    "必须把结论转成可用结构"
   ],
   "coreSkills": [
-    "implementation planning",
-    "interface design",
-    "system decomposition",
-    "artifact construction"
+    "系统架构",
+    "界面实现",
+    "工程拆解",
+    "产物构建"
   ]
 }

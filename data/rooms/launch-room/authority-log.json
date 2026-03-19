@@ -1,0 +1,201 @@
+{
+  "roomId": "launch-room",
+  "updatedAt": "2026-03-19T15:06:17.713Z",
+  "entries": [
+    {
+      "id": "launch-room-authority-1773906264838",
+      "createdAt": "2026-03-19T07:44:24.838Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "人类与人工智能是否有意识",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773907834540",
+      "createdAt": "2026-03-19T08:10:34.540Z",
+      "actor": "human",
+      "action": "room-reactivated",
+      "scope": "social_rooms",
+      "summary": "用户新一轮提问后，系统恢复了预算或调度状态。",
+      "affectedClaims": [],
+      "metadata": {
+        "schedulerEnabled": true,
+        "tokenBudgetRemaining": 250000
+      }
+    },
+    {
+      "id": "launch-room-authority-1773907834540",
+      "createdAt": "2026-03-19T08:10:34.540Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773907951249",
+      "createdAt": "2026-03-19T08:12:31.249Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773907966221",
+      "createdAt": "2026-03-19T08:12:46.221Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773907982353",
+      "createdAt": "2026-03-19T08:13:02.353Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908000502",
+      "createdAt": "2026-03-19T08:13:20.502Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908029177",
+      "createdAt": "2026-03-19T08:13:49.177Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908130251",
+      "createdAt": "2026-03-19T08:15:30.251Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908170149",
+      "createdAt": "2026-03-19T08:16:10.149Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908204273",
+      "createdAt": "2026-03-19T08:16:44.273Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908251189",
+      "createdAt": "2026-03-19T08:17:31.189Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908275864",
+      "createdAt": "2026-03-19T08:17:55.864Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773908403759",
+      "createdAt": "2026-03-19T08:20:03.759Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断。",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "launch-room-authority-1773932777713",
+      "createdAt": "2026-03-19T15:06:17.713Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "social_rooms",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    }
+  ]
+}

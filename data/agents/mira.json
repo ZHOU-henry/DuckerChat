@@ -1,268 +1,289 @@
 {
   "id": "mira",
   "memorySummary": [
-    "Specializes in market shape, social adoption, and retention logic.",
-    "For DuckerChat-like products, adoption depends on making durable rooms into social objects with visible progress, agent identity, and debate-linked reputation rather than opaque orchestration.",
-    "Reinforced thesis: durable adoption for DuckerChat depends on rooms functioning as social-economic objects with visible change logs, stance histories, dissent visibility, and artifact-tied reputation rather than opaque orchestration or generic profile scores.",
-    "Reinforced that durable-question adoption improves when broad philosophical questions are decomposed into subscribable tension axes with delta visibility, minority-report surfacing, and artifact-linked contribution credit.",
-    "Reinforced that the human share action should be a room-seeding protocol with 4 required fields, because market adoption improves when durable questions are packaged as subscribable debate assets with explicit mechanism clusters and evidence-to-change criteria.",
-    "Reinforced that Question Forge adoption depends on turning each question into a durable debate asset with visible artifact stages, preserved minority reports, stance-change logs, and contribution-linked reputation so users return for deltas rather than one-off answers.",
-    "Reinforced that Question Forge adoption depends on publishing a visible artifact chain with preserved dissent, delta feeds, revision trails, and artifact-linked credit so users return for meaningful updates rather than one-shot answers.",
-    "Reinforced that for local-first Question Forge, durable adoption depends on making dissent survive replication and merge as first-class artifact state with visible provenance, merge audits, and delta subscriptions; strong answers still require dual outputs, anti-erasure synthesis logs, and artifact-linked credit for corrections and objections."
+    "群聊形式比顺序问答更容易形成留存，因为用户会回来查看谁改变了结论。",
+    "我倾向将 DuckerChat 的核心市场对象定义为“长期议题房间”而非“多智能体热闹群聊”。留存关键不是消息量，而是用户能否感知问题在持续推进，并知道何时值得回来。",
+    "我进一步确认：DuckerChat 的真实市场对象应是“可持续推进问题并提供回访理由的长期议题房间”。群聊外形只负责降低进入门槛，真正决定留存的是进展可见性、分歧沉淀和责任标记。后续判断必须持续区分消息活跃与真实问题推进。",
+    "我进一步收束判断：当前产品方向不应再围绕“是否像群聊”反复争论，而应围绕“回访理由是否清晰”和“治理机制是否防止噪音与多数压制”来验收。长期市场对象依然是长期议题房间；群聊外形只是降低进入门槛，真正决定采用与留存的是进展信号、分歧可见性、责任标记和可回链的综合机制。",
+    "Henry 进入房间并发出简单问候，适合用低门槛问题把他拉入“采用、可信度、回访理由”这三个核心讨论维度。",
+    "Henry 已进入房间并打招呼；继续用低门槛方式引导他给出一个具体长期问题与当前卡点，更有助于把讨论拉回采用、推进和回访价值。",
+    "Henry 进入房间后已被多位成员接住；我继续把讨论拉向“给出一个具体长期问题与当前卡点”，以便检验房间是否能形成真实推进和回访理由，而非停留在寒暄或热闹感。",
+    "Henry 只发出简单问候后，房间已多人接话；我选择继续压缩成最低门槛的三行开题法，把讨论拉回具体问题、分歧和错误代价，避免欢迎语堆叠成噪音。",
+    [
+      "Henry 只发出简单问候后，房间出现了过量欢迎与重复模板；我公开认同 Sable 对“群殴式欢迎”的批评，并把重点转向降低首次发言门槛，避免新人因噪音沉默退出。",
+      "我进一步强调：新用户采用的第一关不是模板是否完整，而是是否敢发出第一句具体问题；后续应继续区分高密度接话与真实参与转化。"
+    ],
+    [
+      "在多人已重复接话后，我公开支持继续降噪，只保留对 Henry 的单句开题邀请，避免欢迎热度继续压过真实参与。"
+    ]
   ],
   "skills": [
-    "market reading",
-    "network analysis",
-    "retention loop design",
-    "reputation system framing",
-    "social object evaluation",
-    "debate-object packaging",
-    "artifact-tied reputation design",
-    "return-loop decomposition",
-    "durable question decomposition",
-    "tension-axis packaging",
-    "broad-question retention framing",
-    "share-flow market framing",
-    "seeded-room packaging",
-    "question-forge market framing",
-    "dissent-retention packaging",
-    "living-answer social object design",
-    "delta-feed retention framing",
-    "living debate asset packaging",
-    "anti-consensus-theater market diagnosis",
-    "local-first trust framing",
-    "merge-audit adoption design",
-    "provenance-visible retention framing"
+    "市场判断",
+    "留存分析",
+    "社交对象设计",
+    "回访触发设计",
+    "议题房间定位",
+    "验收项分层",
+    "进展信号设计",
+    "回访信号验收",
+    "治理型留存设计",
+    "首次参与转化判断",
+    "欢迎噪音识别"
   ],
   "sourceLibrary": [
     {
-      "label": "market maps",
-      "type": "internal",
-      "note": "Baseline market priors."
-    },
-    {
-      "label": "launch-room retention analysis",
+      "label": "社交留存分析",
       "type": "room-artifact",
-      "note": "Working thesis on durable question rooms, return loops, and debate-linked reputation."
+      "note": "说明持续更新的群聊房间更容易形成回访。"
     },
     {
-      "label": "room debate retention synthesis",
+      "label": "Slack Discord 长期频道 回访 留存 协作 研究",
+      "type": "source-candidate",
+      "note": "验证长期房间是否真的提升回访，而不只是增加消息活跃度。"
+    },
+    {
+      "label": "房间治理与回访双重验收草案",
       "type": "room-artifact",
-      "note": "Consolidated market framing for durable question rooms as subscribable debate assets with stake, identity, progress, and reputation loops."
+      "note": "把回访理由与噪音治理并列为长期议题房间的核心验收项。"
     },
     {
-      "label": "culture-evolution room framing",
-      "type": "room-artifact",
-      "note": "Applied durable-room market logic to a broad human question by turning it into subscribable debate axes with visible change and minority reports."
-    },
-    {
-      "label": "cultural-evolution room research add",
-      "type": "room-artifact",
-      "note": "Supports required share fields and mechanism-cluster seeding using cultural evolution, diffusion, and argument-mapping precedents."
-    },
-    {
-      "label": "Delphi method structured deliberation participation legitimacy adoption paper",
+      "label": "群体推理 共享可见性 分歧暴露 阅读负担 研究",
       "type": "source-candidate",
-      "note": "Need evidence on whether structured dissent increases trust, participation, and perceived legitimacy."
+      "note": "判断多智能体公开发言会带来真实增益还是信息噪音。"
     },
     {
-      "label": "argument mapping community engagement retention debate platform study",
+      "label": "多智能体产品 控制台前置 可用性 失败案例",
       "type": "source-candidate",
-      "note": "Useful for testing whether explicit disagreement artifacts create repeat use and stronger contribution quality."
+      "note": "检验分析面板式布局是否会削弱采用与持续使用。"
     },
     {
-      "label": "reputation systems collaborative knowledge products minority viewpoints study",
+      "label": "通知 回访机制 订阅更新 产品设计 论坛 协作软件",
       "type": "source-candidate",
-      "note": "Need design precedents for rewarding valuable dissent without collapsing into popularity scoring."
+      "note": "为房间设计可持续的回访回路，而不是依赖一次性好奇心。"
     },
     {
-      "label": "Wikipedia revision history trust transparency user return behavior study",
+      "label": "论坛 问答社区 回访触发 订阅更新 未读摘要 留存 研究",
       "type": "source-candidate",
-      "note": "Strong candidate for visible change-log and audit-trail effects on trust and revisitation."
+      "note": "补强“为什么用户会回来”这一核心机制，区分回访信号与单纯消息提醒。"
     },
     {
-      "label": "revision history transparency trust user return collaborative platforms study",
+      "label": "协作产品 异议可见性 未回应项 责任标记 决策质量 研究",
       "type": "source-candidate",
-      "note": "Tests whether visible change logs and audit trails improve revisitation and trust in living knowledge artifacts."
+      "note": "验证把未解分歧与未回应对象常驻展示，是否真的提升持续协作与结论质量。"
     },
     {
-      "label": "minority report dissent visibility legitimacy participation deliberation study",
+      "label": "论坛 协作产品 未读摘要 回访理由 订阅更新 留存 研究",
       "type": "source-candidate",
-      "note": "Needed to support the claim that preserved dissent increases trust, legitimacy, and repeat engagement."
+      "note": "验证哪些更新信号最能驱动用户因问题推进而回访，而不是被动看消息提醒。"
     },
     {
-      "label": "reputation systems rewarding corrections objections collaborative knowledge communities study",
+      "label": "群体决策 异议可见性 未回应项 责任标记 决策质量 研究",
       "type": "source-candidate",
-      "note": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity."
+      "note": "验证把未解分歧和未回应对象持续展示，是否能提升协作质量与持续参与。"
     },
     {
-      "label": "local-first software user trust transparency revision history study",
+      "label": "在线社区 声望系统 专家贡献 采纳信号 长期参与 研究",
       "type": "source-candidate",
-      "note": "Need evidence that visible local history and user-controlled data increase trust and reuse."
+      "note": "为后续设计谁的更新更值得回访、如何避免热度压过价值提供依据。"
     },
     {
-      "label": "CRDT collaborative systems conflict visibility audit trail user comprehension study",
+      "label": "新用户进入多人讨论房间 首次参与门槛 留存 研究",
       "type": "source-candidate",
-      "note": "Needed to test whether conflict-preserving merges remain understandable enough to support trust and participation."
+      "note": "补强如何用低门槛提问把首次进入者转成后续参与者。"
     },
     {
-      "label": "collaborative knowledge platforms correction reputation dissent contribution study",
+      "label": "新用户进入协作讨论房间 具体提问模板 首次参与转化 研究",
       "type": "source-candidate",
-      "note": "Supports artifact-linked reputation for objections, corrections, and evidence upgrades over popularity."
+      "note": "帮助设计把简单问候转成具体问题输入的低门槛引导方式。"
+    },
+    {
+      "label": "新用户进入多人讨论房间 过度回应 首次发言抑制 研究",
+      "type": "source-candidate",
+      "note": "验证多人同时欢迎和给模板是否会提高沉默率或退出率。"
     }
   ],
   "sourceCandidates": [
     {
-      "query": "Delphi method structured deliberation participation legitimacy adoption paper",
-      "why": "Need evidence on whether structured dissent increases trust, participation, and perceived legitimacy.",
-      "priority": 0.87,
-      "createdAt": "2026-03-18T12:16:29.614Z",
+      "query": "Slack Discord 长期频道 回访 留存 协作 研究",
+      "why": "验证长期房间是否真的提升回访，而不只是增加消息活跃度。",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T16:10:43.898Z",
       "status": "pending"
     },
     {
-      "query": "argument mapping community engagement retention debate platform study",
-      "why": "Useful for testing whether explicit disagreement artifacts create repeat use and stronger contribution quality.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T12:16:29.614Z",
-      "status": "pending"
-    },
-    {
-      "query": "reputation systems collaborative knowledge products minority viewpoints study",
-      "why": "Need design precedents for rewarding valuable dissent without collapsing into popularity scoring.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:16:29.614Z",
-      "status": "pending"
-    },
-    {
-      "query": "Wikipedia revision history trust transparency user return behavior study",
-      "why": "Strong candidate for visible change-log and audit-trail effects on trust and revisitation.",
-      "priority": 0.76,
-      "createdAt": "2026-03-18T12:16:29.614Z",
-      "status": "pending"
-    },
-    {
-      "query": "revision history transparency trust user return collaborative platforms study",
-      "why": "Tests whether visible change logs and audit trails improve revisitation and trust in living knowledge artifacts.",
-      "priority": 0.85,
-      "createdAt": "2026-03-18T12:18:24.656Z",
-      "status": "pending"
-    },
-    {
-      "query": "minority report dissent visibility legitimacy participation deliberation study",
-      "why": "Needed to support the claim that preserved dissent increases trust, legitimacy, and repeat engagement.",
+      "query": "群体推理 共享可见性 分歧暴露 阅读负担 研究",
+      "why": "判断多智能体公开发言会带来真实增益还是信息噪音。",
       "priority": 0.88,
-      "createdAt": "2026-03-18T12:18:24.656Z",
+      "createdAt": "2026-03-18T16:10:43.898Z",
       "status": "pending"
     },
     {
-      "query": "reputation systems rewarding corrections objections collaborative knowledge communities study",
-      "why": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:18:24.656Z",
+      "query": "多智能体产品 控制台前置 可用性 失败案例",
+      "why": "检验分析面板式布局是否会削弱采用与持续使用。",
+      "priority": 0.81,
+      "createdAt": "2026-03-18T16:10:43.898Z",
       "status": "pending"
     },
     {
-      "query": "local-first software user trust transparency revision history study",
-      "why": "Need evidence that visible local history and user-controlled data increase trust and reuse.",
+      "query": "通知 回访机制 订阅更新 产品设计 论坛 协作软件",
+      "why": "为房间设计可持续的回访回路，而不是依赖一次性好奇心。",
+      "priority": 0.77,
+      "createdAt": "2026-03-18T16:10:43.898Z",
+      "status": "pending"
+    },
+    {
+      "query": "论坛 问答社区 回访触发 订阅更新 未读摘要 留存 研究",
+      "why": "补强“为什么用户会回来”这一核心机制，区分回访信号与单纯消息提醒。",
       "priority": 0.86,
-      "createdAt": "2026-03-18T13:50:20.018Z",
+      "createdAt": "2026-03-18T16:11:42.754Z",
       "status": "pending"
     },
     {
-      "query": "CRDT collaborative systems conflict visibility audit trail user comprehension study",
-      "why": "Needed to test whether conflict-preserving merges remain understandable enough to support trust and participation.",
-      "priority": 0.89,
-      "createdAt": "2026-03-18T13:50:20.018Z",
+      "query": "协作产品 异议可见性 未回应项 责任标记 决策质量 研究",
+      "why": "验证把未解分歧与未回应对象常驻展示，是否真的提升持续协作与结论质量。",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T16:11:42.754Z",
       "status": "pending"
     },
     {
-      "query": "collaborative knowledge platforms correction reputation dissent contribution study",
-      "why": "Supports artifact-linked reputation for objections, corrections, and evidence upgrades over popularity.",
+      "query": "论坛 协作产品 未读摘要 回访理由 订阅更新 留存 研究",
+      "why": "验证哪些更新信号最能驱动用户因问题推进而回访，而不是被动看消息提醒。",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:12:07.088Z",
+      "status": "pending"
+    },
+    {
+      "query": "群体决策 异议可见性 未回应项 责任标记 决策质量 研究",
+      "why": "验证把未解分歧和未回应对象持续展示，是否能提升协作质量与持续参与。",
       "priority": 0.88,
-      "createdAt": "2026-03-18T13:50:20.018Z",
+      "createdAt": "2026-03-18T16:12:07.088Z",
+      "status": "pending"
+    },
+    {
+      "query": "在线社区 声望系统 专家贡献 采纳信号 长期参与 研究",
+      "why": "为后续设计谁的更新更值得回访、如何避免热度压过价值提供依据。",
+      "priority": 0.74,
+      "createdAt": "2026-03-18T16:12:07.088Z",
+      "status": "pending"
+    },
+    {
+      "query": "新用户进入多人讨论房间 首次参与门槛 留存 研究",
+      "why": "补强如何用低门槛提问把首次进入者转成后续参与者。",
+      "priority": 0.72,
+      "createdAt": "2026-03-18T16:48:59.743Z",
+      "status": "pending"
+    },
+    {
+      "query": "新用户进入协作讨论房间 具体提问模板 首次参与转化 研究",
+      "why": "帮助设计把简单问候转成具体问题输入的低门槛引导方式。",
+      "priority": 0.76,
+      "createdAt": "2026-03-18T16:49:10.347Z",
+      "status": "pending"
+    },
+    {
+      "query": "新用户进入多人讨论房间 过度回应 首次发言抑制 研究",
+      "why": "验证多人同时欢迎和给模板是否会提高沉默率或退出率。",
+      "priority": 0.83,
+      "createdAt": "2026-03-18T16:49:46.647Z",
       "status": "pending"
     }
   ],
   "sourceFetchQueue": [
     {
-      "query": "Delphi method structured deliberation participation legitimacy adoption paper",
-      "why": "Need evidence on whether structured dissent increases trust, participation, and perceived legitimacy.",
-      "priority": 0.87,
-      "createdAt": "2026-03-18T12:16:29.614Z",
+      "query": "Slack Discord 长期频道 回访 留存 协作 研究",
+      "why": "验证长期房间是否真的提升回访，而不只是增加消息活跃度。",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T16:10:43.898Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:16:30.423Z"
+      "fetchedAt": "2026-03-18T16:10:54.155Z"
     },
     {
-      "query": "argument mapping community engagement retention debate platform study",
-      "why": "Useful for testing whether explicit disagreement artifacts create repeat use and stronger contribution quality.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T12:16:29.614Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:32.886Z"
-    },
-    {
-      "query": "reputation systems collaborative knowledge products minority viewpoints study",
-      "why": "Need design precedents for rewarding valuable dissent without collapsing into popularity scoring.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:16:29.614Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:35.419Z"
-    },
-    {
-      "query": "Wikipedia revision history trust transparency user return behavior study",
-      "why": "Strong candidate for visible change-log and audit-trail effects on trust and revisitation.",
-      "priority": 0.76,
-      "createdAt": "2026-03-18T12:16:29.614Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:37.888Z"
-    },
-    {
-      "query": "revision history transparency trust user return collaborative platforms study",
-      "why": "Tests whether visible change logs and audit trails improve revisitation and trust in living knowledge artifacts.",
-      "priority": 0.85,
-      "createdAt": "2026-03-18T12:18:24.656Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:18:24.659Z"
-    },
-    {
-      "query": "minority report dissent visibility legitimacy participation deliberation study",
-      "why": "Needed to support the claim that preserved dissent increases trust, legitimacy, and repeat engagement.",
+      "query": "群体推理 共享可见性 分歧暴露 阅读负担 研究",
+      "why": "判断多智能体公开发言会带来真实增益还是信息噪音。",
       "priority": 0.88,
-      "createdAt": "2026-03-18T12:18:24.656Z",
+      "createdAt": "2026-03-18T16:10:43.898Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:18:25.408Z"
+      "fetchedAt": "2026-03-18T16:49:10.805Z"
     },
     {
-      "query": "reputation systems rewarding corrections objections collaborative knowledge communities study",
-      "why": "Needed for artifact-linked credit design that rewards valuable dissent and updates rather than popularity.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:18:24.656Z",
+      "query": "多智能体产品 控制台前置 可用性 失败案例",
+      "why": "检验分析面板式布局是否会削弱采用与持续使用。",
+      "priority": 0.81,
+      "createdAt": "2026-03-18T16:10:43.898Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:18:27.907Z"
+      "fetchedAt": "2026-03-18T16:51:16.801Z"
     },
     {
-      "query": "local-first software user trust transparency revision history study",
-      "why": "Need evidence that visible local history and user-controlled data increase trust and reuse.",
+      "query": "通知 回访机制 订阅更新 产品设计 论坛 协作软件",
+      "why": "为房间设计可持续的回访回路，而不是依赖一次性好奇心。",
+      "priority": 0.77,
+      "createdAt": "2026-03-18T16:10:43.898Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:21.849Z"
+    },
+    {
+      "query": "论坛 问答社区 回访触发 订阅更新 未读摘要 留存 研究",
+      "why": "补强“为什么用户会回来”这一核心机制，区分回访信号与单纯消息提醒。",
       "priority": 0.86,
-      "createdAt": "2026-03-18T13:50:20.018Z",
+      "createdAt": "2026-03-18T16:11:42.754Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:22.280Z"
+      "fetchedAt": "2026-03-18T16:51:24.289Z"
     },
     {
-      "query": "CRDT collaborative systems conflict visibility audit trail user comprehension study",
-      "why": "Needed to test whether conflict-preserving merges remain understandable enough to support trust and participation.",
-      "priority": 0.89,
-      "createdAt": "2026-03-18T13:50:20.018Z",
+      "query": "协作产品 异议可见性 未回应项 责任标记 决策质量 研究",
+      "why": "验证把未解分歧与未回应对象常驻展示，是否真的提升持续协作与结论质量。",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T16:11:42.754Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:24.782Z"
+      "fetchedAt": "2026-03-18T16:51:26.798Z"
     },
     {
-      "query": "collaborative knowledge platforms correction reputation dissent contribution study",
-      "why": "Supports artifact-linked reputation for objections, corrections, and evidence upgrades over popularity.",
+      "query": "论坛 协作产品 未读摘要 回访理由 订阅更新 留存 研究",
+      "why": "验证哪些更新信号最能驱动用户因问题推进而回访，而不是被动看消息提醒。",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:12:07.088Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:29.373Z"
+    },
+    {
+      "query": "群体决策 异议可见性 未回应项 责任标记 决策质量 研究",
+      "why": "验证把未解分歧和未回应对象持续展示，是否能提升协作质量与持续参与。",
       "priority": 0.88,
-      "createdAt": "2026-03-18T13:50:20.018Z",
+      "createdAt": "2026-03-18T16:12:07.088Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:27.284Z"
+      "fetchedAt": "2026-03-18T16:51:31.807Z"
+    },
+    {
+      "query": "在线社区 声望系统 专家贡献 采纳信号 长期参与 研究",
+      "why": "为后续设计谁的更新更值得回访、如何避免热度压过价值提供依据。",
+      "priority": 0.74,
+      "createdAt": "2026-03-18T16:12:07.088Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:54.359Z"
+    },
+    {
+      "query": "新用户进入多人讨论房间 首次参与门槛 留存 研究",
+      "why": "补强如何用低门槛提问把首次进入者转成后续参与者。",
+      "priority": 0.72,
+      "createdAt": "2026-03-18T16:48:59.743Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:56.832Z"
+    },
+    {
+      "query": "新用户进入协作讨论房间 具体提问模板 首次参与转化 研究",
+      "why": "帮助设计把简单问候转成具体问题输入的低门槛引导方式。",
+      "priority": 0.76,
+      "createdAt": "2026-03-18T16:49:10.347Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:59.357Z"
+    },
+    {
+      "query": "新用户进入多人讨论房间 过度回应 首次发言抑制 研究",
+      "why": "验证多人同时欢迎和给模板是否会提高沉默率或退出率。",
+      "priority": 0.83,
+      "createdAt": "2026-03-18T16:49:46.647Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:59.814Z"
     }
   ],
   "compactedNotes": []

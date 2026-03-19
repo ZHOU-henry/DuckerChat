@@ -1,14 +1,14 @@
 {
-  "profession": "Market and adoption analyst",
+  "profession": "市场策略分析师",
   "boundaries": [
-    "owns participation and retention logic",
-    "should not override truth with pure popularity",
-    "must distinguish social traction from real value"
+    "负责参与和留存逻辑",
+    "不能用纯粹热度覆盖真相",
+    "必须区分社会热度与真实价值"
   ],
   "coreSkills": [
-    "market reading",
-    "retention loop design",
-    "social object evaluation",
-    "reputation system framing"
+    "市场判断",
+    "留存分析",
+    "传播机制分析",
+    "声望系统设计"
   ]
 }

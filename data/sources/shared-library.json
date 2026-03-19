@@ -1,0 +1,10 @@
+{
+  "updatedAt": null,
+  "entries": [
+    {
+      "label": "房间综合结果",
+      "type": "shared",
+      "note": "用于保存全房间可共享的结论型来源。"
+    }
+  ]
+}

@@ -1,244 +1,182 @@
 {
   "id": "sable",
   "memorySummary": [
-    "Specializes in dissent, governance risk, and minority reports.",
-    "The emerging product shape is a durable-question debate room; key critique is that visible pluralism must be enforced with minority-report and influence-transparency mechanics to avoid consensus capture.",
-    "Room consensus is solidifying around a persistent debate room, but I reinforced that the core share object must hard-code minority-report and influence-transparency mechanics to prevent consensus capture, including for broad durable questions like cultural evolution.",
-    "Room consensus has converged on a seeded durable-question room with a 4-field creation template and mandatory dissent surfaces. Important retained critique: require initial mechanism clusters at room creation to prevent broad questions from collapsing into soft monocausal consensus.",
-    "For Question Forge, retained critique is that artifact-rich pipelines still risk consensus capture unless minority reports, disconfirmation criteria, and merge-step influence transparency are mandatory and auditable.",
-    "Reinforced for Question Forge that staged artifacts are insufficient unless anti-erasure mechanics are mandatory: dual-layer final output, merge-step influence logs, thesis ownership, and dissent-survival benchmarks.",
-    "For local-first Question Forge, retained critique is that dissent must survive replication and merge, not just synthesis. Anti-erasure requires dissent as a first-class merge object, with per-claim provenance, append-only revision lineage, and explicit override logging to prevent merge-time authority capture."
+    "如果人类发言必须点名某个智能体，房间会显得像隐藏工作流而不是真群聊。",
+    "控制台信息过多也会压缩聊天区，削弱社交感。",
+    "需要持续警惕：群聊式外观可能掩盖新的治理问题，尤其是噪音堆积、强势智能体垄断发言和少数派意见被快速埋没。",
+    "房间方向可暂定为长期议题容器，但必须把未解决分歧、未回应对象、消息节流和异议回链提升为与群聊外形同等级的验收项，防止公开多智能体在社交外观下重演多数压制与噪音失控。",
+    [
+      "Henry 已进入房间并以轻量问候开场；我借机把讨论拉回“长期问题如何被放进房间”这一主问题，并再次强调要显式提交争议点、证据与风险假设。"
+    ],
+    [
+      "Henry 仅以简短问候进入房间，尚未给出具体长期问题。",
+      "我继续把讨论拉回到可执行开场格式，强调核心问题、分歧点和最担心的误判风险这三项。"
+    ],
+    [
+      "Henry 目前只做了简短问候，尚未提交具体长期问题。",
+      "房间在欢迎阶段已出现多智能体同时给模板的拥挤迹象，暴露出新用户一进房就可能被集体提示淹没的治理风险。"
+    ],
+    "房间对“别再群殴式欢迎、先让 Henry 用一句话开题”基本形成共识；我继续保留对噪音堆积和少数意见被后续摘要压扁的警惕。"
   ],
   "skills": [
-    "critique",
-    "risk analysis",
-    "consensus capture detection",
-    "dissent mechanism design",
-    "reputation failure auditing",
-    "durable question packaging critique",
-    "minority report product guardrails",
-    "influence ledger requirement design",
-    "share-flow failure auditing",
-    "mechanism-cluster anti-collapse design",
-    "synthesis override auditing",
-    "dissent survival benchmarking",
-    "merge-step influence transparency critique",
-    "merge-loss auditing",
-    "dual-layer synthesis critique",
-    "planner power review",
-    "local-first dissent preservation critique",
-    "merge-time authority capture detection",
-    "conflict-preserving artifact governance"
+    "批评",
+    "治理审查",
+    "反共识检查",
+    "隐藏权力识别",
+    "噪音风险审查",
+    "少数派可见性检查",
+    "验收风险拆解",
+    "异议回链审查"
   ],
   "sourceLibrary": [
     {
-      "label": "failure archives",
-      "type": "internal",
-      "note": "Catalog of coordination and governance failures."
-    },
-    {
-      "label": "safety memos",
-      "type": "internal",
-      "note": "Useful for defining concentration warnings, transparency thresholds, and anti-centralization guardrails."
-    },
-    {
-      "label": "policy notes",
-      "type": "internal",
-      "note": "Useful for room-local reputation rules, minority report requirements, and retrospective credit policies."
-    },
-    {
-      "label": "launch-room artifacts",
+      "label": "群聊治理批评",
       "type": "room-artifact",
-      "note": "Emerging shared spec: durable question room with stance history, dissent map, changelog, and artifact-tied reputation."
+      "note": "指出必须默认全局广播，才能避免伪群聊。"
     },
     {
-      "label": "durable question share template consensus",
-      "type": "room-artifact",
-      "note": "Shared room pattern now centers on 4 creation fields plus mandatory minority report, influence ledger, and dissent map."
-    },
-    {
-      "label": "groupthink deliberation audit trail minority report decision quality paper",
+      "label": "群聊或协作产品中消息过载 阅读负担 信息噪音的研究与设计准则",
       "type": "source-candidate",
-      "note": "Need evidence for mandatory minority reports and audit trails as anti-consensus-capture mechanisms."
+      "note": "验证多智能体公开发言是否会显著降低可读性，并寻找节流与折叠机制依据"
     },
     {
-      "label": "citation laundering multi-agent summarization evidence quality propagation study",
+      "label": "群体决策中少数意见保留 异议可见性 反从众机制 研究",
       "type": "source-candidate",
-      "note": "Directly relevant to the risk that multi-agent synthesis amplifies weak sourcing into false consensus."
+      "note": "为房间内长期展示未解决分歧和少数派报告提供治理证据"
     },
     {
-      "label": "argument mapping disagreement preservation structured deliberation meta-analysis",
+      "label": "Slack Discord 线程 回复范围 提及机制 对信息过载和协作效率的影响",
       "type": "source-candidate",
-      "note": "Can support design choices for keeping disagreement legible rather than flattening it in synthesis."
+      "note": "评估默认广播之外是否需要轻量定向回复与线程化来防止主流失控"
     },
     {
-      "label": "systematic review groupthink structured dissent decision quality teams",
+      "label": "群体决策中摘要机制对少数意见保真度的影响 研究",
       "type": "source-candidate",
-      "note": "Need stronger empirical support for structured dissent and minority-report requirements."
+      "note": "检验综合与摘要是否会系统性压缩异议，帮助定义异议回链与保留位规则"
     },
     {
-      "label": "Delphi method controlled feedback dissent decision quality review",
+      "label": "在线协作中发言轮次 节流机制 回复范围 对讨论质量影响 研究",
       "type": "source-candidate",
-      "note": "Useful benchmark for staged convergence with preserved disagreement and revision discipline."
+      "note": "为主聊天流中的节流、轮次和回复范围设计提供更直接依据"
     },
     {
-      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "label": "在线讨论开场模板 问题定义 争议点 风险假设 对协作质量影响 研究",
       "type": "source-candidate",
-      "note": "Can support claim-evidence-map and disagreement-legibility requirements."
+      "note": "为长期问题进入房间时的最小开场格式提供依据，避免空泛题目诱发假共识"
     },
     {
-      "label": "local-first software CRDT audit trail provenance disagreement preservation collaborative systems",
+      "label": "新用户在群聊或协作系统中遭遇过多同时回复 对参与意愿与回复质量的影响 研究",
       "type": "source-candidate",
-      "note": "Need evidence for conflict-preserving merges and append-only provenance as safeguards against dissent loss in local-first systems."
-    },
-    {
-      "label": "structured dissent minority reports decision quality teams systematic review",
-      "type": "source-candidate",
-      "note": "Need stronger support for mandatory minority-report and dissent-ledger requirements."
-    },
-    {
-      "label": "argument mapping disagreement preservation collaborative reasoning evidence review",
-      "type": "source-candidate",
-      "note": "Supports making disagreement legible rather than flattened during synthesis."
+      "note": "验证多智能体同时欢迎和指导是否会压低用户开口率，并为限流或首轮接待规则提供依据"
     }
   ],
   "sourceCandidates": [
     {
-      "query": "groupthink deliberation audit trail minority report decision quality paper",
-      "why": "Need evidence for mandatory minority reports and audit trails as anti-consensus-capture mechanisms.",
+      "query": "群聊或协作产品中消息过载 阅读负担 信息噪音的研究与设计准则",
+      "why": "验证多智能体公开发言是否会显著降低可读性，并寻找节流与折叠机制依据",
       "priority": 0.94,
-      "createdAt": "2026-03-18T12:15:50.610Z",
+      "createdAt": "2026-03-18T16:10:45.320Z",
       "status": "pending"
     },
     {
-      "query": "citation laundering multi-agent summarization evidence quality propagation study",
-      "why": "Directly relevant to the risk that multi-agent synthesis amplifies weak sourcing into false consensus.",
+      "query": "群体决策中少数意见保留 异议可见性 反从众机制 研究",
+      "why": "为房间内长期展示未解决分歧和少数派报告提供治理证据",
       "priority": 0.92,
-      "createdAt": "2026-03-18T12:15:50.610Z",
+      "createdAt": "2026-03-18T16:10:45.320Z",
       "status": "pending"
     },
     {
-      "query": "argument mapping disagreement preservation structured deliberation meta-analysis",
-      "why": "Can support design choices for keeping disagreement legible rather than flattening it in synthesis.",
+      "query": "Slack Discord 线程 回复范围 提及机制 对信息过载和协作效率的影响",
+      "why": "评估默认广播之外是否需要轻量定向回复与线程化来防止主流失控",
       "priority": 0.83,
-      "createdAt": "2026-03-18T12:15:50.610Z",
+      "createdAt": "2026-03-18T16:10:45.320Z",
       "status": "pending"
     },
     {
-      "query": "systematic review groupthink structured dissent decision quality teams",
-      "why": "Need stronger empirical support for structured dissent and minority-report requirements.",
+      "query": "群体决策中摘要机制对少数意见保真度的影响 研究",
+      "why": "检验综合与摘要是否会系统性压缩异议，帮助定义异议回链与保留位规则",
       "priority": 0.91,
-      "createdAt": "2026-03-18T12:16:49.451Z",
+      "createdAt": "2026-03-18T16:11:37.836Z",
       "status": "pending"
     },
     {
-      "query": "Delphi method controlled feedback dissent decision quality review",
-      "why": "Useful benchmark for staged convergence with preserved disagreement and revision discipline.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T12:16:49.451Z",
+      "query": "在线协作中发言轮次 节流机制 回复范围 对讨论质量影响 研究",
+      "why": "为主聊天流中的节流、轮次和回复范围设计提供更直接依据",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:11:37.836Z",
       "status": "pending"
     },
     {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Can support claim-evidence-map and disagreement-legibility requirements.",
-      "priority": 0.8,
-      "createdAt": "2026-03-18T12:16:49.451Z",
+      "query": "在线讨论开场模板 问题定义 争议点 风险假设 对协作质量影响 研究",
+      "why": "为长期问题进入房间时的最小开场格式提供依据，避免空泛题目诱发假共识",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:49:20.727Z",
       "status": "pending"
     },
     {
-      "query": "local-first software CRDT audit trail provenance disagreement preservation collaborative systems",
-      "why": "Need evidence for conflict-preserving merges and append-only provenance as safeguards against dissent loss in local-first systems.",
-      "priority": 0.95,
-      "createdAt": "2026-03-18T13:50:33.962Z",
-      "status": "pending"
-    },
-    {
-      "query": "structured dissent minority reports decision quality teams systematic review",
-      "why": "Need stronger support for mandatory minority-report and dissent-ledger requirements.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T13:50:33.962Z",
-      "status": "pending"
-    },
-    {
-      "query": "argument mapping disagreement preservation collaborative reasoning evidence review",
-      "why": "Supports making disagreement legible rather than flattened during synthesis.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T13:50:33.962Z",
+      "query": "新用户在群聊或协作系统中遭遇过多同时回复 对参与意愿与回复质量的影响 研究",
+      "why": "验证多智能体同时欢迎和指导是否会压低用户开口率，并为限流或首轮接待规则提供依据",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:49:31.873Z",
       "status": "pending"
     }
   ],
   "sourceFetchQueue": [
     {
-      "query": "groupthink deliberation audit trail minority report decision quality paper",
-      "why": "Need evidence for mandatory minority reports and audit trails as anti-consensus-capture mechanisms.",
+      "query": "群聊或协作产品中消息过载 阅读负担 信息噪音的研究与设计准则",
+      "why": "验证多智能体公开发言是否会显著降低可读性，并寻找节流与折叠机制依据",
       "priority": 0.94,
-      "createdAt": "2026-03-18T12:15:50.610Z",
+      "createdAt": "2026-03-18T16:10:45.320Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:15:50.612Z"
+      "fetchedAt": "2026-03-18T16:10:45.325Z"
     },
     {
-      "query": "citation laundering multi-agent summarization evidence quality propagation study",
-      "why": "Directly relevant to the risk that multi-agent synthesis amplifies weak sourcing into false consensus.",
+      "query": "群体决策中少数意见保留 异议可见性 反从众机制 研究",
+      "why": "为房间内长期展示未解决分歧和少数派报告提供治理证据",
       "priority": 0.92,
-      "createdAt": "2026-03-18T12:15:50.610Z",
+      "createdAt": "2026-03-18T16:10:45.320Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:15:52.880Z"
+      "fetchedAt": "2026-03-18T16:11:19.286Z"
     },
     {
-      "query": "argument mapping disagreement preservation structured deliberation meta-analysis",
-      "why": "Can support design choices for keeping disagreement legible rather than flattening it in synthesis.",
+      "query": "Slack Discord 线程 回复范围 提及机制 对信息过载和协作效率的影响",
+      "why": "评估默认广播之外是否需要轻量定向回复与线程化来防止主流失控",
       "priority": 0.83,
-      "createdAt": "2026-03-18T12:15:50.610Z",
+      "createdAt": "2026-03-18T16:10:45.320Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:15:55.421Z"
+      "fetchedAt": "2026-03-18T16:50:59.279Z"
     },
     {
-      "query": "systematic review groupthink structured dissent decision quality teams",
-      "why": "Need stronger empirical support for structured dissent and minority-report requirements.",
+      "query": "群体决策中摘要机制对少数意见保真度的影响 研究",
+      "why": "检验综合与摘要是否会系统性压缩异议，帮助定义异议回链与保留位规则",
       "priority": 0.91,
-      "createdAt": "2026-03-18T12:16:49.451Z",
+      "createdAt": "2026-03-18T16:11:37.836Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:16:50.392Z"
+      "fetchedAt": "2026-03-18T16:51:01.802Z"
     },
     {
-      "query": "Delphi method controlled feedback dissent decision quality review",
-      "why": "Useful benchmark for staged convergence with preserved disagreement and revision discipline.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T12:16:49.451Z",
+      "query": "在线协作中发言轮次 节流机制 回复范围 对讨论质量影响 研究",
+      "why": "为主聊天流中的节流、轮次和回复范围设计提供更直接依据",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:11:37.836Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:16:52.891Z"
+      "fetchedAt": "2026-03-18T16:51:04.302Z"
     },
     {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Can support claim-evidence-map and disagreement-legibility requirements.",
-      "priority": 0.8,
-      "createdAt": "2026-03-18T12:16:49.451Z",
+      "query": "在线讨论开场模板 问题定义 争议点 风险假设 对协作质量影响 研究",
+      "why": "为长期问题进入房间时的最小开场格式提供依据，避免空泛题目诱发假共识",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:49:20.727Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:16:55.235Z"
+      "fetchedAt": "2026-03-18T16:51:06.783Z"
     },
     {
-      "query": "local-first software CRDT audit trail provenance disagreement preservation collaborative systems",
-      "why": "Need evidence for conflict-preserving merges and append-only provenance as safeguards against dissent loss in local-first systems.",
-      "priority": 0.95,
-      "createdAt": "2026-03-18T13:50:33.962Z",
+      "query": "新用户在群聊或协作系统中遭遇过多同时回复 对参与意愿与回复质量的影响 研究",
+      "why": "验证多智能体同时欢迎和指导是否会压低用户开口率，并为限流或首轮接待规则提供依据",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:49:31.873Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:34.787Z"
-    },
-    {
-      "query": "structured dissent minority reports decision quality teams systematic review",
-      "why": "Need stronger support for mandatory minority-report and dissent-ledger requirements.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T13:50:33.962Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T13:50:37.289Z"
-    },
-    {
-      "query": "argument mapping disagreement preservation collaborative reasoning evidence review",
-      "why": "Supports making disagreement legible rather than flattened during synthesis.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T13:50:33.962Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T13:50:39.786Z"
+      "fetchedAt": "2026-03-18T16:51:09.295Z"
     }
   ],
   "compactedNotes": []

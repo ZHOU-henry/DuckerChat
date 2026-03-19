@@ -1,0 +1,290 @@
+{
+  "updatedAt": "2026-03-19T00:00:00.000Z",
+  "packs": [
+    {
+      "id": "platform-product",
+      "label": "平台与产品研究",
+      "focus": "产品结构、协作体验、平台设计",
+      "freshness": "mixed",
+      "reliability": "A-",
+      "sources": [
+        {
+          "label": "Nielsen Norman Group Articles",
+          "type": "web-page",
+          "url": "https://www.nngroup.com/articles/",
+          "note": "高质量 UX 与协作界面研究归档。"
+        },
+        {
+          "label": "W3C Design Principles",
+          "type": "web-page",
+          "url": "https://www.w3.org/TR/design-principles/",
+          "note": "长期产品与开放系统设计原则。"
+        },
+        {
+          "label": "OECD Digital Economy",
+          "type": "web-page",
+          "url": "https://www.oecd.org/en/topics/digital-economy.html",
+          "note": "数字平台、协作与治理的政策资料入口。"
+        }
+      ]
+    },
+    {
+      "id": "frontier-ai",
+      "label": "前沿 AI 研究",
+      "focus": "模型能力、系统论文、研究前沿",
+      "freshness": "high",
+      "reliability": "A-",
+      "sources": [
+        {
+          "label": "arXiv cs.AI recent",
+          "type": "web-page",
+          "url": "https://arxiv.org/list/cs.AI/recent",
+          "note": "AI 论文最新列表。"
+        },
+        {
+          "label": "OpenAI Research",
+          "type": "web-page",
+          "url": "https://openai.com/research/",
+          "note": "模型与智能体研究官方入口。"
+        },
+        {
+          "label": "Google DeepMind Publications",
+          "type": "web-page",
+          "url": "https://deepmind.google/research/publications/",
+          "note": "研究论文与技术报告索引。"
+        }
+      ]
+    },
+    {
+      "id": "engineering-frontend",
+      "label": "前端与交互工程",
+      "focus": "浏览器、框架、标准、可用性实现",
+      "freshness": "high",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "MDN Web Docs",
+          "type": "web-page",
+          "url": "https://developer.mozilla.org/",
+          "note": "浏览器 API 与前端实现权威资料。"
+        },
+        {
+          "label": "React Blog",
+          "type": "web-page",
+          "url": "https://react.dev/blog",
+          "note": "React 官方更新与模式变更。"
+        },
+        {
+          "label": "W3C Standards",
+          "type": "web-page",
+          "url": "https://www.w3.org/standards/",
+          "note": "Web 标准与规范总入口。"
+        }
+      ]
+    },
+    {
+      "id": "cloud-infra",
+      "label": "云与基础设施",
+      "focus": "部署、分布式系统、基础设施演化",
+      "freshness": "high",
+      "reliability": "A-",
+      "sources": [
+        {
+          "label": "Kubernetes Blog",
+          "type": "web-page",
+          "url": "https://kubernetes.io/blog/",
+          "note": "云原生系统设计与版本演化。"
+        },
+        {
+          "label": "Node.js Releases",
+          "type": "web-page",
+          "url": "https://nodejs.org/en/about/previous-releases",
+          "note": "Node 运行时版本与生命周期。"
+        },
+        {
+          "label": "Cloudflare Blog",
+          "type": "web-page",
+          "url": "https://blog.cloudflare.com/",
+          "note": "网络、边缘和安全工程案例。"
+        }
+      ]
+    },
+    {
+      "id": "policy-governance",
+      "label": "政策与治理",
+      "focus": "法规、标准、公共治理、AI 政策",
+      "freshness": "mixed",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "NIST AI Risk Management Framework",
+          "type": "web-page",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "note": "AI 风险与治理官方框架。"
+        },
+        {
+          "label": "Federal Register",
+          "type": "web-page",
+          "url": "https://www.federalregister.gov/",
+          "note": "美国联邦监管与征求意见公开入口。"
+        },
+        {
+          "label": "OECD AI Policy Observatory",
+          "type": "web-page",
+          "url": "https://oecd.ai/",
+          "note": "国际 AI 治理与政策资料库。"
+        }
+      ]
+    },
+    {
+      "id": "security-risk",
+      "label": "安全与风险",
+      "focus": "漏洞、攻击、事件响应、风险资料",
+      "freshness": "high",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "CISA Alerts",
+          "type": "web-page",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+          "note": "官方安全告警与事件通报。"
+        },
+        {
+          "label": "NVD",
+          "type": "web-page",
+          "url": "https://nvd.nist.gov/",
+          "note": "国家漏洞数据库。"
+        },
+        {
+          "label": "MITRE ATT&CK",
+          "type": "web-page",
+          "url": "https://attack.mitre.org/",
+          "note": "攻击技术与战术知识库。"
+        }
+      ]
+    },
+    {
+      "id": "global-public-data",
+      "label": "全球公共数据",
+      "focus": "跨行业宏观、公共统计、全球趋势",
+      "freshness": "mixed",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "World Bank Data",
+          "type": "web-page",
+          "url": "https://data.worldbank.org/",
+          "note": "跨国家与跨行业公共数据。"
+        },
+        {
+          "label": "FRED",
+          "type": "web-page",
+          "url": "https://fred.stlouisfed.org/",
+          "note": "宏观经济与市场公开时间序列。"
+        },
+        {
+          "label": "OECD Data",
+          "type": "web-page",
+          "url": "https://data.oecd.org/",
+          "note": "公共政策与经济社会统计。"
+        }
+      ]
+    },
+    {
+      "id": "science-health",
+      "label": "科学与健康",
+      "focus": "医学、生命科学、基础研究",
+      "freshness": "mixed",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "PubMed",
+          "type": "web-page",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/",
+          "note": "医学与生命科学论文检索。"
+        },
+        {
+          "label": "WHO",
+          "type": "web-page",
+          "url": "https://www.who.int/",
+          "note": "全球健康数据与政策。"
+        },
+        {
+          "label": "Nature Artificial Intelligence",
+          "type": "web-page",
+          "url": "https://www.nature.com/subjects/artificial-intelligence",
+          "note": "高质量 AI 与交叉学科研究聚合页。"
+        }
+      ]
+    },
+    {
+      "id": "industry-economics",
+      "label": "产业与经济",
+      "focus": "采用、就业、产业结构、宏观经济",
+      "freshness": "mixed",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "Bureau of Labor Statistics",
+          "type": "web-page",
+          "url": "https://www.bls.gov/",
+          "note": "就业与产业统计。"
+        },
+        {
+          "label": "Bureau of Economic Analysis",
+          "type": "web-page",
+          "url": "https://www.bea.gov/",
+          "note": "GDP 与产业经济数据。"
+        },
+        {
+          "label": "IMF Data",
+          "type": "web-page",
+          "url": "https://www.imf.org/en/Data",
+          "note": "国际经济数据与宏观比较。"
+        }
+      ]
+    },
+    {
+      "id": "company-filings",
+      "label": "公司与财务披露",
+      "focus": "上市公司披露、财务、业务战略",
+      "freshness": "high",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "SEC EDGAR",
+          "type": "web-page",
+          "url": "https://www.sec.gov/edgar/search/",
+          "note": "公司披露与财报原始来源。"
+        },
+        {
+          "label": "Companies House",
+          "type": "web-page",
+          "url": "https://find-and-update.company-information.service.gov.uk/",
+          "note": "英国公司公开信息入口。"
+        },
+        {
+          "label": "Investor.gov Filings",
+          "type": "web-page",
+          "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/how-read",
+          "note": "帮助理解公开披露与财务文件。"
+        }
+      ]
+    },
+    {
+      "id": "room-artifacts",
+      "label": "房间共享产物",
+      "focus": "共享结论、共识、少数派报告",
+      "freshness": "live",
+      "reliability": "A",
+      "sources": [
+        {
+          "label": "DuckerChat Shared Library",
+          "type": "shared-library",
+          "url": "/api/sources/shared",
+          "note": "房间级共享来源与结论沉淀。"
+        }
+      ]
+    }
+  ]
+}

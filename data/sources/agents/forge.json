@@ -1,0 +1,129 @@
+{
+  "agentId": "forge",
+  "updatedAt": "2026-03-18T16:52:11.813Z",
+  "catalogRefs": [
+    "engineering-frontend",
+    "cloud-infra",
+    "security-risk"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A-",
+    "diversityTarget": 3,
+    "freshness": "mixed"
+  },
+  "entries": [
+    {
+      "label": "MDN Web Docs",
+      "type": "web-page",
+      "url": "https://developer.mozilla.org/",
+      "note": "浏览器 API 与前端实现权威资料。"
+    },
+    {
+      "label": "React Blog",
+      "type": "web-page",
+      "url": "https://react.dev/blog",
+      "note": "React 官方模式与版本更新。"
+    },
+    {
+      "label": "Kubernetes Blog",
+      "type": "web-page",
+      "url": "https://kubernetes.io/blog/",
+      "note": "系统部署与云原生设计资料。"
+    },
+    {
+      "label": "界面实现规划",
+      "type": "room-artifact",
+      "note": "定义如何让中间群聊占据更大空间。"
+    },
+    {
+      "label": "群聊主界面实现草案",
+      "type": "room-artifact",
+      "note": "定义中心消息流、左侧房间栏、右侧折叠控制台与底部广播输入的基础结构。"
+    },
+    {
+      "label": "当前仓库中房间页与聊天消息列表相关组件结构",
+      "type": "source-candidate",
+      "note": "需要确认现有页面壳与消息流组件是否可直接重组为群聊主布局"
+    },
+    {
+      "label": "当前仓库中房间页与聊天消息列表相关组件结构",
+      "type": "私有资料",
+      "note": "已纳入实现评估范围，用于判断现有页面壳和消息流组件能否直接重组为群聊主布局。"
+    },
+    {
+      "label": "房间实现骨架约束草案",
+      "type": "room-artifact",
+      "note": "定义三栏布局、默认广播输入、折叠控制台以及治理能力在主聊天流中的落位规则。"
+    },
+    {
+      "label": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "type": "source-candidate",
+      "note": "决定右侧控制台折叠方式与三栏布局在不同屏宽下的实现边界"
+    },
+    {
+      "label": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
+      "type": "source-candidate",
+      "note": "需要把默认全体广播与房间内综合展示映射到可用的数据模型"
+    },
+    {
+      "label": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "type": "source-candidate",
+      "note": "决定右侧控制台折叠方式、三栏布局收缩规则以及移动端降级策略"
+    },
+    {
+      "label": "服务地图里消息广播、房间成员状态、综合结果的数据接口",
+      "type": "source-candidate",
+      "note": "需要把默认全体广播、房间内综合展示和成员可见状态落到可调用的数据模型"
+    },
+    {
+      "label": "当前仓库中房间级页面状态管理与消息发送链路",
+      "type": "source-candidate",
+      "note": "需要确认默认广播输入、控制台开合和房间切换应接入哪些现有状态容器与动作流"
+    },
+    {
+      "label": "前端规范中关于侧栏、抽屉、响应式断点的约束",
+      "type": "source-candidate",
+      "note": "需要确定右侧控制台折叠方式、桌面三栏比例和移动端降级规则"
+    },
+    {
+      "label": "服务地图里消息广播、回复范围、成员状态、综合结果的数据接口",
+      "type": "source-candidate",
+      "note": "需要把默认全体广播、附加回复范围、未回应提示和房间内综合展示接到真实数据模型"
+    },
+    {
+      "label": "当前仓库中房间级页面状态管理与消息发送链路",
+      "type": "source-candidate",
+      "note": "需要确认输入区、控制台开合、分歧提示和房间切换应接入哪些现有状态容器与动作流"
+    },
+    {
+      "label": "前端规范中关于侧栏 抽屉 响应式断点的约束",
+      "type": "source-candidate",
+      "note": "需要确定右侧控制台折叠方式 桌面三栏比例以及移动端降级规则"
+    },
+    {
+      "label": "当前仓库中房间级页面状态管理与消息发送链路",
+      "type": "source-candidate",
+      "note": "需要把默认广播输入 控制台开合 房间切换 未回应提示接到现有状态容器与动作流"
+    },
+    {
+      "label": "服务地图里消息广播 回复范围 成员状态 综合结果的数据接口",
+      "type": "source-candidate",
+      "note": "需要把默认全体广播 附加回复范围 成员可见状态 分歧提示与综合回链映射到真实数据模型"
+    },
+    {
+      "label": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "type": "source-candidate",
+      "note": "需要把人类提交长期问题的入口直接变成可填写的结构，减少房间开题时的信息缺失"
+    },
+    {
+      "label": "适合长期议题讨论的房间首条问题模板与分歧字段设计",
+      "type": "source-candidate",
+      "note": "需要把 Henry 即将提交的问题直接映射成可填写的开题卡和回访结构"
+    },
+    {
+      "label": "多智能体综合回答 最小字段模板 审计层 展开式信息架构",
+      "type": "source-candidate",
+      "note": "用于把当前共识压成可直接实现的一屏摘要加展开详情结构"
+    }
+  ]
+}

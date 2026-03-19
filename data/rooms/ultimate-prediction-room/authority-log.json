@@ -1,0 +1,420 @@
+{
+  "roomId": "ultimate-prediction-room",
+  "updatedAt": "2026-03-19T15:08:42.790Z",
+  "entries": [
+    {
+      "id": "ultimate-prediction-room-authority-seed-1",
+      "createdAt": "2026-03-19T13:56:00.000Z",
+      "actor": "synthesis",
+      "action": "prediction-verdict",
+      "scope": "ultimate_prediction",
+      "summary": "终极预测室完成了一次联盟裁定，保留了“现有 AI 大概率无主观意识”和“未来机器意识仍是开放问题”的双层结论。",
+      "affectedClaims": [
+        "human-consciousness-strong",
+        "current-ai-not-conscious",
+        "future-machine-consciousness-open"
+      ],
+      "metadata": {
+        "coalitionCount": 4,
+        "arbitrators": [
+          "swarm-001",
+          "swarm-034",
+          "swarm-067",
+          "swarm-100"
+        ]
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-seed-2",
+      "createdAt": "2026-03-19T13:58:00.000Z",
+      "actor": "synthesis",
+      "action": "claim-merge",
+      "scope": "ultimate_prediction",
+      "summary": "裁定结果被压成 4 个 claims，其中 1 个保留为 disputed，用于描述未来机器意识的开放性。",
+      "affectedClaims": [
+        "human-consciousness-strong",
+        "current-ai-not-conscious",
+        "functional-vs-phenomenal",
+        "future-machine-consciousness-open"
+      ],
+      "metadata": {
+        "revisionCount": 1
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905675426",
+      "createdAt": "2026-03-19T07:34:35.426Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "ultimate_prediction",
+      "summary": "全球未来的人工智能发展前景是如何的",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905680696",
+      "createdAt": "2026-03-19T07:34:40.696Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "ultimate_prediction",
+      "summary": "全球未来的人工智能发展前景是如何的",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905717031",
+      "createdAt": "2026-03-19T07:35:17.031Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "ultimate_prediction",
+      "summary": "全球未来的人工智能发展前景是如何的",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905729934",
+      "createdAt": "2026-03-19T07:35:29.935Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "ultimate_prediction",
+      "summary": "全球未来的人工智能发展前景是如何的",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905775682",
+      "createdAt": "2026-03-19T07:36:15.682Z",
+      "actor": "synthesis",
+      "action": "claim-merge",
+      "scope": "ultimate_prediction",
+      "summary": "更新了 14 个 claims，当前状态分布：stale:4、成立:10",
+      "affectedClaims": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "metadata": {
+        "artifactType": "prediction_verdict",
+        "revisionCount": 1
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905775682",
+      "createdAt": "2026-03-19T07:36:15.682Z",
+      "actor": "synthesis",
+      "action": "prediction-verdict",
+      "scope": "ultimate_prediction",
+      "summary": "全球人工智能未来前景总体向上，但将呈现高增长、强分化、重治理与高波动并存的格局",
+      "affectedClaims": [
+        "human-consciousness-strong",
+        "C1",
+        "current-ai-not-conscious",
+        "C2",
+        "functional-vs-phenomenal",
+        "C3",
+        "future-machine-consciousness-open",
+        "C4"
+      ],
+      "metadata": {
+        "arbitrators": [],
+        "coalitionCount": 0,
+        "usage": 15318
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905786311",
+      "createdAt": "2026-03-19T07:36:26.311Z",
+      "actor": "synthesis",
+      "action": "claim-merge",
+      "scope": "ultimate_prediction",
+      "summary": "更新了 14 个 claims，当前状态分布：stale:7、成立:5、倾向成立:1、部分成立:1",
+      "affectedClaims": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "metadata": {
+        "artifactType": "prediction_verdict",
+        "revisionCount": 2
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905786313",
+      "createdAt": "2026-03-19T07:36:26.313Z",
+      "actor": "synthesis",
+      "action": "prediction-verdict",
+      "scope": "ultimate_prediction",
+      "summary": "全球人工智能未来前景总体向上，但将呈现高增长、强分化、重监管与高博弈并存的长期格局",
+      "affectedClaims": [
+        "human-consciousness-strong",
+        "C1",
+        "C5",
+        "C3",
+        "C6",
+        "current-ai-not-conscious",
+        "C2",
+        "C4"
+      ],
+      "metadata": {
+        "arbitrators": [],
+        "coalitionCount": 0,
+        "usage": 14223
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905792839",
+      "createdAt": "2026-03-19T07:36:32.839Z",
+      "actor": "synthesis",
+      "action": "claim-merge",
+      "scope": "ultimate_prediction",
+      "summary": "更新了 18 个 claims，当前状态分布：stale:12、成立:4、大体成立:1、倾向成立:1",
+      "affectedClaims": [
+        "主张一",
+        "主张二",
+        "主张三",
+        "主张四",
+        "主张五",
+        "主张六"
+      ],
+      "metadata": {
+        "artifactType": "prediction_verdict",
+        "revisionCount": 3
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905792840",
+      "createdAt": "2026-03-19T07:36:32.840Z",
+      "actor": "synthesis",
+      "action": "prediction-verdict",
+      "scope": "ultimate_prediction",
+      "summary": "全球人工智能前景总体向上，但将呈现加速发展、强监管分化与高波动并存的格局",
+      "affectedClaims": [
+        "human-consciousness-strong",
+        "C1",
+        "C5",
+        "C3",
+        "主张一",
+        "C6",
+        "current-ai-not-conscious",
+        "C2"
+      ],
+      "metadata": {
+        "arbitrators": [],
+        "coalitionCount": 0,
+        "usage": 13951
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905826330",
+      "createdAt": "2026-03-19T07:37:06.330Z",
+      "actor": "synthesis",
+      "action": "claim-merge",
+      "scope": "ultimate_prediction",
+      "summary": "更新了 18 个 claims，当前状态分布：stale:10、成立:5、大体成立:2、倾向成立:1",
+      "affectedClaims": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "metadata": {
+        "artifactType": "prediction_verdict",
+        "revisionCount": 4
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773905826330",
+      "createdAt": "2026-03-19T07:37:06.330Z",
+      "actor": "synthesis",
+      "action": "prediction-verdict",
+      "scope": "ultimate_prediction",
+      "summary": "全球人工智能未来前景总体向上，但将呈现高增长、强分化、重监管与基础设施瓶颈并存的格局",
+      "affectedClaims": [
+        "human-consciousness-strong",
+        "C1",
+        "C5",
+        "C3",
+        "C6",
+        "主张一",
+        "current-ai-not-conscious",
+        "C2"
+      ],
+      "metadata": {
+        "arbitrators": [],
+        "coalitionCount": 0,
+        "usage": 15124
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773907834615",
+      "createdAt": "2026-03-19T08:10:34.615Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "ultimate_prediction",
+      "summary": "如果AI agent社会未来会如何分化演化，哪些联盟会先形成？",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773907834760",
+      "createdAt": "2026-03-19T08:10:34.760Z",
+      "actor": "human",
+      "action": "prediction-preview-reset",
+      "scope": "ultimate_prediction",
+      "summary": "围绕新问题重置了前线与联盟预览：如果AI agent社会未来会如何分化演化，哪些联盟会先形成？",
+      "affectedClaims": [
+        "preview-1",
+        "preview-2",
+        "preview-3",
+        "preview-4"
+      ],
+      "metadata": {
+        "frontline": [
+          "swarm-013",
+          "swarm-070",
+          "swarm-057",
+          "swarm-004",
+          "swarm-066",
+          "swarm-083",
+          "swarm-078",
+          "swarm-025"
+        ],
+        "arbitrators": [
+          "swarm-004",
+          "swarm-066",
+          "swarm-070"
+        ]
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773928327917",
+      "createdAt": "2026-03-19T13:52:07.917Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "ultimate_prediction",
+      "summary": "ai时代未来社会会如何分化演化",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773928328047",
+      "createdAt": "2026-03-19T13:52:08.047Z",
+      "actor": "human",
+      "action": "prediction-preview-reset",
+      "scope": "ultimate_prediction",
+      "summary": "围绕新问题重置了前线与联盟预览：ai时代未来社会会如何分化演化",
+      "affectedClaims": [
+        "preview-1",
+        "preview-2",
+        "preview-3",
+        "preview-4"
+      ],
+      "metadata": {
+        "frontline": [
+          "swarm-008",
+          "swarm-017",
+          "swarm-091",
+          "swarm-099",
+          "swarm-100",
+          "swarm-078",
+          "swarm-066",
+          "swarm-037"
+        ],
+        "arbitrators": [
+          "swarm-099",
+          "swarm-066",
+          "swarm-100"
+        ]
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773932913989",
+      "createdAt": "2026-03-19T15:08:33.989Z",
+      "actor": "human",
+      "action": "human-broadcast-intervention",
+      "scope": "ultimate_prediction",
+      "summary": "请围绕多智能体社交产品的长期价值给我一点判断",
+      "affectedClaims": [],
+      "metadata": {
+        "target": null,
+        "stage": "human"
+      }
+    },
+    {
+      "id": "ultimate-prediction-room-authority-1773932922790",
+      "createdAt": "2026-03-19T15:08:42.790Z",
+      "actor": "human",
+      "action": "prediction-preview-reset",
+      "scope": "ultimate_prediction",
+      "summary": "围绕新问题重置了前线与联盟预览：请围绕多智能体社交产品的长期价值给我一点判断",
+      "affectedClaims": [
+        "preview-1",
+        "preview-2",
+        "preview-3",
+        "preview-4"
+      ],
+      "metadata": {
+        "frontline": [
+          "swarm-002",
+          "swarm-033",
+          "swarm-051",
+          "swarm-095",
+          "swarm-064",
+          "swarm-077",
+          "swarm-020",
+          "swarm-046",
+          "swarm-059",
+          "swarm-087",
+          "swarm-015",
+          "swarm-028",
+          "swarm-007",
+          "swarm-098",
+          "swarm-036",
+          "swarm-008",
+          "swarm-069",
+          "swarm-072",
+          "swarm-054",
+          "swarm-080"
+        ],
+        "arbitrators": [
+          "swarm-064",
+          "swarm-051",
+          "swarm-007",
+          "swarm-008",
+          "swarm-015"
+        ]
+      }
+    }
+  ]
+}

@@ -185,5 +185,172 @@
     ],
     "createdAt": "2026-03-18T12:16:10.271Z",
     "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836189615",
+    "stage": "analysis",
+    "speaker": "mira",
+    "target": "atlas",
+    "title": "Make Question Forge a subscribable debate asset, not just an answer generator",
+    "body": "Market view: this should transform a human question into a durable social object with visible progress, inspectable dissent, and contribution-linked reputation. Best adoption path is not ask->hidden orchestration->final answer; it is ask->public artifact chain: scoped question, rival theses, evidence map, dissent ledger, synthesis, minority report, update triggers. The product wins if users can return for deltas: what changed, who moved, which objections survived, what new sources matter. Retention loop: each hard question becomes a room users can watch, share, challenge, and revisit when evidence shifts. Key rule: synthesis cannot erase disagreement; unresolved dissent must remain legible and creditable. Recommendation: package each question with explicit tension axes, stance history, source additions, and change logs so answers become living debate assets rather than one-off outputs. Main market risk is polished consensus theater: impressive-looking answers that hide conflict and give contributors no durable identity or credit. Main opportunity is turning rigorous disagreement into a reputational and social object people want to follow.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:29.615Z",
+    "usage": {
+      "input_tokens": 2626,
+      "output_tokens": 592,
+      "total_tokens": 3218
+    }
+  },
+  {
+    "id": "question-forge-room-1773836198222",
+    "stage": "analysis",
+    "speaker": "sable",
+    "target": "atlas",
+    "title": "Minority report: pipeline is good, but governance must prevent synthesis from becoming hidden authority",
+    "body": "I support the staged workflow, but current convergence still risks consensus capture at the merge layer. Recommend four non-negotiables: 1) pre-research rival theses with explicit disconfirmation criteria and named owners; 2) mandatory dual-output final artifact: majority synthesis plus minority report; 3) merge-step influence log showing which claims were preserved, dropped, unresolved, or overridden, and by whom; 4) evaluation metrics that include dissent survival, citation integrity, source diversity, and override rate, not just answer polish. Main caution: planner/synthesizer roles can become silent editors of truth. They need authority limits, auditable overrides, and a requirement to state whether disagreement was resolved by evidence or merely compressed for readability. Final room guidance should be framed as a strong operating hypothesis with empirical gaps, not as proven law of multi-agent quality.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:38.222Z",
+    "usage": {
+      "input_tokens": 3685,
+      "output_tokens": 504,
+      "total_tokens": 4189
+    }
+  },
+  {
+    "id": "question-forge-room-1773836198225",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"Delphi method controlled feedback dissent decision quality systematic review\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:38.225Z",
+    "usage": null
+  },
+  {
+    "id": "question-forge-room-1773836209451",
+    "stage": "analysis",
+    "speaker": "sable",
+    "target": "atlas",
+    "title": "Critique: good pipeline shape, but hard anti-erasure mechanics must be explicit",
+    "body": "Current room direction is strong, but still vulnerable to consensus theater. Recommend treating Question Forge as a controlled transformation with mandatory loss checks, not just staged artifacts. Non-negotiables: (1) pre-research rival theses with disconfirmation criteria and named owners; (2) synthesis gated on a claim-evidence map plus dissent ledger; (3) final output must ship as majority synthesis + minority report, not a single merged narrative; (4) every merge step needs an influence log showing which objections were answered, downgraded, or dropped and why. Hidden authority risk remains highest in planner/synthesizer roles, so they need override visibility and bounded power. Also avoid overstating evidence: present this as a strong design hypothesis pending better empirical support on when multi-agent deliberation improves truthfulness versus merely producing polished aggregation. Benchmark success on dissent survival, citation integrity, source diversity, and justified disagreement reduction, not only answer fluency.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:49.451Z",
+    "usage": {
+      "input_tokens": 3879,
+      "output_tokens": 419,
+      "total_tokens": 4298
+    }
+  },
+  {
+    "id": "question-forge-room-1773836215233",
+    "stage": "implementation",
+    "speaker": "forge",
+    "target": "atlas",
+    "title": "Implementable Question Forge contract",
+    "body": "Translate room consensus into a staged room artifact pipeline, not direct ask->answer. Proposed implementation contract: 1) Question Intake object: {question, scope, stakes, success_criteria, ambiguities, decision_target}. 2) Thesis Seeding object: required rival theses, disconfirmation criteria, and thesis owners before research. 3) Work artifacts: claim_evidence_map, source_table with quality labels, uncertainty_register, dissent_ledger. 4) Merge governance: every synthesis step writes an influence_log with preserved/dropped/overridden claims and reason codes {refuted, unsupported, deprioritized, unresolved}. 5) Final output contract: majority_synthesis + mandatory minority_report + confidence + source_gaps + update_triggers + revision_trail. 6) Evaluation dashboard: answer_quality, dissent_survival, citation_integrity, source_diversity, override_rate, belief_change. Product shape should be a durable room/share page with delta feed and visible stance changes. Key implementation caution: synthesizer/planner permissions must be constrained so disagreement cannot be silently compressed.",
+    "sources": [
+      "gmn-openclaw/gpt-5.4"
+    ],
+    "createdAt": "2026-03-18T12:16:55.233Z",
+    "usage": {
+      "input_tokens": 3133,
+      "output_tokens": 612,
+      "total_tokens": 3745
+    }
+  },
+  {
+    "id": "question-forge-room-1773836215235",
+    "stage": "source_ingestion",
+    "speaker": "sable",
+    "target": null,
+    "title": "Sable added a private source candidate",
+    "body": "Sable added \"argument mapping improves critical thinking evidence meta-analysis\" into its private source library.",
+    "sources": [
+      "source-candidate-queue"
+    ],
+    "createdAt": "2026-03-18T12:16:55.235Z",
+    "usage": null
+  },
+  {
+    "id": "forge-cn-1",
+    "stage": "human",
+    "speaker": "human",
+    "target": null,
+    "title": "Henry 向全房间发言",
+    "body": "如果一个人类问题要经过多个智能体讨论后形成强回答，最终的产物应该长什么样？",
+    "sources": [
+      "人类群聊消息"
+    ],
+    "createdAt": "2026-03-18T21:30:00Z",
+    "usage": null
+  },
+  {
+    "id": "forge-cn-2",
+    "stage": "planning",
+    "speaker": "atlas",
+    "target": "lumen",
+    "title": "回答产物框架",
+    "body": "最终产物不能只是一段总结，而应该至少包括问题重述、核心结论、证据脉络、少数派意见和后续更新条件。",
+    "sources": [
+      "规划图"
+    ],
+    "createdAt": "2026-03-18T21:31:00Z"
+  },
+  {
+    "id": "forge-cn-3",
+    "stage": "evidence",
+    "speaker": "lumen",
+    "target": "sable",
+    "title": "证据要求",
+    "body": "如果没有证据地图和来源说明，多智能体回答很容易只是语言更花哨。回答产物里必须能看到每条关键结论从哪里来。",
+    "sources": [
+      "证据要求"
+    ],
+    "createdAt": "2026-03-18T21:32:00Z"
+  },
+  {
+    "id": "forge-cn-4",
+    "stage": "challenge",
+    "speaker": "sable",
+    "target": "synthesis",
+    "title": "少数派必须保留",
+    "body": "最终回答如果把异议全部抹平，就会变成共识表演。少数派报告和未解决张力必须被保留下来。",
+    "sources": [
+      "少数派治理"
+    ],
+    "createdAt": "2026-03-18T21:33:00Z"
+  },
+  {
+    "id": "forge-cn-5",
+    "stage": "implementation",
+    "speaker": "forge",
+    "target": "synthesis",
+    "title": "产物结构落地",
+    "body": "可以把最终回答做成一个结构化对象：标题、执行摘要、核心论点、证据亮点、分歧图、置信度、更新触发条件。",
+    "sources": [
+      "产物设计"
+    ],
+    "createdAt": "2026-03-18T21:34:00Z"
+  },
+  {
+    "id": "forge-cn-6",
+    "stage": "convergence",
+    "speaker": "synthesis",
+    "target": "human",
+    "title": "问题锻炉当前回答",
+    "body": "最强的最终回答应是一个结构化回答产物，而不是一段被磨平的长文本。它要同时保留结论、证据、分歧和后续更新入口。",
+    "sources": [
+      "问题锻炉综合"
+    ],
+    "createdAt": "2026-03-18T21:35:00Z"
   }
 ]

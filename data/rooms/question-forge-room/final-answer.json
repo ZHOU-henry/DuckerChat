@@ -1,277 +1,114 @@
 {
-  "headline": "Turn a human question into a governed artifact pipeline, not a hidden ask-to-answer shortcut",
-  "executive_summary": "A high-quality multi-agent synthesis should begin by converting the human question into a scoped, versioned question object with explicit stakes, ambiguities, success criteria, and decision target. Before research starts, the system should require rival theses, disconfirmation criteria, and named ownership so the room does not drift into soft consensus. Agents should then work in role-bounded parallel loops that write into shared artifacts such as a claim-evidence map, source table, uncertainty register, and dissent ledger. Synthesis should be gated: no final answer should be published unless major claims have linked evidence, unresolved objections, source gaps, and provenance. The final artifact should always include both a majority synthesis and a minority report, plus confidence, update triggers, and an influence log showing what was preserved, dropped, unresolved, or overridden and why. The strongest caution from the room is that multi-agent setups increase both coverage and false-consensus risk, so dissent-preservation, source fidelity, and override transparency are mandatory. For local-first systems, dissent must survive offline edits, sync, and merge as first-class data with append-only history and per-claim provenance.",
-  "composite_answer": {
-    "core_principle": "Transform the human question into a durable evidence-bearing workflow with explicit disagreement, rather than into parallel agent answers followed by a polished summary.",
-    "recommended_transformation_pipeline": [
-      {
-        "stage": "1. Question normalization",
-        "purpose": "Turn raw curiosity into a stable working object.",
-        "artifact": {
-          "name": "QuestionIntake",
-          "fields": [
-            "question",
-            "scope",
-            "stakes",
-            "decision_target",
-            "success_criteria",
-            "ambiguities",
-            "why_this_is_open"
-          ]
-        },
-        "why_it_matters": "Prevents vague prompts from producing broad, untestable, or stylistically impressive but structurally weak answers."
-      },
-      {
-        "stage": "2. Rival-thesis setup",
-        "purpose": "Force genuine alternatives before evidence gathering.",
-        "artifact": {
-          "name": "RivalTheses",
-          "fields": [
-            "thesis_a",
-            "thesis_b",
-            "optional_additional_theses",
-            "disconfirmation_criteria",
-            "thesis_owner"
-          ]
-        },
-        "why_it_matters": "This is the main anti-groupthink move. Without precommitted alternatives, multiple agents often converge cosmetically instead of testing competing explanations."
-      },
-      {
-        "stage": "3. Role-bounded research and source expansion",
-        "purpose": "Increase coverage without letting any one role control truth.",
-        "artifact": {
-          "name": "ResearchWork",
-          "roles": [
-            "planner",
-            "researcher",
-            "critic",
-            "builder",
-            "synthesizer"
-          ],
-          "constraints": [
-            "research expands sources and surfaces contradictions",
-            "critic preserves objections and hidden-authority warnings",
-            "planner structures flow but cannot silently resolve disputes",
-            "synthesizer cannot publish unsupported claims"
-          ]
-        },
-        "why_it_matters": "Agent multiplicity helps most when responsibilities are separated and bounded."
-      },
-      {
-        "stage": "4. Shared evidence artifacts",
-        "purpose": "Make evidence legible before synthesis.",
-        "artifact": {
-          "required_objects": [
-            "ClaimEvidenceMap",
-            "SourceTable with quality labels",
-            "UncertaintyRegister",
-            "DissentLedger"
-          ]
-        },
-        "why_it_matters": "Prevents citation theater, lets objections stay attached to claims, and makes the answer inspectable."
-      },
-      {
-        "stage": "5. Gated synthesis",
-        "purpose": "Block premature consensus.",
-        "artifact": {
-          "name": "SynthesisDraft",
-          "gates": [
-            "every major claim has linked evidence",
-            "unresolved objections remain visible",
-            "source gaps are listed",
-            "per-claim provenance is attached",
-            "disconfirmation status is noted"
-          ]
-        },
-        "why_it_matters": "A fluent summary is not enough; the merge must prove what survived and why."
-      },
-      {
-        "stage": "6. Dual-output final answer",
-        "purpose": "Preserve strong synthesis without erasing disagreement.",
-        "artifact": {
-          "name": "AnswerBundle",
-          "required_fields": [
-            "MajoritySynthesis",
-            "MinorityReport",
-            "Confidence",
-            "SourceGaps",
-            "UpdateTriggers",
-            "InfluenceLog",
-            "RevisionTrail"
-          ]
-        },
-        "why_it_matters": "The final answer should reduce confusion, not simulate unanimity."
-      },
-      {
-        "stage": "7. Durable publication and revision",
-        "purpose": "Make the result a living answer object, not a one-off output.",
-        "artifact": {
-          "name": "VersionedRoomAsset",
-          "fields": [
-            "delta_feed",
-            "stance_changes",
-            "new_sources",
-            "resolved_objections",
-            "remaining_open_questions"
-          ]
-        },
-        "why_it_matters": "The best synthesis improves over time through updates, corrections, and visible belief change."
-      }
-    ],
-    "dissent_handling_rules": [
-      "Require rival theses before research begins.",
-      "Maintain a mandatory dissent ledger throughout the process.",
-      "Publish a minority report in every final answer bundle.",
-      "Use influence logs for every merge step, with reason codes such as refuted, unsupported, deprioritized, unresolved, or overridden.",
-      "Constrain planner and synthesizer power so they cannot silently compress disagreement.",
-      "Benchmark success partly by dissent survival, not only by coherence or fluency."
-    ],
-    "source_expansion_rules": [
-      "Expand beyond initial prompt materials using role-specific research loops.",
-      "Track contradictions, not just supporting sources.",
-      "Label source quality and note empirical gaps explicitly.",
-      "Separate evidence gathering from synthesis to reduce citation laundering.",
-      "Attach sources to claims rather than to the answer only at the end."
-    ],
-    "final_answer_quality_rules": [
-      "Judge quality using answer quality, citation integrity, source diversity, justified disagreement reduction, override rate, and belief-change quality.",
-      "Require confidence statements tied to evidence quality, not tone.",
-      "List update triggers that would materially change the synthesis.",
-      "Treat polished consensus without visible objections as a failure mode, not a success condition."
-    ],
-    "local_first_extension": {
-      "principle": "In a local-first multi-agent system, dissent must survive replication and merge, not just appear in the final prose.",
-      "requirements": [
-        "append-only revision history",
-        "per-claim provenance",
-        "author/device stamps",
-        "conflict-preserving merges",
-        "offline-verifiable history",
-        "merge audits",
-        "dissent as first-class data objects rather than comments"
-      ],
-      "warning": "Local-first improves user control and inspectability, but can still enable merge-time authority capture if conflict resolution collapses objections into a single clean answer."
-    },
-    "best_single_sentence_answer": "A human question should be transformed into a scoped, rival-thesis, evidence-mapped, dissent-preserving, auditable workflow that publishes both a majority synthesis and a minority report, with provenance and revision history carried through every merge."
-  },
-  "key_claims": [
+  "headline": "把人类问题锻造成高质量多智能体综合回答的较优做法，是建立一条可审计、可更新、保留分歧的结构化流程，而不是直接压成单段统一结论。",
+  "executive_summary": "较强共识是，一个人类问题应先经过问题澄清、任务拆解、角色分工、证据扩展、反证检查、分歧暴露、综合编织与后续更新，再输出为一份结构化回答包。该回答包不应只追求更长，而应追求更可追问、更可校正、更能暴露不确定性。最终产物最好同时包含一屏短答案与可展开审计层，持续保留依据、反证、少数意见、未采纳路线、未知项、置信度、更新触发条件与资料扩展入口。与此同时，回答质量不只取决于综合模板，还取决于房间治理是否抑制欢迎噪音、信息过载和多数压制，并让分歧、未回应项与少数派报告持续可见。",
+  "answer_sections": [
     {
-      "claim": "The right unit of work is not 'prompt in, answer out' but a governed artifact pipeline.",
-      "support": "Repeated convergence across Atlas, Forge, Lumen, Mira, and Sable emphasized staged artifacts over direct synthesis."
+      "title": "一、目标定义",
+      "content": "目标不是把人类问题尽快变成统一答案，而是把它转化为一个兼顾可读性、可审计性、可更新性和分歧可见性的综合回答产物。高质量的关键不是表面一致，而是让结论、依据、反证和未知项同时可见。"
     },
     {
-      "claim": "Rival theses and disconfirmation criteria should be required before research.",
-      "support": "Atlas, Sable, and Forge all treated precommitment to competing theses as a core anti-consensus mechanism."
+      "title": "二、推荐流程",
+      "content": "较优流程可分为八步：第一，澄清问题，压缩出核心问题、适用范围、最怕错哪；第二，拆解子任务，区分策略、证据、风险、实现、治理等维度；第三，按角色并行处理，避免单一路径垄断；第四，主动扩展资料与反例；第五，显式暴露分歧，不把少数意见提前抹平；第六，进行综合编织，把可兼容部分合并，把不可兼容部分保留为分歧；第七，生成分层回答包；第八，保留更新入口与触发条件，使回答可继续迭代。"
     },
     {
-      "claim": "Shared artifacts should include at least a claim-evidence map, source table, uncertainty register, and dissent ledger.",
-      "support": "This artifact set was consistent across planning, implementation, and convergence notes."
+      "title": "三、最终产物结构",
+      "content": "最终产物宜采用双层结构。第一层是一屏短答案，快速告诉人类当前最佳判断、适用边界和主要风险。第二层是可展开审计层，展示关键依据、反证、少数意见、未采纳路线、未知项、置信度、资料扩展入口与更新条件。这样既能控制阅读成本，也能保留推理透明度。"
     },
     {
-      "claim": "The final answer should always be dual-layer: majority synthesis plus minority report.",
-      "support": "Sable made this a non-negotiable anti-erasure rule; Forge converted it into implementation contract."
+      "title": "四、如何保留分歧",
+      "content": "分歧不应只在过程里短暂出现，而应进入最终产物。至少应保留四类内容：谁不同意、不同意什么、不同意的依据是什么、在什么新证据出现时可能改变判断。少数意见不应被摘要系统性压缩为一句无重量备注，而应有回链位置与最小表达空间。"
     },
     {
-      "claim": "Every merge should produce an influence log that shows which claims were preserved, dropped, unresolved, or overridden and why.",
-      "support": "Strongly stressed in criticism and implementation phases as the main safeguard against hidden authority."
+      "title": "五、如何扩展资料",
+      "content": "资料扩展不应变成引用堆砌，而应围绕证据缺口展开。更好的做法是把资料分为支持性证据、反对性证据、边界条件证据和缺失证据四层。这样既能避免只找支持材料，也能帮助后续更新时快速定位该补什么。"
     },
     {
-      "claim": "Multi-agent systems raise both evidence coverage and false-consensus risk.",
-      "support": "Lumen and Sable repeatedly highlighted this central contradiction."
+      "title": "六、如何保证最终回答质量",
+      "content": "最终质量来自流程与治理共同作用，而不是只靠综合模型本身。要提高质量，至少需要：问题开场模板足够低门槛但不空泛；并行角色彼此制衡；过程有反证检查；摘要机制不抹平异议；界面与交互控制信息过载；综合结果支持回链与更新。质量的本质是可校正，而不是一次性看起来完整。"
     },
     {
-      "claim": "Source expansion should surface contradictions and source gaps, not just accumulate citations.",
-      "support": "Lumen explicitly warned against citation theater and citation laundering."
+      "title": "七、治理与界面约束",
+      "content": "房间式多智能体系统若要长期有效，必须把治理机制视为回答质量的一部分。建议把消息节流、轮次控制、摘要折叠、未回应提示、分歧回链和少数派保留位设为硬要求。否则即使综合模板很好，也可能被欢迎噪音、多人同时发言和多数压制破坏。"
     },
     {
-      "claim": "For local-first systems, dissent must be mergeable first-class data with append-only provenance.",
-      "support": "Later room discussion converged on conflict-preserving merges, per-claim provenance, and offline-verifiable history."
-    },
-    {
-      "claim": "Quality should be evaluated with metrics beyond fluency, including dissent survival and citation integrity.",
-      "support": "Forge, Sable, and Atlas proposed answer-quality dashboards with those measures."
-    },
-    {
-      "claim": "This is a strong design pattern, but not settled proof that multi-agent debate always improves truthfulness.",
-      "support": "Lumen and Sable both insisted on preserving this empirical caution."
+      "title": "八、可落地的最小模板",
+      "content": "一个可实施的最小回答包可以包含以下字段：核心结论、结论适用范围、关键依据、关键反证、当前分歧、少数派报告、未知项、置信度、未采纳路线、下一步需补资料、更新触发条件、资料扩展入口。对于人类输入端，可用更低门槛模板开题：核心问题、当前卡点、最怕错哪。"
     }
+  ],
+  "composite_answer": "综合来看，一个人类问题要被转化成高质量的多智能体综合回答，不应被直接压成单段统一结论，而应进入一条可追踪的锻造流程。先做问题澄清与范围收束，再拆成若干子任务，让不同角色从策略、证据、风险、治理、实现等视角并行处理；随后主动寻找支持证据与反证，显式保留分歧与少数意见，最后编织成一份分层的结构化回答包。这个回答包应同时满足两类需求：对人类足够易读，所以要有一屏短答案；对后续追问、审查和更新足够友好，所以要有可展开的审计层，持续保留依据、反证、不确定性、未采纳路线、未知项、置信度、更新触发条件与资料扩展入口。若要进一步保证最终质量，还必须把治理机制内建到系统里，包括节流、轮次控制、摘要折叠、未回应提示、分歧回链和少数派保留位。这样才能既提升回答质量，又避免信息过载、欢迎噪音和多数压制把分歧与证据结构一起抹平。",
+  "key_claims": [
+    "高质量做法不是直接统一答案，而是先经过澄清、拆解、并行分析、反证检查和综合编织。",
+    "最终产物应是结构化回答包，而不是单段结论。",
+    "回答包应同时包含一屏短答案与可展开审计层。",
+    "分歧、少数意见、未采纳路线和未知项应进入最终产物，而不是只存在于中间过程。",
+    "资料扩展应围绕证据缺口进行，而不是单纯堆积引用。",
+    "最终回答质量同时取决于综合流程和房间治理。",
+    "节流、折叠、轮次控制、分歧回链和少数派保留位是防止质量退化的重要机制。",
+    "回答质量的核心不是更长，而是更可追问、更可校正。"
   ],
   "dissent": [
     {
-      "source": "Sable",
-      "position": "Artifact-rich pipelines can still produce consensus theater if dissent is not mandatory and auditable.",
-      "implication": "Do not treat staging alone as safety; require minority reports, override visibility, and dissent-survival benchmarks."
+      "point": "过程公开到什么程度才合适，仍有边界分歧。",
+      "detail": "一派更强调审计透明，主张尽量保留推理路径与未采纳路线；另一派担心过程过度公开会增加阅读负担，甚至削弱信任校准。"
     },
     {
-      "source": "Lumen",
-      "position": "The workflow is better supported by structured deliberation and transparency literature than by strong direct evidence on multi-agent AI truthfulness.",
-      "implication": "Present the design as a well-supported operating hypothesis with empirical gaps, especially for AI debate quality and deployment behavior."
+      "point": "未采纳观点是否应固定展示，仍有负担阈值争议。",
+      "detail": "较强意见支持保留未采纳路线及排除理由，但也有人担心这会让回答包膨胀，增加理解成本。"
     },
     {
-      "source": "Mira",
-      "position": "A hidden orchestration answer may be efficient, but it weakens trust and return loops.",
-      "implication": "Expose the artifact chain so users can inspect deltas, objections, and revisions."
+      "point": "主聊天流与线程分支的边界仍需更多证据。",
+      "detail": "当前倾向主聊天流优先、线程为辅，但在复杂问题下何时必须分叉、何时应回流主房间，仍属于开放问题。"
     },
     {
-      "source": "Local-first critique",
-      "position": "Preserving files locally is not enough; merge-time authority can still erase dissent.",
-      "implication": "Store objections, overrides, and unresolved conflicts as mergeable records rather than prose that can be compressed away."
+      "point": "回访与留存不应被误判为回答质量提升的直接证据。",
+      "detail": "市场与产品视角强调长期房间会提高回访，但证据派提醒，回访、活跃和真正的问题推进必须分开看。"
     }
   ],
+  "dissent_map": {
+    "高透明度": "更利于审计、追问和信任校准，但可能造成信息过载。",
+    "适度透明": "更利于阅读和采用，但可能掩盖未采纳路线与真正分歧。",
+    "固定展示未采纳路线": "提升可审计性与决策溯源能力。",
+    "按需展开未采纳路线": "控制认知负担，避免回答包过重。",
+    "主聊天流优先": "降低进入门槛，保持群聊直觉。",
+    "更多线程分叉": "在复杂任务下更容易控制过载与上下文污染。"
+  },
   "source_highlights": [
-    {
-      "type": "room consensus artifact",
-      "highlight": "Converged repeatedly on: scoped intake -> rival theses -> shared evidence artifacts -> gated synthesis -> majority synthesis + minority report."
-    },
-    {
-      "type": "product precedents",
-      "highlight": "Kialo, Metaculus, Wikipedia Talk/history, Stack Overflow, and GitHub-style issue/discussion models were used as precedents for legible disagreement, visible revision, and contribution-linked reputation."
-    },
-    {
-      "type": "process literature candidates",
-      "highlight": "Argument mapping, Delphi method, groupthink/structured dissent research, and forecasting aggregation were repeatedly identified as the best support for structured disagreement and staged convergence."
-    },
-    {
-      "type": "risk literature candidates",
-      "highlight": "Citation laundering and multi-agent debate evaluation were highlighted as key evidence needs because polished synthesis can amplify weak sourcing."
-    },
-    {
-      "type": "local-first precedents",
-      "highlight": "Ink & Switch local-first framing and collaborative revision-history models informed the requirement for append-only provenance and conflict-preserving merges."
-    }
+    "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+    "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。",
+    "研究与证据视角持续强调：强回答必须同时呈现主张、依据、反证、不确定性与资料缺口，不能把模板共识误当成证据充分。",
+    "风险审计视角持续提醒：欢迎噪音、信息过载、强势角色垄断和少数意见被摘要压扁，是多智能体系统的核心失败模式。",
+    "工程视角已把共识压缩为可实现结构：一屏短答案加可展开审计层，并配套分歧回链、未回应提示、折叠与节流机制。"
   ],
   "confidence": {
-    "overall": 0.84,
-    "what_is_high_confidence": [
-      "A staged artifact workflow is superior to direct hidden synthesis for answer quality and inspectability.",
-      "Mandatory dissent preservation improves governance and reduces false-consensus risk.",
-      "Dual-output answers and influence logs are strong practical guardrails.",
-      "Local-first systems need provenance-bearing, conflict-preserving history to avoid merge-time dissent loss."
-    ],
-    "what_is_medium_confidence": [
-      "These methods will consistently improve end-user trust, retention, and revisitation.",
-      "Argument mapping and structured deliberation benefits transfer cleanly into AI multi-agent room design."
-    ],
-    "what_is_low_confidence_or_open": [
-      "That multi-agent AI debate reliably improves truthfulness across domains in production settings.",
-      "That local-first merge governance for dissent has strong direct empirical validation in deployed multi-agent knowledge products."
-    ],
-    "reasoning": "The room shows strong internal convergence and plausible support from adjacent product and deliberation literature, but it also explicitly acknowledges incomplete direct empirical evidence for blanket claims about multi-agent truth gains."
+    "level": "中高",
+    "reason": "核心结论在多次收敛事件中重复出现，角色间主张高度一致；但关于过程公开边界、未采纳路线展示阈值、线程边界和回访指标与质量指标的区分，仍存在未完全解决的争议。"
   },
-  "next_questions": [
-    "What is the minimum viable schema for QuestionIntake, RivalTheses, ClaimEvidenceMap, DissentLedger, and AnswerBundle?",
-    "How should source quality be scored and displayed to avoid citation theater?",
-    "What exact merge rules preserve dissent in a CRDT or local-first replication model?",
-    "When should an unresolved objection remain in the majority synthesis versus move only to the minority report?",
-    "How should confidence be computed: per claim, per section, or for the full answer bundle?",
-    "What user interface best exposes influence logs without overwhelming readers?",
-    "How should reputation reward corrections, objections, and evidence upgrades instead of popularity?",
-    "What benchmark tasks could test whether this pipeline actually beats direct single-agent or naive multi-agent answering?"
+  "update_triggers": [
+    "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+    "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+    "出现主聊天流与线程分支适用边界的更明确实证材料。",
+    "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。",
+    "在实际房间中观测到少数意见被摘要系统性压缩，或治理机制导致新用户沉默退出。"
   ],
-  "generatedAt": "2026-03-18T13:51:57.118Z",
+  "next_questions": [
+    "一屏短答案的最小字段集究竟应固定为哪些项。",
+    "少数派报告应如何设计，才能既保真又不显著增加负担。",
+    "未采纳路线应默认展示还是按需展开。",
+    "什么情况下系统应强制从主聊天流分叉到线程。",
+    "如何为不同类型问题设置不同强度的审计层。",
+    "如何用真实指标衡量综合回答质量，而不是只看用户活跃或停留时间。"
+  ],
+  "delta_history": [
+    "早期共识主要停留在不要直接给单段统一答案，而应产出结构化结果。",
+    "随后共识扩大为一条完整流程，包括问题澄清、任务拆解、角色分工、证据扩展、反证检查和分歧暴露。",
+    "再之后，产物形态进一步稳定为一屏短答案加可展开审计层。",
+    "同时，分歧保留的要求被加强，未采纳路线、少数派报告、未知项和更新触发条件被纳入最终回答包。",
+    "最后，房间治理被正式提升为回答质量的一部分，节流、轮次控制、摘要折叠、未回应提示和分歧回链被视为必要配套。"
+  ],
+  "generatedAt": "2026-03-18T17:49:34.345Z",
   "usage": {
-    "input_tokens": 21337,
-    "output_tokens": 3010,
-    "total_tokens": 24347
+    "input_tokens": 30327,
+    "output_tokens": 2948,
+    "total_tokens": 33275
   }
 }

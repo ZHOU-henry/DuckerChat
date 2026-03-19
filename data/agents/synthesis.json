@@ -1,10 +1,19 @@
 {
   "id": "synthesis",
   "memorySummary": [
-    "Holds the shared room conclusion and unresolved tensions."
+    "当前综合方向：中文、多智能体、默认广播、聊天区最大化、控制区可折叠。"
   ],
   "skills": [
-    "artifact aggregation"
+    "结果聚合",
+    "结论压缩"
   ],
-  "sourceLibrary": []
+  "sourceLibrary": [
+    {
+      "label": "房间综合结果",
+      "type": "artifact",
+      "note": "保存当前结论、分歧和下一步动作。"
+    }
+  ],
+  "sourceCandidates": [],
+  "sourceFetchQueue": []
 }

@@ -1,0 +1,2088 @@
+{
+  "question": "请围绕多智能体社交产品的长期价值给我一点判断",
+  "updatedAt": "2026-03-19T15:08:42.790Z",
+  "phase": "frontline_preview",
+  "population": 100,
+  "scoutCount": 100,
+  "frontlineAgentIds": [
+    "swarm-002",
+    "swarm-033",
+    "swarm-051",
+    "swarm-095",
+    "swarm-064",
+    "swarm-077",
+    "swarm-020",
+    "swarm-046",
+    "swarm-059",
+    "swarm-087",
+    "swarm-015",
+    "swarm-028",
+    "swarm-007",
+    "swarm-098",
+    "swarm-036",
+    "swarm-008",
+    "swarm-069",
+    "swarm-072",
+    "swarm-054",
+    "swarm-080"
+  ],
+  "participantAgentIds": [
+    "swarm-002",
+    "swarm-033",
+    "swarm-051",
+    "swarm-095",
+    "swarm-064",
+    "swarm-077",
+    "swarm-020",
+    "swarm-046",
+    "swarm-059",
+    "swarm-087",
+    "swarm-015",
+    "swarm-028",
+    "swarm-007",
+    "swarm-098",
+    "swarm-036",
+    "swarm-008",
+    "swarm-069",
+    "swarm-072",
+    "swarm-054",
+    "swarm-080"
+  ],
+  "arbitratorIds": [
+    "swarm-064",
+    "swarm-051",
+    "swarm-007",
+    "swarm-008",
+    "swarm-015"
+  ],
+  "materials": [
+    {
+      "agentId": "swarm-002",
+      "label": "Agent 002",
+      "role": "历史与人类学研究员",
+      "cluster": "research",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-033",
+      "label": "Agent 033",
+      "role": "市场策略分析师",
+      "cluster": "market",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-077",
+      "label": "Agent 077",
+      "role": "历史与人类学研究员",
+      "cluster": "research",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-051",
+      "label": "Agent 051",
+      "role": "产品策略顾问",
+      "cluster": "planning",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-095",
+      "label": "Agent 095",
+      "role": "软件架构师",
+      "cluster": "build",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-020",
+      "label": "Agent 020",
+      "role": "软件架构师",
+      "cluster": "build",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-064",
+      "label": "Agent 064",
+      "role": "调查记者兼风险审计员",
+      "cluster": "critique",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-046",
+      "label": "Agent 046",
+      "role": "产品策略顾问",
+      "cluster": "planning",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-059",
+      "label": "Agent 059",
+      "role": "调查记者兼风险审计员",
+      "cluster": "critique",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-087",
+      "label": "Agent 087",
+      "role": "历史与人类学研究员",
+      "cluster": "research",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-015",
+      "label": "Agent 015",
+      "role": "软件架构师",
+      "cluster": "build",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-028",
+      "label": "Agent 028",
+      "role": "市场策略分析师",
+      "cluster": "market",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-007",
+      "label": "Agent 007",
+      "role": "历史与人类学研究员",
+      "cluster": "research",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-098",
+      "label": "Agent 098",
+      "role": "市场策略分析师",
+      "cluster": "market",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-036",
+      "label": "Agent 036",
+      "role": "产品策略顾问",
+      "cluster": "planning",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-008",
+      "label": "Agent 008",
+      "role": "市场策略分析师",
+      "cluster": "market",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-069",
+      "label": "Agent 069",
+      "role": "调查记者兼风险审计员",
+      "cluster": "critique",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-072",
+      "label": "Agent 072",
+      "role": "历史与人类学研究员",
+      "cluster": "research",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-054",
+      "label": "Agent 054",
+      "role": "调查记者兼风险审计员",
+      "cluster": "critique",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-080",
+      "label": "Agent 080",
+      "role": "软件架构师",
+      "cluster": "build",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-090",
+      "label": "Agent 090",
+      "role": "软件架构师",
+      "cluster": "build",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-025",
+      "label": "Agent 025",
+      "role": "软件架构师",
+      "cluster": "build",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-061",
+      "label": "Agent 061",
+      "role": "产品策略顾问",
+      "cluster": "planning",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    },
+    {
+      "agentId": "swarm-043",
+      "label": "Agent 043",
+      "role": "市场策略分析师",
+      "cluster": "market",
+      "activation": 0.4,
+      "questionMatch": 0.4,
+      "distinctiveness": 0.4,
+      "sourceSignals": []
+    }
+  ],
+  "coalitions": [
+    {
+      "id": "coalition-1",
+      "label": "research",
+      "thesis": "从历史与人类学研究员视角给出问题的第一轮预估。",
+      "memberIds": [
+        "swarm-002",
+        "swarm-077",
+        "swarm-087",
+        "swarm-007",
+        "swarm-072"
+      ],
+      "integratorId": "swarm-002",
+      "averageConfidence": 0.63,
+      "evidenceHighlights": [
+        "Agent 002 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 077 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "openRisks": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ]
+    },
+    {
+      "id": "coalition-2",
+      "label": "market",
+      "thesis": "从市场策略分析师视角给出问题的第一轮预估。",
+      "memberIds": [
+        "swarm-033",
+        "swarm-028",
+        "swarm-098",
+        "swarm-008"
+      ],
+      "integratorId": "swarm-008",
+      "averageConfidence": 0.63,
+      "evidenceHighlights": [
+        "Agent 033 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 028 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "openRisks": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ]
+    },
+    {
+      "id": "coalition-4",
+      "label": "build",
+      "thesis": "从软件架构师视角给出问题的第一轮预估。",
+      "memberIds": [
+        "swarm-095",
+        "swarm-020",
+        "swarm-015",
+        "swarm-080"
+      ],
+      "integratorId": "swarm-095",
+      "averageConfidence": 0.63,
+      "evidenceHighlights": [
+        "Agent 095 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 020 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "openRisks": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ]
+    },
+    {
+      "id": "coalition-5",
+      "label": "critique",
+      "thesis": "从调查记者兼风险审计员视角给出问题的第一轮预估。",
+      "memberIds": [
+        "swarm-064",
+        "swarm-059",
+        "swarm-069",
+        "swarm-054"
+      ],
+      "integratorId": "swarm-064",
+      "averageConfidence": 0.63,
+      "evidenceHighlights": [
+        "Agent 064 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 059 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "openRisks": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ]
+    },
+    {
+      "id": "coalition-3",
+      "label": "planning",
+      "thesis": "从产品策略顾问视角给出问题的第一轮预估。",
+      "memberIds": [
+        "swarm-051",
+        "swarm-046",
+        "swarm-036"
+      ],
+      "integratorId": "swarm-051",
+      "averageConfidence": 0.63,
+      "evidenceHighlights": [
+        "Agent 051 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 046 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "openRisks": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "source": "swarm-001",
+      "target": "swarm-002",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-001",
+      "target": "swarm-008",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-003",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-009",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-003",
+      "target": "swarm-004",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-003",
+      "target": "swarm-010",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-004",
+      "target": "swarm-005",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-004",
+      "target": "swarm-011",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-005",
+      "target": "swarm-006",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-005",
+      "target": "swarm-012",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-006",
+      "target": "swarm-007",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-006",
+      "target": "swarm-013",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-007",
+      "target": "swarm-008",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-007",
+      "target": "swarm-014",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-009",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-015",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-009",
+      "target": "swarm-010",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-009",
+      "target": "swarm-016",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-010",
+      "target": "swarm-011",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-010",
+      "target": "swarm-017",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-011",
+      "target": "swarm-012",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-011",
+      "target": "swarm-018",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-012",
+      "target": "swarm-013",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-012",
+      "target": "swarm-019",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-013",
+      "target": "swarm-014",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-013",
+      "target": "swarm-020",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-014",
+      "target": "swarm-015",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-014",
+      "target": "swarm-021",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-015",
+      "target": "swarm-016",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-015",
+      "target": "swarm-022",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-016",
+      "target": "swarm-017",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-016",
+      "target": "swarm-023",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-017",
+      "target": "swarm-018",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-017",
+      "target": "swarm-024",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-018",
+      "target": "swarm-019",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-018",
+      "target": "swarm-025",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-019",
+      "target": "swarm-020",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-019",
+      "target": "swarm-026",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-020",
+      "target": "swarm-021",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-020",
+      "target": "swarm-027",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-021",
+      "target": "swarm-022",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-021",
+      "target": "swarm-028",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-022",
+      "target": "swarm-023",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-022",
+      "target": "swarm-029",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-023",
+      "target": "swarm-024",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-023",
+      "target": "swarm-030",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-024",
+      "target": "swarm-025",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-024",
+      "target": "swarm-031",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-025",
+      "target": "swarm-026",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-025",
+      "target": "swarm-032",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-026",
+      "target": "swarm-027",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-026",
+      "target": "swarm-033",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-027",
+      "target": "swarm-028",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-027",
+      "target": "swarm-034",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-028",
+      "target": "swarm-029",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-028",
+      "target": "swarm-035",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-029",
+      "target": "swarm-030",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-029",
+      "target": "swarm-036",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-030",
+      "target": "swarm-031",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-030",
+      "target": "swarm-037",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-031",
+      "target": "swarm-032",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-031",
+      "target": "swarm-038",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-032",
+      "target": "swarm-033",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-032",
+      "target": "swarm-039",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-033",
+      "target": "swarm-034",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-033",
+      "target": "swarm-040",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-034",
+      "target": "swarm-035",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-034",
+      "target": "swarm-041",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-035",
+      "target": "swarm-036",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-035",
+      "target": "swarm-042",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-036",
+      "target": "swarm-037",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-036",
+      "target": "swarm-043",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-037",
+      "target": "swarm-038",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-037",
+      "target": "swarm-044",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-038",
+      "target": "swarm-039",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-038",
+      "target": "swarm-045",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-039",
+      "target": "swarm-040",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-039",
+      "target": "swarm-046",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-040",
+      "target": "swarm-041",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-040",
+      "target": "swarm-047",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-041",
+      "target": "swarm-042",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-041",
+      "target": "swarm-048",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-042",
+      "target": "swarm-043",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-042",
+      "target": "swarm-049",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-043",
+      "target": "swarm-044",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-043",
+      "target": "swarm-050",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-044",
+      "target": "swarm-045",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-044",
+      "target": "swarm-051",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-045",
+      "target": "swarm-046",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-045",
+      "target": "swarm-052",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-046",
+      "target": "swarm-047",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-046",
+      "target": "swarm-053",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-047",
+      "target": "swarm-048",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-047",
+      "target": "swarm-054",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-048",
+      "target": "swarm-049",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-048",
+      "target": "swarm-055",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-049",
+      "target": "swarm-050",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-049",
+      "target": "swarm-056",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-050",
+      "target": "swarm-051",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-050",
+      "target": "swarm-057",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-052",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-058",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-052",
+      "target": "swarm-053",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-052",
+      "target": "swarm-059",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-053",
+      "target": "swarm-054",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-053",
+      "target": "swarm-060",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-054",
+      "target": "swarm-055",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-054",
+      "target": "swarm-061",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-055",
+      "target": "swarm-056",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-055",
+      "target": "swarm-062",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-056",
+      "target": "swarm-057",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-056",
+      "target": "swarm-063",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-057",
+      "target": "swarm-058",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-057",
+      "target": "swarm-064",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-058",
+      "target": "swarm-059",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-058",
+      "target": "swarm-065",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-059",
+      "target": "swarm-060",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-059",
+      "target": "swarm-066",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-060",
+      "target": "swarm-061",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-060",
+      "target": "swarm-067",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-061",
+      "target": "swarm-062",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-061",
+      "target": "swarm-068",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-062",
+      "target": "swarm-063",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-062",
+      "target": "swarm-069",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-063",
+      "target": "swarm-064",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-063",
+      "target": "swarm-070",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-065",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-071",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-065",
+      "target": "swarm-066",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-065",
+      "target": "swarm-072",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-066",
+      "target": "swarm-067",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-066",
+      "target": "swarm-073",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-067",
+      "target": "swarm-068",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-067",
+      "target": "swarm-074",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-068",
+      "target": "swarm-069",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-068",
+      "target": "swarm-075",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-069",
+      "target": "swarm-070",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-069",
+      "target": "swarm-076",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-070",
+      "target": "swarm-071",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-070",
+      "target": "swarm-077",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-071",
+      "target": "swarm-072",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-071",
+      "target": "swarm-078",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-072",
+      "target": "swarm-073",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-072",
+      "target": "swarm-079",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-073",
+      "target": "swarm-074",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-073",
+      "target": "swarm-080",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-074",
+      "target": "swarm-075",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-074",
+      "target": "swarm-081",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-075",
+      "target": "swarm-076",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-075",
+      "target": "swarm-082",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-076",
+      "target": "swarm-077",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-076",
+      "target": "swarm-083",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-077",
+      "target": "swarm-078",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-077",
+      "target": "swarm-084",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-078",
+      "target": "swarm-079",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-078",
+      "target": "swarm-085",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-079",
+      "target": "swarm-080",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-079",
+      "target": "swarm-086",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-080",
+      "target": "swarm-081",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-080",
+      "target": "swarm-087",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-081",
+      "target": "swarm-082",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-081",
+      "target": "swarm-088",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-082",
+      "target": "swarm-083",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-082",
+      "target": "swarm-089",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-083",
+      "target": "swarm-084",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-083",
+      "target": "swarm-090",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-084",
+      "target": "swarm-085",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-084",
+      "target": "swarm-091",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-085",
+      "target": "swarm-086",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-085",
+      "target": "swarm-092",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-086",
+      "target": "swarm-087",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-086",
+      "target": "swarm-093",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-087",
+      "target": "swarm-088",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-087",
+      "target": "swarm-094",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-088",
+      "target": "swarm-089",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-088",
+      "target": "swarm-095",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-089",
+      "target": "swarm-090",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-089",
+      "target": "swarm-096",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-090",
+      "target": "swarm-091",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-090",
+      "target": "swarm-097",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-091",
+      "target": "swarm-092",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-091",
+      "target": "swarm-098",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-092",
+      "target": "swarm-093",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-092",
+      "target": "swarm-099",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-093",
+      "target": "swarm-094",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-093",
+      "target": "swarm-100",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-094",
+      "target": "swarm-095",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-094",
+      "target": "swarm-001",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-096",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-002",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-096",
+      "target": "swarm-097",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-096",
+      "target": "swarm-003",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-097",
+      "target": "swarm-098",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-097",
+      "target": "swarm-004",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-098",
+      "target": "swarm-099",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-098",
+      "target": "swarm-005",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-099",
+      "target": "swarm-100",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-099",
+      "target": "swarm-006",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-100",
+      "target": "swarm-001",
+      "weight": 0.7,
+      "kind": "society-loop"
+    },
+    {
+      "source": "swarm-100",
+      "target": "swarm-007",
+      "weight": 0.35,
+      "kind": "society-bridge"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-033",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-033",
+      "target": "swarm-051",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-095",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-064",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-077",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-077",
+      "target": "swarm-020",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-020",
+      "target": "swarm-046",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-046",
+      "target": "swarm-059",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-059",
+      "target": "swarm-087",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-087",
+      "target": "swarm-015",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-015",
+      "target": "swarm-028",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-028",
+      "target": "swarm-007",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-007",
+      "target": "swarm-098",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-098",
+      "target": "swarm-036",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-036",
+      "target": "swarm-008",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-069",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-069",
+      "target": "swarm-072",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-072",
+      "target": "swarm-054",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-054",
+      "target": "swarm-080",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-080",
+      "target": "swarm-002",
+      "weight": 1.1,
+      "kind": "participant-loop"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-002",
+      "weight": 0.8,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-077",
+      "target": "swarm-002",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-087",
+      "target": "swarm-002",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-007",
+      "target": "swarm-002",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-072",
+      "target": "swarm-002",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-033",
+      "target": "swarm-008",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-028",
+      "target": "swarm-008",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-098",
+      "target": "swarm-008",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-008",
+      "weight": 0.8,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-095",
+      "weight": 0.8,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-020",
+      "target": "swarm-095",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-015",
+      "target": "swarm-095",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-080",
+      "target": "swarm-095",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-064",
+      "weight": 0.8,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-059",
+      "target": "swarm-064",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-069",
+      "target": "swarm-064",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-054",
+      "target": "swarm-064",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-051",
+      "weight": 0.8,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-046",
+      "target": "swarm-051",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-036",
+      "target": "swarm-051",
+      "weight": 1.6,
+      "kind": "coalition"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-064",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-064",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-064",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-064",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-064",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-051",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-051",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-051",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-051",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-051",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-007",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-007",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-007",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-007",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-007",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-008",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-008",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-008",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-008",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-008",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-002",
+      "target": "swarm-015",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-008",
+      "target": "swarm-015",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-095",
+      "target": "swarm-015",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-064",
+      "target": "swarm-015",
+      "weight": 2,
+      "kind": "arbitration"
+    },
+    {
+      "source": "swarm-051",
+      "target": "swarm-015",
+      "weight": 2,
+      "kind": "arbitration"
+    }
+  ],
+  "counterfactualBranches": [],
+  "beliefShifts": [],
+  "timelineSnapshots": [
+    {
+      "id": "ultimate-prediction-room-timeline-scouting",
+      "phase": "scouting",
+      "at": "2026-03-19T15:08:42.790Z",
+      "headline": "全体素材感知",
+      "summary": "共扫描 0 个 society 节点，先形成素材层而非答案层。",
+      "coalitionCount": 0,
+      "claimCount": 0
+    },
+    {
+      "id": "ultimate-prediction-room-timeline-frontline",
+      "phase": "frontline",
+      "at": "2026-03-19T15:08:42.790Z",
+      "headline": "前线起草",
+      "summary": "筛出 20 个高相关且高差异前线节点。",
+      "coalitionCount": 0,
+      "claimCount": 0
+    },
+    {
+      "id": "ultimate-prediction-room-timeline-coalition",
+      "phase": "coalition",
+      "at": "2026-03-19T15:08:42.790Z",
+      "headline": "联盟形成",
+      "summary": "形成 5 个答案联盟，并指定整合节点。",
+      "coalitionCount": 5,
+      "claimCount": 4
+    },
+    {
+      "id": "ultimate-prediction-room-timeline-arbitrated",
+      "phase": "arbitrated",
+      "at": "2026-03-19T15:08:42.790Z",
+      "headline": "正在重组终极预测社会",
+      "summary": "围绕“请围绕多智能体社交产品的长期价值给我一点判断”，系统已先筛出新的前线节点与联盟，正式裁定仍在继续。",
+      "coalitionCount": 5,
+      "claimCount": 4
+    }
+  ],
+  "phaseHistory": [
+    {
+      "phase": "frontline_preview",
+      "at": "2026-03-19T15:08:42.790Z",
+      "note": "用户刚提出新问题，系统已先重组前线与联盟预览。"
+    }
+  ],
+  "finalVerdict": {
+    "headline": "正在重组终极预测社会",
+    "executive_summary": "围绕“请围绕多智能体社交产品的长期价值给我一点判断”，系统已先筛出新的前线节点与联盟，正式裁定仍在继续。",
+    "best_answer": "",
+    "minority_report": [],
+    "coalition_summaries": [
+      "research：从历史与人类学研究员视角给出问题的第一轮预估。",
+      "market：从市场策略分析师视角给出问题的第一轮预估。",
+      "build：从软件架构师视角给出问题的第一轮预估。",
+      "critique：从调查记者兼风险审计员视角给出问题的第一轮预估。"
+    ],
+    "confidence": "预览",
+    "arbitrator_ids": [
+      "swarm-064",
+      "swarm-051",
+      "swarm-007",
+      "swarm-008",
+      "swarm-015"
+    ],
+    "update_triggers": [
+      "正式裁定完成",
+      "前线重排",
+      "新来源进入"
+    ],
+    "counterfactual_branches": [],
+    "belief_shifts": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "agentId": "swarm-271",
+  "updatedAt": null,
+  "catalogRefs": [
+    "platform-product",
+    "policy-governance",
+    "global-public-data"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A-",
+    "diversityTarget": 3,
+    "freshness": "mixed"
+  },
+  "entries": []
+}

@@ -1,140 +1,191 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DuckerChat Prototype</title>
+    <title>DuckerChat 多智能体群聊</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="chorus-app-shell" id="chorusApp">
-      <aside class="chorus-left-rail">
-        <div class="chorus-brand-card">
-          <span class="chorus-eyebrow">DuckerChat</span>
-          <h1>Social rooms for human + multi-agent reasoning.</h1>
-          <p>
-            DuckerChat should feel closer to a social platform than a hidden
-            orchestration console. Humans enter rooms, agents debate in public,
-            and the reasoning graph stays inspectable.
-          </p>
-          <div class="chorus-module-switch" id="moduleTabs"></div>
+    <div class="duckerchat-shell" id="chorusApp">
+      <aside class="duckerchat-sidebar">
+        <div class="duckerchat-brand">
+          <span class="duckerchat-eyebrow">DuckerChat</span>
+          <h1>多智能体群聊房间</h1>
+          <p>本地优先的多智能体聊天软件，让讨论、推理和分歧都可见。</p>
         </div>
 
-        <section class="chorus-panel chorus-nav-section">
-          <div class="chorus-section-head">
-            <h2>Rooms</h2>
+        <div class="duckerchat-modules" id="moduleTabs"></div>
+
+        <section class="duckerchat-panel">
+          <div class="duckerchat-panel-head">
+            <h2>房间</h2>
             <span id="roomCount"></span>
           </div>
-          <div id="roomList" class="chorus-room-list"></div>
+          <div id="roomList" class="duckerchat-room-list"></div>
         </section>
 
-        <section class="chorus-panel chorus-nav-section">
-          <div class="chorus-section-head">
-            <h2>Agent Roster</h2>
-            <span>Independent identities</span>
+        <section class="duckerchat-panel duckerchat-room-summary-panel">
+          <div class="duckerchat-panel-head">
+                  <h2>房间概览</h2>
+                  <span>当前房间</span>
           </div>
-          <div id="agentRoster" class="chorus-agent-roster"></div>
+          <div class="duckerchat-room-kicker" id="roomCommunity"></div>
+          <div class="duckerchat-chip-row" id="roomTags"></div>
+          <div class="duckerchat-stat-row" id="roomStats"></div>
+          <div id="participantStrip" class="duckerchat-participant-strip duckerchat-sidebar-strip"></div>
         </section>
       </aside>
 
-      <main class="chorus-main-column">
-        <header class="chorus-room-header chorus-panel">
-          <div>
-            <div class="chorus-room-kicker" id="roomCommunity"></div>
-            <h2 id="roomTitle"></h2>
-            <p id="roomPrompt"></p>
-          </div>
-          <div class="chorus-room-meta">
-            <div class="chorus-tag-row" id="roomTags"></div>
-            <div class="chorus-stat-row" id="roomStats"></div>
-          </div>
-        </header>
+      <main class="duckerchat-main">
+        <header class="duckerchat-chat-header">
+          <div class="duckerchat-chat-title-block">
+                  <h2 id="roomTitle"></h2>
+                </div>
+              </header>
 
-        <section class="chorus-panel chorus-feed-panel">
-          <div class="chorus-section-head">
-            <h2 id="feedTitle">Discussion Feed</h2>
-            <span id="timelineMeta"></span>
-          </div>
-          <div class="chorus-chip-row" id="stageFilters"></div>
-          <div id="messageList" class="chorus-message-stream"></div>
-        </section>
+              <section class="duckerchat-chat-panel" id="chatPanel">
+                <div class="duckerchat-feed-head">
+                  <div>
+                    <h3 id="feedTitle">群聊消息</h3>
+                    <p id="timelineMeta"></p>
+                  </div>
+                  <div class="duckerchat-chip-row" id="stageFilters"></div>
+                </div>
+                <div id="messageList" class="duckerchat-chat-stream"></div>
+                <button type="button" class="duckerchat-jump-badge" id="jumpToLatestButton" hidden>有新消息</button>
+              </section>
 
-        <form class="chorus-panel chorus-composer" id="composer">
-          <div class="chorus-section-head">
-            <h2 id="composerTitle">Join The Discussion</h2>
-            <span id="composerHint">Humans can redirect the room at any time</span>
-          </div>
-          <div class="chorus-composer-grid">
-            <label>
-              <span>Target</span>
-              <select id="targetSelect"></select>
-            </label>
-            <label>
-              <span>Intent</span>
-              <select id="intentSelect">
-                <option value="redirect">Redirect discussion</option>
-                <option value="challenge">Challenge current conclusion</option>
-                <option value="evidence">Inject evidence</option>
-                <option value="clarify">Clarify the question</option>
-              </select>
-            </label>
-          </div>
-          <textarea
-            id="promptInput"
-            rows="4"
-            placeholder="Share a new thought, correction, or question into the room."
-          ></textarea>
-          <div class="chorus-composer-actions">
-            <button type="submit">Send To Room</button>
-            <button type="button" class="secondary" id="advanceButton">Advance Agent Loop</button>
-            <button type="button" class="ghost" id="resetButton">Reset Room</button>
-          </div>
-        </form>
-      </main>
+              <section class="duckerchat-panel duckerchat-prediction-panel" id="predictionArena" hidden>
+                <div class="duckerchat-feed-head">
+                  <div>
+                    <h3 id="predictionTitle">终极预测关系图</h3>
+                    <p id="predictionMeta"></p>
+                  </div>
+                </div>
+                <div class="duckerchat-chip-row" id="predictionViewTabs"></div>
+                <div class="duckerchat-prediction-stage">
+                  <div class="duckerchat-prediction-graph-shell">
+                    <svg id="predictionGraphView" viewBox="0 0 1000 560" role="img" aria-label="Ultimate prediction graph"></svg>
+                  </div>
+                  <div class="duckerchat-prediction-side">
+                    <div id="predictionOverview" class="duckerchat-note"></div>
+                    <div id="predictionCoalitions" class="duckerchat-console-list"></div>
+                    <div id="predictionSignals" class="duckerchat-console-list"></div>
+                  </div>
+                </div>
+              </section>
 
-      <aside class="chorus-right-rail">
-        <section class="chorus-panel">
-          <div class="chorus-section-head">
-            <h2>Deliberation Graph</h2>
-            <span>Directed loops stay visible</span>
-          </div>
-          <svg id="graphView" viewBox="0 0 1000 560" role="img" aria-label="Agent deliberation graph"></svg>
-        </section>
+              <form class="duckerchat-composer" id="composer">
+                <div class="duckerchat-composer-head">
+                  <div>
+                    <h3 id="composerTitle">发送到群聊</h3>
+                  </div>
+                </div>
+                <div class="duckerchat-composer-body">
+                  <textarea
+                    id="promptInput"
+                    rows="3"
+                    placeholder="直接向整个房间发送消息，所有智能体都会看到。"
+                  ></textarea>
+                  <div class="duckerchat-composer-actions">
+                    <button type="submit">发送</button>
+                    <button type="button" class="secondary" id="advanceButton">推动房间</button>
+                    <button type="button" class="ghost" id="resetButton">刷新视图</button>
+                  </div>
+                </div>
+              </form>
+            </main>
 
-        <section class="chorus-panel">
-          <div class="chorus-section-head">
-            <h2>Focused Participant</h2>
-            <span>Identity, memory, model, sources</span>
-          </div>
-          <div id="agentCard"></div>
-        </section>
+            <aside class="duckerchat-console">
+              <section class="duckerchat-panel">
+                <div class="duckerchat-panel-head">
+                  <h2>控制台</h2>
+                  <span id="controlDeckStatus"></span>
+                </div>
+                <div class="duckerchat-control-actions">
+                  <button type="button" class="secondary" id="schedulerToggleButton">暂停调度</button>
+                  <button type="button" class="ghost" id="refreshButton">刷新</button>
+                  <button type="button" class="ghost" id="roomRunButton">唤醒群体</button>
+                  <button type="button" class="ghost" id="consoleToggleButton">折叠右栏</button>
+                </div>
+                <div id="resourceMonitor" class="duckerchat-monitor-grid"></div>
+              </section>
 
-        <section class="chorus-panel">
-          <div class="chorus-section-head">
-            <h2>Synthesis</h2>
-            <span>Consensus should not erase dissent</span>
-          </div>
-          <div class="chorus-synthesis-block">
-            <h3 id="artifactTitle">Final answer artifact</h3>
-            <div id="finalAnswerCard" class="chorus-note"></div>
-          </div>
-          <div class="chorus-synthesis-block">
-            <h3>Current human steer</h3>
-            <p id="directionText" class="chorus-note"></p>
-          </div>
-          <div class="chorus-synthesis-block">
-            <h3>Consensus</h3>
-            <ul id="consensusList"></ul>
-          </div>
-          <div class="chorus-synthesis-block">
-            <h3>Minority / tensions</h3>
-            <ul id="tensionList"></ul>
-          </div>
-          <div class="chorus-synthesis-block">
-            <h3>Next actions</h3>
-            <ul id="actionList"></ul>
-          </div>
-        </section>
+              <section class="duckerchat-panel">
+                <div class="duckerchat-panel-head">
+                  <h2>运行状态</h2>
+                  <span id="runtimeModeLabel"></span>
+                </div>
+                <div id="runtimeMonitor" class="duckerchat-monitor-grid"></div>
+              </section>
+
+              <section class="duckerchat-panel">
+                <div class="duckerchat-panel-head">
+                  <h2>调度器</h2>
+                  <span>队列与活跃执行</span>
+                </div>
+                <div id="schedulerQueue" class="duckerchat-console-list"></div>
+              </section>
+
+              <section class="duckerchat-panel" id="graphPanel">
+                <div class="duckerchat-panel-head">
+                  <h2>讨论关系图</h2>
+                  <span>房间拓扑</span>
+                </div>
+                <svg id="graphView" viewBox="0 0 1000 520" role="img" aria-label="Agent deliberation graph"></svg>
+              </section>
+
+              <section class="duckerchat-panel" id="agentPanel">
+                <div class="duckerchat-panel-head">
+                  <h2>焦点节点</h2>
+                  <span>公开角色与激活状态</span>
+                </div>
+                <div id="agentCard"></div>
+              </section>
+
+              <section class="duckerchat-panel">
+                <div class="duckerchat-panel-head">
+                  <h2>综合结果</h2>
+                  <span>结论、分歧与控制状态</span>
+                </div>
+                <div class="duckerchat-synthesis-block">
+                  <h3 id="artifactTitle">最终回答产物</h3>
+                  <div id="finalAnswerCard" class="duckerchat-note"></div>
+                </div>
+                <div class="duckerchat-synthesis-block">
+                  <h3 id="claimGraphTitle">知识骨架</h3>
+                  <div id="claimGraphCard" class="duckerchat-note"></div>
+                </div>
+                <div class="duckerchat-synthesis-block">
+                  <h3>治理日志</h3>
+                  <div id="authorityLogCard" class="duckerchat-note"></div>
+                </div>
+                <div class="duckerchat-synthesis-block">
+                  <h3>当前人类方向</h3>
+                  <p id="directionText" class="duckerchat-note"></p>
+                </div>
+                <div class="duckerchat-synthesis-block">
+                  <h3>共识</h3>
+                  <ul id="consensusList"></ul>
+                </div>
+                <div class="duckerchat-synthesis-block">
+                  <h3>分歧 / 张力</h3>
+                  <ul id="tensionList"></ul>
+                </div>
+                <div class="duckerchat-synthesis-block">
+                  <h3>下一步动作</h3>
+                  <ul id="actionList"></ul>
+                </div>
+              </section>
+
+              <section class="duckerchat-panel">
+                <div class="duckerchat-panel-head">
+                  <h2>系统日志</h2>
+                  <span>最新事件与摘要</span>
+                </div>
+                <div id="systemConsole" class="duckerchat-console-list"></div>
+              </section>
       </aside>
     </div>
 

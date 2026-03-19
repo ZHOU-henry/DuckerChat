@@ -1,0 +1,149 @@
+{
+  "roomId": "ultimate-prediction-room",
+  "artifactType": "prediction_preview",
+  "generatedAt": "2026-03-19T15:08:42.790Z",
+  "claims": [
+    {
+      "claim_id": "preview-1",
+      "text": "围绕“请围绕多智能体社交产品的长期价值给我一点判断”，research 已形成第一轮预估立场。",
+      "status": "proposed",
+      "confidence": "中低",
+      "evidence": [
+        "Agent 002 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 077 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "counterevidence": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ],
+      "source_refs": [],
+      "supporting_agents": [
+        "swarm-002",
+        "swarm-077",
+        "swarm-087",
+        "swarm-007",
+        "swarm-072"
+      ],
+      "opposing_agents": [],
+      "update_triggers": [
+        "正式裁定完成",
+        "来源补全",
+        "联盟重组"
+      ],
+      "importance": 0.88
+    },
+    {
+      "claim_id": "preview-2",
+      "text": "围绕“请围绕多智能体社交产品的长期价值给我一点判断”，market 已形成第一轮预估立场。",
+      "status": "proposed",
+      "confidence": "中低",
+      "evidence": [
+        "Agent 033 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 028 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "counterevidence": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ],
+      "source_refs": [],
+      "supporting_agents": [
+        "swarm-033",
+        "swarm-028",
+        "swarm-098",
+        "swarm-008"
+      ],
+      "opposing_agents": [],
+      "update_triggers": [
+        "正式裁定完成",
+        "来源补全",
+        "联盟重组"
+      ],
+      "importance": 0.8
+    },
+    {
+      "claim_id": "preview-3",
+      "text": "围绕“请围绕多智能体社交产品的长期价值给我一点判断”，build 已形成第一轮预估立场。",
+      "status": "proposed",
+      "confidence": "中低",
+      "evidence": [
+        "Agent 095 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 020 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "counterevidence": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ],
+      "source_refs": [],
+      "supporting_agents": [
+        "swarm-095",
+        "swarm-020",
+        "swarm-015",
+        "swarm-080"
+      ],
+      "opposing_agents": [],
+      "update_triggers": [
+        "正式裁定完成",
+        "来源补全",
+        "联盟重组"
+      ],
+      "importance": 0.72
+    },
+    {
+      "claim_id": "preview-4",
+      "text": "围绕“请围绕多智能体社交产品的长期价值给我一点判断”，critique 已形成第一轮预估立场。",
+      "status": "proposed",
+      "confidence": "中低",
+      "evidence": [
+        "Agent 064 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。",
+        "Agent 059 被问题匹配与差异性门控选入前线。",
+        "当前仍处于预览阶段，尚未完成正式裁定。"
+      ],
+      "counterevidence": [
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。",
+        "正式重模型裁定尚未完成，当前只是前线预览态。"
+      ],
+      "source_refs": [],
+      "supporting_agents": [
+        "swarm-064",
+        "swarm-059",
+        "swarm-069",
+        "swarm-054"
+      ],
+      "opposing_agents": [],
+      "update_triggers": [
+        "正式裁定完成",
+        "来源补全",
+        "联盟重组"
+      ],
+      "importance": 0.64
+    }
+  ],
+  "relations": [
+    {
+      "source": "preview-1",
+      "target": "preview-2",
+      "type": "supports"
+    },
+    {
+      "source": "preview-1",
+      "target": "preview-3",
+      "type": "supports"
+    },
+    {
+      "source": "preview-1",
+      "target": "preview-4",
+      "type": "supports"
+    }
+  ]
+}

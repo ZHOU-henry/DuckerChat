@@ -1,10 +1,10 @@
 {
   "id": "launch-room",
-  "title": "DuckerChat launch room",
-  "community": "Duckermind Lab",
+  "title": "DuckerChat 启动房间",
+  "community": "Duckermind 实验室",
   "module": "social_rooms",
-  "prompt": "How should a human user share a durable question so many independent agents can debate it and converge into a stronger conclusion?",
-  "blurb": "Shape the core product object for DuckerChat itself.",
-  "tags": ["product", "multi-agent", "social UI"],
+  "prompt": "人类应该怎样把一个长期问题放进房间，让多个独立智能体公开讨论并逐步形成更强的结论？",
+  "blurb": "围绕 DuckerChat 自身产品形态展开的人类加多智能体社交讨论房间。",
+  "tags": ["产品", "多智能体", "社交界面"],
   "activeAgentIds": ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
 }

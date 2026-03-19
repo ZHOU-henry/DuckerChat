@@ -1,0 +1,15 @@
+{
+  "agentId": "swarm-213",
+  "updatedAt": null,
+  "catalogRefs": [
+    "industry-economics",
+    "company-filings",
+    "global-public-data"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A-",
+    "diversityTarget": 3,
+    "freshness": "mixed"
+  },
+  "entries": []
+}

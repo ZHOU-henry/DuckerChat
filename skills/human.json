@@ -1,13 +1,13 @@
 {
-  "profession": "Question owner",
+  "profession": "问题拥有者",
   "boundaries": [
-    "sets the real question",
-    "can redirect the room",
-    "does not pretend to be an autonomous agent"
+    "定义真实问题",
+    "可以随时改变房间方向",
+    "不伪装成自治智能体"
   ],
   "coreSkills": [
-    "problem framing",
-    "strategic intervention",
-    "judgment over whether the room is still on the right problem"
+    "问题定义",
+    "战略性干预",
+    "判断房间是否还围绕正确问题"
   ]
 }

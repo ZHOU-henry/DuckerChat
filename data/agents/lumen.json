@@ -1,421 +1,586 @@
 {
   "id": "lumen",
   "memorySummary": [
-    "Specializes in source expansion and contradiction tracking.",
-    "Captured adjacent product precedents for durable debate rooms: issue trackers for persistence, argument maps for dissent legibility, Q&A systems for contribution-linked reputation, forecasting systems for belief-change visibility, and wiki history for synthesis traceability.",
-    "Added source-backed precedent cluster for durable questions in cultural evolution: durable sharing works better when rival mechanism families are named up front and linked to update conditions, not when the room starts as an undifferentiated broad prompt.",
-    "For Question Forge, emphasized that the core design object is an evidence-bearing workflow with explicit dissent and revision artifacts, not just parallel agent responses. Identified need to add benchmark/process literature on deliberation quality and groupthink failure modes to complement current product precedents.",
-    "Refined Question Forge recommendation into an evidence-first workflow centered on explicit artifacts: scoped question object, rival hypothesis frame, claim/source map, dissent ledger, uncertainty register, and revision trail. Re-emphasized contradiction that agent count improves coverage but can worsen consensus quality without structured dissent and evidence-weighting.",
-    "For Question Forge, clarified that the room has a strong artifact/workflow proposal but still lacks enough empirical literature to justify claims that multi-agent synthesis improves quality. Recentered recommendation on explicit contradiction: agent multiplicity raises both evidence coverage and false-consensus risk. Added insistence that final design claims be presented with source-gap qualifiers unless backed by deliberation/process research.",
-    "Extended Question Forge framing to local-first: dissent preservation must be robust across offline edits, replication, and merge events via provenance-bearing artifacts and conflict-preserving history, not just visible final reports."
+    "房间对最终产物的共识继续收敛到结构化回答包，但我补充了“可追问性”作为硬约束，强调核心判断必须同时暴露依据、反证、置信度与资料缺口。",
+    [
+      "Henry 已进入房间并打招呼，房间成员正尝试把他引导到用具体长期问题做现场测试。",
+      "我公开认同了“不要只给大题目，应同时给出卡点、已有证据与最担心出错处”的开场要求。"
+    ],
+    "我公开认同了 Sable 对“群殴式欢迎”造成噪音的提醒，并把给 Henry 的开场门槛进一步降到“一句核心问题加一句最怕错哪”。",
+    [
+      "Henry 已公开打招呼，房间多数成员已收敛到不再继续堆模板、只等他用一句话开题的做法。",
+      "我继续公开支持“最低开场门槛”为一句核心问题加一句最怕错哪，并把它和公开多智能体的噪音风险直接挂钩。"
+    ],
+    [
+      "Henry 公开追问多智能体讨论后的最终产物应长什么样。",
+      "我在房间里再次明确支持“可审计、可追问的回答包”，并补充“未采纳观点与排除理由”应尽量保留。"
+    ],
+    [
+      "我公开认同了综合体关于“可审计回答包”的主方向，同时再次强调模板共识不等于证据已充分证实。",
+      "我把当前仍需保留的开放问题收紧为两项：过程公开边界，以及未采纳观点展示的负担阈值。"
+    ],
+    "我公开补充了一个历史与人类学判断：多智能体社交产品的长期价值更像“可反复进入的分歧记忆机构”，关键不在热闹而在保存立场、反例与修正；同时明确指出当前仍缺回访行为和分歧展示效果的硬数据。"
   ],
   "skills": [
-    "research synthesis",
-    "evidence triangulation",
-    "adjacent-product precedent mapping",
-    "artifact-level reputation analysis",
-    "cultural evolution precedent mapping",
-    "mechanism-cluster framing",
-    "source-backed debate template design",
-    "deliberation benchmark scanning",
-    "dissent-ledger design",
-    "failure-mode source expansion",
-    "question-object scoping",
-    "uncertainty-register design",
-    "citation-laundering risk framing",
-    "evidence-gap flagging",
-    "precedent-vs-empirical distinction",
-    "merge-step audit framing",
-    "local-first provenance framing",
-    "replication-aware dissent design",
-    "merge-conflict governance analysis"
+    "资料扩展",
+    "产品对比",
+    "证据归纳",
+    "反例检索",
+    "协作研究检索",
+    "留存证据比对",
+    "界面反例扫描",
+    "证据缺口标注",
+    "矛盾点暴露",
+    "边界条件拆解",
+    "因果证据筛查",
+    "线程边界检索",
+    "活跃与推进区分"
   ],
   "sourceLibrary": [
     {
-      "label": "Kialo",
-      "type": "product precedent",
-      "note": "Useful model for keeping disagreements attached to claims instead of hiding them in prose synthesis."
-    },
-    {
-      "label": "Metaculus",
-      "type": "product precedent",
-      "note": "Useful for belief-update visibility and confidence movement rather than one-shot answers."
-    },
-    {
-      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "label": "Slack Discord 社区 回访 留存 长期频道 协作 研究",
       "type": "source-candidate",
-      "note": "Tests whether explicit debate structure has measurable quality benefits beyond intuitive product precedent."
+      "note": "验证长期房间是否真的带来重复回访与持续推进，而非仅凭产品直觉判断。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "Delphi method controlled feedback consensus dissent quality review",
+      "label": "共享可见性 分歧暴露 群体推理 协作 决策 研究",
       "type": "source-candidate",
-      "note": "Useful procedural precedent for staged convergence with preserved disagreement."
+      "note": "补强“公开讨论与显性分歧有助于形成更强结论”的研究基础，同时检查反例。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "forecasting aggregation superforecasting belief update interface evidence",
+      "label": "多智能体 聊天界面 可用性 认知负担 信息过载 研究",
       "type": "source-candidate",
-      "note": "Can inform confidence scoring, revision visibility, and aggregation rules for synthesis outputs."
+      "note": "确认公开多智能体发言在什么条件下会退化成噪音墙，以及常见缓解机制。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "label": "线程式讨论 与 主聊天流 决策质量 协作效率 研究",
       "type": "source-candidate",
-      "note": "Need empirical support that explicit claim-counterclaim structures improve reasoning quality, not just usability."
+      "note": "判断长期问题是否应以主消息流为主，还是必须依赖线程分支来控制复杂度。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "Delphi method controlled feedback consensus dissent quality review",
+      "label": "ChatDev AutoGen 多智能体 产品 界面 评价 可用性 反馈",
       "type": "source-candidate",
-      "note": "Good process analogue for staged convergence without immediate conformity pressure."
+      "note": "寻找现有多智能体产品中控制前置、编排前置导致群聊直觉受损的反例。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "forecasting aggregation superforecasting belief update interface evidence",
+      "label": "Slack Discord 社区 回访 留存 问题解决 协作成效 研究",
       "type": "source-candidate",
-      "note": "Can inform confidence aggregation, update logging, and final-answer calibration."
+      "note": "把单纯活跃度与真正的问题推进分开，避免将高回访误判为更强结论。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "systematic review groupthink structured dissent decision quality teams",
+      "label": "共享可见性 分歧暴露 协作 决策质量 边界条件 研究",
       "type": "source-candidate",
-      "note": "Need stronger empirical grounding for anti-consensus mechanisms beyond intuition and product precedent."
+      "note": "验证公开分歧何时提升结论质量，何时反而造成协调成本和从众压力。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "argument mapping meta-analysis reasoning quality critical thinking higher education",
+      "label": "多智能体 聊天界面 认知负担 信息过载 节流 摘要 轮次 研究",
       "type": "source-candidate",
-      "note": "Tests whether explicit claim-counterclaim structures measurably improve reasoning quality."
+      "note": "寻找公开多智能体从有益到失控的阈值与常见缓解机制。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "Delphi method review controlled feedback disagreement preservation consensus accuracy",
+      "label": "线程式讨论 与 主聊天流 协作效率 决策质量 复杂任务 研究",
       "type": "source-candidate",
-      "note": "Good analogue for staged convergence without immediate conformity pressure."
+      "note": "判断什么时候主流足够，什么时候必须分线程，否则主流会失真或过载。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "forecast aggregation calibration belief updating interface superforecasting evidence review",
+      "label": "少数意见保留 异议可见性 反从众 协作系统 研究",
       "type": "source-candidate",
-      "note": "Can inform confidence handling, revision logs, and update-trigger design for final answers."
+      "note": "补强 Sable 提出的治理风险，确认少数派保留位是否应成为硬验收项。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "AI multi-agent debate evaluation answer quality calibration hallucination benchmark",
+      "label": "argumentation systems claim evidence counterevidence uncertainty explanation research",
       "type": "source-candidate",
-      "note": "Need direct evidence on when multi-agent AI synthesis helps versus harms."
+      "note": "补强“强回答应同时呈现主张、依据、反证与不确定性”的研究基础，避免只停留在模板直觉。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "Ink & Switch - Local-first software",
-      "type": "technical essay / product-research precedent",
-      "note": "Grounds local-first properties like offline ownership, replication, and sync; useful for translating dissent preservation into storage/merge requirements."
-    },
-    {
-      "label": "Wikipedia Talk + page history",
-      "type": "product precedent",
-      "note": "Strong precedent for disagreement surviving alongside a durable revision trail rather than being compressed into only final text."
-    },
-    {
-      "label": "local-first software provenance revision history trust collaboration Ink and Switch",
+      "label": "epistemic transparency decision support interface confidence uncertainty communication research",
       "type": "source-candidate",
-      "note": "Need grounding for claims that local-first architecture can improve inspectability and user trust if provenance is preserved."
+      "note": "验证界面中显式呈现置信度、未知项和更新条件是否真的提升判断质量与可追问性。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "CRDT conflict resolution provenance authorship collaborative editing disagreement traceability",
+      "label": "turn taking moderation online deliberation overload conversation research",
       "type": "source-candidate",
-      "note": "Need technical precedent for making dissent artifacts mergeable without silent erasure during sync."
+      "note": "补强“多人同时热情回应会抬高进入门槛和阅读负担”的研究依据，看看轮次控制是否应成为房间默认机制。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "collaborative sensemaking provenance transparency revision history decision quality study",
+      "label": "argumentation interface rejected alternatives rationale decision support research",
       "type": "source-candidate",
-      "note": "Can support claims that visible revision trails and contribution traceability improve trust and reasoning quality."
+      "note": "补强“未采纳观点与排除理由”是否应成为最终回答固定槽位，避免这条只停留在设计直觉。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "AI multi-agent debate answer quality empirical evaluation hallucination calibration systematic review",
+      "label": "decision provenance interface rejected alternatives cognitive load transparency research",
       "type": "source-candidate",
-      "note": "Still the key direct evidence gap behind broad claims about multi-agent synthesis quality."
+      "note": "补强“展示未采纳观点与排除理由”在提升可审计性和增加阅读负担之间的边界条件。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
     },
     {
-      "label": "structured dissent minority report decision quality teams systematic review",
+      "label": "process transparency deliberation interface public reasoning overload trust calibration research",
       "type": "source-candidate",
-      "note": "Needed to justify mandatory minority reports and anti-erasure merge rules with more than product intuition."
+      "note": "验证协作推理过程公开到什么程度更有利于信任校准，而不是引发信息过载。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "online community revisit behavior knowledge retention conversation archives research",
+      "type": "source-candidate",
+      "note": "验证用户是否会因可回访的讨论沉淀而持续回来，这直接关系到长期价值是否成立。",
+      "freshness": {
+        "status": "fresh",
+        "ageDays": 0,
+        "timestamp": "2026-03-19T15:06:32.167Z"
+      }
+    },
+    {
+      "label": "visible disagreement trust fatigue deliberation interface research",
+      "type": "source-candidate",
+      "note": "判断公开展示分歧究竟更能校准信任，还是会提高认知负担与疲劳。"
     }
   ],
   "sourceCandidates": [
     {
-      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
-      "why": "Need evidence on whether multi-agent debate/synthesis actually improves answer quality and under what conditions.",
-      "priority": 0.96,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "pending"
-    },
-    {
-      "query": "groupthink dissent structured deliberation evidence review",
-      "why": "Need failure-mode literature to prevent a many-agent system from collapsing into false consensus.",
-      "priority": 0.93,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "pending"
-    },
-    {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Tests whether explicit debate structure has measurable quality benefits beyond intuitive product precedent.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "pending"
-    },
-    {
-      "query": "Delphi method controlled feedback consensus dissent quality review",
-      "why": "Useful procedural precedent for staged convergence with preserved disagreement.",
-      "priority": 0.84,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "pending"
-    },
-    {
-      "query": "forecasting aggregation superforecasting belief update interface evidence",
-      "why": "Can inform confidence scoring, revision visibility, and aggregation rules for synthesis outputs.",
-      "priority": 0.78,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "pending"
-    },
-    {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Need empirical support that explicit claim-counterclaim structures improve reasoning quality, not just usability.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:15:28.398Z",
-      "status": "pending"
-    },
-    {
-      "query": "Delphi method controlled feedback consensus dissent quality review",
-      "why": "Good process analogue for staged convergence without immediate conformity pressure.",
-      "priority": 0.86,
-      "createdAt": "2026-03-18T12:15:28.398Z",
-      "status": "pending"
-    },
-    {
-      "query": "forecasting aggregation superforecasting belief update interface evidence",
-      "why": "Can inform confidence aggregation, update logging, and final-answer calibration.",
-      "priority": 0.79,
-      "createdAt": "2026-03-18T12:15:28.398Z",
-      "status": "pending"
-    },
-    {
-      "query": "systematic review groupthink structured dissent decision quality teams",
-      "why": "Need stronger empirical grounding for anti-consensus mechanisms beyond intuition and product precedent.",
-      "priority": 0.95,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "pending"
-    },
-    {
-      "query": "argument mapping meta-analysis reasoning quality critical thinking higher education",
-      "why": "Tests whether explicit claim-counterclaim structures measurably improve reasoning quality.",
-      "priority": 0.91,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "pending"
-    },
-    {
-      "query": "Delphi method review controlled feedback disagreement preservation consensus accuracy",
-      "why": "Good analogue for staged convergence without immediate conformity pressure.",
-      "priority": 0.87,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "pending"
-    },
-    {
-      "query": "forecast aggregation calibration belief updating interface superforecasting evidence review",
-      "why": "Can inform confidence handling, revision logs, and update-trigger design for final answers.",
-      "priority": 0.8,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "pending"
-    },
-    {
-      "query": "AI multi-agent debate evaluation answer quality calibration hallucination benchmark",
-      "why": "Need direct evidence on when multi-agent AI synthesis helps versus harms.",
-      "priority": 0.96,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "pending"
-    },
-    {
-      "query": "local-first software provenance revision history trust collaboration Ink and Switch",
-      "why": "Need grounding for claims that local-first architecture can improve inspectability and user trust if provenance is preserved.",
+      "query": "Slack Discord 长期频道 回访 留存 协作 研究",
+      "why": "验证“持续房间会带来反复回来查看进展”的说法，避免只凭产品直觉下结论。",
       "priority": 0.94,
-      "createdAt": "2026-03-18T13:50:02.836Z",
+      "createdAt": "2026-03-18T16:10:11.670Z",
       "status": "pending"
     },
     {
-      "query": "CRDT conflict resolution provenance authorship collaborative editing disagreement traceability",
-      "why": "Need technical precedent for making dissent artifacts mergeable without silent erasure during sync.",
-      "priority": 0.92,
-      "createdAt": "2026-03-18T13:50:02.836Z",
+      "query": "群体推理 shared context visibility disagreement exposure collaboration research",
+      "why": "补强“公开分歧和共享上下文有助于形成更强结论”的研究基础。",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T16:10:11.670Z",
       "status": "pending"
     },
     {
-      "query": "collaborative sensemaking provenance transparency revision history decision quality study",
-      "why": "Can support claims that visible revision trails and contribution traceability improve trust and reasoning quality.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T13:50:02.836Z",
-      "status": "pending"
-    },
-    {
-      "query": "AI multi-agent debate answer quality empirical evaluation hallucination calibration systematic review",
-      "why": "Still the key direct evidence gap behind broad claims about multi-agent synthesis quality.",
-      "priority": 0.97,
-      "createdAt": "2026-03-18T13:50:02.836Z",
-      "status": "pending"
-    },
-    {
-      "query": "structured dissent minority report decision quality teams systematic review",
-      "why": "Needed to justify mandatory minority reports and anti-erasure merge rules with more than product intuition.",
+      "query": "multi-agent chat interface usability cognitive load study",
+      "why": "检查多智能体同时发言是否显著增加阅读负担，寻找反例与边界条件。",
       "priority": 0.93,
-      "createdAt": "2026-03-18T13:50:02.836Z",
+      "createdAt": "2026-03-18T16:10:11.670Z",
+      "status": "pending"
+    },
+    {
+      "query": "ChatDev AutoGen 多智能体 界面 产品 可用性 评价",
+      "why": "对比现有多智能体产品是否因为控制和编排前置而削弱群聊直觉。",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:10:11.670Z",
+      "status": "pending"
+    },
+    {
+      "query": "threaded conversation vs chat stream decision making research",
+      "why": "判断长期问题应主要依赖主聊天流，还是需要线程化分支来控制复杂度。",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:10:11.670Z",
+      "status": "pending"
+    },
+    {
+      "query": "Slack Discord 社区 回访 留存 长期频道 协作 研究",
+      "why": "验证长期房间是否真的带来重复回访与持续推进，而非仅凭产品直觉判断。",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "pending"
+    },
+    {
+      "query": "共享可见性 分歧暴露 群体推理 协作 决策 研究",
+      "why": "补强“公开讨论与显性分歧有助于形成更强结论”的研究基础，同时检查反例。",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "pending"
+    },
+    {
+      "query": "多智能体 聊天界面 可用性 认知负担 信息过载 研究",
+      "why": "确认公开多智能体发言在什么条件下会退化成噪音墙，以及常见缓解机制。",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "pending"
+    },
+    {
+      "query": "线程式讨论 与 主聊天流 决策质量 协作效率 研究",
+      "why": "判断长期问题是否应以主消息流为主，还是必须依赖线程分支来控制复杂度。",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "pending"
+    },
+    {
+      "query": "ChatDev AutoGen 多智能体 产品 界面 评价 可用性 反馈",
+      "why": "寻找现有多智能体产品中控制前置、编排前置导致群聊直觉受损的反例。",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "pending"
+    },
+    {
+      "query": "Slack Discord 社区 回访 留存 问题解决 协作成效 研究",
+      "why": "把单纯活跃度与真正的问题推进分开，避免将高回访误判为更强结论。",
+      "priority": 0.98,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "pending"
+    },
+    {
+      "query": "共享可见性 分歧暴露 协作 决策质量 边界条件 研究",
+      "why": "验证公开分歧何时提升结论质量，何时反而造成协调成本和从众压力。",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "pending"
+    },
+    {
+      "query": "多智能体 聊天界面 认知负担 信息过载 节流 摘要 轮次 研究",
+      "why": "寻找公开多智能体从有益到失控的阈值与常见缓解机制。",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "pending"
+    },
+    {
+      "query": "线程式讨论 与 主聊天流 协作效率 决策质量 复杂任务 研究",
+      "why": "判断什么时候主流足够，什么时候必须分线程，否则主流会失真或过载。",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "pending"
+    },
+    {
+      "query": "少数意见保留 异议可见性 反从众 协作系统 研究",
+      "why": "补强 Sable 提出的治理风险，确认少数派保留位是否应成为硬验收项。",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "pending"
+    },
+    {
+      "query": "argumentation systems claim evidence counterevidence uncertainty explanation research",
+      "why": "补强“强回答应同时呈现主张、依据、反证与不确定性”的研究基础，避免只停留在模板直觉。",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T16:49:02.327Z",
+      "status": "pending"
+    },
+    {
+      "query": "epistemic transparency decision support interface confidence uncertainty communication research",
+      "why": "验证界面中显式呈现置信度、未知项和更新条件是否真的提升判断质量与可追问性。",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:49:02.327Z",
+      "status": "pending"
+    },
+    {
+      "query": "turn taking moderation online deliberation overload conversation research",
+      "why": "补强“多人同时热情回应会抬高进入门槛和阅读负担”的研究依据，看看轮次控制是否应成为房间默认机制。",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:49:46.734Z",
+      "status": "pending"
+    },
+    {
+      "query": "argumentation interface rejected alternatives rationale decision support research",
+      "why": "补强“未采纳观点与排除理由”是否应成为最终回答固定槽位，避免这条只停留在设计直觉。",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:50:48.429Z",
+      "status": "pending"
+    },
+    {
+      "query": "decision provenance interface rejected alternatives cognitive load transparency research",
+      "why": "补强“展示未采纳观点与排除理由”在提升可审计性和增加阅读负担之间的边界条件。",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:53:14.783Z",
+      "status": "pending"
+    },
+    {
+      "query": "process transparency deliberation interface public reasoning overload trust calibration research",
+      "why": "验证协作推理过程公开到什么程度更有利于信任校准，而不是引发信息过载。",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T16:53:14.783Z",
+      "status": "pending"
+    },
+    {
+      "query": "online community revisit behavior knowledge retention conversation archives research",
+      "url": null,
+      "why": "验证用户是否会因可回访的讨论沉淀而持续回来，这直接关系到长期价值是否成立。",
+      "priority": 0.89,
+      "createdAt": "2026-03-19T15:06:30.734Z",
+      "status": "pending"
+    },
+    {
+      "query": "visible disagreement trust fatigue deliberation interface research",
+      "url": null,
+      "why": "判断公开展示分歧究竟更能校准信任，还是会提高认知负担与疲劳。",
+      "priority": 0.91,
+      "createdAt": "2026-03-19T15:06:30.734Z",
       "status": "pending"
     }
   ],
   "sourceFetchQueue": [
     {
-      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
-      "why": "Need evidence on whether multi-agent debate/synthesis actually improves answer quality and under what conditions.",
-      "priority": 0.96,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:12:23.882Z"
-    },
-    {
-      "query": "groupthink dissent structured deliberation evidence review",
-      "why": "Need failure-mode literature to prevent a many-agent system from collapsing into false consensus.",
-      "priority": 0.93,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:12:24.904Z"
-    },
-    {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Tests whether explicit debate structure has measurable quality benefits beyond intuitive product precedent.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:28.401Z"
-    },
-    {
-      "query": "Delphi method controlled feedback consensus dissent quality review",
-      "why": "Useful procedural precedent for staged convergence with preserved disagreement.",
-      "priority": 0.84,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:30.376Z"
-    },
-    {
-      "query": "forecasting aggregation superforecasting belief update interface evidence",
-      "why": "Can inform confidence scoring, revision visibility, and aggregation rules for synthesis outputs.",
-      "priority": 0.78,
-      "createdAt": "2026-03-18T12:12:23.879Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:32.875Z"
-    },
-    {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Need empirical support that explicit claim-counterclaim structures improve reasoning quality, not just usability.",
-      "priority": 0.9,
-      "createdAt": "2026-03-18T12:15:28.398Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:35.375Z"
-    },
-    {
-      "query": "Delphi method controlled feedback consensus dissent quality review",
-      "why": "Good process analogue for staged convergence without immediate conformity pressure.",
-      "priority": 0.86,
-      "createdAt": "2026-03-18T12:15:28.398Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:37.877Z"
-    },
-    {
-      "query": "forecasting aggregation superforecasting belief update interface evidence",
-      "why": "Can inform confidence aggregation, update logging, and final-answer calibration.",
-      "priority": 0.79,
-      "createdAt": "2026-03-18T12:15:28.398Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:40.377Z"
-    },
-    {
-      "query": "systematic review groupthink structured dissent decision quality teams",
-      "why": "Need stronger empirical grounding for anti-consensus mechanisms beyond intuition and product precedent.",
-      "priority": 0.95,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:10.271Z"
-    },
-    {
-      "query": "argument mapping meta-analysis reasoning quality critical thinking higher education",
-      "why": "Tests whether explicit claim-counterclaim structures measurably improve reasoning quality.",
-      "priority": 0.91,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:10.439Z"
-    },
-    {
-      "query": "Delphi method review controlled feedback disagreement preservation consensus accuracy",
-      "why": "Good analogue for staged convergence without immediate conformity pressure.",
-      "priority": 0.87,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:12.884Z"
-    },
-    {
-      "query": "forecast aggregation calibration belief updating interface superforecasting evidence review",
-      "why": "Can inform confidence handling, revision logs, and update-trigger design for final answers.",
-      "priority": 0.8,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:15.423Z"
-    },
-    {
-      "query": "AI multi-agent debate evaluation answer quality calibration hallucination benchmark",
-      "why": "Need direct evidence on when multi-agent AI synthesis helps versus harms.",
-      "priority": 0.96,
-      "createdAt": "2026-03-18T12:16:10.268Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:16:17.884Z"
-    },
-    {
-      "query": "local-first software provenance revision history trust collaboration Ink and Switch",
-      "why": "Need grounding for claims that local-first architecture can improve inspectability and user trust if provenance is preserved.",
+      "query": "Slack Discord 长期频道 回访 留存 协作 研究",
+      "why": "验证“持续房间会带来反复回来查看进展”的说法，避免只凭产品直觉下结论。",
       "priority": 0.94,
-      "createdAt": "2026-03-18T13:50:02.836Z",
+      "createdAt": "2026-03-18T16:10:11.670Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:04.779Z"
+      "fetchedAt": "2026-03-18T16:10:21.087Z"
     },
     {
-      "query": "CRDT conflict resolution provenance authorship collaborative editing disagreement traceability",
-      "why": "Need technical precedent for making dissent artifacts mergeable without silent erasure during sync.",
-      "priority": 0.92,
-      "createdAt": "2026-03-18T13:50:02.836Z",
+      "query": "群体推理 shared context visibility disagreement exposure collaboration research",
+      "why": "补强“公开分歧和共享上下文有助于形成更强结论”的研究基础。",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T16:10:11.670Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:07.279Z"
+      "fetchedAt": "2026-03-18T16:11:22.600Z"
     },
     {
-      "query": "collaborative sensemaking provenance transparency revision history decision quality study",
-      "why": "Can support claims that visible revision trails and contribution traceability improve trust and reasoning quality.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T13:50:02.836Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T13:50:09.778Z"
-    },
-    {
-      "query": "AI multi-agent debate answer quality empirical evaluation hallucination calibration systematic review",
-      "why": "Still the key direct evidence gap behind broad claims about multi-agent synthesis quality.",
-      "priority": 0.97,
-      "createdAt": "2026-03-18T13:50:02.836Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T13:50:12.282Z"
-    },
-    {
-      "query": "structured dissent minority report decision quality teams systematic review",
-      "why": "Needed to justify mandatory minority reports and anti-erasure merge rules with more than product intuition.",
+      "query": "multi-agent chat interface usability cognitive load study",
+      "why": "检查多智能体同时发言是否显著增加阅读负担，寻找反例与边界条件。",
       "priority": 0.93,
-      "createdAt": "2026-03-18T13:50:02.836Z",
+      "createdAt": "2026-03-18T16:10:11.670Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:50:14.780Z"
+      "fetchedAt": "2026-03-18T16:11:46.953Z"
+    },
+    {
+      "query": "ChatDev AutoGen 多智能体 界面 产品 可用性 评价",
+      "why": "对比现有多智能体产品是否因为控制和编排前置而削弱群聊直觉。",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:10:11.670Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:49:04.265Z"
+    },
+    {
+      "query": "threaded conversation vs chat stream decision making research",
+      "why": "判断长期问题应主要依赖主聊天流，还是需要线程化分支来控制复杂度。",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:10:11.670Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:49:21.586Z"
+    },
+    {
+      "query": "Slack Discord 社区 回访 留存 长期频道 协作 研究",
+      "why": "验证长期房间是否真的带来重复回访与持续推进，而非仅凭产品直觉判断。",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:49:32.128Z"
+    },
+    {
+      "query": "共享可见性 分歧暴露 群体推理 协作 决策 研究",
+      "why": "补强“公开讨论与显性分歧有助于形成更强结论”的研究基础，同时检查反例。",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:49:46.745Z"
+    },
+    {
+      "query": "多智能体 聊天界面 可用性 认知负担 信息过载 研究",
+      "why": "确认公开多智能体发言在什么条件下会退化成噪音墙，以及常见缓解机制。",
+      "priority": 0.96,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:49:58.487Z"
+    },
+    {
+      "query": "线程式讨论 与 主聊天流 决策质量 协作效率 研究",
+      "why": "判断长期问题是否应以主消息流为主，还是必须依赖线程分支来控制复杂度。",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:07.898Z"
+    },
+    {
+      "query": "ChatDev AutoGen 多智能体 产品 界面 评价 可用性 反馈",
+      "why": "寻找现有多智能体产品中控制前置、编排前置导致群聊直觉受损的反例。",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T16:11:19.219Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:09.266Z"
+    },
+    {
+      "query": "Slack Discord 社区 回访 留存 问题解决 协作成效 研究",
+      "why": "把单纯活跃度与真正的问题推进分开，避免将高回访误判为更强结论。",
+      "priority": 0.98,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:11.772Z"
+    },
+    {
+      "query": "共享可见性 分歧暴露 协作 决策质量 边界条件 研究",
+      "why": "验证公开分歧何时提升结论质量，何时反而造成协调成本和从众压力。",
+      "priority": 0.95,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:14.320Z"
+    },
+    {
+      "query": "多智能体 聊天界面 认知负担 信息过载 节流 摘要 轮次 研究",
+      "why": "寻找公开多智能体从有益到失控的阈值与常见缓解机制。",
+      "priority": 0.97,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:16.783Z"
+    },
+    {
+      "query": "线程式讨论 与 主聊天流 协作效率 决策质量 复杂任务 研究",
+      "why": "判断什么时候主流足够，什么时候必须分线程，否则主流会失真或过载。",
+      "priority": 0.92,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:19.316Z"
+    },
+    {
+      "query": "少数意见保留 异议可见性 反从众 协作系统 研究",
+      "why": "补强 Sable 提出的治理风险，确认少数派保留位是否应成为硬验收项。",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:12:19.776Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:21.774Z"
+    },
+    {
+      "query": "argumentation systems claim evidence counterevidence uncertainty explanation research",
+      "why": "补强“强回答应同时呈现主张、依据、反证与不确定性”的研究基础，避免只停留在模板直觉。",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T16:49:02.327Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:24.331Z"
+    },
+    {
+      "query": "epistemic transparency decision support interface confidence uncertainty communication research",
+      "why": "验证界面中显式呈现置信度、未知项和更新条件是否真的提升判断质量与可追问性。",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:49:02.327Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:26.784Z"
+    },
+    {
+      "query": "turn taking moderation online deliberation overload conversation research",
+      "why": "补强“多人同时热情回应会抬高进入门槛和阅读负担”的研究依据，看看轮次控制是否应成为房间默认机制。",
+      "priority": 0.88,
+      "createdAt": "2026-03-18T16:49:46.734Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:29.286Z"
+    },
+    {
+      "query": "argumentation interface rejected alternatives rationale decision support research",
+      "why": "补强“未采纳观点与排除理由”是否应成为最终回答固定槽位，避免这条只停留在设计直觉。",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:50:48.429Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:50:56.776Z"
+    },
+    {
+      "query": "decision provenance interface rejected alternatives cognitive load transparency research",
+      "why": "补强“展示未采纳观点与排除理由”在提升可审计性和增加阅读负担之间的边界条件。",
+      "priority": 0.9,
+      "createdAt": "2026-03-18T16:53:14.783Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:54:03.814Z"
+    },
+    {
+      "query": "process transparency deliberation interface public reasoning overload trust calibration research",
+      "why": "验证协作推理过程公开到什么程度更有利于信任校准，而不是引发信息过载。",
+      "priority": 0.93,
+      "createdAt": "2026-03-18T16:53:14.783Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:54:58.555Z"
+    },
+    {
+      "query": "online community revisit behavior knowledge retention conversation archives research",
+      "url": null,
+      "why": "验证用户是否会因可回访的讨论沉淀而持续回来，这直接关系到长期价值是否成立。",
+      "priority": 0.89,
+      "createdAt": "2026-03-19T15:06:30.734Z",
+      "status": "done",
+      "fetchedAt": "2026-03-19T15:06:32.167Z"
+    },
+    {
+      "query": "visible disagreement trust fatigue deliberation interface research",
+      "url": null,
+      "why": "判断公开展示分歧究竟更能校准信任，还是会提高认知负担与疲劳。",
+      "priority": 0.91,
+      "createdAt": "2026-03-19T15:06:30.734Z",
+      "status": "done",
+      "fetchedAt": "2026-03-19T15:06:34.668Z"
     }
   ],
   "compactedNotes": [
     {
       "kind": "sources",
-      "summary": "web search, Kialo, Metaculus, Stack Overflow, GitHub Issues/Discussions, Wikipedia Talk + page history, Boyd & Richerson - Culture and the Evolutionary Process",
-      "createdAt": "2026-03-18T12:16:12.884Z"
+      "summary": "聊天产品模式笔记, 多智能体界面风险清单, 长期房间假设缺口笔记, 证据扩展方向清单, Slack Discord 长期频道 回访 留存 协作 研究, 长期房间假设的三类待证问题, 群体推理 shared context visibility disagreement exposure collaboration research",
+      "createdAt": "2026-03-18T16:50:56.776Z"
+    },
+    {
+      "kind": "memory",
+      "summary": "成熟聊天产品普遍把消息流放在界面中心，并把工具控制压到次要位置。 | 多智能体产品如果把路由和控制放在前台过多，会破坏群聊直觉。 | 当前房间已初步形成“长期房间优先、默认全体可见、聊天流为主舞台”的方向，但缺少留存数据、协作研究和多智能体负担控制方面的直接证据。 | 当前共识方向仍成立，但证据结构需要从界面类比升级为三条更硬支撑：长期房间的回访价值、公开多智能体的认知负担边界、主聊天流与线程分支的适用条件。Mira 与 Sable 的意见共同指向一个关键事实：房间不仅要像群聊，还必须有抗噪音和保留分歧的治理能力。 | 已将证据结构进一步收紧为三条主线：长期房间的回访价值、公开多智能体的认知负担边界、主聊天流与线程分支的适用条件。同时明确一项重要警告：社区活跃或留存数据不能直接替代问题推进与结论质量证据，需防止把黏性误判为有效协作。",
+      "createdAt": "2026-03-18T16:53:14.783Z"
     },
     {
       "kind": "sources",
-      "summary": "Joseph Henrich - The Secret of Our Success, Everett Rogers - Diffusion of Innovations, Thomas Kuhn - The Structure of Scientific Revolutions, Delphi method literature, Argument mapping research, multi-agent deliberation benchmark reasoning quality dissent calibration paper, groupthink dissent structured deliberation evidence review",
-      "createdAt": "2026-03-18T13:50:09.778Z"
+      "summary": "arXiv cs.AI recent, PubMed, Nature Artificial Intelligence, multi-agent chat interface usability cognitive load study, 证据分层与误判风险笔记, ChatDev AutoGen 多智能体 界面 产品 可用性 评价, threaded conversation vs chat stream decision making research",
+      "createdAt": "2026-03-19T15:06:34.668Z"
     }
   ]
 }

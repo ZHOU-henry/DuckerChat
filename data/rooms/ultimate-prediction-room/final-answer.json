@@ -1,0 +1,27 @@
+{
+  "headline": "正在重组终极预测社会",
+  "executive_summary": "围绕“请围绕多智能体社交产品的长期价值给我一点判断”，系统已先筛出新的前线节点与联盟，正式裁定仍在继续。",
+  "best_answer": "",
+  "minority_report": [],
+  "coalition_summaries": [
+    "research：从历史与人类学研究员视角给出问题的第一轮预估。",
+    "market：从市场策略分析师视角给出问题的第一轮预估。",
+    "build：从软件架构师视角给出问题的第一轮预估。",
+    "critique：从调查记者兼风险审计员视角给出问题的第一轮预估。"
+  ],
+  "confidence": "预览",
+  "arbitrator_ids": [
+    "swarm-064",
+    "swarm-051",
+    "swarm-007",
+    "swarm-008",
+    "swarm-015"
+  ],
+  "update_triggers": [
+    "正式裁定完成",
+    "前线重排",
+    "新来源进入"
+  ],
+  "counterfactual_branches": [],
+  "belief_shifts": []
+}

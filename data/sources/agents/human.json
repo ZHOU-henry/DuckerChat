@@ -1,0 +1,11 @@
+{
+  "agentId": "human",
+  "updatedAt": null,
+  "entries": [
+    {
+      "label": "人类输入",
+      "type": "room",
+      "note": "来自提问者的原始问题和追加说明。"
+    }
+  ]
+}

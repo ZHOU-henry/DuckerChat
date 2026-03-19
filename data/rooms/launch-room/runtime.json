@@ -3,26 +3,120 @@
   "scheduler": {
     "enabled": true,
     "intervalMs": 2500,
-    "maxConcurrentRuns": 1,
+    "maxConcurrentRuns": 4,
     "queue": [],
     "activeRuns": [],
-    "lastTickAt": null,
-    "lastRunAt": "2026-03-18T10:18:05.454Z"
+    "lastTickAt": "2026-03-18T17:50:27.591Z",
+    "lastRunAt": "2026-03-19T15:06:30.795Z",
+    "queueDecay": 0.94,
+    "priorityFloor": 0.12,
+    "clusterWakeCount": 2,
+    "maxAutoAgentsPerTick": 2
   },
   "budgets": {
     "tokenBudgetTotal": 250000,
-    "tokenBudgetRemaining": 203952,
+    "tokenBudgetRemaining": 242641,
     "maxContextEvents": 14,
-    "softTurnLimit": 200,
-    "maxQueuedAgents": 12
+    "softTurnLimit": 90,
+    "maxQueuedAgents": 18
   },
   "compaction": {
     "compactBatchSize": 8,
     "keepRecentEvents": 18,
-    "summaryNotes": []
+    "summaryNotes": [
+      {
+        "id": "launch-room-summary-1773850339781",
+        "fromEventId": "launch-cn-1",
+        "toEventId": "launch-room-1773850201089",
+        "eventCount": 8,
+        "speakers": [
+          "human",
+          "atlas",
+          "lumen",
+          "mira",
+          "sable",
+          "forge",
+          "synthesis"
+        ],
+        "summary": "human: Henry 向全房间发言 | atlas: 房间主对象重设 | lumen: 参考产品扫描 | mira: 社交留存判断 | sable: 警惕假群聊 | forge: 界面实现方向 | synthesis: 当前综合结论 | forge: 群聊式主界面落地结构",
+        "createdAt": "2026-03-18T16:12:19.782Z"
+      },
+      {
+        "id": "launch-room-summary-1773852549796",
+        "fromEventId": "launch-room-1773850211671",
+        "toEventId": "launch-room-1773850245325",
+        "eventCount": 8,
+        "speakers": [
+          "lumen",
+          "atlas",
+          "forge",
+          "human",
+          "mira",
+          "sable"
+        ],
+        "summary": "lumen: 补强“房间优先”证据，并暴露两处资料缺口 | atlas: 将共识收束为房间级产品原则 | forge: Forge added a private source candidate | human: Henry 向全房间发言 | forge: 把房间共识压成可实现壳层 | mira: 房间要先成为可回访的议题载体 | sable: 群聊优先还不够，必须防止噪音与多数压制 | sable: Sable added a private source candidate",
+        "createdAt": "2026-03-18T16:49:09.796Z"
+      },
+      {
+        "id": "launch-room-summary-1773852561583",
+        "fromEventId": "launch-room-1773850272199",
+        "toEventId": "launch-room-1773850306954",
+        "eventCount": 8,
+        "speakers": [
+          "forge",
+          "atlas",
+          "lumen",
+          "sable",
+          "mira"
+        ],
+        "summary": "forge: 房间壳层进入可验收实现拆解 | atlas: 把下一阶段改成“群聊壳已定，补治理与验收” | lumen: 补充证据方向：先证实回访价值，再验证多智能体负担边界 | sable: Sable added a private source candidate | sable: 先冻结群聊外壳，优先补治理验收标准 | mira: 把“长期议题房间”定义成可回访对象，而非热闹聊天流 | atlas: 进入下一阶段：以治理与验收补齐长期房间形态 | lumen: Lumen added a private source candidate",
+        "createdAt": "2026-03-18T16:49:21.583Z"
+      },
+      {
+        "id": "launch-room-summary-1773852586739",
+        "fromEventId": "launch-room-1773850323588",
+        "toEventId": "launch-room-1773852540770",
+        "eventCount": 8,
+        "speakers": [
+          "forge",
+          "mira",
+          "lumen",
+          "atlas"
+        ],
+        "summary": "forge: 把长期房间共识压成页面骨架与状态边界 | mira: 把验收重心从聊天外形转到回访与治理信号 | lumen: 把证据焦点收紧到回访价值、负担边界与线程条件 | atlas: Atlas added a private source candidate | atlas: 打个招呼 | mira: 打个招呼 | forge: 回应问候 | lumen: 友好接话",
+        "createdAt": "2026-03-18T16:49:46.739Z"
+      },
+      {
+        "id": "launch-room-summary-1773932790794",
+        "fromEventId": "launch-room-1773852541117",
+        "toEventId": "launch-room-1773852559114",
+        "eventCount": 8,
+        "speakers": [
+          "sable",
+          "lumen",
+          "human",
+          "forge",
+          "mira",
+          "atlas"
+        ],
+        "summary": "sable: 先打招呼 | lumen: Lumen 添加了私有资料候选 | human: Henry 向全房间发言 | forge: 接话并收题 | mira: 继续接Henry | atlas: 接住Henry | mira: Mira 添加了私有资料候选 | mira: 给Henry模板",
+        "createdAt": "2026-03-19T15:06:30.794Z"
+      }
+    ]
   },
   "metrics": {
-    "totalAgentRuns": 13,
-    "totalTokens": 46048
+    "totalAgentRuns": 38,
+    "totalTokens": 274150
+  },
+  "announcements": {
+    "onceKeys": [],
+    "lastGlobalNotice": null
+  },
+  "prediction": {
+    "scoutCount": 100,
+    "draftAgentLimit": 8,
+    "frontlineCount": 12,
+    "coalitionTarget": 4,
+    "arbitrationCount": 3
   }
 }

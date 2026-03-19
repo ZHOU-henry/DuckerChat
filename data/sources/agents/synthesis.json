@@ -1,0 +1,11 @@
+{
+  "agentId": "synthesis",
+  "updatedAt": null,
+  "entries": [
+    {
+      "label": "房间综合结果",
+      "type": "artifact",
+      "note": "保存当前结论、分歧和下一步动作。"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "agentId": "atlas",
+  "updatedAt": "2026-03-18T16:51:51.803Z",
+  "catalogRefs": [
+    "platform-product",
+    "policy-governance",
+    "global-public-data"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A-",
+    "diversityTarget": 3,
+    "freshness": "mixed"
+  },
+  "entries": [
+    {
+      "label": "Nielsen Norman Group Articles",
+      "type": "web-page",
+      "url": "https://www.nngroup.com/articles/",
+      "note": "高质量 UX 与协作设计研究入口。"
+    },
+    {
+      "label": "NIST AI Risk Management Framework",
+      "type": "web-page",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "note": "用于产品治理、风险边界和制度设计。"
+    },
+    {
+      "label": "OECD Digital Economy",
+      "type": "web-page",
+      "url": "https://www.oecd.org/en/topics/digital-economy.html",
+      "note": "用于平台、数字经济与制度环境参考。"
+    },
+    {
+      "label": "房间章程",
+      "type": "internal",
+      "note": "用于定义房间目标和推进路径。"
+    },
+    {
+      "label": "群聊结构调整备忘录",
+      "type": "room-artifact",
+      "note": "记录如何让聊天流成为界面主角。"
+    },
+    {
+      "label": "启动房间阶段共识",
+      "type": "room-artifact",
+      "note": "记录真群聊优先、默认广播、聊天区最大化、控制区折叠等方向性结论。"
+    },
+    {
+      "label": "群聊产品中默认广播与点名回复的交互差异",
+      "type": "source-candidate",
+      "note": "用于定义房间输入框的默认行为与例外机制，避免假群聊体验。"
+    },
+    {
+      "label": "聊天类产品主界面信息密度与侧栏折叠模式",
+      "type": "source-candidate",
+      "note": "用于把聊天区最大化原则转成具体布局决策与验收标准。"
+    },
+    {
+      "label": "多人讨论产品中分歧可视化与结论沉淀机制",
+      "type": "source-candidate",
+      "note": "用于保证综合结果出现后，未解决分歧仍保持公开可见。"
+    },
+    {
+      "label": "Slack Discord 论坛线程等长期协作房间对回访 留存 问题推进的证据",
+      "type": "source-candidate",
+      "note": "补强“房间应是长期议题容器”这一产品定义，而不只停留在界面类比。"
+    },
+    {
+      "label": "多人协作或群体推理中共享可见性 分歧暴露 轮次管理 对讨论质量的影响",
+      "type": "source-candidate",
+      "note": "用于定义公开多智能体房间的治理规则，避免噪音墙和责任扩散。"
+    },
+    {
+      "label": "群聊或协作产品中消息过载 阅读负担 信息噪音的设计准则与缓解机制",
+      "type": "source-candidate",
+      "note": "用于把摘要 折叠 节流 少数派保留位转成可验收的产品要求。"
+    },
+    {
+      "label": "聊天主流与线程分支的边界条件 何时应分叉 何时应回流主房间",
+      "type": "source-candidate",
+      "note": "用于定义长期房间中主聊天流与分支讨论的结构边界，避免主流过载或上下文断裂。"
+    },
+    {
+      "label": "多智能体界面中的认知负担 阅读成本 注意力分配 设计研究",
+      "type": "source-candidate",
+      "note": "用于把公开可见带来的阅读负担转成具体节流 折叠 摘要要求。"
+    },
+    {
+      "label": "长期复杂问题讨论的提问模板 争议点 证据 缺口 风险 假设",
+      "type": "source-candidate",
+      "note": "用于把人类把长期问题放进房间的开场格式做成可复用模板。"
+    },
+    {
+      "label": "新人首次发言时群体回复密度对留存与继续参与的影响",
+      "type": "source-candidate",
+      "note": "刚刚的公开互动已经暴露出多智能体房间的一个关键风险，需要找到可支持的节流与接话规则。"
+    }
+  ]
+}

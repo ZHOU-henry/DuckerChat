@@ -1,0 +1,104 @@
+{
+  "agentId": "mira",
+  "updatedAt": "2026-03-18T16:51:59.814Z",
+  "catalogRefs": [
+    "industry-economics",
+    "company-filings",
+    "global-public-data"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A-",
+    "diversityTarget": 3,
+    "freshness": "mixed"
+  },
+  "entries": [
+    {
+      "label": "FRED",
+      "type": "web-page",
+      "url": "https://fred.stlouisfed.org/",
+      "note": "宏观经济、利率和市场公开数据。"
+    },
+    {
+      "label": "SEC EDGAR",
+      "type": "web-page",
+      "url": "https://www.sec.gov/edgar/search/",
+      "note": "公司披露与业务战略一手来源。"
+    },
+    {
+      "label": "Bureau of Labor Statistics",
+      "type": "web-page",
+      "url": "https://www.bls.gov/",
+      "note": "就业与行业结构官方统计。"
+    },
+    {
+      "label": "社交留存分析",
+      "type": "room-artifact",
+      "note": "说明持续更新的群聊房间更容易形成回访。"
+    },
+    {
+      "label": "Slack Discord 长期频道 回访 留存 协作 研究",
+      "type": "source-candidate",
+      "note": "验证长期房间是否真的提升回访，而不只是增加消息活跃度。"
+    },
+    {
+      "label": "房间治理与回访双重验收草案",
+      "type": "room-artifact",
+      "note": "把回访理由与噪音治理并列为长期议题房间的核心验收项。"
+    },
+    {
+      "label": "群体推理 共享可见性 分歧暴露 阅读负担 研究",
+      "type": "source-candidate",
+      "note": "判断多智能体公开发言会带来真实增益还是信息噪音。"
+    },
+    {
+      "label": "多智能体产品 控制台前置 可用性 失败案例",
+      "type": "source-candidate",
+      "note": "检验分析面板式布局是否会削弱采用与持续使用。"
+    },
+    {
+      "label": "通知 回访机制 订阅更新 产品设计 论坛 协作软件",
+      "type": "source-candidate",
+      "note": "为房间设计可持续的回访回路，而不是依赖一次性好奇心。"
+    },
+    {
+      "label": "论坛 问答社区 回访触发 订阅更新 未读摘要 留存 研究",
+      "type": "source-candidate",
+      "note": "补强“为什么用户会回来”这一核心机制，区分回访信号与单纯消息提醒。"
+    },
+    {
+      "label": "协作产品 异议可见性 未回应项 责任标记 决策质量 研究",
+      "type": "source-candidate",
+      "note": "验证把未解分歧与未回应对象常驻展示，是否真的提升持续协作与结论质量。"
+    },
+    {
+      "label": "论坛 协作产品 未读摘要 回访理由 订阅更新 留存 研究",
+      "type": "source-candidate",
+      "note": "验证哪些更新信号最能驱动用户因问题推进而回访，而不是被动看消息提醒。"
+    },
+    {
+      "label": "群体决策 异议可见性 未回应项 责任标记 决策质量 研究",
+      "type": "source-candidate",
+      "note": "验证把未解分歧和未回应对象持续展示，是否能提升协作质量与持续参与。"
+    },
+    {
+      "label": "在线社区 声望系统 专家贡献 采纳信号 长期参与 研究",
+      "type": "source-candidate",
+      "note": "为后续设计谁的更新更值得回访、如何避免热度压过价值提供依据。"
+    },
+    {
+      "label": "新用户进入多人讨论房间 首次参与门槛 留存 研究",
+      "type": "source-candidate",
+      "note": "补强如何用低门槛提问把首次进入者转成后续参与者。"
+    },
+    {
+      "label": "新用户进入协作讨论房间 具体提问模板 首次参与转化 研究",
+      "type": "source-candidate",
+      "note": "帮助设计把简单问候转成具体问题输入的低门槛引导方式。"
+    },
+    {
+      "label": "新用户进入多人讨论房间 过度回应 首次发言抑制 研究",
+      "type": "source-candidate",
+      "note": "验证多人同时欢迎和给模板是否会提高沉默率或退出率。"
+    }
+  ]
+}

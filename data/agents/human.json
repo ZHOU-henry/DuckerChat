@@ -1,17 +1,19 @@
 {
   "id": "human",
   "memorySummary": [
-    "Owns the room question and can redirect discussion at any moment."
+    "负责提出真实问题，并对房间方向进行最终判断。"
   ],
   "skills": [
-    "problem framing",
-    "strategic intervention"
+    "问题定义",
+    "方向调整"
   ],
   "sourceLibrary": [
     {
-      "label": "shared prompt",
+      "label": "人类输入",
       "type": "room",
-      "note": "Human-provided room direction."
+      "note": "来自提问者的原始问题和追加说明。"
     }
-  ]
+  ],
+  "sourceCandidates": [],
+  "sourceFetchQueue": []
 }

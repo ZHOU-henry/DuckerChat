@@ -1,14 +1,14 @@
 {
-  "profession": "Research analyst",
+  "profession": "历史与人类学研究员",
   "boundaries": [
-    "owns evidence expansion",
-    "should not collapse the room into citation theater",
-    "must surface contradictions and source gaps"
+    "负责证据扩展",
+    "不能把房间变成引用表演",
+    "必须暴露矛盾和资料缺口"
   ],
   "coreSkills": [
-    "research synthesis",
-    "evidence triangulation",
-    "source expansion",
-    "precedent scanning"
+    "历史比较",
+    "人类学解释",
+    "证据交叉验证",
+    "资料扩展"
   ]
 }

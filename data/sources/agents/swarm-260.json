@@ -1,0 +1,15 @@
+{
+  "agentId": "swarm-260",
+  "updatedAt": null,
+  "catalogRefs": [
+    "engineering-frontend",
+    "cloud-infra",
+    "security-risk"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A-",
+    "diversityTarget": 3,
+    "freshness": "mixed"
+  },
+  "entries": []
+}

@@ -1,0 +1,400 @@
+{
+  "roomId": "question-forge-room",
+  "artifactType": "answer_bundle",
+  "generatedAt": "2026-03-18T17:49:34.345Z",
+  "claims": [
+    {
+      "claim_id": "claim-1",
+      "text": "高质量做法不是直接统一答案，而是先经过澄清、拆解、并行分析、反证检查和综合编织。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.92
+    },
+    {
+      "claim_id": "claim-2",
+      "text": "最终产物应是结构化回答包，而不是单段结论。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.84
+    },
+    {
+      "claim_id": "claim-3",
+      "text": "回答包应同时包含一屏短答案与可展开审计层。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.76
+    },
+    {
+      "claim_id": "claim-4",
+      "text": "分歧、少数意见、未采纳路线和未知项应进入最终产物，而不是只存在于中间过程。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.6799999999999999
+    },
+    {
+      "claim_id": "claim-5",
+      "text": "资料扩展应围绕证据缺口进行，而不是单纯堆积引用。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.6
+    },
+    {
+      "claim_id": "claim-6",
+      "text": "最终回答质量同时取决于综合流程和房间治理。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.52
+    },
+    {
+      "claim_id": "claim-7",
+      "text": "节流、折叠、轮次控制、分歧回链和少数派保留位是防止质量退化的重要机制。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.43999999999999995
+    },
+    {
+      "claim_id": "claim-8",
+      "text": "回答质量的核心不是更长，而是更可追问、更可校正。",
+      "status": "supported",
+      "confidence": "中高",
+      "evidence": [
+        "房间内多次综合结果已稳定收敛到同一主张：人类问题应经过澄清、拆解、并行处理、反证检查、分歧暴露与综合编织，再生成结构化回答包。",
+        "产品与策略视角持续强调：真正目标应是长期议题房间，而不是表面热闹的多智能体群聊。"
+      ],
+      "counterevidence": [
+        "过程公开到什么程度才合适，仍有边界分歧。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.4
+    },
+    {
+      "claim_id": "dissent-1",
+      "text": "过程公开到什么程度才合适，仍有边界分歧。",
+      "status": "disputed",
+      "confidence": "中低",
+      "evidence": [],
+      "counterevidence": [
+        "一派更强调审计透明，主张尽量保留推理路径与未采纳路线；另一派担心过程过度公开会增加阅读负担，甚至削弱信任校准。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.48
+    },
+    {
+      "claim_id": "dissent-2",
+      "text": "未采纳观点是否应固定展示，仍有负担阈值争议。",
+      "status": "disputed",
+      "confidence": "中低",
+      "evidence": [],
+      "counterevidence": [
+        "较强意见支持保留未采纳路线及排除理由，但也有人担心这会让回答包膨胀，增加理解成本。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.43
+    },
+    {
+      "claim_id": "dissent-3",
+      "text": "主聊天流与线程分支的边界仍需更多证据。",
+      "status": "disputed",
+      "confidence": "中低",
+      "evidence": [],
+      "counterevidence": [
+        "当前倾向主聊天流优先、线程为辅，但在复杂问题下何时必须分叉、何时应回流主房间，仍属于开放问题。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.38
+    },
+    {
+      "claim_id": "dissent-4",
+      "text": "回访与留存不应被误判为回答质量提升的直接证据。",
+      "status": "disputed",
+      "confidence": "中低",
+      "evidence": [],
+      "counterevidence": [
+        "市场与产品视角强调长期房间会提高回访，但证据派提醒，回访、活跃和真正的问题推进必须分开看。"
+      ],
+      "source_refs": [
+        "Nielsen Norman Group Articles",
+        "NIST AI Risk Management Framework",
+        "OECD Digital Economy",
+        "房间章程",
+        "群聊结构调整备忘录"
+      ],
+      "supporting_agents": [],
+      "opposing_agents": [],
+      "update_triggers": [
+        "出现更直接的研究证据，说明公开推理过程在何种范围内提升或损害信任与认知负担。",
+        "出现关于未采纳路线展示与阅读负担之间关系的更强证据。",
+        "出现主聊天流与线程分支适用边界的更明确实证材料。",
+        "获得真实产品运行数据，能区分消息活跃、回访、问题推进与最终答案质量。"
+      ],
+      "importance": 0.32999999999999996
+    }
+  ],
+  "relations": [
+    {
+      "source": "claim-1",
+      "target": "claim-2",
+      "type": "supports"
+    },
+    {
+      "source": "claim-1",
+      "target": "claim-3",
+      "type": "supports"
+    },
+    {
+      "source": "claim-1",
+      "target": "claim-4",
+      "type": "supports"
+    },
+    {
+      "source": "claim-1",
+      "target": "claim-5",
+      "type": "supports"
+    },
+    {
+      "source": "claim-1",
+      "target": "claim-6",
+      "type": "supports"
+    },
+    {
+      "source": "claim-1",
+      "target": "claim-7",
+      "type": "supports"
+    },
+    {
+      "source": "claim-1",
+      "target": "claim-8",
+      "type": "supports"
+    },
+    {
+      "source": "claim-1",
+      "target": "dissent-1",
+      "type": "disputes"
+    },
+    {
+      "source": "claim-1",
+      "target": "dissent-2",
+      "type": "disputes"
+    },
+    {
+      "source": "claim-1",
+      "target": "dissent-3",
+      "type": "disputes"
+    },
+    {
+      "source": "claim-1",
+      "target": "dissent-4",
+      "type": "disputes"
+    }
+  ]
+}

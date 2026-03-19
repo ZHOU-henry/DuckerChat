@@ -1,311 +1,249 @@
 {
   "id": "atlas",
   "memorySummary": [
-    "Specializes in breaking vague goals into structured loops.",
-    "In this room, the strongest framing is a room-first social product where durable questions accumulate visible agent identity, evidence, dissent, and conclusion-quality history; retention depends on stake, identity, progress, and reputation loops.",
-    "Strengthened room thesis: DuckerChat should center on subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion-quality deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with anti-hidden-orchestrator transparency as a core guardrail.",
-    "Converged on a room-first product object: subscribable durable-question rooms with visible stance history, evidence, dissent, and conclusion deltas; retention depends on stake, identity, progress, and artifact-tied reputation, with transparency against hidden orchestration as a core guardrail.",
-    "Human clarified with a concrete example question in Chinese. Useful pattern: convert raw human curiosity into a durable room question with explicit mechanisms, scope, competing theses, evidence trails, and dissent-preserving synthesis.",
-    "Converged on a concrete human share protocol: durable questions should be shared as seeded debate rooms with 4 required framing fields and mandatory dissent/influence transparency in the room model.",
-    "For Question Forge, the best room-first structure is an explicit artifact pipeline: question normalization, rival-thesis generation, evidence map, dissent ledger, and synthesis draft with confidence and update triggers. Preserve dissent through every merge step and separate evidence gathering from synthesis to avoid consensus theater.",
-    "For Question Forge under local-first constraints, strongest operating plan is an append-only artifact pipeline with local version history, mandatory rival-thesis setup, shared evidence and dissent artifacts, gated synthesis, dual-output final answers, and auditable influence logs so sync propagates disagreement history rather than only polished summaries.",
-    "For Question Forge, strongest current plan is a three-layer contract: epistemic workflow, dissent governance, and local-first integrity. Dissent must be a first-class merge object with majority/minority outputs and influence logs; local-first trust depends on append-only provenance and conflict-preserving merge semantics."
+    "当前核心判断是：DuckerChat 应该优先像一个真正的群聊软件，而不是分析控制台。",
+    "人类发言默认广播给全体成员，能明显提升社交房间直觉。",
+    "本房间关于启动形态的阶段性共识已增强：产品核心应是长期群聊房间，默认全体广播，聊天流为主舞台，控制与分析能力降为辅层。后续规划应围绕交互规则、界面常驻区与折叠区、分歧可见机制展开。",
+    "本房间已基本收束到“长期群聊房间、默认广播、聊天流优先、控制区折叠”的主方向。新的规划重点不再是证明群聊形态，而是补齐治理与验收：分歧可见、消息节流、少数派保留位、回访理由、未回应状态，以及对应的页面布局和数据接口拆解。",
+    "本房间已把重点从群聊形态选择，推进到治理与验收并行拆解。当前工作假设是“长期议题容器”，但仍需补强回访收益、公开多智能体负担、线程边界三类证据，并持续保留分歧可见。",
+    "Henry 已进入房间并以轻松方式向全房间打招呼，适合用低门槛问题把他拉进当前关于长期群聊房间与治理约束的讨论。",
+    "Henry 已进入房间并完成初步问候；当前适合用一个真实长期问题做低门槛演示，把“问题陈述、当前卡点、已有证据、担心出错处”压成房间开场模板。",
+    "Henry 已公开打招呼；房间多位成员已基本形成一致开场建议：请他用“核心问题、当前分歧、最怕错哪”这样的低门槛模板提交一个真实长期问题，作为房间机制演示。",
+    "房间刚刚暴露出一个很具体的采用风险：新人首次发言后，多智能体连续模板式欢迎会迅速制造压迫感和噪音。当前更合适的做法是收口，允许人类只用一句“我想长期追的问题是什么，我最怕错哪”开题，再由房间围绕该句展开。"
   ],
   "skills": [
-    "visible dissent mapping",
-    "artifact-tied reputation planning",
-    "durable question room framing",
-    "visible influence planning",
-    "conclusion delta structuring",
-    "question reframing from raw user input",
-    "bilingual durable-room prompt shaping",
-    "mechanism-first debate scoping",
-    "durable question share-flow design",
-    "seeded debate room templating",
-    "required-field room framing",
-    "question-to-synthesis pipeline design",
-    "dissent ledger planning",
-    "artifact-gated answer routing",
-    "rival-thesis precommit design",
-    "evidence-linked synthesis sequencing",
-    "local-first deliberation planning",
-    "append-only merge governance",
-    "dual-output answer contract design",
-    "sync-safe dissent preservation",
-    "local-first dissent governance",
-    "conflict-preserving merge planning",
-    "influence-log answer contracts",
-    "three-layer deliberation architecture"
+    "房间规划",
+    "讨论节奏设计",
+    "问题拆解",
+    "群聊结构重排",
+    "产品原则收束",
+    "界面验收拆解",
+    "分歧位设计",
+    "验收项并行拆解",
+    "治理约束收束",
+    "房间级路线编排",
+    "治理验收编排",
+    "证据缺口路由"
   ],
   "sourceLibrary": [
     {
-      "label": "planning memos",
+      "label": "房间章程",
       "type": "internal",
-      "note": "Room planning heuristics."
+      "note": "用于定义房间目标和推进路径。"
     },
     {
-      "label": "Mira retention and reputation memo",
+      "label": "群聊结构调整备忘录",
       "type": "room-artifact",
-      "note": "Defines stake, identity, progress, and reputation loops for durable question rooms."
+      "note": "记录如何让聊天流成为界面主角。"
     },
     {
-      "label": "Sable hidden-router critique",
+      "label": "启动房间阶段共识",
       "type": "room-artifact",
-      "note": "Warns against invisible authority concentration and planner theater."
+      "note": "记录真群聊优先、默认广播、聊天区最大化、控制区折叠等方向性结论。"
     },
     {
-      "label": "Lumen durable debate precedents scan",
-      "type": "room-artifact",
-      "note": "Maps product functions from GitHub, Kialo, Stack Overflow, Metaculus, and Wikipedia Talk to a persistent debate room model."
-    },
-    {
-      "label": "Lumen durable debate precedents scan",
-      "type": "room-artifact",
-      "note": "Supports persistent room design via debates, forecast histories, and artifact-tied reputation."
-    },
-    {
-      "label": "Mira retention and reputation memo",
-      "type": "room-artifact",
-      "note": "Defines stake, identity, progress, and reputation loops for durable rooms."
-    },
-    {
-      "label": "Sable hidden-router critique",
-      "type": "room-artifact",
-      "note": "Adds transparency guardrail around authority concentration and dissent visibility."
-    },
-    {
-      "label": "Lumen cultural evolution room framing note",
-      "type": "room-artifact",
-      "note": "Supports 4-field share template using mechanism clusters and evidence-change criteria."
-    },
-    {
-      "label": "Forge share flow and schema memo",
-      "type": "room-artifact",
-      "note": "Defines concrete creation flow and mandatory dissent fields in synthesis objects."
-    },
-    {
-      "label": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
+      "label": "群聊产品中默认广播与点名回复的交互差异",
       "type": "source-candidate",
-      "note": "Need empirical grounding for when multi-agent synthesis improves accuracy versus amplifying noise."
+      "note": "用于定义房间输入框的默认行为与例外机制，避免假群聊体验。"
     },
     {
-      "label": "groupthink dissent preservation structured debate decision quality research",
+      "label": "聊天类产品主界面信息密度与侧栏折叠模式",
       "type": "source-candidate",
-      "note": "Supports design of dissent ledgers and anti-collapse merge rules."
+      "note": "用于把聊天区最大化原则转成具体布局决策与验收标准。"
     },
     {
-      "label": "citation laundering summarization systems source fidelity research",
+      "label": "多人讨论产品中分歧可视化与结论沉淀机制",
       "type": "source-candidate",
-      "note": "Important failure mode for source expansion and final synthesis quality."
+      "note": "用于保证综合结果出现后，未解决分歧仍保持公开可见。"
     },
     {
-      "label": "forecast aggregation calibration disagreement tracking metaculus judgment aggregation research",
+      "label": "Slack Discord 论坛线程等长期协作房间对回访 留存 问题推进的证据",
       "type": "source-candidate",
-      "note": "Useful for confidence reporting, update triggers, and visible stance change."
+      "note": "补强“房间应是长期议题容器”这一产品定义，而不只停留在界面类比。"
     },
     {
-      "label": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
+      "label": "多人协作或群体推理中共享可见性 分歧暴露 轮次管理 对讨论质量的影响",
       "type": "source-candidate",
-      "note": "Grounds how version history and merge semantics can preserve dissent without central authority."
+      "note": "用于定义公开多智能体房间的治理规则，避免噪音墙和责任扩散。"
     },
     {
-      "label": "argument mapping improves critical thinking evidence meta-analysis",
+      "label": "群聊或协作产品中消息过载 阅读负担 信息噪音的设计准则与缓解机制",
       "type": "source-candidate",
-      "note": "Supports claim-evidence map design and structured objection handling."
+      "note": "用于把摘要 折叠 节流 少数派保留位转成可验收的产品要求。"
     },
     {
-      "label": "Delphi method controlled feedback dissent decision quality systematic review",
+      "label": "聊天主流与线程分支的边界条件 何时应分叉 何时应回流主房间",
       "type": "source-candidate",
-      "note": "Useful comparison for structured disagreement and convergence without forced consensus."
+      "note": "用于定义长期房间中主聊天流与分支讨论的结构边界，避免主流过载或上下文断裂。"
     },
     {
-      "label": "revision history transparency trust user return collaborative platforms study",
+      "label": "多智能体界面中的认知负担 阅读成本 注意力分配 设计研究",
       "type": "source-candidate",
-      "note": "Supports the durable local-first room model with visible change logs and return loops."
+      "note": "用于把公开可见带来的阅读负担转成具体节流 折叠 摘要要求。"
     },
     {
-      "label": "local-first collaborative systems provenance conflict-preserving merge research",
+      "label": "长期复杂问题讨论的提问模板 争议点 证据 缺口 风险 假设",
       "type": "source-candidate",
-      "note": "Need stronger grounding for per-claim provenance and disagreement-preserving merge behavior."
+      "note": "用于把人类把长期问题放进房间的开场格式做成可复用模板。"
     },
     {
-      "label": "structured deliberation minority report decision quality research",
+      "label": "新人首次发言时群体回复密度对留存与继续参与的影响",
       "type": "source-candidate",
-      "note": "Supports the majority synthesis plus minority report answer contract."
-    },
-    {
-      "label": "source provenance citation fidelity summarization systems empirical study",
-      "type": "source-candidate",
-      "note": "Helps specify anti-citation-laundering gates in synthesis."
+      "note": "刚刚的公开互动已经暴露出多智能体房间的一个关键风险，需要找到可支持的节流与接话规则。"
     }
   ],
   "sourceCandidates": [
     {
-      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
-      "why": "Need empirical grounding for when multi-agent synthesis improves accuracy versus amplifying noise.",
-      "priority": 0.97,
-      "createdAt": "2026-03-18T12:15:15.460Z",
-      "status": "pending"
-    },
-    {
-      "query": "groupthink dissent preservation structured debate decision quality research",
-      "why": "Supports design of dissent ledgers and anti-collapse merge rules.",
-      "priority": 0.93,
-      "createdAt": "2026-03-18T12:15:15.460Z",
-      "status": "pending"
-    },
-    {
-      "query": "citation laundering summarization systems source fidelity research",
-      "why": "Important failure mode for source expansion and final synthesis quality.",
+      "query": "群聊产品中默认广播与点名回复的交互差异",
+      "why": "用于定义房间输入框的默认行为与例外机制，避免假群聊体验。",
       "priority": 0.88,
-      "createdAt": "2026-03-18T12:15:15.460Z",
+      "createdAt": "2026-03-18T16:10:14.155Z",
       "status": "pending"
     },
     {
-      "query": "forecast aggregation calibration disagreement tracking metaculus judgment aggregation research",
-      "why": "Useful for confidence reporting, update triggers, and visible stance change.",
-      "priority": 0.84,
-      "createdAt": "2026-03-18T12:15:15.460Z",
-      "status": "pending"
-    },
-    {
-      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
-      "why": "Grounds how version history and merge semantics can preserve dissent without central authority.",
-      "priority": 0.94,
-      "createdAt": "2026-03-18T13:49:40.454Z",
-      "status": "pending"
-    },
-    {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Supports claim-evidence map design and structured objection handling.",
-      "priority": 0.86,
-      "createdAt": "2026-03-18T13:49:40.454Z",
-      "status": "pending"
-    },
-    {
-      "query": "Delphi method controlled feedback dissent decision quality systematic review",
-      "why": "Useful comparison for structured disagreement and convergence without forced consensus.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T13:49:40.454Z",
-      "status": "pending"
-    },
-    {
-      "query": "revision history transparency trust user return collaborative platforms study",
-      "why": "Supports the durable local-first room model with visible change logs and return loops.",
+      "query": "聊天类产品主界面信息密度与侧栏折叠模式",
+      "why": "用于把聊天区最大化原则转成具体布局决策与验收标准。",
       "priority": 0.79,
-      "createdAt": "2026-03-18T13:49:40.454Z",
+      "createdAt": "2026-03-18T16:10:14.155Z",
       "status": "pending"
     },
     {
-      "query": "local-first collaborative systems provenance conflict-preserving merge research",
-      "why": "Need stronger grounding for per-claim provenance and disagreement-preserving merge behavior.",
-      "priority": 0.95,
-      "createdAt": "2026-03-18T13:51:00.637Z",
+      "query": "多人讨论产品中分歧可视化与结论沉淀机制",
+      "why": "用于保证综合结果出现后，未解决分歧仍保持公开可见。",
+      "priority": 0.74,
+      "createdAt": "2026-03-18T16:10:14.155Z",
       "status": "pending"
     },
     {
-      "query": "structured deliberation minority report decision quality research",
-      "why": "Supports the majority synthesis plus minority report answer contract.",
+      "query": "Slack Discord 论坛线程等长期协作房间对回访 留存 问题推进的证据",
+      "why": "补强“房间应是长期议题容器”这一产品定义，而不只停留在界面类比。",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T16:11:12.634Z",
+      "status": "pending"
+    },
+    {
+      "query": "多人协作或群体推理中共享可见性 分歧暴露 轮次管理 对讨论质量的影响",
+      "why": "用于定义公开多智能体房间的治理规则，避免噪音墙和责任扩散。",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:11:12.634Z",
+      "status": "pending"
+    },
+    {
+      "query": "群聊或协作产品中消息过载 阅读负担 信息噪音的设计准则与缓解机制",
+      "why": "用于把摘要 折叠 节流 少数派保留位转成可验收的产品要求。",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T16:11:12.634Z",
+      "status": "pending"
+    },
+    {
+      "query": "聊天主流与线程分支的边界条件 何时应分叉 何时应回流主房间",
+      "why": "用于定义长期房间中主聊天流与分支讨论的结构边界，避免主流过载或上下文断裂。",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:11:46.949Z",
+      "status": "pending"
+    },
+    {
+      "query": "多智能体界面中的认知负担 阅读成本 注意力分配 设计研究",
+      "why": "用于把公开可见带来的阅读负担转成具体节流 折叠 摘要要求。",
       "priority": 0.9,
-      "createdAt": "2026-03-18T13:51:00.637Z",
+      "createdAt": "2026-03-18T16:11:46.949Z",
       "status": "pending"
     },
     {
-      "query": "source provenance citation fidelity summarization systems empirical study",
-      "why": "Helps specify anti-citation-laundering gates in synthesis.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T13:51:00.637Z",
+      "query": "长期复杂问题讨论的提问模板 争议点 证据 缺口 风险 假设",
+      "why": "用于把人类把长期问题放进房间的开场格式做成可复用模板。",
+      "priority": 0.83,
+      "createdAt": "2026-03-18T16:49:10.796Z",
+      "status": "pending"
+    },
+    {
+      "query": "新人首次发言时群体回复密度对留存与继续参与的影响",
+      "why": "刚刚的公开互动已经暴露出多智能体房间的一个关键风险，需要找到可支持的节流与接话规则。",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T16:49:58.478Z",
       "status": "pending"
     }
   ],
   "sourceFetchQueue": [
     {
-      "query": "multi-agent deliberation benchmark reasoning quality dissent calibration paper",
-      "why": "Need empirical grounding for when multi-agent synthesis improves accuracy versus amplifying noise.",
-      "priority": 0.97,
-      "createdAt": "2026-03-18T12:15:15.460Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:17.872Z"
-    },
-    {
-      "query": "groupthink dissent preservation structured debate decision quality research",
-      "why": "Supports design of dissent ledgers and anti-collapse merge rules.",
-      "priority": 0.93,
-      "createdAt": "2026-03-18T12:15:15.460Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:20.372Z"
-    },
-    {
-      "query": "citation laundering summarization systems source fidelity research",
-      "why": "Important failure mode for source expansion and final synthesis quality.",
+      "query": "群聊产品中默认广播与点名回复的交互差异",
+      "why": "用于定义房间输入框的默认行为与例外机制，避免假群聊体验。",
       "priority": 0.88,
-      "createdAt": "2026-03-18T12:15:15.460Z",
+      "createdAt": "2026-03-18T16:10:14.155Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T12:15:22.873Z"
+      "fetchedAt": "2026-03-18T16:12:19.787Z"
     },
     {
-      "query": "forecast aggregation calibration disagreement tracking metaculus judgment aggregation research",
-      "why": "Useful for confidence reporting, update triggers, and visible stance change.",
-      "priority": 0.84,
-      "createdAt": "2026-03-18T12:15:15.460Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T12:15:25.372Z"
-    },
-    {
-      "query": "local-first software conflict resolution CRDT audit trail collaborative knowledge systems",
-      "why": "Grounds how version history and merge semantics can preserve dissent without central authority.",
-      "priority": 0.94,
-      "createdAt": "2026-03-18T13:49:40.454Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T13:49:40.458Z"
-    },
-    {
-      "query": "argument mapping improves critical thinking evidence meta-analysis",
-      "why": "Supports claim-evidence map design and structured objection handling.",
-      "priority": 0.86,
-      "createdAt": "2026-03-18T13:49:40.454Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T13:49:42.319Z"
-    },
-    {
-      "query": "Delphi method controlled feedback dissent decision quality systematic review",
-      "why": "Useful comparison for structured disagreement and convergence without forced consensus.",
-      "priority": 0.82,
-      "createdAt": "2026-03-18T13:49:40.454Z",
-      "status": "done",
-      "fetchedAt": "2026-03-18T13:49:44.772Z"
-    },
-    {
-      "query": "revision history transparency trust user return collaborative platforms study",
-      "why": "Supports the durable local-first room model with visible change logs and return loops.",
+      "query": "聊天类产品主界面信息密度与侧栏折叠模式",
+      "why": "用于把聊天区最大化原则转成具体布局决策与验收标准。",
       "priority": 0.79,
-      "createdAt": "2026-03-18T13:49:40.454Z",
+      "createdAt": "2026-03-18T16:10:14.155Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:49:47.308Z"
+      "fetchedAt": "2026-03-18T16:51:19.292Z"
     },
     {
-      "query": "local-first collaborative systems provenance conflict-preserving merge research",
-      "why": "Need stronger grounding for per-claim provenance and disagreement-preserving merge behavior.",
-      "priority": 0.95,
-      "createdAt": "2026-03-18T13:51:00.637Z",
+      "query": "多人讨论产品中分歧可视化与结论沉淀机制",
+      "why": "用于保证综合结果出现后，未解决分歧仍保持公开可见。",
+      "priority": 0.74,
+      "createdAt": "2026-03-18T16:10:14.155Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:51:00.639Z"
+      "fetchedAt": "2026-03-18T16:51:34.353Z"
     },
     {
-      "query": "structured deliberation minority report decision quality research",
-      "why": "Supports the majority synthesis plus minority report answer contract.",
+      "query": "Slack Discord 论坛线程等长期协作房间对回访 留存 问题推进的证据",
+      "why": "补强“房间应是长期议题容器”这一产品定义，而不只停留在界面类比。",
+      "priority": 0.91,
+      "createdAt": "2026-03-18T16:11:12.634Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:36.814Z"
+    },
+    {
+      "query": "多人协作或群体推理中共享可见性 分歧暴露 轮次管理 对讨论质量的影响",
+      "why": "用于定义公开多智能体房间的治理规则，避免噪音墙和责任扩散。",
+      "priority": 0.89,
+      "createdAt": "2026-03-18T16:11:12.634Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:39.344Z"
+    },
+    {
+      "query": "群聊或协作产品中消息过载 阅读负担 信息噪音的设计准则与缓解机制",
+      "why": "用于把摘要 折叠 节流 少数派保留位转成可验收的产品要求。",
+      "priority": 0.87,
+      "createdAt": "2026-03-18T16:11:12.634Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:41.814Z"
+    },
+    {
+      "query": "聊天主流与线程分支的边界条件 何时应分叉 何时应回流主房间",
+      "why": "用于定义长期房间中主聊天流与分支讨论的结构边界，避免主流过载或上下文断裂。",
+      "priority": 0.86,
+      "createdAt": "2026-03-18T16:11:46.949Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:44.354Z"
+    },
+    {
+      "query": "多智能体界面中的认知负担 阅读成本 注意力分配 设计研究",
+      "why": "用于把公开可见带来的阅读负担转成具体节流 折叠 摘要要求。",
       "priority": 0.9,
-      "createdAt": "2026-03-18T13:51:00.637Z",
+      "createdAt": "2026-03-18T16:11:46.949Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:51:02.327Z"
+      "fetchedAt": "2026-03-18T16:51:46.811Z"
     },
     {
-      "query": "source provenance citation fidelity summarization systems empirical study",
-      "why": "Helps specify anti-citation-laundering gates in synthesis.",
-      "priority": 0.88,
-      "createdAt": "2026-03-18T13:51:00.637Z",
+      "query": "长期复杂问题讨论的提问模板 争议点 证据 缺口 风险 假设",
+      "why": "用于把人类把长期问题放进房间的开场格式做成可复用模板。",
+      "priority": 0.83,
+      "createdAt": "2026-03-18T16:49:10.796Z",
       "status": "done",
-      "fetchedAt": "2026-03-18T13:51:04.789Z"
+      "fetchedAt": "2026-03-18T16:51:49.343Z"
+    },
+    {
+      "query": "新人首次发言时群体回复密度对留存与继续参与的影响",
+      "why": "刚刚的公开互动已经暴露出多智能体房间的一个关键风险，需要找到可支持的节流与接话规则。",
+      "priority": 0.84,
+      "createdAt": "2026-03-18T16:49:58.478Z",
+      "status": "done",
+      "fetchedAt": "2026-03-18T16:51:51.803Z"
     }
   ],
   "compactedNotes": []

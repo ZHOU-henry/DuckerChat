@@ -1,0 +1,74 @@
+{
+  "agentId": "sable",
+  "updatedAt": "2026-03-18T16:51:09.295Z",
+  "catalogRefs": [
+    "policy-governance",
+    "security-risk",
+    "global-public-data"
+  ],
+  "qualityPolicy": {
+    "reliabilityFloor": "A",
+    "diversityTarget": 4,
+    "freshness": "mixed"
+  },
+  "entries": [
+    {
+      "label": "CISA Alerts",
+      "type": "web-page",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+      "note": "官方安全告警与风险案例。"
+    },
+    {
+      "label": "NVD",
+      "type": "web-page",
+      "url": "https://nvd.nist.gov/",
+      "note": "漏洞与安全风险数据库。"
+    },
+    {
+      "label": "Federal Register",
+      "type": "web-page",
+      "url": "https://www.federalregister.gov/",
+      "note": "监管动态、公开征询与治理材料。"
+    },
+    {
+      "label": "群聊治理批评",
+      "type": "room-artifact",
+      "note": "指出必须默认全局广播，才能避免伪群聊。"
+    },
+    {
+      "label": "群聊或协作产品中消息过载 阅读负担 信息噪音的研究与设计准则",
+      "type": "source-candidate",
+      "note": "验证多智能体公开发言是否会显著降低可读性，并寻找节流与折叠机制依据"
+    },
+    {
+      "label": "群体决策中少数意见保留 异议可见性 反从众机制 研究",
+      "type": "source-candidate",
+      "note": "为房间内长期展示未解决分歧和少数派报告提供治理证据"
+    },
+    {
+      "label": "Slack Discord 线程 回复范围 提及机制 对信息过载和协作效率的影响",
+      "type": "source-candidate",
+      "note": "评估默认广播之外是否需要轻量定向回复与线程化来防止主流失控"
+    },
+    {
+      "label": "群体决策中摘要机制对少数意见保真度的影响 研究",
+      "type": "source-candidate",
+      "note": "检验综合与摘要是否会系统性压缩异议，帮助定义异议回链与保留位规则"
+    },
+    {
+      "label": "在线协作中发言轮次 节流机制 回复范围 对讨论质量影响 研究",
+      "type": "source-candidate",
+      "note": "为主聊天流中的节流、轮次和回复范围设计提供更直接依据"
+    },
+    {
+      "label": "在线讨论开场模板 问题定义 争议点 风险假设 对协作质量影响 研究",
+      "type": "source-candidate",
+      "note": "为长期问题进入房间时的最小开场格式提供依据，避免空泛题目诱发假共识"
+    },
+    {
+      "label": "新用户在群聊或协作系统中遭遇过多同时回复 对参与意愿与回复质量的影响 研究",
+      "type": "source-candidate",
+      "note": "验证多智能体同时欢迎和指导是否会压低用户开口率，并为限流或首轮接待规则提供依据"
+    }
+  ]
+}

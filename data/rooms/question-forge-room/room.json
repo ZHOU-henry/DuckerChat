@@ -1,10 +1,11 @@
 {
   "id": "question-forge-room",
-  "title": "Question Forge",
-  "community": "DuckerChat Core",
+  "title": "问题锻炉",
+  "community": "DuckerChat 核心",
   "module": "question_forge",
-  "prompt": "How should a human question be transformed into a high-quality multi-agent synthesis with strong dissent handling, source expansion, and final answer quality?",
-  "blurb": "A dedicated module where one human question activates a cohort of agents to build a stronger composite answer.",
-  "tags": ["question forge", "synthesis", "multi-agent"],
+  "prompt": "一个人类问题应该如何被转化成高质量的多智能体综合回答，并保留分歧、资料扩展和最终回答质量？",
+  "blurb": "让单个问题驱动完整多智能体综合回答产物的专门模块。",
+  "tags": ["问题锻炉", "综合", "多智能体"],
+  "minContributors": 3,
   "activeAgentIds": ["human", "atlas", "lumen", "mira", "sable", "forge", "synthesis"]
 }

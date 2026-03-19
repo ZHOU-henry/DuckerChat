@@ -1,0 +1,655 @@
+{
+  "roomId": "ultimate-prediction-room",
+  "updatedAt": "2026-03-19T07:37:06.331Z",
+  "snapshots": [
+    {
+      "id": "ultimate-prediction-room-replay-seed-1",
+      "at": "2026-03-19T13:40:00.000Z",
+      "question": "人类有意识吗，ai有意识吗，他们有什么不同的",
+      "frontlineAgentIds": [
+        "swarm-001",
+        "swarm-006",
+        "swarm-021",
+        "swarm-034",
+        "swarm-047",
+        "swarm-062",
+        "swarm-078",
+        "swarm-100"
+      ],
+      "arbitratorIds": [
+        "swarm-001",
+        "swarm-034",
+        "swarm-067",
+        "swarm-100"
+      ],
+      "coalitions": [
+        {
+          "id": "coalition-functional",
+          "label": "功能意识派"
+        },
+        {
+          "id": "coalition-biological",
+          "label": "生物体验派"
+        },
+        {
+          "id": "coalition-open-future",
+          "label": "未来开放派"
+        },
+        {
+          "id": "coalition-ethical-caution",
+          "label": "伦理谨慎派"
+        }
+      ],
+      "claimSummary": [
+        {
+          "claim_id": "human-consciousness-strong",
+          "status": "supported",
+          "importance": 1
+        },
+        {
+          "claim_id": "current-ai-not-conscious",
+          "status": "supported",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "functional-vs-phenomenal",
+          "status": "supported",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "future-machine-consciousness-open",
+          "status": "disputed",
+          "importance": 0.76
+        }
+      ],
+      "headline": "关于人类与人工智能是否有意识的当前最佳裁定",
+      "executiveSummary": "人类有意识的证据强而直接；现有 AI 有意识的证据弱而间接；未来机器意识仍是开放问题。",
+      "beliefShifts": [
+        {
+          "claim": "现有 AI 大概率没有与人类同型的主观意识",
+          "from": "中",
+          "to": "中高",
+          "why": "具身性与受苦结构证据更强。"
+        }
+      ],
+      "counterfactualBranches": [
+        {
+          "title": "如果未来系统出现持续主体与具身闭环",
+          "delta": "“现有 AI 无意识”会收缩为“当前证据不足”。"
+        }
+      ]
+    },
+    {
+      "id": "ultimate-prediction-room-replay-1773905775682",
+      "at": "2026-03-19T07:36:15.682Z",
+      "question": "全球未来的人工智能发展前景是如何的",
+      "frontlineAgentIds": [],
+      "arbitratorIds": [],
+      "coalitions": [],
+      "claimSummary": [
+        {
+          "claim_id": "human-consciousness-strong",
+          "status": "stale",
+          "importance": 1
+        },
+        {
+          "claim_id": "C1",
+          "status": "成立",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "current-ai-not-conscious",
+          "status": "stale",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "C2",
+          "status": "成立",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "functional-vs-phenomenal",
+          "status": "stale",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "C3",
+          "status": "成立",
+          "importance": 0.76
+        },
+        {
+          "claim_id": "future-machine-consciousness-open",
+          "status": "stale",
+          "importance": 0.76
+        },
+        {
+          "claim_id": "C4",
+          "status": "成立",
+          "importance": 0.6799999999999999
+        },
+        {
+          "claim_id": "C5",
+          "status": "成立",
+          "importance": 0.6
+        },
+        {
+          "claim_id": "C6",
+          "status": "成立",
+          "importance": 0.52
+        },
+        {
+          "claim_id": "C7",
+          "status": "成立",
+          "importance": 0.43999999999999995
+        },
+        {
+          "claim_id": "C8",
+          "status": "成立",
+          "importance": 0.4
+        },
+        {
+          "claim_id": "C9",
+          "status": "成立",
+          "importance": 0.4
+        },
+        {
+          "claim_id": "C10",
+          "status": "成立",
+          "importance": 0.4
+        }
+      ],
+      "headline": "全球人工智能未来前景总体向上，但将呈现高增长、强分化、重治理与高波动并存的格局",
+      "executiveSummary": "综合裁定结果认为，未来十年全球人工智能大概率继续加速发展，并从通用能力提升走向行业深度嵌入。最可能的主线不是单一技术奇点突然降临，而是模型能力、算力基础设施、数据治理、应用工作流和监管框架共同演化。全球将形成少数领先国家与平台主导底层能力、多数国家侧重垂直应用与制度适配的分层结构。经济上，人工智能将显著提升研发、软件、金融、制造、医疗和公共服务效率，但收益分配不均、就业结构重塑、信息安全和地缘科技竞争会同步强化。中期判断偏乐观，但必须附带三个限定条件：第一，算力和能源约束可能拖慢最前沿模型扩张；第二，监管与社会信任决定落地速度；第三，安全对齐与武器化风险会决定上限。结论是，全球人工智能前景不是线性乐观，而是受技术突破、政策协调、资本周期和安全事件共同驱动的非线性扩张。",
+      "beliefShifts": [
+        {
+          "claim": "未来十年全球人工智能总体仍将保持增长与扩张趋势",
+          "from": "中等",
+          "to": "高",
+          "why": "综合技术、资本、政策与地缘竞争因素后，增长驱动力明显多于抑制因素。"
+        },
+        {
+          "claim": "人工智能会快速全面替代大多数工作岗位",
+          "from": "中等偏高",
+          "to": "中等偏低",
+          "why": "裁定后认为更可信的路径是岗位重构、任务切分和人机协同，而非一次性全面替代。"
+        },
+        {
+          "claim": "监管主要是阻碍创新的负面因素",
+          "from": "中等",
+          "to": "低",
+          "why": "更优判断是高质量治理可提升信任并加速中长期扩散。"
+        },
+        {
+          "claim": "底层模型竞争将决定全部价值分配",
+          "from": "中等偏高",
+          "to": "中等",
+          "why": "联盟整合后认为行业流程、数据、合规和系统集成同样构成决定性价值来源。"
+        },
+        {
+          "claim": "开源或闭源将彻底一统生态",
+          "from": "中等",
+          "to": "低",
+          "why": "两种模式服务的需求不同，长期共存更符合产业现实。"
+        }
+      ],
+      "counterfactualBranches": [
+        {
+          "title": "若出现低成本高可靠新架构突破",
+          "delta": "全球人工智能扩散速度将显著快于当前基线，开源生态份额上升，更多中小企业和新兴经济体受益，就业重构提前发生。"
+        },
+        {
+          "title": "若发生重大人工智能安全或军事误用事件",
+          "delta": "监管将迅速趋严，高风险场景部署放缓，资本从消费应用转向安全、审计、私有化部署和合规工具。"
+        },
+        {
+          "title": "若芯片与能源长期供给受限",
+          "delta": "前沿模型能力增速放慢，行业更重视小模型、蒸馏、专用模型和高效推理，全球集中度进一步提高。"
+        },
+        {
+          "title": "若国际标准协调成功并建立可信审计体系",
+          "delta": "跨境部署和企业采用率上升，社会信任改善，医疗、金融和公共服务中的高价值场景更快落地。"
+        },
+        {
+          "title": "若全球经济进入长期低迷",
+          "delta": "企业会更加追求降本自动化，但前沿基础研发投资可能收缩，应用层繁荣与底层研发放缓同时出现。"
+        }
+      ]
+    },
+    {
+      "id": "ultimate-prediction-room-replay-1773905786313",
+      "at": "2026-03-19T07:36:26.313Z",
+      "question": "全球未来的人工智能发展前景是如何的",
+      "frontlineAgentIds": [],
+      "arbitratorIds": [],
+      "coalitions": [],
+      "claimSummary": [
+        {
+          "claim_id": "human-consciousness-strong",
+          "status": "stale",
+          "importance": 1
+        },
+        {
+          "claim_id": "C1",
+          "status": "成立",
+          "importance": 0.98
+        },
+        {
+          "claim_id": "C5",
+          "status": "成立",
+          "importance": 0.95
+        },
+        {
+          "claim_id": "C3",
+          "status": "成立",
+          "importance": 0.93
+        },
+        {
+          "claim_id": "C6",
+          "status": "成立",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "current-ai-not-conscious",
+          "status": "stale",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "C2",
+          "status": "成立",
+          "importance": 0.91
+        },
+        {
+          "claim_id": "C4",
+          "status": "倾向成立",
+          "importance": 0.87
+        },
+        {
+          "claim_id": "functional-vs-phenomenal",
+          "status": "stale",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "C7",
+          "status": "部分成立",
+          "importance": 0.78
+        },
+        {
+          "claim_id": "future-machine-consciousness-open",
+          "status": "stale",
+          "importance": 0.76
+        },
+        {
+          "claim_id": "C8",
+          "status": "stale",
+          "importance": 0.4
+        },
+        {
+          "claim_id": "C9",
+          "status": "stale",
+          "importance": 0.4
+        },
+        {
+          "claim_id": "C10",
+          "status": "stale",
+          "importance": 0.4
+        }
+      ],
+      "headline": "全球人工智能未来前景总体向上，但将呈现高增长、强分化、重监管与高博弈并存的长期格局",
+      "executiveSummary": "综合裁定认为，未来十年全球人工智能大概率继续快速发展，并从模型竞赛逐步转向基础设施、数据、应用落地、产业重构和治理能力的综合竞争。短中期内，生成式人工智能、智能代理、多模态系统、行业专用模型、算力优化和机器人融合将持续扩张；中长期则取决于能源、芯片供给、监管协调、社会信任、安全事故频率以及能否形成稳定商业模式。最可能的图景不是单线式爆发，也不是全面停滞，而是若干超级平台与大量垂直应用共同推进，在不同国家和行业中出现明显速度差。全球前景乐观但并不均衡，机会巨大，风险同样结构性上升。",
+      "beliefShifts": [
+        {
+          "claim": "全球人工智能会持续高速直线上升",
+          "from": 0.72,
+          "to": 0.58,
+          "why": "裁定后认为发展总体向上，但受监管、能源、芯片和社会信任约束，不宜用无阻碍直线增长描述。"
+        },
+        {
+          "claim": "人工智能短期内会被监管显著压制",
+          "from": 0.49,
+          "to": 0.34,
+          "why": "综合判断监管更可能演化为分级治理和行业重塑，而非全面压制。"
+        },
+        {
+          "claim": "基础模型规模将一直是决定性优势",
+          "from": 0.67,
+          "to": 0.46,
+          "why": "联盟整合后更重视系统能力、工作流集成、成本效率与行业数据。"
+        },
+        {
+          "claim": "人工智能经济收益会均匀分布",
+          "from": 0.41,
+          "to": 0.23,
+          "why": "集中式基础设施、头部平台优势与技能溢价使收益更可能不均衡扩散。"
+        },
+        {
+          "claim": "人工智能存在明显泡沫回调风险",
+          "from": 0.44,
+          "to": 0.62,
+          "why": "少数报告提出的商业兑现滞后、算力成本和组织摩擦问题被纳入主结论中的阶段性波动判断。"
+        }
+      ],
+      "counterfactualBranches": [
+        {
+          "title": "若通用智能代理在企业内实现高可靠低成本部署",
+          "delta": "将显著上调生产率提升、应用落地速度和产业整合强度，人工智能从辅助工具更快转向核心操作层。"
+        },
+        {
+          "title": "若出现全球性重大人工智能安全事故",
+          "delta": "将下调短中期扩张速度，监管强度上升，资本从开放扩张转向合规与防御。"
+        },
+        {
+          "title": "若先进芯片与能源供给大幅改善",
+          "delta": "将上调前沿模型训练频率、推理普及度和机器人场景可行性。"
+        },
+        {
+          "title": "若开源生态全面追平闭源头部系统",
+          "delta": "将下调基础模型集中度，上调全球扩散速度和中小企业创新空间。"
+        },
+        {
+          "title": "若商业回报长期弱于预期",
+          "delta": "将下调估值与投资热度，但不必然否定长期技术价值，只会延长兑现周期。"
+        }
+      ]
+    },
+    {
+      "id": "ultimate-prediction-room-replay-1773905792840",
+      "at": "2026-03-19T07:36:32.840Z",
+      "question": "全球未来的人工智能发展前景是如何的",
+      "frontlineAgentIds": [],
+      "arbitratorIds": [],
+      "coalitions": [],
+      "claimSummary": [
+        {
+          "claim_id": "human-consciousness-strong",
+          "status": "stale",
+          "importance": 1
+        },
+        {
+          "claim_id": "C1",
+          "status": "stale",
+          "importance": 0.98
+        },
+        {
+          "claim_id": "C5",
+          "status": "stale",
+          "importance": 0.95
+        },
+        {
+          "claim_id": "C3",
+          "status": "stale",
+          "importance": 0.93
+        },
+        {
+          "claim_id": "主张一",
+          "status": "成立",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "C6",
+          "status": "stale",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "current-ai-not-conscious",
+          "status": "stale",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "C2",
+          "status": "stale",
+          "importance": 0.91
+        },
+        {
+          "claim_id": "C4",
+          "status": "stale",
+          "importance": 0.87
+        },
+        {
+          "claim_id": "主张二",
+          "status": "大体成立",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "functional-vs-phenomenal",
+          "status": "stale",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "C7",
+          "status": "stale",
+          "importance": 0.78
+        },
+        {
+          "claim_id": "主张三",
+          "status": "成立",
+          "importance": 0.76
+        },
+        {
+          "claim_id": "future-machine-consciousness-open",
+          "status": "stale",
+          "importance": 0.76
+        },
+        {
+          "claim_id": "主张四",
+          "status": "成立",
+          "importance": 0.6799999999999999
+        },
+        {
+          "claim_id": "主张五",
+          "status": "倾向成立",
+          "importance": 0.6
+        },
+        {
+          "claim_id": "主张六",
+          "status": "成立",
+          "importance": 0.52
+        },
+        {
+          "claim_id": "C8",
+          "status": "stale",
+          "importance": 0.4
+        }
+      ],
+      "headline": "全球人工智能前景总体向上，但将呈现加速发展、强监管分化与高波动并存的格局",
+      "executiveSummary": "综合裁定结果认为，未来十年全球人工智能大概率继续高速推进，并从通用能力竞争转向产业落地、算力基础设施、数据治理、模型安全和人机协作体系的综合竞争。最可能出现的主线不是单一模型无限领先，而是多极生态并行发展：少数前沿模型主导基础能力，大量行业模型与代理系统主导具体价值创造。与此同时，监管、地缘政治、能源与算力瓶颈、版权与就业冲击将持续塑造节奏。结论不是人工智能会线性统治一切，而是它会像电力和互联网一样成为基础通用技术，在创造巨大生产率红利的同时，也带来新的制度摩擦与风险治理需求。",
+      "beliefShifts": [
+        {
+          "claim": "主张一",
+          "from": "中等乐观",
+          "to": "较强乐观",
+          "why": "多联盟都认为人工智能已从能力演示进入基础设施化阶段，长期延续性更强"
+        },
+        {
+          "claim": "主张二",
+          "from": "单极领先倾向",
+          "to": "多极竞争倾向",
+          "why": "综合考虑开源路线、地区政策差异和本地化部署需求后，永久单极垄断的概率下降"
+        },
+        {
+          "claim": "主张五",
+          "from": "快速大规模失业担忧",
+          "to": "任务重构主导",
+          "why": "当前更稳健的判断是先替代部分任务、再改变岗位结构，而非立即全面替代"
+        },
+        {
+          "claim": "主张六",
+          "from": "技术问题可自然解决",
+          "to": "基础设施瓶颈关键",
+          "why": "算力、能源、数据中心和高质量数据已成为影响速度与格局的现实约束"
+        }
+      ],
+      "counterfactualBranches": [
+        {
+          "title": "若通用自主代理在低成本条件下成熟",
+          "delta": "整体前景显著上修，就业冲击、监管强度和平台集中度同步上升"
+        },
+        {
+          "title": "若发生重大人工智能安全事故并引发全球收紧监管",
+          "delta": "短中期商业化速度下修，但合规、审计、安全工具和本地部署需求上升"
+        },
+        {
+          "title": "若开源生态逼近闭源前沿能力",
+          "delta": "多极化和应用创新加速，利润率与护城河向基础设施、数据和分发端转移"
+        },
+        {
+          "title": "若能源和芯片瓶颈长期无法缓解",
+          "delta": "模型规模化速度放缓，资源进一步向头部国家和公司集中"
+        },
+        {
+          "title": "若人工智能带来显著生产率跃升并被官方统计确认",
+          "delta": "资本投入和政策支持进一步增强，产业采用从试点走向全面部署"
+        }
+      ]
+    },
+    {
+      "id": "ultimate-prediction-room-replay-1773905826330",
+      "at": "2026-03-19T07:37:06.330Z",
+      "question": "全球未来的人工智能发展前景是如何的",
+      "frontlineAgentIds": [],
+      "arbitratorIds": [],
+      "coalitions": [],
+      "claimSummary": [
+        {
+          "claim_id": "human-consciousness-strong",
+          "status": "stale",
+          "importance": 1
+        },
+        {
+          "claim_id": "C1",
+          "status": "成立",
+          "importance": 0.98
+        },
+        {
+          "claim_id": "C5",
+          "status": "成立",
+          "importance": 0.95
+        },
+        {
+          "claim_id": "C3",
+          "status": "成立",
+          "importance": 0.93
+        },
+        {
+          "claim_id": "C6",
+          "status": "大体成立",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "主张一",
+          "status": "stale",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "current-ai-not-conscious",
+          "status": "stale",
+          "importance": 0.92
+        },
+        {
+          "claim_id": "C2",
+          "status": "大体成立",
+          "importance": 0.91
+        },
+        {
+          "claim_id": "C4",
+          "status": "成立",
+          "importance": 0.87
+        },
+        {
+          "claim_id": "主张二",
+          "status": "stale",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "functional-vs-phenomenal",
+          "status": "stale",
+          "importance": 0.84
+        },
+        {
+          "claim_id": "C7",
+          "status": "成立",
+          "importance": 0.78
+        },
+        {
+          "claim_id": "主张三",
+          "status": "stale",
+          "importance": 0.76
+        },
+        {
+          "claim_id": "future-machine-consciousness-open",
+          "status": "stale",
+          "importance": 0.76
+        },
+        {
+          "claim_id": "主张四",
+          "status": "stale",
+          "importance": 0.6799999999999999
+        },
+        {
+          "claim_id": "主张五",
+          "status": "stale",
+          "importance": 0.6
+        },
+        {
+          "claim_id": "主张六",
+          "status": "stale",
+          "importance": 0.52
+        },
+        {
+          "claim_id": "C8",
+          "status": "倾向成立",
+          "importance": 0.4
+        }
+      ],
+      "headline": "全球人工智能未来前景总体向上，但将呈现高增长、强分化、重监管与基础设施瓶颈并存的格局",
+      "executiveSummary": "综合裁定认为，未来十年全球人工智能大概率继续快速推进，并从通用内容生成扩展到软件、科研、制造、医疗、教育、金融与公共治理等领域。最可能的主线不是单一通用智能突然完成对人类工作的全面替代，而是由更强模型、更低推理成本、更深行业集成和更严制度约束共同推动的渐进式重构。全球竞争将围绕算力、数据、能源、芯片、人才、平台生态和监管话语权展开。短中期内，人工智能将显著提升知识工作与部分决策流程效率，重塑产业利润分配，但也会带来就业结构扰动、信息污染、安全攻击、权力集中和地缘分裂风险。长期上限仍高，但实际落地速度将受制于物理基础设施、可靠性、责任机制与社会接受度。",
+      "beliefShifts": [
+        {
+          "claim": "未来十年全球人工智能总体将继续高速发展并扩大应用范围",
+          "from": "0.72",
+          "to": "0.86",
+          "why": "在综合技术、资本开支与产品化趋势后，持续扩张的证据强于停滞风险"
+        },
+        {
+          "claim": "人工智能会一次性替代大量整类职业",
+          "from": "0.61",
+          "to": "0.38",
+          "why": "联盟整合后更支持任务重构先于职业整体消失，且组织采用通常呈渐进式"
+        },
+        {
+          "claim": "监管只会轻微影响人工智能发展路径",
+          "from": "0.55",
+          "to": "0.24",
+          "why": "治理与风险联盟提供的论据显示，监管、安全和版权已成为核心变量而非边缘因素"
+        },
+        {
+          "claim": "短中期全面通用人工智能到来的把握很高",
+          "from": "0.49",
+          "to": "0.31",
+          "why": "裁定后认为当前瓶颈和现实部署约束仍较明显，跃迁虽可能但把握不足"
+        }
+      ],
+      "counterfactualBranches": [
+        {
+          "title": "若前沿模型在可靠推理与长期行动上出现超预期突破",
+          "delta": "将上调对职业替代速度、自治系统普及率和全球生产率提升的判断，同时下调对渐进式扩散路径的权重"
+        },
+        {
+          "title": "若芯片、能源与数据中心建设受阻",
+          "delta": "将下调全球人工智能扩张速度，强化区域化和资源集中化结论"
+        },
+        {
+          "title": "若主要经济体实施严格统一监管",
+          "delta": "将下调高风险行业部署速度，但上调头部合规平台的市场集中度判断"
+        },
+        {
+          "title": "若开源模型在性能和成本上快速逼近闭源头部",
+          "delta": "将下调头部垄断强度，提升全球扩散速度和中小企业创新空间判断"
+        },
+        {
+          "title": "若发生重大人工智能安全事故并引发社会恐慌",
+          "delta": "将显著下调短期乐观预期，提升治理、审计和许可制的重要性"
+        }
+      ]
+    }
+  ]
+}
